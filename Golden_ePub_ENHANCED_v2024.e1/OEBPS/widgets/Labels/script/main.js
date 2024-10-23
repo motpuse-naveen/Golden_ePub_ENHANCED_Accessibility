@@ -79,8 +79,10 @@ $(document).ready(function () {
         $tooltipAnchor.html($(".pin").eq(i).html());
         $toolTipAnchorWrapper.append($tooltipAnchor);
         $tooltipAnchor.focusout(() => {
-            Utils.hideToolTip();
-            Utils.setImageBound();
+            setTimeout(() => {
+                Utils.hideToolTip();
+                Utils.setImageBound();
+            },50);
         });
         // append the tooltip
         $("#image-map").append($toolTipAnchorWrapper);
@@ -217,7 +219,7 @@ $(document).ready(function () {
                 isLeftUpdated = true;
             }
             if (toolTipoffset.left < 50) {
-                newLeft = Math.abs(toolTipoffset.left) + 50;
+                newLeft = Math.abs(toolTipoffset.left) + 20;
                 isLeftUpdated = true;
             }
             if (toolTipoffset.top < 50) {
@@ -229,17 +231,17 @@ $(document).ready(function () {
                 isTopUpdated = true;
             }
             if (isTopUpdated && isLeftUpdated) {
-                $imageWrapper.animate({ 'left': newLeft + 'px', 'top': newTop + 'px' }, 20);
+                $imageWrapper.animate({ 'left': newLeft + 'px', 'top': newTop + 'px' }, 50);
             } else if (isTopUpdated) {
-                $imageWrapper.animate({ 'top': newTop + 'px' }, 100);
+                $imageWrapper.animate({ 'top': newTop + 'px' }, 50);
             } else if (isLeftUpdated) {
-                $imageWrapper.animate({ 'left': newLeft + 'px' }, 100);
+                $imageWrapper.animate({ 'left': newLeft + 'px' }, 50);
             }
             $tooltip.fadeIn(500);
             $tooltip.find('p').focus();
             $tooltip.addClass('is-visible');
             $tooltip.closest(".tooltipInner").addClass('maxzindex');
-        }, 200);
+        }, 300);
     }
     app.getNewScaleByDirection = function (direction) {
         var newZoom = currentSliderVal;
@@ -298,7 +300,8 @@ $(document).ready(function () {
         if ($imgBoundingBox.height < $(window).height()) {
             newTop = 0;
         }
-        $imageWrapper.animate({ 'top': newTop, 'left': newLeft }, 400);
+        $imageWrapper.animate({ 'top': newTop, 'left': newLeft }, 200);
+        //$imageWrapper.css({ 'top': newTop, 'left': newLeft });
     }
     app.ariaAnnounce = function (msg) {
         console.log(msg);

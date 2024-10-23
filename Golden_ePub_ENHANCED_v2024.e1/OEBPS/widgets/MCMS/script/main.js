@@ -8,30 +8,32 @@ const tabButton = document.querySelectorAll(".step");
 const contents = document.querySelectorAll(".tab-pane");
 function getQuestionByEvent(e) {
     var id;
-    if ($(e.target).is('span')) {
-        id = $(e.target).parent().attr('data-id');
-    } else if ($(e.target).is('a')) {
-        id = $(e.target).attr('data-id');
-    }
-    if (id) {
-        getNewQuestion(parseInt(id.split('-')[1]));
-        $('.nav-link').removeClass('active');
+    if($(e.target.closest(".nav-item").length>1) || $(e.target.closest(".nav-link").length>1)){
         if ($(e.target).is('span')) {
-            $(e.target).parent().addClass("active");
-        } else {
-            $(e.target).addClass("active");
+            id = $(e.target).parent().attr('data-id');
+        } else if ($(e.target).is('a')) {
+            id = $(e.target).attr('data-id');
         }
+        if (id) {
+            getNewQuestion(parseInt(id.split('-')[1]));
+            $('.nav-link').removeClass('active');
+            if ($(e.target).is('span')) {
+                $(e.target).parent().addClass("active");
+            } else {
+                $(e.target).addClass("active");
+            }
 
-        $('#questionNumber').focus();
-        if (parseInt(id.split('-')[1]) === quiz.length) {
-            $('.arrow-right').addClass('disabled');
-            $('.arrow-left').removeClass('disabled');
-        } else if (parseInt(id.split('-')[1]) === 1) {
-            $('.arrow-left').addClass('disabled');
-            $('.arrow-right').removeClass('disabled');
-        } else {
-            $('.arrow-right').removeClass('disabled');
-            $('.arrow-left').removeClass('disabled');
+            $('#questionNumber').focus();
+            if (parseInt(id.split('-')[1]) === quiz.length) {
+                $('.arrow-right').addClass('disabled');
+                $('.arrow-left').removeClass('disabled');
+            } else if (parseInt(id.split('-')[1]) === 1) {
+                $('.arrow-left').addClass('disabled');
+                $('.arrow-right').removeClass('disabled');
+            } else {
+                $('.arrow-right').removeClass('disabled');
+                $('.arrow-left').removeClass('disabled');
+            }
         }
     }
 }
@@ -39,8 +41,8 @@ $(".steps").on('click keydown', function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
         getQuestionByEvent(e);
         $ul = $('.steps ul');
-        $ulWrapper = $ul.parent();
-        stepWidth = 38;
+        $ulWrapper = $ul//.parent();
+        stepWidth = $('.steps ul li').outerWidth();
         ulWrapperWidth = $ulWrapper.width();
         wrapperCapacity = ulWrapperWidth / stepWidth;
         totalItemsWidth = $('.steps ul li').length * stepWidth;
@@ -58,8 +60,8 @@ $(".steps").on('click keydown', function (e) {
 });
 function autoDragPagination(selectedStep) {
     $ul = $('.steps ul');
-    $ulWrapper = $ul.parent();
-    stepWidth = 38;
+    $ulWrapper = $ul//.parent();
+    stepWidth = $('.steps ul li').outerWidth();
     ulWrapperWidth = $ulWrapper.width();
     wrapperCapacity = ulWrapperWidth / stepWidth;
     totalItemsWidth = $('.steps ul li').length * stepWidth;
@@ -123,6 +125,7 @@ function setAvailableQuestion() {
 }
 // goto question and new question of array
 function getNewQuestion(question) {
+    $('#mcq_button').show();
     selectOption = [];
     QuestionNumber.innerText = "Question " + (question);
     //  &lt;!-- QuestionNumber.innerText = "Question " + (question) + " of " + (quiz.length); 
@@ -186,6 +189,9 @@ function getNewQuestion(question) {
     }
     $('.focus-input').on('keydown click', addActiveClass);
     $(".focus-input *").on("click", function (e) {
+        if($(this).closest(".focus-input").length>0){
+            $(this).closest(".focus-input").click();
+        }
         e.stopPropagation()
     })
     if (typeof bind_glossary_events == "function") {
@@ -220,7 +226,7 @@ function getNewQuestion(question) {
         $('#answer_label').removeClass().addClass('not-quite');
     } else if (currentQuestion.state === 'correct') {
         if (question == quiz.length) {
-            $('#mcq_button').html('Done');
+            $('#mcq_button').html('Done').hide();
             $('#mcq_button').attr('title', 'Done');
         } else {
             $('#mcq_button').html('Next Question');
@@ -360,7 +366,7 @@ function getResult(element) {
         $(element).attr("role", "img");
         updateAnswerIndicator("correct");
         if (parseInt($('.tab-pane').attr('id')) == quiz.length) {
-            $('#mcq_button').html('Done');
+            $('#mcq_button').html('Done').hide();
             $('#mcq_button').attr('title', 'Done');
         } else {
             $('#mcq_button').html('Next Question');
@@ -491,8 +497,10 @@ $('#mcq_button').on('mousedown click', function (e) {
     }
 })
 window.onload = function () {
+    $(".answer-controls").hide()
     setAvailableQuestion();
     getNewQuestion(1);
+    $(".answer-controls").show()
     answerIndicatot();
     $('#Add_solution').hide();
     $('#Add_solution').children().html(quiz[0].ansText);

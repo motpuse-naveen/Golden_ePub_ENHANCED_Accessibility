@@ -1,6 +1,7 @@
 /*@charset "UTF-8";
 	@namespace "http://www.w3.org/1999/xhtml";
 @namespace epub "http://www.idpf.org/2007/ops";*/
+/* Version 19.7, Date:08 JULY 2022 */
 
 body {
 	margin: 0px;
@@ -119,6 +120,9 @@ body {
     color: var(--blue);
     outline-offset: -1px;
 }
+.focus-input.active i,.focus-input.active b, .focus-input.active span, .focus-input.active div {
+    color: var(--blue);
+}
 .active, .slide-thumbnail:hover {
     opacity: 1;
 }
@@ -129,6 +133,9 @@ body {
     color: var(--red);
     position: relative;
 }
+.focus-input.wrong i,.focus-input.wrong b, .focus-input.wrong span, .focus-input.wrong div {
+    color: var(--red);
+}
 .Multiple-choice .focus-input:last-child {
     border-width: 1px 1px 1px 1px;
 }
@@ -138,6 +145,9 @@ body {
     color: var(--green);
     position: relative;
     border-bottom-width: 1px;
+}
+.focus-input.last-child i,.focus-input.last-child b, .focus-input.last-child span, .focus-input.last-child div {
+    color: var(--green);
 }
 .already-answered {
     pointer-events: none;
@@ -184,9 +194,9 @@ i{
 }
 .mcq button#mcq_button {
     border: 2px solid transparent;
-	position: absolute;
+	/*position: absolute;
+    bottom: 0px;*/
     right: 20px;
-    bottom: 0px;
 }
 .check.disabled, .check-try-again.disabled {
     pointer-events: none;
@@ -241,7 +251,7 @@ i{
 }
 
 .mcq footer {
-    /*position: fixed;*/
+    position: fixed;
     left: 0px;
     right: 0px;
     bottom: 0;
@@ -348,7 +358,7 @@ i{
     padding-inline-start: 0px;
 }
 .steps li.nav-item {
-    margin: 10px 4px;
+    padding: 10px 4px;
     line-height: 15px;
     outline: none;
     border: 1px solid transparent;
@@ -449,4 +459,7 @@ i{
 .footer *:focus {
     border: 1px solid var(--orange) !important;
     outline: none !important;
+}
+.mar-left{
+    margin-left: 1.5em;
 }
