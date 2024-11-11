@@ -364,7 +364,7 @@ span.text-highlighter::after {
 .dropdown-content{
     bottom: 24px!important;
     text-indent: initial;
-    border: 1px solid #E6E6E6;
+    border: 1px solid var(--gray-border-color);
     font-weight: normal;
     font-style: normal;
     text-align: left;

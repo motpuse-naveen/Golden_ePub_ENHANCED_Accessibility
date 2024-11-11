@@ -834,7 +834,7 @@ div.aria-widget-vertical-slider .label {
 .focus-input {
 	background: #fff;
 	border-style: solid;
-	border-color: #CDCDCD;
+	border-color: var(--gray-border-color);
 	border-width: 1px 1px 0 1px;
 	padding: 16px 60px 16px 16px;
 	font-size: 14px;
