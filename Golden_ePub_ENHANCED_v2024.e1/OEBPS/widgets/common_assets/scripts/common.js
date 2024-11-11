@@ -74,7 +74,6 @@ allhrefs.forEach(hrefelm => {
 	}
 });
 function handle_frame_target_click(event) {
-	//debugger
 	event.preventDefault();
 	var frameid = event.target.getAttribute("itemid");
 	var questionnumber = event.target.getAttribute("itemref");

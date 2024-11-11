@@ -156,11 +156,13 @@ function getNewQuestion(question) {
         $('#subheading3').hide().attr("aria-hidden", true);
         optionsIndex++
     }
-    if(currentQuestion.optionStyleType!=undefined && currentQuestion.optionStyleType!=null && currentQuestion.optionStyleType!=""){
+    if(currentQuestion.optionStyleType!=undefined && currentQuestion.optionStyleType!=null && currentQuestion.optionStyleType!="" && currentQuestion.optionStyleType != "none"){
         optionContainer.setAttribute("styletype",currentQuestion.optionStyleType);
+        $(".answer-controls").addClass("mar-left")
     }
     else{
         optionContainer.removeAttribute("styletype");
+        $(".answer-controls").removeClass("mar-left")
     }
     //get the position of questionIndex from the availableQuestion
     // var index1 = quiz.indexOf(questionIndex);
@@ -449,7 +451,6 @@ $('#show_ans').on('click keydown', (function (e) {
         let correctAnswer = [];
         $('.focus-input').removeClass('wrong').removeAttr("aria-describedby");
         $('.focus-input').each(function () {
-            debugger;
             if ($(this).attr('data-id') == quiz[currentQuestion].answer) {
                 $(this).addClass('last-child').attr("aria-selected", "true").attr("aria-describedby", "ariaCorrect");
                 correctAnswer.push($(this).text());

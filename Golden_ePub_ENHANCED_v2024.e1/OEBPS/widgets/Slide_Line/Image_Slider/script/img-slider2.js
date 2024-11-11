@@ -141,7 +141,6 @@ $(document).ready(function () {
         }
 
     function handleDotMove(e) {
-        //debugger;
         contents.forEach(content => {
             content.classList.remove("active");
         });

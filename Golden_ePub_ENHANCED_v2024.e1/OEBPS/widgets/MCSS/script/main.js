@@ -190,7 +190,7 @@ function getNewQuestion(question) {
         $('#subheading3').hide().attr("aria-hidden", true);
         optionsIndex++
     }
-    if (currentQuestion.optionStyleType != undefined && currentQuestion.optionStyleType != null && currentQuestion.optionStyleType != "") {
+    if (currentQuestion.optionStyleType != undefined && currentQuestion.optionStyleType != null && currentQuestion.optionStyleType != "" && currentQuestion.optionStyleType != "none") {
         optionContainer.setAttribute("styletype", currentQuestion.optionStyleType);
         $(".answer-controls").addClass("mar-left")
     }
@@ -241,7 +241,6 @@ function getNewQuestion(question) {
     $('.tab-pane ').attr('data-state', currentQuestion.state);
     $('.tab-pane ').attr('id', question);
     $(".ic-opt-fbk").remove();
-    //debugger;
     var optFeedback = ""
     if (currentQuestion.state === 'wrong') {
         $('.focus-input').each(function () {
