@@ -7,12 +7,14 @@ const tabs = document.querySelector(".tab-content");
 const tabButton = document.querySelectorAll(".step");
 const contents = document.querySelectorAll(".tab-pane");
 function getQuestionByEvent(e) {
-    var id;
     if($(e.target.closest(".nav-item").length>1) || $(e.target.closest(".nav-link").length>1)){
+        var id;
         if ($(e.target).is('span')) {
             id = $(e.target).parent().attr('data-id');
         } else if ($(e.target).is('a')) {
             id = $(e.target).attr('data-id');
+        } else if ($(e.target).find('a').length) {
+            id = $(e.target).find('a').attr('data-id');
         }
         if (id) {
             getNewQuestion(parseInt(id.split('-')[1]));
@@ -22,17 +24,19 @@ function getQuestionByEvent(e) {
             } else {
                 $(e.target).addClass("active");
             }
-
+            if (e.type === "click" && $(e.target).find('a').length) {
+                $(e.target).find('a').addClass("active");
+            }
             $('#questionNumber').focus();
             if (parseInt(id.split('-')[1]) === quiz.length) {
-                $('.arrow-right').addClass('disabled');
-                $('.arrow-left').removeClass('disabled');
+                $('.arrow-right').addClass('disabled').attr("aria-disabled",true);
+                $('.arrow-left').removeClass('disabled').removeAttr("aria-disabled");
             } else if (parseInt(id.split('-')[1]) === 1) {
-                $('.arrow-left').addClass('disabled');
-                $('.arrow-right').removeClass('disabled');
+                $('.arrow-left').addClass('disabled').attr("aria-disabled",true);
+                $('.arrow-right').removeClass('disabled').removeAttr("aria-disabled");
             } else {
-                $('.arrow-right').removeClass('disabled');
-                $('.arrow-left').removeClass('disabled');
+                $('.arrow-right').removeClass('disabled').removeAttr("aria-disabled");
+                $('.arrow-left').removeClass('disabled').removeAttr("aria-disabled");
             }
         }
     }
@@ -40,12 +44,12 @@ function getQuestionByEvent(e) {
 $(".steps").on('click keydown', function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
         getQuestionByEvent(e);
-        $ul = $('.steps ul');
+        $ul = $('.steps ol');
         $ulWrapper = $ul//.parent();
-        stepWidth = $('.steps ul li').outerWidth();
+        stepWidth = $('.steps ol li').outerWidth();
         ulWrapperWidth = $ulWrapper.width();
         wrapperCapacity = ulWrapperWidth / stepWidth;
-        totalItemsWidth = $('.steps ul li').length * stepWidth;
+        totalItemsWidth = $('.steps ol li').length * stepWidth;
         var stepAtCenter = -1;
         var $selectedStep = $(e.target);
         var selectedStep;
@@ -59,12 +63,12 @@ $(".steps").on('click keydown', function (e) {
     }
 });
 function autoDragPagination(selectedStep) {
-    $ul = $('.steps ul');
+    $ul = $('.steps ol');
     $ulWrapper = $ul//.parent();
-    stepWidth = $('.steps ul li').outerWidth();
+    stepWidth = $('.steps ol li').outerWidth();
     ulWrapperWidth = $ulWrapper.width();
     wrapperCapacity = ulWrapperWidth / stepWidth;
-    totalItemsWidth = $('.steps ul li').length * stepWidth;
+    totalItemsWidth = $('.steps ol li').length * stepWidth;
     var stepAtCenter = -1;
 
     var stepCountAtCenter = Math.floor(wrapperCapacity / 2);
@@ -88,7 +92,7 @@ function autoDragPagination(selectedStep) {
             // // (totalItemsWidth - ulWrapperWidth)
             // for(let i = 0; i&lt;=hiddenUnderLeft;i++) {
             //    // console.log()
-            //    $($('.steps ul li')[i]).find('a').removeAttr('tabindex');
+            //    $($('.steps ol li')[i]).find('a').removeAttr('tabindex');
             // }
             $ul.css('left', newLeft);
         } else {
@@ -99,10 +103,10 @@ function autoDragPagination(selectedStep) {
             $ul.css('left', newLeft);
         }
     }
-    // $('.steps ul li a').removeAttr('tabindex');
+    // $('.steps ol li a').removeAttr('tabindex');
     // var hiddenUnderLeft = (Math.abs(newLeft)/stepWidth);
     // for (let i = hiddenUnderLeft+1; i&lt; hiddenUnderLeft + Math.floor(wrapperCapacity); i++) {
-    //    $($('.steps ul li')[i]).find('a').attr('tabindex', 0);
+    //    $($('.steps ol li')[i]).find('a').attr('tabindex', 0);
     // }
 }
 var QuestionNumber = document.querySelector("#questionNumber");
@@ -137,28 +141,28 @@ function getNewQuestion(question) {
     var questionIndex = quiz[question - 1];
     currentQuestion = questionIndex;
     QuestionName.innerHTML = currentQuestion.q;
-    QuestionName.setAttribute('tabindex', '0');
+    //QuestionName.setAttribute('tabindex', '0');
     optionsIndex++
     if (currentQuestion.q2) {
         $('#subheading2').html(currentQuestion.q2);
         $('#subheading2').attr('tabindex', '0');
-        $('#subheading2').show();
+        $('#subheading2').show().removeAttr("aria-hidden");
         optionsIndex++
     } else {
         $('#subheading2').removeAttr('aria-label');
         $('#subheading2').removeAttr('tabindex');
-        $('#subheading2').hide();
+        $('#subheading2').hide().attr("aria-hidden", true);
         optionsIndex++
     }
     if (currentQuestion.q3.length) {
         $('#subheading3').html(currentQuestion.q3[0]);
         $('#subheading3').attr('tabindex', '0');
-        $('#subheading3').show();
+        $('#subheading3').show().removeAttr("aria-hidden");
         optionsIndex++
     } else {
         $('#subheading3').removeAttr('aria-label');
         $('#subheading3').removeAttr('tabindex');
-        $('#subheading3').hide();
+        $('#subheading3').hide().attr("aria-hidden", true);
         optionsIndex++
     }
     if (currentQuestion.optionStyleType != undefined && currentQuestion.optionStyleType != null && currentQuestion.optionStyleType != "") {
@@ -180,6 +184,7 @@ function getNewQuestion(question) {
         option.setAttribute('data-id', j);
         option.setAttribute('tabindex', '0');
         option.setAttribute('role', 'option');
+        option.setAttribute('aria-selected', 'false');
         optionsIndex++;
         option.className = "focus-input";
         if (typeof currentQuestion.optionFeedback != 'undefined') {
@@ -205,14 +210,14 @@ function getNewQuestion(question) {
     if (currentQuestion.state === 'wrong') {
         $('.focus-input').each(function () {
             if ($(this).attr('data-id') == currentQuestion.userAnswered) {
-                $(this).addClass('wrong');
+                $(this).addClass('wrong').attr("aria-describedby", "ariaIncorrect");
                 if (typeof currentQuestion.optionFeedback != 'undefined') {
                     optFeedback = $(this).attr('data-feedback')
                 }
             }
         });
         $('#mcq_button').html('Try Again');
-        $('#mcq_button').removeClass('disabled');
+        $('#mcq_button').removeClass('disabled').removeAttr("aria-disabled");
         $('#mcq_button').attr('title', 'Try Again');
         $('#mcq_button').attr('tabindex', '0');
         $('#answer_label').show();
@@ -232,7 +237,7 @@ function getNewQuestion(question) {
             $('#mcq_button').html('Next Question');
             $('#mcq_button').attr('title', 'Next Question');
         }
-        $('#mcq_button').removeClass('disabled');
+        $('#mcq_button').removeClass('disabled').removeAttr("aria-disabled");
         $('#mcq_button').attr('tabindex', '0');
         $('#answer_label').show();
         $('#Add_solution').children().html(currentQuestion.ansText);
@@ -242,13 +247,19 @@ function getNewQuestion(question) {
         $('#answer_label').removeClass().addClass('correct');
         unclickableOptions();
     } else {
-        $('.focus-input').removeClass().addClass('focus-input');
+        $('.focus-input').removeClass().addClass('focus-input').removeAttr("aria-describedby");
+        $('.focus-input').each(function () {
+            if($(this).attr("aria-describedby") == "ariaIncorrect" 
+            || $(this).attr("aria-describedby") == "ariaCorrect"){
+                $(this).removeAttr("aria-describedby");
+            }
+        });
         $('#mcq_button').html('Check Answer');
-        $('#mcq_button').addClass('disabled');
+        $('#mcq_button').addClass('disabled').attr("aria-disabled",true);
         // $('#questionNumber').focus();
         $('#mcq_button').attr('title', 'Check Answer');
         // $('#mcq_button').removeAttr('tabindex');
-        $('#mcq_button').attr('tabindex', '-1');
+        //$('#mcq_button').attr('tabindex', '-1');
         $('#answer_label').hide();
         $('#Add_solution').hide();
         $('#need_help').show();
@@ -262,9 +273,9 @@ function getNewQuestion(question) {
     currentQuestion.userAnswered.forEach(userAns => {
         let index = currentQuestion.answer.findIndex(currentQuest => currentQuest === userAns);
         if (index !== -1) {
-            $("ul").find(`[data-id='${userAns}']`).removeClass().addClass("focus-input last-child");
+            $("ul").find(`[data-id='${userAns}']`).removeClass().addClass("focus-input last-child").attr("aria-describedby", "ariaCorrect");
         } else {
-            $("ul").find(`[data-id='${userAns}']`).removeClass().addClass('focus-input wrong');
+            $("ul").find(`[data-id='${userAns}']`).removeClass().addClass('focus-input wrong').attr("aria-describedby", "ariaIncorrect");
         }
     });
     MathJax.typesetClear()
@@ -273,63 +284,64 @@ function getNewQuestion(question) {
     bind_annotLinkEvents();
 }
 function addActiveClass(el) {
-    el.preventDefault();
-    el.stopPropagation();
-
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
-        if (currentQuestion.state !== 'wrong' && !$(el.target).hasClass('wrong') && !$(el.target).hasClass('last-child')) {
-            if (!$(el.target).hasClass("active")) {
-                $(el.target).removeClass().addClass('focus-input');
-                selectOption = [];
-                $(el.target).removeClass().addClass('focus-input active');
+        if(!$(el.target).hasClass('already-answered')){
+            if (currentQuestion.state !== 'wrong' && !$(el.target).hasClass('wrong') && !$(el.target).hasClass('last-child')) {
+                if (!$(el.target).hasClass("active")) {
+                    $(el.target).removeClass().addClass('focus-input');
+                    selectOption = [];
+                    $(el.target).removeClass().addClass('focus-input active').attr("aria-selected", true);;
+                    if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
+                        && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
+                        $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-selected", false);
+                        $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-selected", false);
+                        $(el.target).removeClass().addClass('focus-input active').attr("aria-selected", true);
+                    }
+                    $('#mcq_button').html('Check Answer');
+                    $('#mcq_button').removeAttr('aria-disabled');
+                    $('#Add_solution').hide();
+                    $('#answer_label').hide();
+                    $('.tab-pane ').attr('data-state', 'answered');
+                    $('#mcq_button').removeClass('disabled').removeAttr("aria-disabled");
+                    $('#mcq_button').attr('title', 'Check Answer');
+                    $('#mcq_button').attr('tabindex', '0');
+                    ariaAnnounce('Selected option is ' + $(el.target).text());
+                }
+                else {
+                    if ($('.focus-input.active').length > 1) {
+                        $(el.target).removeClass("active").attr("aria-selected", false);
+                    }
+                }
+            } else {
                 if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
                     && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
-                    $(el.target).prevAll().removeClass().addClass('focus-input');
-                    $(el.target).nextAll().removeClass().addClass('focus-input');
-                    $(el.target).removeClass().addClass('focus-input active');
+                    selectOption = [];
+                    $(".ic-opt-fbk").remove();
+                    $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-selected", false);
+                    $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-selected", false);
+                    $(el.target).removeClass().addClass('focus-input active').attr("aria-selected", true);
+                    $(el.target).removeClass('wrong').removeAttr("aria-describedby");
+                    $('#mcq_button').html('Check Answer');
+                    $('#Add_solution').hide();
+                    $('#answer_label').hide();
+                    $('.tab-pane ').attr('data-state', 'answered');
+                    $('#mcq_button').removeClass('disabled').removeAttr("aria-disabled");
+                    $('#mcq_button').attr('tabindex', '0');
                 }
-                $('#mcq_button').html('Check Answer');
-                $('#mcq_button').removeAttr('aria-disabled');
-                $('#Add_solution').hide();
-                $('#answer_label').hide();
-                $('.tab-pane ').attr('data-state', 'answered');
-                $('#mcq_button').removeClass('disabled');
-                $('#mcq_button').attr('title', 'Check Answer');
-                $('#mcq_button').attr('tabindex', '0');
-                ariaAnnounce('Selected option is ' + $(el.target).text());
-            }
-            else {
-                if ($('.focus-input.active').length > 1) {
-                    $(el.target).removeClass("active");
-                }
-            }
-        } else {
-            if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
-                && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
-                selectOption = [];
-                $(".ic-opt-fbk").remove();
-                $(el.target).prevAll().removeClass().addClass('focus-input');
-                $(el.target).nextAll().removeClass().addClass('focus-input');
-                $(el.target).removeClass().addClass('focus-input active');
-                $(el.target).removeClass('wrong');
-                $('#mcq_button').html('Check Answer');
-                $('#Add_solution').hide();
-                $('#answer_label').hide();
-                $('.tab-pane ').attr('data-state', 'answered');
-                $('#mcq_button').removeClass('disabled');
-                $('#mcq_button').removeAttr('aria-disabled');
-                $('#mcq_button').attr('tabindex', '0');
-            }
-            else {
-                if (!$(el.target).hasClass('wrong') && !$(el.target).hasClass('last-child')) {
-                    $(el.target).removeClass().addClass('focus-input active');
-                } else {
-                    $(el.target).removeClass('wrong');
+                else {
+                    if (!$(el.target).hasClass('wrong') && !$(el.target).hasClass('last-child')) {
+                        $(el.target).removeClass().addClass('focus-input active').attr("aria-selected", true);
+                    } else {
+                        $(el.target).removeClass('wrong').removeAttr("aria-describedby");
+                    }
                 }
             }
         }
+        el.preventDefault();
+        el.stopPropagation();
+        return false;
     }
-    return false;
+    
 }
 // check the current option is true or not .
 function check(answer, selectOption) {
@@ -345,25 +357,28 @@ function check(answer, selectOption) {
 }
 function getResult(element) {
     var wrongAns = 0;
+    var selOptionText = [];
     var id = parseInt($(element[0]).attr('data-id'));
     for (var i = 0; i < element.length; i++) {
         selectOption.push(parseInt($(element[i]).attr('data-id')));
+        selOptionText.push($(element[i]).text())
     }
     selectOption.sort();
     let dataId = 'q-' + parseInt($('.tab-pane').attr('id'));
     selectOption.forEach(option => {
         let index = currentQuestion.answer.findIndex(ans => ans === option);
         if (index !== -1) {
-            $("ul").find(`[data-id='${option}']`).removeClass().addClass("focus-input last-child");
+            $("ul").find(`[data-id='${option}']`).removeClass().addClass("focus-input last-child").attr("aria-describedby", "ariaCorrect");
         } else {
-            $("ul").find(`[data-id='${option}']`).removeClass().addClass('focus-input wrong');
+            $("ul").find(`[data-id='${option}']`).removeClass().addClass('focus-input wrong').attr("aria-describedby", "ariaIncorrect");
             wrongAns++;
         }
     });
+    
     if (wrongAns === 0 && check(currentQuestion.answer, selectOption) !== false) {
         correctMsg.innerHTML = correctFBText;
         $(element).parent().attr("data-correct", "true");
-        $(element).attr("role", "img");
+        //$(element).attr("role", "img");
         updateAnswerIndicator("correct");
         if (parseInt($('.tab-pane').attr('id')) == quiz.length) {
             $('#mcq_button').html('Done').hide();
@@ -385,7 +400,14 @@ function getResult(element) {
                 $(this).attr('data-correct', true);
             }
         });
-        ariaAnnounce('Selected answer' + $(element).text() + ' is correct.');
+        //selOptionText = selOptionText.join(', ');
+        if(selOptionText.length>1){
+            selOptionText = " options " + selOptionText.join(', ')
+        }
+        else{
+            selOptionText = " option " + selOptionText.join(', ')
+        }
+        ariaAnnounce('Selected ' + selOptionText + ' is correct. ' + currentQuestion.ansText);
     }
     else {
         var optFeedback = $(element).attr('data-feedback')
@@ -396,10 +418,12 @@ function getResult(element) {
         if (currentQuestion.answer.length !== selectOption.length) {
             correctMsg.classList.add("not-quite");
             correctMsg.innerHTML = "Incorrect. Please select any " + currentQuestion.answer.length + " Option.";
+            ariaAnnounce("Incorrect. Please select any " + currentQuestion.answer.length + " Option.");
         }
         else {
             correctMsg.classList.add("not-quite");
             correctMsg.innerHTML = incorrectFBText;
+            ariaAnnounce(incorrectFBText);
         }
         updateAnswerIndicator("wrong");
         $('#mcq_button').html('Try Again');
@@ -414,7 +438,7 @@ function getResult(element) {
             }
         });
         currentQuestion.state = 'wrong';
-        ariaAnnounce('Sected answer' + $(element).text() + ' is incorrect.');
+        
     }
     currentQuestion.userAnswered = selectOption;
     bind_annotLinkEvents();
@@ -431,16 +455,22 @@ function answerIndicatot() {
         var footerLi = document.createElement("li");
         indicator.appendChild(footerLi);
         footerLi.classList.add("nav-item");
-        footerLi.setAttribute('role', 'option');
+        
         var footerAnchor = document.createElement("a");
         footerLi.appendChild(footerAnchor);
         footerAnchor.classList.add("nav-link");
         footerAnchor.classList.add("step");
         footerAnchor.setAttribute("data-id", 'q-' + (parseInt(i) + 1));
+        //footerLi.setAttribute('role', 'option');
+        //footerLi.setAttribute('aria-selected', 'false');
+        //APT: Added selected state to anchor element
+        footerAnchor.setAttribute('role', 'option');
+        footerAnchor.setAttribute('aria-selected', false);
         var footerSpan = document.createElement("span");
         footerAnchor.appendChild(footerSpan);
         if (parseInt(i) === 0) {
             footerAnchor.classList.add("active");
+            footerAnchor.setAttribute('aria-selected', true);
         }
         footerAnchor.setAttribute("title", 'page ' + (parseInt(i) + 1));
         footerAnchor.setAttribute('tabindex', '0');
@@ -460,8 +490,17 @@ function updateAnswerIndicator(markType) {
     bind_annotLinkEvents();
 }
 $('#mcq_button').on('mousedown click', function (e) {
+    if($(e.currentTarget).hasClass("disabled")){
+        return false;
+    }
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
         $(".ic-opt-fbk").remove();
+        $('.focus-input').each(function () {
+            if($(this).attr("aria-describedby") == "ariaIncorrect" 
+            || $(this).attr("aria-describedby") == "ariaCorrect"){
+                $(this).removeAttr("aria-describedby");
+            }
+        });
         let buttonText = $('#mcq_button').text().split(' ')[0].trim().toLocaleLowerCase();
         if (buttonText === 'check') {
             let answered = $('.Multiple-choice').find('.active');
@@ -472,9 +511,10 @@ $('#mcq_button').on('mousedown click', function (e) {
             $('#answer_label').hide();
             $('#Add_solution').hide();
             $('#need_help').show();
+            $('#questionNumber').focus();
         } else if (buttonText === 'try') {
             selectOption = [];
-            $('.focus-input').removeClass().addClass('focus-input');
+            $('.focus-input').removeClass().addClass('focus-input').attr("aria-selected",false);
             $('#answer_label').hide();
             $('#Add_solution').hide();
             $('.nav-link').each(function () {
@@ -483,12 +523,13 @@ $('#mcq_button').on('mousedown click', function (e) {
                     $(this).removeAttr('data-correct');
                 }
             });
-            $('#mcq_button').addClass('disabled');
+            $('#show_ans').attr('aria-expanded', false);
+            $('#mcq_button').addClass('disabled').attr("aria-disabled",true);
             $('#questionNumber').focus();
             $('#mcq_button').html('Check Answer');
             $('#mcq_button').attr('title', 'Check Answer');
             // $('#mcq_button').removeAttr('tabindex');
-            $('#mcq_button').attr('tabindex', '-1');
+            //$('#mcq_button').attr('tabindex', '-1');
             let currentQuestionIndex = parseInt($('.tab-pane').attr('id')) - 1;
             let question = quiz[currentQuestionIndex]
             question.userAnswered = [];
@@ -504,29 +545,31 @@ window.onload = function () {
     answerIndicatot();
     $('#Add_solution').hide();
     $('#Add_solution').children().html(quiz[0].ansText);
-    $('.arrow-left').addClass('disabled')
+    $('.arrow-left').addClass('disabled').attr("aria-disabled",true)
     bind_annotLinkEvents();
 };
 $('#show_ans').on('click keydown', (function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
+        debugger;
         let currentQuestion = parseInt($('.tab-pane').attr('id')) - 1;
         $('#Add_solution').children().html(quiz[currentQuestion].ansText);
         $('#Add_solution').show();
         $("#show_ans").attr('aria-expanded', true);
         $('#mcq_button').html('Try Again');
-        $('#mcq_button').removeClass('disabled');
+        $('#mcq_button').removeClass('disabled').removeAttr("aria-disabled");
         $('#mcq_button').attr('title', 'Try Again');
         // $('#mcq_button').removeAttr('tabindex');
         $('#mcq_button').attr('tabindex', '0');
-        $('.focus-input').removeClass('wrong');
+        $('.focus-input').removeClass('wrong').removeAttr("aria-describedby");
+        let correctAnswer = [];
         quiz[currentQuestion].answer.forEach(option => {
-            $("ul").find(`[data-id='${option}']`).removeClass().addClass("focus-input last-child");
-            // ariaAnnounce('Correct answer is' + $(this).text());
+            $("ul").find(`[data-id='${option}']`).removeClass().addClass("focus-input last-child").attr("aria-selected", "true").attr("aria-describedby", "ariaCorrect");
+            //ariaAnnounce('Correct answer is' + $(this).text());
+            correctAnswer.push($("ul").find(`[data-id='${option}']`).text());
         });
-        let correctAnswer = quiz[currentQuestion].answer.map(el => el = el + 1);
-        correctAnswer = correctAnswer.join(',');
+        correctAnswer = correctAnswer.join(', ');
         setTimeout(() => {
-            ariaAnnounce('Correct answer is ' + correctAnswer);
+            ariaAnnounce('Correct answer is ' + correctAnswer + ". " + quiz[currentQuestion].ansText);
         }, 200);
         $(".ic-opt-fbk").remove();
         $('#answer_label').hide();
@@ -541,13 +584,14 @@ $('.arrow-left').on('click keydown', function (e) {
             // autoDragPagination(quiz.length);
         } else {
             if (currentQuestion - 1 === 1) {
-                $('.arrow-left').addClass('disabled');
+                $('.arrow-left').addClass('disabled').attr("aria-disabled",true);
             } else {
-                $('.arrow-left').removeClass('disabled');
+                $('.arrow-left').removeClass('disabled').removeAttr("aria-disabled");
             }
-            $('.arrow-right').removeClass('disabled');
+            $('.arrow-right').removeClass('disabled').removeAttr("aria-disabled");
             getNewQuestion(currentQuestion - 1);
             autoDragPagination(currentQuestion - 1);
+            $('#questionNumber').focus();
         }
     }
 });
@@ -559,13 +603,14 @@ $('.arrow-right').on('click keydown', function (e) {
             // autoDragPagination(1);
         } else {
             if (currentQuestion + 1 === quiz.length) {
-                $('.arrow-right').addClass('disabled');
+                $('.arrow-right').addClass('disabled').attr("aria-disabled",true);
             } else {
-                $('.arrow-right').removeClass('disabled');
+                $('.arrow-right').removeClass('disabled').removeAttr("aria-disabled");
             }
-            $('.arrow-left').removeClass('disabled');
+            $('.arrow-left').removeClass('disabled').removeAttr("aria-disabled");
             getNewQuestion(currentQuestion + 1);
             autoDragPagination(currentQuestion + 1);
+            $('#questionNumber').focus();
         }
     }
 });
@@ -582,24 +627,27 @@ function ariaAnnounce(msg) {
 function bind_annotLinkEvents() {
     $('.tab-pane a[href]').on('click', function (e) {
         var annotId = $(this).attr("href");
-        if (!annotId.startsWith("#")) {
-            annotId = "#" + annotId;
-        }
-        if ($(annotId).length > 0) {
-            document.location.hash = annotId;
-        }
-        else {
-            try {
-                if (typeof parent.annotate_from_frame == "function") {
-                    parent.annotate_from_frame(annotId);
-                }
+        if(annotId!="#" && annotId!="" && annotId!= undefined){
+            if (!annotId.startsWith("#")) {
+                annotId = "#" + annotId;
             }
-            catch (err) {
-                //$(this).hide();
+            if ($(annotId).length > 0) {
+                document.location.hash = annotId;
+            }
+            else {
+                try {
+                    if (typeof parent.annotate_from_frame == "function") {
+                        parent.annotate_from_frame(annotId);
+                    }
+                }
+                catch (err) {
+                    //$(this).hide();
+                }
             }
         }
         //e.stopPropagation();
         e.preventDefault();
+    
     });
 }
 

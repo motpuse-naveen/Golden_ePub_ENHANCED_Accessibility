@@ -168,7 +168,12 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "flex";
     var element = document.getElementById(slideIndex.toString());
     element.classList.add("active");
-    captionText.innerHTML = $(dots[slideIndex - 1]).find(".hiddenCaption").html()//'<b>' + dots[slideIndex - 1].title.substr(0, 2) + '</b>' + dots[slideIndex - 1].title.substr(2);
+    if($(dots[slideIndex - 1]).find(".hiddenCaption") && $(dots[slideIndex - 1]).find(".hiddenCaption").length>0){
+        captionText.innerHTML = $(dots[slideIndex - 1]).find(".hiddenCaption").html()
+    }
+    else{
+        captionText.innerHTML = '<b>' + dots[slideIndex - 1].title.substr(0, 2) + '</b>' + dots[slideIndex - 1].title.substr(2);
+    }
     Utils.ariaAnnounce('Image ' + slideIndex + ' Selected')
     bind_annotLinkEvents();
 }
@@ -262,20 +267,22 @@ $(".column").focus((e) => {
 function bind_annotLinkEvents(){
     $('.caption-container a[href]').on('click', function (e) {
         var annotId = $(this).attr("href");
-        if(!annotId.startsWith("#")){
-            annotId = "#" + annotId;
-        }
-        if($(annotId).length>0){
-            document.location.hash = annotId;
-        }
-        else{
-            try{
-                if(typeof parent.annotate_from_frame == "function"){
-                    parent.annotate_from_frame(annotId);
-                }
+        if(annotId!="#" && annotId!="" && annotId!= undefined){
+            if(!annotId.startsWith("#")){
+                annotId = "#" + annotId;
             }
-            catch(err){
-                //$(this).hide();
+            if($(annotId).length>0){
+                document.location.hash = annotId;
+            }
+            else{
+                try{
+                    if(typeof parent.annotate_from_frame == "function"){
+                        parent.annotate_from_frame(annotId);
+                    }
+                }
+                catch(err){
+                    //$(this).hide();
+                }
             }
         }
         //e.stopPropagation();

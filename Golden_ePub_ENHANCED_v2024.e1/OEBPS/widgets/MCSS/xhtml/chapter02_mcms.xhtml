@@ -18,7 +18,7 @@
 <body>
 <div class="main-document-area mcq" role="main">
    <div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">MCQ</div>
-   <div class="mcq_inner textfl" role="application">
+   <div class="mcq_inner textfl">
       <div class="tab-content">
          <div class="tab-pane-main">
                <div class="tab-pane active" id="q-1">
@@ -37,10 +37,10 @@
                                                       associated
                                                       with
                                                       ethnicity.</i></p>
-                           <p id="need_help">Need help with this one? <span class="text-link" tabindex="0" id="show_ans" aria-label="Show Answer" role="button" aria-expanded="false">Show
-                                                      answer</span>
+                           <p id="need_help">Need help with this one? <a href="#" class="text-link" tabindex="0" id="show_ans" aria-label="Show Answer" role="button" aria-expanded="false">Show
+                                                      answer</a>
                                                 </p>
-                                                <button class="check disabled" id="mcq_button" aria-disabled="true" data-state="notAnswered" tabindex="-1">Check
+                                                <button class="check disabled" id="mcq_button" aria-disabled="true" data-state="notAnswered" tabindex="0">Check
                                                    Answer</button>
                      </div>
                </div>
@@ -48,21 +48,23 @@
          <footer role="none">
             <div class="footer" role="navigation" aria-label="Pagination">
                   <div class="arrow-mask left">
-                     <div class="arrow-left outer" role="button" aria-disabled="true" aria-label="previous" tabindex="0"></div>
+                     <button class="arrow-left outer" aria-disabled="true" aria-label="previous" tabindex="0"></button>
                   </div>   
                   <div class="mcq_toolbar_main">
                         <div class="steps d-flex justify-content-center">
-                              <ul class="nav nav-tabs md-tabs nav-justified" aria-label="Navigation" role="listbox"></ul>
+                              <ol class="nav nav-tabs md-tabs nav-justified" aria-label="Pagination Buttons"></ol>
                         </div>
                   </div>   
                   <div class="arrow-mask right">
-                     <div class="arrow-right outer" role="button" aria-label="next" tabindex="0"></div>
+                     <button class="arrow-right outer" aria-label="next" tabindex="0"></button>
                   </div>
             </div>
          </footer>
       </div>
    </div>
    <div id="ariaMessages" class="visually-hidden" aria-live="assertive"></div>
+   <div id="ariaCorrect" class="visually-hidden">Correct</div>
+   <div id="ariaIncorrect" class="visually-hidden">Incorrect</div>
 </div>
    
 <script src="../script/main.js"></script>

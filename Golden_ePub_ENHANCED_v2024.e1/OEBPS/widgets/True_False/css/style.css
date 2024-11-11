@@ -59,7 +59,13 @@ body {
     /*font-size: 14px;*/
     color: var(--blue);
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+}
+.mcq #questionNumber:focus-visible {
+    outline: none;
+    -webkit-box-shadow: 0px 0px 0px 2px var(--focus-visible);
+    -moz-box-shadow: 0px 0px 0px 2px var(--focus-visible);
+    box-shadow: 0px 0px 0px 2px var(--focus-visible);
 }
 #questionName {
     /*font-size: 14px;*/
@@ -133,6 +139,11 @@ body {
     color: var(--red);
     position: relative;
 }
+
+.focus-input:focus-visible{
+    outline: 2px solid var(--focus-visible) !important;
+}
+
 .focus-input.wrong i,.focus-input.wrong b, .focus-input.wrong span, .focus-input.wrong div {
     color: var(--red);
 }
@@ -192,17 +203,27 @@ i{
     float: right;
     margin-top: 20px;
 }
+.check:focus-visible, .check-try-again:focus-visible {
+    outline: 2px solid var(--focus-visible);
+}
+
 .mcq button#mcq_button {
     border: 2px solid transparent;
 	/*position: absolute;
     bottom: 0px;*/
     right: 20px;
 }
+.mcq button#mcq_button:hover{
+    background-color: var(--white);
+    border-color: var(--focus-border);
+    color: var(--primary-text);
+}
 .check.disabled, .check-try-again.disabled {
     pointer-events: none;
-    background-color: #EDEDED;
-    color: #BFBFBF;
+    background-color: #B9B9B9;
+    color: #FFFFFF;
 }
+
 .disabled {
     pointer-events: none;
 }
@@ -248,6 +269,17 @@ i{
 .text-link {
     color: var(--blue);
     cursor: pointer;
+    padding: 2px;
+    text-underline-offset: 4px;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--focus-visible);
+}
+
+.text-link:focus-visible{
+    outline: 2px solid var(--focus-visible) !important;
 }
 
 .mcq footer {
@@ -308,15 +340,15 @@ i{
     background-repeat: no-repeat;
     background-position: 9px 3px;
 }
-.arrow-left.outer:focus, .arrow-left.outer:focus-visible {
-    background-image: url(../images/left-arrow-default.svg);
-    border: 1px solid var(--orange);
-    outline: 1px solid var(--orange);
+.arrow-left.outer:focus-visible {
+    /*background-image: url(../images/left-arrow-default.svg);*/
+    border: 1px solid var(--focus-visible);
+    outline: 2px solid var(--focus-visible);
 }
-.arrow-right.outer:focus, .arrow-right.outer:focus-visible {
-    background-image: url(../images/right-arrow-default.svg);
-    border: 1px solid var(--orange);
-    outline: 1px solid var(--orange);
+.arrow-right.outer:focus-visible {
+    /*background-image: url(../images/right-arrow-default.svg);*/
+    border: 1px solid var(--focus-visible);
+    outline: 2px solid var(--focus-visible);
 }
 .arrow-mask {
     /*position: absolute;
@@ -382,22 +414,34 @@ i{
     line-height: 26px;
     border: 1px solid transparent;
 }
-.step.active::before, .step.active:hover::before {
+.step.active::before, 
+.step.active:hover::before {
     content: " ";
     position: absolute;
-    top: 24px;
-    left: 5px;
+    top: 26px;
+    left: 4px;
     background-color: var(--orange);
     height: 2px;
     width: 65%;
 }
-.steps .step:focus, .steps .step:focus-visible {
-    border: 1px solid var(--orange);
-    outline: 1px solid var(--orange);
+
+/*
+a.step:hover, 
+a.step.active, 
+a.step.active:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--focus-visible);
+    text-underline-offset: 4px;
 }
-.steps li.nav-item:focus, .steps li.nav-item:focus-visible {
+*/
+
+.steps .step:focus-visible {
     border: 1px solid var(--orange);
-    outline: 1px solid var(--orange);
+    outline: 1px solid var(--focus-visible);
+}
+.steps li.nav-item:focus-visible {
+    border: 1px solid var(--orange);
+    outline: 1px solid var(--focus-visible);
 }
 .step[data-correct="true"] {
     background-image: url(../images/check_normal.png);
@@ -456,10 +500,12 @@ i{
     clip-path: inset(50%);
     white-space: nowrap;
 }
+/*
 .footer *:focus {
     border: 1px solid var(--orange) !important;
     outline: none !important;
 }
+*/
 .mar-left{
     margin-left: 1.5em;
 }

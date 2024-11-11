@@ -26,7 +26,7 @@ a:active {
 	align-items: center;
 }
 .hotspot-slider-area *:focus-visible {
-	outline: none !important;
+	/*outline: none !important;*/
 }
 
 .inner-image-area img {
@@ -350,14 +350,17 @@ span.hotspot2 {
 	left: 10px;
 	top: 5px;
 	color: transparent;
-	height: 32px;
+	height: 25px;
 	width: 128px;
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	background-size: 128px;
 	z-index: 9;
+	background-color: #027DB6;
 }
-
+.poptip_btn:focus-visible {
+	outline: 2px solid var(--focus-visible);
+}
 .poptip_btn:hover {
 	background-position: 0 -38px;
 }
@@ -416,6 +419,12 @@ span.hotspot2 {
 	box-sizing: border-box;
 	cursor: pointer;
 	box-shadow: 0px 1px 4px rgb(0 0 0 / 35%);
+}
+.tooltip-up:focus-visible,
+.tooltip-down:focus-visible,
+.tooltip-left:focus-visible,
+.tooltip-right:focus-visible{
+	outline: 2px solid var(--focus-visible);
 }
 
 .tooltip-up:after,

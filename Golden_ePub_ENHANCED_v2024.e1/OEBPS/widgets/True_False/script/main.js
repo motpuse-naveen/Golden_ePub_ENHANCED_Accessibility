@@ -11,6 +11,8 @@ function getQuestionByEvent(e) {
         id = $(e.target).parent().attr('data-id');
     } else if ($(e.target).is('a')) {
         id = $(e.target).attr('data-id');
+    } else if ($(e.target).find('a').length) {
+        id = $(e.target).find('a').attr('data-id');
     }
     if (id) {
         getNewQuestion(parseInt(id.split('-')[1]));
@@ -20,29 +22,31 @@ function getQuestionByEvent(e) {
         } else {
             $(e.target).addClass("active");
         }
-
+        if (e.type === "click" && $(e.target).find('a').length) {
+            $(e.target).find('a').addClass("active");
+        }
         $('#questionNumber').focus();
     }
     if (parseInt(id.split('-')[1]) === quiz.length) {
-        $('.arrow-right').addClass('disabled');
-        $('.arrow-left').removeClass('disabled');
+        $('.arrow-right').addClass('disabled').attr("aria-disabled",true);
+        $('.arrow-left').removeClass('disabled').removeAttr('aria-disabled');
     } else if (parseInt(id.split('-')[1]) === 1) {
-        $('.arrow-left').addClass('disabled');
-        $('.arrow-right').removeClass('disabled');
+        $('.arrow-left').addClass('disabled').attr("aria-disabled",true);
+        $('.arrow-right').removeClass('disabled').removeAttr('aria-disabled');
     } else {
-        $('.arrow-right').removeClass('disabled');
-        $('.arrow-left').removeClass('disabled');
+        $('.arrow-right').removeClass('disabled').removeAttr('aria-disabled');
+        $('.arrow-left').removeClass('disabled').removeAttr('aria-disabled');
     }
 }
 $(".steps").on('click keydown', function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
         getQuestionByEvent(e);
-        $ul = $('.steps ul');
+        $ul = $('.steps ol');
         $ulWrapper = $ul.parent();
         stepWidth = 38;
         ulWrapperWidth = $ulWrapper.width();
         wrapperCapacity = ulWrapperWidth / stepWidth;
-        totalItemsWidth = $('.steps ul li').length * stepWidth;
+        totalItemsWidth = $('.steps ol li').length * stepWidth;
         var stepAtCenter = -1;
         var $selectedStep = $(e.target);
         var selectedStep;
@@ -56,12 +60,12 @@ $(".steps").on('click keydown', function (e) {
     }
 });
 function autoDragPagination(selectedStep) {
-    $ul = $('.steps ul');
+    $ul = $('.steps ol');
     $ulWrapper = $ul.parent();
     stepWidth = 38;
     ulWrapperWidth = $ulWrapper.width();
     wrapperCapacity = ulWrapperWidth / stepWidth;
-    totalItemsWidth = $('.steps ul li').length * stepWidth;
+    totalItemsWidth = $('.steps ol li').length * stepWidth;
     var stepAtCenter = -1;
 
     var stepCountAtCenter = Math.floor(wrapperCapacity / 2);
@@ -84,7 +88,7 @@ function autoDragPagination(selectedStep) {
         // // (totalItemsWidth - ulWrapperWidth)
         // for(let i = 0; i&lt;=hiddenUnderLeft;i++) {
         //    // console.log()
-        //    $($('.steps ul li')[i]).find('a').removeAttr('tabindex');
+        //    $($('.steps ol li')[i]).find('a').removeAttr('tabindex');
         // }
         $ul.css('left', newLeft);
     } else {
@@ -94,10 +98,10 @@ function autoDragPagination(selectedStep) {
         }
         $ul.css('left', newLeft);
     }
-    // $('.steps ul li a').removeAttr('tabindex');
+    // $('.steps ol li a').removeAttr('tabindex');
     // var hiddenUnderLeft = (Math.abs(newLeft)/stepWidth);
     // for (let i = hiddenUnderLeft+1; i&lt; hiddenUnderLeft + Math.floor(wrapperCapacity); i++) {
-    //    $($('.steps ul li')[i]).find('a').attr('tabindex', 0);
+    //    $($('.steps ol li')[i]).find('a').attr('tabindex', 0);
     // }
 }
 var QuestionNumber = document.querySelector("#questionNumber");
@@ -128,28 +132,28 @@ function getNewQuestion(question) {
     var questionIndex = quiz[question - 1];
     currentQuestion = questionIndex;
     QuestionName.innerHTML = currentQuestion.q;
-    QuestionName.setAttribute('tabindex', '0');
+    //QuestionName.setAttribute('tabindex', '0');
     optionsIndex++
     if (currentQuestion.q2) {
         $('#subheading2').html(currentQuestion.q2);
         $('#subheading2').attr('tabindex', '0');
-        $('#subheading2').show();
+        $('#subheading2').show().removeAttr("aria-hidden");
         optionsIndex++
     } else {
         $('#subheading2').removeAttr('aria-label');
         $('#subheading2').removeAttr('tabindex');
-        $('#subheading2').hide();
+        $('#subheading2').hide().attr("aria-hidden", true);
         optionsIndex++
     }
     if (currentQuestion.q3.length) {
         $('#subheading3').html(currentQuestion.q3[0]);
         $('#subheading3').attr('tabindex', '0');
-        $('#subheading3').show();
+        $('#subheading3').show().removeAttr("aria-hidden");
         optionsIndex++
     } else {
         $('#subheading3').removeAttr('aria-label');
         $('#subheading3').removeAttr('tabindex');
-        $('#subheading3').hide();
+        $('#subheading3').hide().attr("aria-hidden", true);
         optionsIndex++
     }
     if(currentQuestion.optionStyleType!=undefined && currentQuestion.optionStyleType!=null && currentQuestion.optionStyleType!=""){
@@ -174,6 +178,7 @@ function getNewQuestion(question) {
         option.setAttribute('data-id', j);
         option.setAttribute('tabindex', '0');
         option.setAttribute('role', 'option');
+        option.setAttribute('aria-selected', 'false');
         optionsIndex++;
         option.className = "focus-input";
         optionContainer.appendChild(option);
@@ -186,11 +191,11 @@ function getNewQuestion(question) {
     if (currentQuestion.state === 'wrong') {
         $('.focus-input').each(function () {
             if ($(this).attr('data-id') == currentQuestion.userAnswered) {
-                $(this).addClass('wrong');
+                $(this).addClass('wrong').attr("aria-describedby", "ariaIncorrect");
             }
         });
         $('#mcq_button').html('Try Again');
-        $('#mcq_button').removeClass('disabled');
+        $('#mcq_button').removeClass('disabled').removeAttr('aria-disabled');
         $('#mcq_button').attr('title', 'Try Again');
         $('#mcq_button').attr('tabindex', '0');
         $('#answer_label').show();
@@ -203,7 +208,7 @@ function getNewQuestion(question) {
         $('.focus-input').each(function () {
             $(this).addClass('already-answered');
             if ($(this).attr('data-id') == currentQuestion.userAnswered) {
-                $(this).addClass('last-child');
+                $(this).addClass('last-child').attr("aria-describedby", "ariaCorrect");
             }
         });
         if (question == quiz.length) {
@@ -213,7 +218,7 @@ function getNewQuestion(question) {
             $('#mcq_button').html('Next Question');
             $('#mcq_button').attr('title', 'Next Question');
         }
-        $('#mcq_button').removeClass('disabled');
+        $('#mcq_button').removeClass('disabled').removeAttr('aria-disabled');
         $('#mcq_button').attr('tabindex', '0');
         $('#answer_label').show();
         $('#Add_solution').show();
@@ -222,10 +227,16 @@ function getNewQuestion(question) {
         $('#answer_label').removeClass().addClass('correct');
     } else {
         $('.focus-input').removeClass().addClass('focus-input');
+        $('.focus-input').each(function () {
+            if($(this).attr("aria-describedby") == "ariaIncorrect" 
+            || $(this).attr("aria-describedby") == "ariaCorrect"){
+                $(this).removeAttr("aria-describedby");
+            }
+        });
         $('#mcq_button').html('Check Answer');
-        $('#mcq_button').addClass('disabled');
+        $('#mcq_button').addClass('disabled').attr("aria-disabled",true);
         // $('#questionNumber').focus();
-        $('#mcq_button').attr('tabindex', '-1');
+        //$('#mcq_button').attr('tabindex', '-1');
         $('#mcq_button').attr('title', 'Check Answer');
         $('#mcq_button').removeAttr('tabindex');
         $('#answer_label').hide();
@@ -244,17 +255,28 @@ function getNewQuestion(question) {
 }
 function addActiveClass(el) {
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
-        $(el.target).prevAll().removeClass().addClass('focus-input');
-        $(el.target).nextAll().removeClass().addClass('focus-input');
-        $(el.target).removeClass().addClass('focus-input active');
-        $('#mcq_button').html('Check Answer');
-        $('#Add_solution').hide();
-        $('#answer_label').hide();
-        $('.tab-pane ').attr('data-state', 'answered');
-        $('#mcq_button').removeClass('disabled');
-        $('#mcq_button').attr('title', 'Check Answer');
-        $('#mcq_button').attr('tabindex', '0');
-        ariaAnnounce('Selected option is ' + $(el.target).text());
+        if(!$(el.target).hasClass('already-answered')){
+            $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-selected", false);
+            $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-selected", false);
+            $('.focus-input').each(function () {
+                if($(this).attr("aria-describedby") == "ariaIncorrect" 
+                || $(this).attr("aria-describedby") == "ariaCorrect"){
+                    $(this).removeAttr("aria-describedby");
+                }
+            });
+            $(el.target).removeClass().addClass('focus-input active').attr("aria-selected", true);
+            $('#mcq_button').html('Check Answer');
+            $('#Add_solution').hide();
+            $('#answer_label').hide();
+            $('.tab-pane ').attr('data-state', 'answered');
+            $('#mcq_button').removeClass('disabled').removeAttr('aria-disabled');
+            $('#mcq_button').attr('title', 'Check Answer');
+            $('#mcq_button').attr('tabindex', '0');
+            ariaAnnounce('Selected option is ' + $(el.target).text());
+        }
+        el.preventDefault();
+        el.stopPropagation();
+        return false;
     }
 }
 // check the current option is true or not .
@@ -262,10 +284,10 @@ function getResult(element) {
     var id = parseInt($(element).attr('data-id'));
     let dataId = 'q-' + parseInt($('.tab-pane').attr('id'));
     if (id === currentQuestion.answer) {
-        $(element).removeClass().addClass("focus-input last-child");
+        $(element).removeClass().addClass("focus-input last-child").attr("aria-describedby", "ariaCorrect");
         correctMsg.innerHTML = correctFBText;
         $(element).parent().attr("data-correct", "true");
-        $(element).attr("role", "img");
+        //$(element).attr("role", "img");
         updateAnswerIndicator("correct");
         if (parseInt($('.tab-pane').attr('id')) == quiz.length) {
             $('#mcq_button').html('Done');
@@ -286,10 +308,10 @@ function getResult(element) {
                 $(this).attr('data-correct', true);
             }
         });
-        ariaAnnounce('Sected answer' + $(element).text() + ' is correct.');
+        ariaAnnounce('Sected option ' + $(element).text() + ' is correct. ' + currentQuestion.ansText);
     }
     else {
-        $(element).removeClass().addClass("focus-input wrong");
+        $(element).removeClass().addClass("focus-input wrong").attr("aria-describedby", "ariaIncorrect");
         correctMsg.classList.add("not-quite");
         correctMsg.innerHTML = incorrectFBText;
         updateAnswerIndicator("wrong");
@@ -305,7 +327,8 @@ function getResult(element) {
             }
         });
         currentQuestion.state = 'wrong';
-        ariaAnnounce('Sected answer' + $(element).text() + ' is incorrect.');
+        //ariaAnnounce('Sected option ' + $(element).text() + ' is incorrect.');
+        ariaAnnounce(incorrectFBText);
     }
     currentQuestion.userAnswered = id;
 }
@@ -332,15 +355,17 @@ function answerIndicatot() {
         footerAnchor.classList.add("nav-link");
         footerAnchor.classList.add("step");
         footerAnchor.setAttribute("data-id", 'q-' + (parseInt(i) + 1));
+        //footerLi.setAttribute('role', 'option');
+        //footerLi.setAttribute('aria-selected', 'false');
+        //APT: Added selected state to anchor element
         footerAnchor.setAttribute('role', 'option');
+        footerAnchor.setAttribute('aria-selected', false);
         var footerSpan = document.createElement("span");
         footerAnchor.appendChild(footerSpan);
         if (parseInt(i) === 0) {
-            // footerSpan.classList.add("step");
             footerAnchor.classList.add("active");
-        } else {
-            // footerSpan.classList.add("step");
-        }
+            footerAnchor.setAttribute('aria-selected', true);
+        } 
         // optionIndi.setAttribute("data-correct", "true");
         footerAnchor.setAttribute("title", 'page ' + (parseInt(i) + 1));
         footerAnchor.setAttribute('tabindex', '0');
@@ -360,8 +385,17 @@ function updateAnswerIndicator(markType) {
     }
 }
 $('#mcq_button').on('mousedown click', function (e) {
+    if($(e.currentTarget).hasClass("disabled")){
+        return false;
+    }
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
         let buttonText = $('#mcq_button').text().split(' ')[0].trim().toLocaleLowerCase();
+        $('.focus-input').each(function () {
+            if($(this).attr("aria-describedby") == "ariaIncorrect" 
+            || $(this).attr("aria-describedby") == "ariaCorrect"){
+                $(this).removeAttr("aria-describedby");
+            }
+        });
         if (buttonText === 'check') {
             let answered = $('.Multiple-choice').find('.active');
             getResult(answered);
@@ -370,8 +404,9 @@ $('#mcq_button').on('mousedown click', function (e) {
             $('#answer_label').hide();
             $('#Add_solution').hide();
             $('#need_help').show();
+            $('#questionNumber').focus();
         } else if (buttonText === 'try') {
-            $('.focus-input').removeClass().addClass('focus-input');
+            $('.focus-input').removeClass().addClass('focus-input').attr("aria-selected",false);
             $('#answer_label').hide();
             $('#Add_solution').hide();
             $('.nav-link').each(function () {
@@ -380,12 +415,13 @@ $('#mcq_button').on('mousedown click', function (e) {
                     $(this).removeAttr('data-correct');
                 }
             });
-            $('#mcq_button').addClass('disabled');
+            $('#show_ans').attr('aria-expanded', false);
+            $('#mcq_button').addClass('disabled').attr("aria-disabled",true);
             $('#questionNumber').focus();
             $('#mcq_button').html('Check Answer');
             $('#mcq_button').attr('title', 'Check Answer');
             // $('#mcq_button').removeAttr('tabindex');
-            $('#mcq_button').attr('tabindex', '-1');
+            //$('#mcq_button').attr('tabindex', '-1');
             let currentQuestionIndex = parseInt($('.tab-pane').attr('id')) - 1;
             let question = quiz[currentQuestionIndex]
             question.userAnswered = '';
@@ -399,24 +435,32 @@ window.onload = function () {
     answerIndicatot();
     $('#Add_solution').hide();
     $('#Add_solution').children().html(quiz[0].ansText);
-    $('.arrow-left').addClass('disabled')
+    $('.arrow-left').addClass('disabled').attr("aria-disabled",true)
 };
 $('#show_ans').on('click keydown', (function (e) {
     if ((e.type === 'keydown' && e.keyCode == 13) || e.type === 'click') {
         $('#Add_solution').show();
         let currentQuestion = parseInt($('.tab-pane').attr('id')) - 1;
         $('#mcq_button').html('Try Again');
-        $('#mcq_button').removeClass('disabled');
+        $('#mcq_button').removeClass('disabled').removeAttr('aria-disabled');
         $('#mcq_button').attr('title', 'Try Again');
         // $('#mcq_button').removeAttr('tabindex');
         $('#mcq_button').attr('tabindex', '0');
+        let correctAnswer = [];
+        $('.focus-input').removeClass('wrong').removeAttr("aria-describedby");
         $('.focus-input').each(function () {
+            debugger;
             if ($(this).attr('data-id') == quiz[currentQuestion].answer) {
-                $(this).addClass('last-child');
-                ariaAnnounce('Correct answer is' + $(this).text());
+                $(this).addClass('last-child').attr("aria-selected", "true").attr("aria-describedby", "ariaCorrect");
+                correctAnswer.push($(this).text());
+                //ariaAnnounce('Correct answer is ' + $(this).text());
             }
         })
-        $('.focus-input').removeClass('wrong');
+        correctAnswer = correctAnswer.join(',');
+        setTimeout(() => {
+            ariaAnnounce('Correct answer is ' + correctAnswer + ". " + quiz[currentQuestion].ansText);
+        }, 200);
+        
         $('#answer_label').hide();
     }
 }));
@@ -428,13 +472,14 @@ $('.arrow-left').on('click keydown', function (e) {
             // autoDragPagination(quiz.length);
         } else {
             if (currentQuestion - 1 === 1) {
-                $('.arrow-left').addClass('disabled');
+                $('.arrow-left').addClass('disabled').attr("aria-disabled",true);
             } else {
-                $('.arrow-left').removeClass('disabled');
+                $('.arrow-left').removeClass('disabled').removeAttr('aria-disabled');
             }
-            $('.arrow-right').removeClass('disabled');
+            $('.arrow-right').removeClass('disabled').removeAttr('aria-disabled');
             getNewQuestion(currentQuestion - 1);
             autoDragPagination(currentQuestion - 1);
+            $('#questionNumber').focus();
         }
     }
 });
@@ -446,13 +491,14 @@ $('.arrow-right').on('click keydown', function (e) {
             // autoDragPagination(1);
         } else {
             if (currentQuestion + 1 === quiz.length) {
-                $('.arrow-right').addClass('disabled');
+                $('.arrow-right').addClass('disabled').attr("aria-disabled",true);
             } else {
-                $('.arrow-right').removeClass('disabled');
+                $('.arrow-right').removeClass('disabled').removeAttr('aria-disabled');
             }
-            $('.arrow-left').removeClass('disabled');
+            $('.arrow-left').removeClass('disabled').removeAttr('aria-disabled');
             getNewQuestion(currentQuestion + 1);
             autoDragPagination(currentQuestion + 1);
+            $('#questionNumber').focus();
         }
     }
 });

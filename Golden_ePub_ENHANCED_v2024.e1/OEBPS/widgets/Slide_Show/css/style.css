@@ -122,7 +122,7 @@
 
 .main-slider-area .thumbnail_main .column:focus-visible,
 .main-slider-area .thumbnail_main .column:focus-visible {
-	border: 3px solid #EB6500;
+	border: 3px solid var(--focus-visible);
 	outline: none;
 }
 
@@ -211,8 +211,7 @@
 
 .prevContainer a:focus-visible,
 .nextContainer a:focus-visible {
-	border: 3px solid #EB6500 !important;
-	outline: 0;
+	outline: 2px solid var(--focus-visible);
 }
 
 /* Container for image text */
@@ -302,7 +301,7 @@
 }
 
 .thumbnail_main .column:focus-visible {
-	border: 3px solid #EB6500;
+	border: 3px solid var(--focus-visible);
 }
 
 .thumbnail_main .column.selected {

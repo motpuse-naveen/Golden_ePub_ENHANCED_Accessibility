@@ -74,7 +74,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_02.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Embryoblast`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_02.png" alt="Diagram of an embryo with five labeled parts: A, B, C, D, and E. Each label indicates a distinct structure involved in early development." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Embryoblast`,
         q2: ``,
         q3: [],
         option: [
@@ -98,7 +98,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_02.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Gives rise to part of the placenta`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_02.png" alt="Diagram of an embryo with five labeled parts: A, B, C, D, and E. Each label indicates a distinct structure involved in early development."/><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Gives rise to part of the placenta`,
         q2: ``,
         q3: [],
         option: [
@@ -122,7 +122,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_02.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Gives rise to the hypoblast`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_02.png" alt="Diagram of an embryo with five labeled parts: A, B, C, D, and E. Each label indicates a distinct structure involved in early development."/><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Gives rise to the hypoblast`,
         q2: ``,
         q3: [],
         option: [
@@ -146,7 +146,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_02.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Degenerates and disappears`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_02.png" alt="Diagram of an embryo with five labeled parts: A, B, C, D, and E. Each label indicates a distinct structure involved in early development." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Degenerates and disappears`,
         q2: ``,
         q3: [],
         option: [
@@ -170,7 +170,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_02.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Blastocystic cavity`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_02.png" alt="Diagram of an embryo with five labeled parts: A, B, C, D, and E. Each label indicates a distinct structure involved in early development." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Blastocystic cavity`,
         q2: ``,
         q3: [],
         option: [
@@ -194,7 +194,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Once filled the cavity of the ovarian follicle`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" alt="Illustration of an ovarian follicle at an early stage, showing five labeled parts: A, B, C, D, and E. Each label identifies a different part within or surrounding the follicle structure."/><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Once filled the cavity of the ovarian follicle`,
         q2: ``,
         q3: [],
         option: [
@@ -217,7 +217,7 @@ var quiz = [
     },
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Develops under luteinizing hormone influence`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" alt="Illustration of an ovarian follicle at an early stage, showing five labeled parts: A, B, C, D, and E. Each label identifies a different part within or surrounding the follicle structure." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Develops under luteinizing hormone influence`,
         q2: ``,
         q3: [],
         option: [
@@ -241,7 +241,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Produces progesterone`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" alt="Illustration of an ovarian follicle at an early stage, showing five labeled parts: A, B, C, D, and E. Each label identifies a different part within or surrounding the follicle structure." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Produces progesterone`,
         q2: ``,
         q3: [],
         option: [
@@ -265,7 +265,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Expelled with the follicular fluid`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" alt="Illustration of an ovarian follicle at an early stage, showing five labeled parts: A, B, C, D, and E. Each label identifies a different part within or surrounding the follicle structure." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Expelled with the follicular fluid`,
         q2: ``,
         q3: [],
         option: [
@@ -287,7 +287,7 @@ var quiz = [
         userAnswered: ``
     },
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Fimbriae`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" alt="Illustration of an ovarian follicle at an early stage, showing five labeled parts: A, B, C, D, and E. Each label identifies a different part within or surrounding the follicle structure." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Fimbriae`,
         q2: ``,
         q3: [],
         option: [
@@ -311,7 +311,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Derived from a primary oocyte`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_03.png" alt="Illustration of an ovarian follicle at an early stage, showing five labeled parts: A, B, C, D, and E. Each label identifies a different part within or surrounding the follicle structure." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Derived from a primary oocyte`,
         q2: ``,
         q3: [],
         option: [
@@ -334,7 +334,7 @@ var quiz = [
     },
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_04.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Cytotrophoblast`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_04.png" alt="Diagram of an embryo in an early developmental stage with five labeled parts: A, B, C, D, and E. Each part marks a unique structure involved in embryonic development." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Cytotrophoblast`,
         q2: ``,
         q3: [],
         option: [
@@ -358,7 +358,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_04.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Embryoblast`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_04.png" alt="Diagram of an embryo in an early developmental stage with five labeled parts: A, B, C, D, and E. Each part marks a unique structure involved in embryonic development." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Embryoblast`,
         q2: ``,
         q3: [],
         option: [
@@ -382,7 +382,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_04.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Endometrium`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_04.png" alt="Diagram of an embryo in an early developmental stage with five labeled parts: A, B, C, D, and E. Each part marks a unique structure involved in embryonic development." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Endometrium`,
         q2: ``,
         q3: [],
         option: [
@@ -406,7 +406,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_04.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Hypoblast`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_04.png" alt="Diagram of an embryo in an early developmental stage with five labeled parts: A, B, C, D, and E. Each part marks a unique structure involved in embryonic development." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Hypoblast`,
         q2: ``,
         q3: [],
         option: [
@@ -430,7 +430,7 @@ var quiz = [
 
 
     {
-        q: `<img style="width:30%;" src="../images/ass/ch01_un_04.png" /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Syncytiotrophoblast`,
+        q: `<img style="width:30%;" src="../images/ass/ch01_un_04.png" alt="Diagram of an embryo in an early developmental stage with five labeled parts: A, B, C, D, and E. Each part marks a unique structure involved in embryonic development." /><br />For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Syncytiotrophoblast`,
         q2: ``,
         q3: [],
         option: [
