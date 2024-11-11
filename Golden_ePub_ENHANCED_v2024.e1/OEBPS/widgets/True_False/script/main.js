@@ -17,13 +17,21 @@ function getQuestionByEvent(e) {
     if (id) {
         getNewQuestion(parseInt(id.split('-')[1]));
         $('.nav-link').removeClass('active');
+        $('.nav-link').removeAttr('aria-current');
+            $('.nav-link').attr('aria-selected', false);
         if ($(e.target).is('span')) {
             $(e.target).parent().addClass("active");
+            //$(e.target).parent().attr('aria-selected', true);
+            $(e.target).parent().attr('aria-current', "page");
         } else {
             $(e.target).addClass("active");
+            //$(e.target).attr('aria-selected', true);
+            $(e.target).attr('aria-current', "page");
         }
         if (e.type === "click" && $(e.target).find('a').length) {
             $(e.target).find('a').addClass("active");
+            //$(e.target).find('a').attr('aria-selected', true);
+            $(e.target).find('a').attr('aria-current', "page");
         }
         $('#questionNumber').focus();
     }
@@ -360,13 +368,15 @@ function answerIndicatot() {
         //footerLi.setAttribute('role', 'option');
         //footerLi.setAttribute('aria-selected', 'false');
         //APT: Added selected state to anchor element
-        footerAnchor.setAttribute('role', 'option');
+        //footerAnchor.setAttribute('role', 'option');
         footerAnchor.setAttribute('aria-selected', false);
+        footerAnchor.removeAttribute("aria-current");
         var footerSpan = document.createElement("span");
         footerAnchor.appendChild(footerSpan);
         if (parseInt(i) === 0) {
             footerAnchor.classList.add("active");
             footerAnchor.setAttribute('aria-selected', true);
+            footerAnchor.setAttribute('aria-current', "page");
         } 
         // optionIndi.setAttribute("data-correct", "true");
         footerAnchor.setAttribute("title", 'page ' + (parseInt(i) + 1));
