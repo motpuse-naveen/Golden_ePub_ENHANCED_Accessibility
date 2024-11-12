@@ -6,6 +6,13 @@ var optionsIndex = 1;
 const tabs = document.querySelector(".tab-content");
 const tabButton = document.querySelectorAll(".step");
 const contents = document.querySelectorAll(".tab-pane");
+const styleTypes = {
+    'st-upper-alpha': ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+    'st-lower-alpha': ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+    'st-upper-roman': ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX"],
+    'st-lower-roman': ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "xi", "xii", "xiii", "xiv", "xv", "xvi", "xvii", "xviii", "xix", "xx"],
+    'st-decimal':["1" ,"2","3","4","5","6","7","8","9","10","11","12","13","14","15", "16","17","18","19","20"]
+}
 function getQuestionByEvent(e) {
     if($(e.target.closest(".nav-item").length>1) || $(e.target.closest(".nav-link").length>1)){
         var id;
@@ -20,19 +27,19 @@ function getQuestionByEvent(e) {
             getNewQuestion(parseInt(id.split('-')[1]));
             $('.nav-link').removeClass('active');
             $('.nav-link').removeAttr('aria-current');
-            $('.nav-link').attr('aria-selected', false);
+            //$('.nav-link').attr('aria-selected', false);
             if ($(e.target).is('span')) {
                 $(e.target).parent().addClass("active");
-                $(e.target).parent().attr('aria-selected', true);
+                //$(e.target).parent().attr('aria-selected', true);
                 $(e.target).parent().attr('aria-current', "page");
             } else {
                 $(e.target).addClass("active");
-                $(e.target).attr('aria-selected', true);
+                //$(e.target).attr('aria-selected', true);
                 $(e.target).attr('aria-current', "page");
             }
             if (e.type === "click" && $(e.target).find('a').length) {
                 $(e.target).find('a').addClass("active");
-                $(e.target).find('a').attr('aria-selected', true);
+                //$(e.target).find('a').attr('aria-selected', true);
                 $(e.target).find('a').attr('aria-current', "page");
             }
             $('#questionNumber').focus();
@@ -173,9 +180,11 @@ function getNewQuestion(question) {
         $('#subheading3').hide().attr("aria-hidden", true);
         optionsIndex++
     }
+    var optionStyleType = [];
     if (currentQuestion.optionStyleType != undefined && currentQuestion.optionStyleType != null && currentQuestion.optionStyleType != "" && currentQuestion.optionStyleType != "none") {
         optionContainer.setAttribute("styletype", currentQuestion.optionStyleType);
         $(".answer-controls").addClass("mar-left")
+        optionStyleType = styleTypes[currentQuestion.optionStyleType]
     }
     else {
         optionContainer.removeAttribute("styletype");
@@ -191,12 +200,15 @@ function getNewQuestion(question) {
         option.innerHTML = currentQuestion.option[j];
         option.setAttribute('data-id', j);
         option.setAttribute('tabindex', '0');
-        option.setAttribute('role', 'option');
-        option.setAttribute('aria-selected', 'false');
+        option.setAttribute('role', 'checkbox');
+        option.setAttribute('aria-checked', 'false');
         optionsIndex++;
         option.className = "focus-input";
         if (typeof currentQuestion.optionFeedback != 'undefined') {
             option.setAttribute('data-feedback', currentQuestion.optionFeedback[j]);
+        }
+        if(optionStyleType !=undefined && optionStyleType.length>0){
+            option.prepend($("<span class='visually-hidden'>" + optionStyleType[j] + ". " + "</span>")[0])
         }
         optionContainer.appendChild(option);
     }
@@ -226,7 +238,7 @@ function getNewQuestion(question) {
         });
         $('#mcq_button').html('Try Again');
         $('#mcq_button').removeClass('disabled').removeAttr("aria-disabled");
-        $('#mcq_button').attr('title', 'Try Again');
+        //$('#mcq_button').attr('title', 'Try Again');
         $('#mcq_button').attr('tabindex', '0');
         $('#answer_label').show();
         $('#Add_solution').hide();
@@ -240,10 +252,10 @@ function getNewQuestion(question) {
     } else if (currentQuestion.state === 'correct') {
         if (question == quiz.length) {
             $('#mcq_button').html('Done').hide();
-            $('#mcq_button').attr('title', 'Done');
+            //$('#mcq_button').attr('title', 'Done');
         } else {
             $('#mcq_button').html('Next Question');
-            $('#mcq_button').attr('title', 'Next Question');
+            //$('#mcq_button').attr('title', 'Next Question');
         }
         $('#mcq_button').removeClass('disabled').removeAttr("aria-disabled");
         $('#mcq_button').attr('tabindex', '0');
@@ -265,7 +277,7 @@ function getNewQuestion(question) {
         $('#mcq_button').html('Check Answer');
         $('#mcq_button').addClass('disabled').attr("aria-disabled",true);
         // $('#questionNumber').focus();
-        $('#mcq_button').attr('title', 'Check Answer');
+        //$('#mcq_button').attr('title', 'Check Answer');
         // $('#mcq_button').removeAttr('tabindex');
         //$('#mcq_button').attr('tabindex', '-1');
         $('#answer_label').hide();
@@ -298,12 +310,12 @@ function addActiveClass(el) {
                 if (!$(el.target).hasClass("active")) {
                     $(el.target).removeClass().addClass('focus-input');
                     selectOption = [];
-                    $(el.target).removeClass().addClass('focus-input active').attr("aria-selected", true);;
+                    $(el.target).removeClass().addClass('focus-input active').attr("aria-checked", true);;
                     if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
                         && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
-                        $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-selected", false);
-                        $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-selected", false);
-                        $(el.target).removeClass().addClass('focus-input active').attr("aria-selected", true);
+                        $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-checked", false);
+                        $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-checked", false);
+                        $(el.target).removeClass().addClass('focus-input active').attr("aria-checked", true);
                     }
                     $('#mcq_button').html('Check Answer');
                     $('#mcq_button').removeAttr('aria-disabled');
@@ -311,13 +323,13 @@ function addActiveClass(el) {
                     $('#answer_label').hide();
                     $('.tab-pane ').attr('data-state', 'answered');
                     $('#mcq_button').removeClass('disabled').removeAttr("aria-disabled");
-                    $('#mcq_button').attr('title', 'Check Answer');
+                    //$('#mcq_button').attr('title', 'Check Answer');
                     $('#mcq_button').attr('tabindex', '0');
                     ariaAnnounce('Selected option is ' + $(el.target).text());
                 }
                 else {
                     if ($('.focus-input.active').length > 1) {
-                        $(el.target).removeClass("active").attr("aria-selected", false);
+                        $(el.target).removeClass("active").attr("aria-checked", false);
                     }
                 }
             } else {
@@ -325,9 +337,9 @@ function addActiveClass(el) {
                     && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
                     selectOption = [];
                     $(".ic-opt-fbk").remove();
-                    $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-selected", false);
-                    $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-selected", false);
-                    $(el.target).removeClass().addClass('focus-input active').attr("aria-selected", true);
+                    $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-checked", false);
+                    $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-checked", false);
+                    $(el.target).removeClass().addClass('focus-input active').attr("aria-checked", true);
                     $(el.target).removeClass('wrong').removeAttr("aria-describedby");
                     $('#mcq_button').html('Check Answer');
                     $('#Add_solution').hide();
@@ -338,7 +350,7 @@ function addActiveClass(el) {
                 }
                 else {
                     if (!$(el.target).hasClass('wrong') && !$(el.target).hasClass('last-child')) {
-                        $(el.target).removeClass().addClass('focus-input active').attr("aria-selected", true);
+                        $(el.target).removeClass().addClass('focus-input active').attr("aria-checked", true);
                     } else {
                         $(el.target).removeClass('wrong').removeAttr("aria-describedby");
                     }
@@ -390,10 +402,10 @@ function getResult(element) {
         updateAnswerIndicator("correct");
         if (parseInt($('.tab-pane').attr('id')) == quiz.length) {
             $('#mcq_button').html('Done').hide();
-            $('#mcq_button').attr('title', 'Done');
+            //$('#mcq_button').attr('title', 'Done');
         } else {
             $('#mcq_button').html('Next Question');
-            $('#mcq_button').attr('title', 'Next Question');
+            //$('#mcq_button').attr('title', 'Next Question');
         }
         $('#mcq_button').attr('tabindex', '0');
         unclickableOptions();
@@ -435,7 +447,7 @@ function getResult(element) {
         }
         updateAnswerIndicator("wrong");
         $('#mcq_button').html('Try Again');
-        $('#mcq_button').attr('title', 'Try Again');
+        //$('#mcq_button').attr('title', 'Try Again');
         $('#mcq_button').attr('tabindex', '0');
         $('#answer_label').show();
         $('#need_help').show();
@@ -473,19 +485,19 @@ function answerIndicatot() {
         //footerLi.setAttribute('aria-selected', 'false');
         //APT: Added selected state to anchor element
         //footerAnchor.setAttribute('role', 'option');
-        footerAnchor.setAttribute('aria-selected', false);
+        //footerAnchor.setAttribute('aria-selected', false);
         footerAnchor.removeAttribute("aria-current");
         var footerSpan = document.createElement("span");
+        footerSpan.innerHTML = (parseInt(i) + 1);
         footerAnchor.appendChild(footerSpan);
+        footerAnchor.prepend($("<span class='visually-hidden'>page </span>")[0])
         if (parseInt(i) === 0) {
             footerAnchor.classList.add("active");
-            footerAnchor.setAttribute('aria-selected', true);
+            //footerAnchor.setAttribute('aria-selected', true);
             footerAnchor.setAttribute('aria-current', "page");
         }
-        footerAnchor.setAttribute("title", 'page ' + (parseInt(i) + 1));
         footerAnchor.setAttribute('tabindex', '0');
         paginationTabindex++;
-        footerSpan.innerHTML = (parseInt(i) + 1);
     }
 }
 function updateAnswerIndicator(markType) {
@@ -524,7 +536,7 @@ $('#mcq_button').on('mousedown click', function (e) {
             $('#questionNumber').focus();
         } else if (buttonText === 'try') {
             selectOption = [];
-            $('.focus-input').removeClass().addClass('focus-input').attr("aria-selected",false);
+            $('.focus-input').removeClass().addClass('focus-input').attr("aria-checked",false);
             $('#answer_label').hide();
             $('#Add_solution').hide();
             $('.nav-link').each(function () {
@@ -537,7 +549,7 @@ $('#mcq_button').on('mousedown click', function (e) {
             $('#mcq_button').addClass('disabled').attr("aria-disabled",true);
             $('#questionNumber').focus();
             $('#mcq_button').html('Check Answer');
-            $('#mcq_button').attr('title', 'Check Answer');
+            //$('#mcq_button').attr('title', 'Check Answer');
             // $('#mcq_button').removeAttr('tabindex');
             //$('#mcq_button').attr('tabindex', '-1');
             let currentQuestionIndex = parseInt($('.tab-pane').attr('id')) - 1;
@@ -566,13 +578,13 @@ $('#show_ans').on('click keydown', (function (e) {
         $("#show_ans").attr('aria-expanded', true);
         $('#mcq_button').html('Try Again');
         $('#mcq_button').removeClass('disabled').removeAttr("aria-disabled");
-        $('#mcq_button').attr('title', 'Try Again');
+        //$('#mcq_button').attr('title', 'Try Again');
         // $('#mcq_button').removeAttr('tabindex');
         $('#mcq_button').attr('tabindex', '0');
         $('.focus-input').removeClass('wrong').removeAttr("aria-describedby");
         let correctAnswer = [];
         quiz[currentQuestion].answer.forEach(option => {
-            $("ul").find(`[data-id='${option}']`).removeClass().addClass("focus-input last-child").attr("aria-selected", "true").attr("aria-describedby", "ariaCorrect");
+            $("ul").find(`[data-id='${option}']`).removeClass().addClass("focus-input last-child").attr("aria-checked", "true").attr("aria-describedby", "ariaCorrect");
             //ariaAnnounce('Correct answer is' + $(this).text());
             correctAnswer.push($("ul").find(`[data-id='${option}']`).text());
         });

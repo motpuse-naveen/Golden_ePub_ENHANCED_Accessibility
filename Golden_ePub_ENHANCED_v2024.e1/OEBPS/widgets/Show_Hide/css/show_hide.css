@@ -142,3 +142,23 @@ button.ans:focus-visible{
 .c-ans-details ul[type="bullet"] li {
     margin-bottom: 0.5em;
 }
+.option-list[styletype="st-upper-alpha"]{
+    list-style-type: upper-alpha;
+    margin-left: 1.5em;
+}
+.option-list[styletype="st-lower-alpha"]{
+    list-style-type: lower-alpha;
+    margin-left: 1.5em;
+}
+.option-list[styletype="st-upper-roman"]{
+    list-style-type: upper-roman;
+    margin-left: 1.5em;
+}
+.option-list[styletype="st-lower-roman"]{
+    list-style-type: lower-roman;
+    margin-left: 1.5em;
+}
+.option-list[styletype="st-decimal"]{
+    list-style-type: decimal;
+	margin-left: 1.5em;
+}
