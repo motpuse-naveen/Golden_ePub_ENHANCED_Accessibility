@@ -450,15 +450,17 @@ function answerIndicatot() {
         footerAnchor.removeAttribute("aria-current");
         var footerSpan = document.createElement("span");
         footerSpan.innerHTML = (parseInt(i) + 1);
+        footerSpan.setAttribute('aria-hidden', 'true');
         footerAnchor.appendChild(footerSpan);
-        footerAnchor.prepend($("<span class='visually-hidden'>page </span>")[0])
+        footerAnchor.prepend($("<span class='visually-hidden' aria-hidden='true'>page </span>")[0])
         if (parseInt(i) === 0) {
             footerAnchor.classList.add("active");
             //footerAnchor.setAttribute('aria-selected', true);
             footerAnchor.setAttribute('aria-current', "page");
         }
         // optionIndi.setAttribute("data-correct", "true");
-        footerAnchor.setAttribute("title", 'page ' + (parseInt(i) + 1));
+        //footerAnchor.setAttribute("title", 'page ' + (parseInt(i) + 1));
+        footerAnchor.setAttribute("aria-label", 'page ' + (parseInt(i) + 1));
         footerAnchor.setAttribute('tabindex', '0');
         paginationTabindex++;
     }

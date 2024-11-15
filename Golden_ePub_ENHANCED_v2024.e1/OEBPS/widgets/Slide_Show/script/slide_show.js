@@ -153,7 +153,6 @@ function currentSlide(n) {
     Utils.activeImg = 'img' + n;
 }
 function showSlides(n) {
-    debugger
     //   Utils.ariaAnnounce('Image ' + n + ' Selected')
     var i;
     var slides = document.getElementsByClassName("slides");

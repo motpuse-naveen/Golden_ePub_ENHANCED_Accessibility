@@ -47,7 +47,7 @@ ol.ques-list li .ques-title{
 	left: 0em;
 	top: 0em;*/
 	font-weight: 400;
-	color:var(--orange);
+	color:var(--orange-dark);
 	float:left;
 	padding-right: 4px;
     text-align: right;
@@ -112,7 +112,7 @@ button.ans:hover {
 	text-decoration: underline;
 }
 button.ans:focus-visible{
-	outline: 2px solid var(--orange);
+	outline: 2px solid var(--focus-visible);
 }
 
 .review-main .answer {

@@ -441,11 +441,11 @@ a.step.active:hover {
 */
 
 .steps .step:focus-visible {
-    border: 1px solid var(--orange);
+    border: 1px solid var(--focus-visible);
     outline: 1px solid var(--focus-visible);
 }
 .steps li.nav-item:focus-visible {
-    border: 1px solid var(--orange);
+    border: 1px solid var(--focus-visible);
     outline: 1px solid var(--focus-visible);
 }
 .step[data-correct="true"] {
@@ -505,12 +505,6 @@ a.step.active:hover {
     clip-path: inset(50%);
     white-space: nowrap;
 }
-/*
-.footer *:focus {
-    border: 1px solid var(--orange) !important;
-    outline: none !important;
-}
-*/
 .mar-left{
     margin-left: 1.5em;
 }
