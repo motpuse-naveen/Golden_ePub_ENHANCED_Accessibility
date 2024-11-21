@@ -454,14 +454,14 @@ a.step.active:hover {
 }
 .step[data-correct="true"] {
     background-image: url(../images/check_normal.png);
-    background-position: center;
+    background-position: bottom;
     background-size: 24px;
     background-repeat: no-repeat;
     font-size: 0px;
 }
 .step.active[data-correct="true"], .step.active[data-correct="true"]:hover {
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: 24px;
     font-size: 0px;
 }
@@ -477,14 +477,14 @@ a.step.active:hover {
 }
 
 .step.active[data-correct="false"], .step.active[data-correct="false"]:hover {
-    background-position: center;
+    background-position: bottom;
     background-size: 24px;
     background-repeat: no-repeat;
     font-size: 0px;
 }
 .step[data-correct="false"] {
     background-image: url(../images/false_red.png);
-    background-position: center;
+    background-position: bottom;
     background-size: 24px;
     background-repeat: no-repeat;
     font-size: 0px;

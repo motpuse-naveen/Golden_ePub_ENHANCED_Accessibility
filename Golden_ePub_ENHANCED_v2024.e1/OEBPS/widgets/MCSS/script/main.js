@@ -2,6 +2,7 @@
 /* Version 19.7, Date:08 JULY 2022 */
 const correctFBText = "Correct."
 const incorrectFBText = "Incorrect. Please try again."
+const tryagainFBText = "Please try again."
 var paginationTabindex = 10001;
 var optionsIndex = 1;
 const tabs = document.querySelector(".tab-content");
@@ -333,7 +334,7 @@ function getNewQuestion(question) {
 }
 function addActiveClass(el) {
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
-        if(!$(el.target).hasClass('already-answered')){
+        if(!$(el.target).hasClass('already-answered') && !$(el.target).hasClass('wrong')){
             $(".ic-opt-fbk").remove();
             $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-checked", false);
             $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-checked", false);
@@ -388,7 +389,7 @@ function getResult(element) {
                 });
             }
         });
-        ariaAnnounce('Sected option ' + $(element).text() + ' is correct. ' + currentQuestion.ansText);
+        ariaAnnounce('Selected option ' + $(element).text() + ' is correct. ' + currentQuestion.ansText);
     } else {
         $(element).removeClass().addClass("focus-input wrong").attr("aria-describedby", "ariaIncorrect");
         correctMsg.classList.add("not-quite");
@@ -413,7 +414,7 @@ function getResult(element) {
             }
         });
         currentQuestion.state = 'wrong';
-        ariaAnnounce('Sected option ' + $(element).text() + ' is incorrect. ' + incorrectFBText);
+        ariaAnnounce('Selected option ' + $(element).text() + ' is incorrect. ' + tryagainFBText);
     }
     currentQuestion.userAnswered = id;
 
@@ -610,15 +611,20 @@ $('#show_ans').on('focusin click keyup', function (e) {
         $(e.target).attr('aria-expanded', false);
     }
 });
+
+var ariaClearTimeout = null;
 function ariaAnnounce(msg) {
     console.log(msg);
     if (msg) {
+        clearTimeout(ariaClearTimeout)
+        $('#ariaMessages').html("");
         $('#ariaMessages').html(msg);
     }
-    setTimeout(function () {
+    ariaClearTimeout = setTimeout(function () {
         $('#ariaMessages').html("");
     }, 5000);
 };
+
 
 function bind_annotLinkEvents() {
     $('.tab-pane a[href]').on('click', function (e) {

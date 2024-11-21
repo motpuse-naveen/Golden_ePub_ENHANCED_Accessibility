@@ -1,6 +1,7 @@
 /* Version 19.4, Date:02 JUNE 2022 */
 const correctFBText = "Correct."
 const incorrectFBText = "Incorrect. Please try again."
+const tryagainFBText = "Please try again."
 var paginationTabindex = 10001;
 var optionsIndex = 1;
 const tabs = document.querySelector(".tab-content");
@@ -352,7 +353,7 @@ function addActiveClass(el) {
                     if (!$(el.target).hasClass('wrong') && !$(el.target).hasClass('last-child')) {
                         $(el.target).removeClass().addClass('focus-input active').attr("aria-checked", true);
                     } else {
-                        $(el.target).removeClass('wrong').removeAttr("aria-describedby");
+                        //$(el.target).removeClass('wrong').removeAttr("aria-describedby");
                     }
                 }
             }
@@ -638,12 +639,15 @@ $('.arrow-right').on('click keydown', function (e) {
         }
     }
 });
+var ariaClearTimeout = null;
 function ariaAnnounce(msg) {
     console.log(msg);
     if (msg) {
+        clearTimeout(ariaClearTimeout)
+        $('#ariaMessages').html("");
         $('#ariaMessages').html(msg);
     }
-    setTimeout(function () {
+    ariaClearTimeout = setTimeout(function () {
         $('#ariaMessages').html("");
     }, 5000);
 };

@@ -1,5 +1,6 @@
 const correctFBText = "Correct."
 const incorrectFBText = "Incorrect. Please try again."
+const tryagainFBText = "Please try again."
 var paginationTabindex = 10001;
 var optionsIndex = 1;
 const tabs = document.querySelector(".tab-content");
@@ -277,7 +278,7 @@ function getNewQuestion(question) {
 }
 function addActiveClass(el) {
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
-        if(!$(el.target).hasClass('already-answered')){
+        if(!$(el.target).hasClass('already-answered') && !$(el.target).hasClass('wrong')){
             $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-checked", false);
             $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-checked", false);
             $('.focus-input').each(function () {
@@ -330,7 +331,7 @@ function getResult(element) {
                 $(this).attr('data-correct', true);
             }
         });
-        ariaAnnounce('Sected option ' + $(element).text() + ' is correct. ' + currentQuestion.ansText);
+        ariaAnnounce('Selected option ' + $(element).text() + ' is correct. ' + currentQuestion.ansText);
     }
     else {
         $(element).removeClass().addClass("focus-input wrong").attr("aria-describedby", "ariaIncorrect");
@@ -528,12 +529,15 @@ $('.arrow-right').on('click keydown', function (e) {
         }
     }
 });
+var ariaClearTimeout = null;
 function ariaAnnounce(msg) {
     console.log(msg);
     if (msg) {
+        clearTimeout(ariaClearTimeout)
+        $('#ariaMessages').html("");
         $('#ariaMessages').html(msg);
     }
-    setTimeout(function () {
+    ariaClearTimeout = setTimeout(function () {
         $('#ariaMessages').html("");
     }, 5000);
 };
