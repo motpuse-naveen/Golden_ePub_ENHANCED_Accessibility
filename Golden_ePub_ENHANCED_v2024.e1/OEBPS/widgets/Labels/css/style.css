@@ -344,25 +344,31 @@ span.hotspot2 {
 }
 
 .poptip_btn {
-	background-image: url(../images/image_figure_test_yourself_btn.png);
+	background-image: url(../images/image_figure_test_yourself_btn_wt.png);
 	cursor: pointer;
 	position: absolute;
 	left: 10px;
 	top: 5px;
-	color: transparent;
+	color: #FFFFFF;
 	height: 25px;
-	width: 128px;
+	/*width: 128px;*/
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	background-size: 128px;
 	z-index: 9;
 	background-color: #027DB6;
+	border: none;
+	text-transform: uppercase;
+    padding-left: 30px;
 }
+
 .poptip_btn:focus-visible {
 	outline: 2px solid var(--focus-visible);
 }
 .poptip_btn:hover {
+	background-color: #016F9B;
 	background-position: 0 -38px;
+
 }
 
 .poptip_btn.show-poptip {
@@ -420,10 +426,12 @@ span.hotspot2 {
 	cursor: pointer;
 	box-shadow: 0px 1px 4px rgb(0 0 0 / 35%);
 }
+.tooltip:focus-visible,
 .tooltip-up:focus-visible,
 .tooltip-down:focus-visible,
 .tooltip-left:focus-visible,
-.tooltip-right:focus-visible{
+.tooltip-right:focus-visible
+{
 	outline: 2px solid var(--focus-visible);
 }
 
@@ -513,14 +521,14 @@ span.hotspot2 {
 	width: 220px;
 }
 
-.tooltip-down .tooltip {
+.tooltip-down .tooltip, .li-tooltip-down .tooltip {
 	top: unset;
 	right: unset;
 	bottom: -1px;
 	left: 50%;
 	transform: translate(-50%, 0);
 }
-.tooltip-up .tooltip {
+.tooltip-up .tooltip, .li-tooltip-up .tooltip {
 	top: -1px;
 	right: unset;
 	bottom: unset;
@@ -528,7 +536,7 @@ span.hotspot2 {
 	transform: translate(-50%, 0);
 }
 
-.tooltip-left .tooltip {
+.tooltip-left .tooltip, .li-tooltip-left .tooltip {
 	right: unset;
 	left: -1px;
 }
@@ -563,5 +571,13 @@ sup {
 }
 .tooltipInner.maxzindex{
 	z-index: 10 !important;
+}
+
+.tooltip-listitem{
+	display: block;
+	position: absolute;
+	list-style-type: none;
+    width: 30px;
+    height: 30px;
 }
 

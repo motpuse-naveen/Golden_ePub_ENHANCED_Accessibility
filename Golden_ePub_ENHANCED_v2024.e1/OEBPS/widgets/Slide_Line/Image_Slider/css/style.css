@@ -118,7 +118,7 @@ input#slide[type=range]:hover::-webkit-slider-thumb {
 .focus-input {
 	background: #fff;
 	border-style: solid;
-	border-color: var(--gray-border-color);
+	border-color: #CDCDCD;
 	border-width: 1px 1px 0 1px;
 	padding: 16px 60px 16px 16px;
 	font-size: 14px;
@@ -130,15 +130,15 @@ input#slide[type=range]:hover::-webkit-slider-thumb {
 
 .neuromuscularfunction .arrow-left.outer,
 .neuromuscularfunction .arrow-right.outer {
-	top: 28px;
+	top: 7px;
 }
 
 .neuromuscularfunction .arrow-left.outer {
-	left: 15px;
+	left: 10px;
 }
 
 .neuromuscularfunction .arrow-right.outer {
-	right: 15px;
+	right: 10px;
 }
 
 .arrow-left.outer,
@@ -154,25 +154,15 @@ input#slide[type=range]:hover::-webkit-slider-thumb {
 }
 
 .arrow-right.outer {
-	background-position: -141px 0;
+	background-position: -107px 0;
 	right: 19px;
 }
-.arrow-right.outer.disabled{
-	background-position: -107px 0;
-}
-.arrow-right.outer:focus-visible {
-	outline: 2px solid var(--focus-visible);
-}
+
 .arrow-left.outer {
-	background-position: -40px 0;
+	background-position: -74px 0;
 	left: 15px;
 }
-.arrow-left.outer.disabled {
-	background-position: -74px 0;
-}
-.arrow-left.outer:focus-visible {
-	outline: 2px solid var(--focus-visible);
-}
+
 
 /* img-slide */
 
@@ -229,7 +219,7 @@ button {
 	position: relative;
 	top: 4.5px;
 	height: 6px;
-	background: #d9d9d9;
+	background: #6D6D6D;
 	border: #22adcc;
 	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
 	transition: all 0.2s ease-out;
@@ -239,15 +229,21 @@ button {
 
 .buttonWrapper {
 	position: relative;
-	margin-top: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+	margin-left: -2px;
 }
+ul.buttonWrapper li,ol.buttonWrapper li {
+	list-style: none;
+}
+
 .radio-button{
 	position: absolute;
 	top: -22px;
 	left: 0px;
-	height: 17px;
-	width: 17px;
-	background: url(../images/timeline_dot_small.png), #d9d9d9;
+	height: 5px;
+    width: 5px;
+	background: #FFFFFF;
 	background-repeat: no-repeat;
 	background-position: 4px 4px;
 	background-size: 8px;
@@ -263,9 +259,8 @@ button {
 	-webkit-box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
 	-moz-box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.08) inset;
 	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
-}
-.radio-button.tab-marker:focus-visible{
-	outline: 2px solid var(--focus-visible);
+	border: 6px solid #6D6D6D;
+    border-radius: 12px;
 }
 /*
 .radio-button-1 {
@@ -374,7 +369,7 @@ button {
 
 #draggableDot {
 	position: absolute;
-	top: 30px;
+	top: 20px;
 	height: 10px;
 	width: 10px;
 	background: #007cb6;
@@ -505,7 +500,7 @@ span.nrvs-label.current-step {
 	background-color: #fff;
 	border-top: 1px solid #f2f2f6;
 	border-bottom: 1px solid #f2f2f6;
-	padding: 30px 60px 10px 60px;
+	padding: 20px 60px 10px 50px;
 	-webkit-box-shadow: 0 -1px 1px rgb(0 0 0 / 10%);
 	-moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 -1px 1px rgb(0 0 0 / 10%);
@@ -541,7 +536,8 @@ span.nrvs-label.current-step {
 	.slide8 #image-map {
 		transform: scale(0.45);
 	}
-	.subcaption.active {
+	/*
+	 {
 		position: absolute;
 		bottom: 78px;
 		left: 0;
@@ -556,7 +552,7 @@ span.nrvs-label.current-step {
 		font-size: 14px;
 		width: auto !important;
 		margin-left: 0 !important;
-	}
+	}*/
 	.neuromuscularfunction .subcaption.active {
 		position: fixed;
 	}
@@ -726,6 +722,9 @@ sup {
 	height: 100%;
 	margin: 0 auto;
 }
+.slideline-main div.subcaption{
+	display: none;
+}
 
 .subcaption.active {
 	position: absolute;
@@ -740,7 +739,7 @@ sup {
 	background-color: rgba(255, 255, 255, 0.8);
 	border-top: 1px solid #f7f7f7;
 	font-size: 14px;
-	width: 97%;
+	width: auto;
 	margin-left: 1%;
 }
 
@@ -750,5 +749,14 @@ sup {
     display: block;
     height: 42px;
     overflow-y: auto;
-	margin: 4px 0px;
+	margin: 4px 10px;
+	
+}
+
+:focus-visible{
+	outline: 2px solid var(--focus-visible);
+	outline: none;
+    -webkit-box-shadow: 0px 0px 0px 2px var(--focus-visible);
+    -moz-box-shadow: 0px 0px 0px 2px var(--focus-visible);
+    box-shadow: 0px 0px 0px 2px var(--focus-visible);
 }

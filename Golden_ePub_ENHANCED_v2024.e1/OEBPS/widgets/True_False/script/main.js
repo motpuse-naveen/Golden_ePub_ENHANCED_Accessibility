@@ -277,8 +277,9 @@ function getNewQuestion(question) {
     questionCounter++;
 }
 function addActiveClass(el) {
+    var isWrong = isAnsweredWrong();
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
-        if(!$(el.target).hasClass('already-answered') && !$(el.target).hasClass('wrong')){
+        if(!$(el.target).hasClass('already-answered') && !isWrong){
             $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-checked", false);
             $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-checked", false);
             $('.focus-input').each(function () {
@@ -302,22 +303,30 @@ function addActiveClass(el) {
         return false;
     }
 }
+function isAnsweredWrong(){
+    var isAnsweredWrong = false;
+    $('.ques-content ul li.focus-input').each(function () {
+        if($(this).hasClass("wrong")){
+            isAnsweredWrong = true;
+        }
+    });
+    return isAnsweredWrong;
+}
 // check the current option is true or not .
 function getResult(element) {
     var id = parseInt($(element).attr('data-id'));
     let dataId = 'q-' + parseInt($('.tab-pane').attr('id'));
     if (id === currentQuestion.answer) {
         $(element).removeClass().addClass("focus-input last-child").attr("aria-describedby", "ariaCorrect");
+        $(".focus-input").attr("aria-disabled",true);
         correctMsg.innerHTML = correctFBText;
         $(element).parent().attr("data-correct", "true");
         //$(element).attr("role", "img");
         updateAnswerIndicator("correct");
         if (parseInt($('.tab-pane').attr('id')) == quiz.length) {
-            $('#mcq_button').html('Done');
-            //$('#mcq_button').attr('title', 'Done');
+            $('#mcq_button').html('Done').hide();
         } else {
             $('#mcq_button').html('Next Question');
-            //$('#mcq_button').attr('title', 'Next Question');
         }
         $('#mcq_button').attr('tabindex', '0');
         unclickableOptions();
@@ -335,11 +344,11 @@ function getResult(element) {
     }
     else {
         $(element).removeClass().addClass("focus-input wrong").attr("aria-describedby", "ariaIncorrect");
+        $(".focus-input").attr("aria-disabled",true);
         correctMsg.classList.add("not-quite");
         correctMsg.innerHTML = incorrectFBText;
         updateAnswerIndicator("wrong");
         $('#mcq_button').html('Try Again');
-        //$('#mcq_button').attr('title', 'Try Again');
         $('#mcq_button').attr('tabindex', '0');
         $('#answer_label').show();
         $('#need_help').show();
@@ -350,7 +359,7 @@ function getResult(element) {
             }
         });
         currentQuestion.state = 'wrong';
-        //ariaAnnounce('Sected option ' + $(element).text() + ' is incorrect.');
+        //ariaAnnounce('Selected option ' + $(element).text() + ' is incorrect.');
         ariaAnnounce(incorrectFBText);
     }
     currentQuestion.userAnswered = id;
@@ -434,7 +443,7 @@ $('#mcq_button').on('mousedown click', function (e) {
             $('#need_help').show();
             $('#questionNumber').focus();
         } else if (buttonText === 'try') {
-            $('.focus-input').removeClass().addClass('focus-input').attr("aria-checked",false);
+            $('.focus-input').removeClass().addClass('focus-input').attr("aria-checked",false).attr("aria-disabled", false);
             $('#answer_label').hide();
             $('#Add_solution').hide();
             $('.nav-link').each(function () {
@@ -474,8 +483,8 @@ $('#show_ans').on('click keydown', (function (e) {
         $('#mcq_button').attr('title', 'Try Again');
         // $('#mcq_button').removeAttr('tabindex');
         $('#mcq_button').attr('tabindex', '0');
+        $('.focus-input').removeClass('wrong').removeAttr("aria-describedby").attr("aria-disabled", true);
         let correctAnswer = [];
-        $('.focus-input').removeClass('wrong').removeAttr("aria-describedby");
         $('.focus-input').each(function () {
             if ($(this).attr('data-id') == quiz[currentQuestion].answer) {
                 $(this).addClass('last-child').attr("aria-checked", "true").attr("aria-describedby", "ariaCorrect");

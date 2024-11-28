@@ -166,11 +166,13 @@ function showSlides(n) {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
         dots[i].setAttribute("aria-selected",false);
+        dots[i].setAttribute("aria-pressed",false);
     }
     slides[slideIndex - 1].style.display = "flex";
     var element = document.getElementById(slideIndex.toString());
     element.classList.add("active");
     element.setAttribute("aria-selected",true)
+    element.setAttribute("aria-pressed",true)
     if($(dots[slideIndex - 1]).find(".hiddenCaption") && $(dots[slideIndex - 1]).find(".hiddenCaption").length>0){
         captionText.innerHTML = $(dots[slideIndex - 1]).find(".hiddenCaption").html()
     }

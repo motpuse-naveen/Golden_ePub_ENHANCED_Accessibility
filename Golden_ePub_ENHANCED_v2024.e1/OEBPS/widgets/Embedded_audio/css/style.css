@@ -24,7 +24,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
-	-webkit-font-smoothing: antialiased;
+	/*-webkit-font-smoothing: antialiased;*/
 	text-rendering: optimizeLegibility;
 }
 
@@ -160,7 +160,7 @@ body.has-bottom-bar .bottom-bar-container {
 	-ms-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 	line-height: 0;
-
+	padding: 10px;
 }
 
 .audio-document-area {
@@ -846,4 +846,20 @@ div.aria-widget-vertical-slider .label {
 audio {
     width: 100%;
 	margin-bottom: 10px;
+}
+.about-the-audio{
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.audio-description{
+	height: auto;
+    display: block;
+    position: unset;
+    float: left;
+    line-height: 1.3em;
+}
+
+.about-the-audio-container{
+	display: inline-block;
 }

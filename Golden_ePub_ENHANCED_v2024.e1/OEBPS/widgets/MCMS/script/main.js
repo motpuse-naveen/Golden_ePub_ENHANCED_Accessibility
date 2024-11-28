@@ -395,7 +395,7 @@ function getResult(element) {
             wrongAns++;
         }
     });
-    
+    $(".focus-input").attr("aria-disabled",true);
     if (wrongAns === 0 && check(currentQuestion.answer, selectOption) !== false) {
         correctMsg.innerHTML = correctFBText;
         $(element).parent().attr("data-correct", "true");
@@ -540,7 +540,7 @@ $('#mcq_button').on('mousedown click', function (e) {
             $('#questionNumber').focus();
         } else if (buttonText === 'try') {
             selectOption = [];
-            $('.focus-input').removeClass().addClass('focus-input').attr("aria-checked",false);
+            $('.focus-input').removeClass().addClass('focus-input').attr("aria-checked",false).attr("aria-disabled",false);
             $('#answer_label').hide();
             $('#Add_solution').hide();
             $('.nav-link').each(function () {
@@ -585,7 +585,7 @@ $('#show_ans').on('click keydown', (function (e) {
         //$('#mcq_button').attr('title', 'Try Again');
         // $('#mcq_button').removeAttr('tabindex');
         $('#mcq_button').attr('tabindex', '0');
-        $('.focus-input').removeClass('wrong').removeAttr("aria-describedby");
+        $('.focus-input').removeClass('wrong').removeAttr("aria-describedby").attr("aria-disabled",true);
         let correctAnswer = [];
         quiz[currentQuestion].answer.forEach(option => {
             $("ul").find(`[data-id='${option}']`).removeClass().addClass("focus-input last-child").attr("aria-checked", "true").attr("aria-describedby", "ariaCorrect");

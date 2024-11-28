@@ -8,6 +8,7 @@ $(document).ready(function (){
             $(e.target).parents('.dropdown-content').length <= 0
         ) { 
             setTimeout(function(){
+                console.log("dropdown-content - click/keypress")
                 $('.dropdown-content').hide();
                 //NM: 09-June-2023 - The code is added to fix issue 
                 //Related to the annotation links in poptip is not working on ipad
@@ -23,8 +24,8 @@ $(document).ready(function (){
         }
     });
     $('.dropdown').on('keydown', '.dropdown-content', (e)=> {
-        console.log($(e.target))
         if (e.type === 'keydown' && e.keyCode === 27) { 
+            console.log($(e.target))
             $(e.target).parent().focus();   
             $(e.target).hide();
             //NM: 09-June-2023 - The code is added to fix issue 
@@ -44,8 +45,9 @@ $(document).ready(function (){
 function bind_glossary_events(){
     //var $bubbleTips = $('[data-dfn]');
     //$('[data-dfn]').on('click keydown', function (e) {
-    $(document).on('click keydown', '[data-dfn]', function (e) {
+    $(document).on('click', '[data-dfn]', function (e) {
         console.log(e.target)
+        console.log("keypress111")
         var dfnCode = $(e.target).closest("[data-dfn]").attr('data-dfn');
         if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
             if (!$('.dropdown-content').is(':visible')) {
@@ -62,7 +64,10 @@ function bind_glossary_events(){
                     }
                 }
                 setTimeout(function(){
-                    $('.dropdown-content').hide();
+                    
+                },200)
+                $('.dropdown-content').hide();
+                    closestdropdwn.focus();   
                     //NM: 09-June-2023 - The code is added to fix issue 
                     //Related to the annotation links in poptip is not working on ipad
                     $('.dropdown-content').each(function(){
@@ -73,8 +78,8 @@ function bind_glossary_events(){
                             tempdataDefElm.attr("data-dfn", tempdataDefVal);
                         }
                     });
-                },200)
                 if(openanotherpoptip){
+                    $(e.target).closest("[data-dfn]").focus()
                     Utils.getTooltip(dfnCode, $(e.target).closest("[data-dfn]"));
                 }
             }

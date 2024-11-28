@@ -32,6 +32,9 @@ $(document).ready(function () {
             $(".radio-button.tab-marker[data-id='img-"+ (index+1) +"']").css({"left":((radioPerc * index)-radioButtnPerc) + "%"});
         }
     });
+    $(".buttonWrapper button.radio-button").each(function(index){
+        $(this).attr("aria-label", $(this).attr("title"));
+    });
     var selectedStep = 1;
     
     $('.arrow-left').addClass('disabled');
@@ -94,6 +97,7 @@ $(document).ready(function () {
         })
         trackMouseDown = true;
         console.log(e.pageX - 70)
+        
     });
     $(document).mousemove(function (e) {
         if (isDragging) {
@@ -119,35 +123,48 @@ $(document).ready(function () {
 
     wrapper = document.getElementById('inner-image-area'),
         tabs.onclick = e => {
-            const id = e.target.dataset.id;
-            if (id) {
-                tabButton.forEach(btn => {
-                    btn.classList.remove("active");
-                });
-                e.target.classList.add("active");
-                jQuery('#selectedPhase').text(jQuery('.buttonWrapper .tab-marker.active .marker').text());
-                contents.forEach(content => {
-                    content.classList.remove("active");
-                });
-                subcaptionContents.forEach(content => {
-                    content.classList.remove("active");
-                });
-                const element = document.getElementById(id);
-                element.classList.add("active");
-                const element2 = document.getElementsByClassName(id);
-                $(element2).addClass('active');
-                handleDotMove(e);
+            if($(e.target).hasClass('radio-button')){
+                const id = e.target.dataset.id;
+                if (id) {
+                    tabButton.forEach(btn => {
+                        btn.classList.remove("active");
+                        btn.setAttribute("aria-selected", false);
+                        //btn.setAttribute("aria-pressed", false);
+                    });
+                    e.target.classList.add("active");
+                    e.target.setAttribute("aria-selected", true);
+                    //e.target.setAttribute("aria-pressed", true);
+                    jQuery('#selectedPhase').text(jQuery('.buttonWrapper .tab-marker.active .marker').text());
+                    contents.forEach(content => {
+                        content.classList.remove("active");
+                        content.setAttribute("aria-hidden", true);
+                    });
+                    subcaptionContents.forEach(content => {
+                        content.classList.remove("active");
+                        content.setAttribute("aria-hidden", true);;
+                    });
+                    const element = document.getElementById(id);
+                    element.classList.add("active")
+                    element.setAttribute("aria-hidden", false);
+                    const element2 = document.getElementsByClassName(id)[0];
+                    $(element2).addClass('active');
+                    element2.setAttribute("aria-hidden", false);
+                    handleDotMove(e);
+                }
             }
         }
 
     function handleDotMove(e) {
         contents.forEach(content => {
             content.classList.remove("active");
+            content.setAttribute("aria-hidden", true);
         });
         subcaptionContents.forEach(content => {
             content.classList.remove("active");
+            content.setAttribute("aria-hidden", true);
         });
-        dragUnit = e.clientX - framePadding;
+        const rect = e.target.getBoundingClientRect();
+        dragUnit = rect.x - framePadding;
         var trackStepWidth = getTrackWidth() / (maxSteps -1);
         var halfTrackStepWidth = trackStepWidth / 2;
         
@@ -161,7 +178,7 @@ $(document).ready(function () {
         selectStep(stepno, phsText);
     }
     function onRightArrowMouseUp(e) {
-        if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'mouseup') {
+        if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
             contents.forEach(content => {
                 content.classList.remove("active");
             });
@@ -171,21 +188,11 @@ $(document).ready(function () {
             var stepno = selectedStep + 1;
             var phsText = $(".tab-marker[data-id='img-" + stepno + "']").attr("title")
             selectStep(stepno, phsText);
-            /*
-            if (jQuery('#selectedPhase').text() === 'G1') {
-                
-            } else if (jQuery('#selectedPhase').text() === 'S') {
-                selectStep(3, 'G2');
-            } else if (jQuery('#selectedPhase').text() === 'G2') {
-                selectStep(4, 'Mitosis');
-            } else {
-                selectStep(1, 'G1');
-            }
-            */
+            
         }
     }
     function onLeftArrowMouseUp(e) {
-        if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'mouseup') {
+        if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
             contents.forEach(content => {
                 content.classList.remove("active");
             });
@@ -195,33 +202,23 @@ $(document).ready(function () {
             var stepno = selectedStep - 1;
             var phsText = $(".tab-marker[data-id='img-" + stepno + "']").attr("title")
             selectStep(stepno, phsText);
-            /*
-            if (jQuery('#selectedPhase').text() === 'G1') {
-                selectStep(4, 'Mitosis');
-            } else if (jQuery('#selectedPhase').text() === 'S') {
-                selectStep(1, 'G1');
-            } else if (jQuery('#selectedPhase').text() === 'G2') {
-                selectStep(2, 'S');
-            } else {
-                selectStep(3, 'G2');
-            }
-            */
+           
         }
     }
     function removeEvent($ele, event) {
         $ele.off(event);
     }
     function addMouseUpToArrowLeft() {
-        $('.arrow-left').unbind('mouseup keydown').bind('mouseup keydown', onLeftArrowMouseUp);
+        $('.arrow-left').unbind('click').bind('click', onLeftArrowMouseUp);
     }
     function addMouseUpToArrowRight() {
-        $('.arrow-right').unbind('mouseup keydown').bind('mouseup keydown', onRightArrowMouseUp);
+        $('.arrow-right').unbind('click').bind('click', onRightArrowMouseUp);
     }
 
     // addMouseUpToArrowLeft();
     addMouseUpToArrowRight();
     $('.tab-marker').keyup(function (e) {
-        if (e.keyCode === 9) {
+        if (e.type === 'keyup' && e.keyCode === 13) {
             contents.forEach(content => {
                 content.classList.remove("active");
             });
@@ -248,8 +245,8 @@ $(document).ready(function () {
         $draggableDot.animate({
             'margin-left': getStepLeft(stepNumber)
         }, 200)
-        $('#img-' + stepNumber).addClass('active');
-        $('.img-' + stepNumber).addClass('active');
+        $('#img-' + stepNumber).addClass('active').attr("aria-hidden", false);
+        $('.img-' + stepNumber).addClass('active').attr("aria-hidden", false);
         // jQuery('#selectedPhase').text('G1');
         jQuery('#selectedPhase').text(phaseText);
         selectedStep = stepNumber;

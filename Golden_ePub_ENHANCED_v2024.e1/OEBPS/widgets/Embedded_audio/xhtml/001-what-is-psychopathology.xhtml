@@ -3,47 +3,58 @@
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <!-- Version 19, Date:30 MAR 2022 -->
 <!--Embedded_Audio Template Unique ID: ZQ3RWC6UONT59JS7-->
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title>What is Psychopathology?</title>
-<link rel="stylesheet" type="text/css" href="../css/style.css" />
-<script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="../script/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../../common_assets/scripts/common.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>What is Psychopathology?</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../script/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../common_assets/scripts/common.js"></script>
 </head>
 <!--[if gt IE 9]><!-->
+
 <body class="audiofigure-exhibit has-bottom-bar">
-<div class="book" role="main">
+    <div class="book" role="main">
 
-<div class="bottom-bar-container center-in-display">
-<div class="bottom-bar">
-<div class="inline-audio">
-<div class="subcaption">
-<h1>What is Psychopathology?</h1>
-</div>
-<audio controls="controls" class="playAudio" controlslist="nodownload">
-<source src="../audio/001-what-is-psychopathology.mp3" type="audio/mpeg" />
-<source src="../audio/001-what-is-psychopathology.ogg" type="audio/ogg"/>
-Your browser does not support the audio element.
-</audio>
-</div>
-</div>
-</div>
+        <div class="bottom-bar-container center-in-display">
+            <div class="bottom-bar">
+                <div class="inline-audio">
+                    <div class="subcaption">
+                        <h1 id="audio-title">What is Psychopathology?</h1>
+                    </div>
+                    <audio controls="controls" class="playAudio" controlslist="nodownload" aria-describedby="audio-description" aria-label="What is Psychopathology? audio content">
+                        <source src="../audio/001-what-is-psychopathology.mp3" type="audio/mpeg" />
+                        <source src="../audio/001-what-is-psychopathology.ogg" type="audio/ogg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="about-the-audio-container">
+                        <button class="about-the-audio" aria-pressed="true">About the Audio</button>
+                        <div id="audio-description" class="audio-description">
+                            This audio clip discusses the latest advancements in space exploration, including recent missions to Mars and the development of new telescopes. 
+                            <strong>Speaker:</strong> Dr. Jane Smith, an astrophysicist from the National Space Research Institute. 
+                            <strong>Key Highlights:</strong> Introduction to Mars Rover discoveries, discussion on the James Webb Space Telescope's findings, and insights into upcoming space missions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div id="ariaMessages" class="visually-hidden" aria-live="assertive" />
-</div>
-<script>
-var allImageElmts = document.querySelectorAll("video");
-allImageElmts.forEach(imgelement => {
-imgelement.addEventListener("contextmenu", function(event){
-event.preventDefault();
-return false;
-});
-});
-document.addEventListener("contextmenu", function (e){
-e.preventDefault();
-}, false);
-</script>
+        <div id="ariaMessages" class="visually-hidden" aria-live="assertive" />
+    </div>
+    <script>
+        var allImageElmts = document.querySelectorAll("video");
+        allImageElmts.forEach(imgelement => {
+            imgelement.addEventListener("contextmenu", function (event) {
+                event.preventDefault();
+                return false;
+            });
+        });
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        }, false);
+    </script>
 </body>
+
 </html>

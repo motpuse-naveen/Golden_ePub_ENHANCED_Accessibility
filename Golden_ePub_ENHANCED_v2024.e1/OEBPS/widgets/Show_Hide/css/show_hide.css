@@ -8,6 +8,9 @@ body{
 	line-height: 1.2em;
 }
 /*-----  ques Ans  -----*/
+.ques-text figure{
+	margin: 1rem 0;
+}
 .main-document-area {
 	background-color: var(--white);
 	max-width: 979px;
@@ -112,7 +115,8 @@ button.ans:hover {
 	text-decoration: underline;
 }
 button.ans:focus-visible{
-	outline: 2px solid var(--focus-visible);
+	outline: 2px solid var(--focus-visible) !important;
+	border: none !important;
 }
 
 .review-main .answer {

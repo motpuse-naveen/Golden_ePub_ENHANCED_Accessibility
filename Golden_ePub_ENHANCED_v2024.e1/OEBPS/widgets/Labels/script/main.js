@@ -1,29 +1,42 @@
 /* Version 19, Date:30 MAR 2022 */
-$(".poptip_btn").on('click keydown', function (event) {
+$(".poptip_btn").on('click', function (event) {
     //console.log(event);
-    if ((event.type === 'keydown' && event.keyCode === 13) || event.type === 'click') {
+    //if ((event.type === 'keydown' && event.keyCode === 13) || event.type === 'click') {
         $(this).toggleClass('show-poptip');
         if($(this).hasClass("show-poptip")){
-            $(".img-wrap.testyourself").removeClass("hide").addClass("show");
-            $(".img-wrap.showlabels").removeClass("show").addClass("hide");
+            $(".img-wrap.testyourself").removeClass("hide").addClass("show").attr("aria-hidden",false);
+            $(".img-wrap.showlabels").removeClass("show").addClass("hide").attr("aria-hidden",true);
         }
         else{
-            $(".img-wrap.testyourself").removeClass("show").addClass("hide");
-            $(".img-wrap.showlabels").removeClass("hide").addClass("show");
+            $(".img-wrap.testyourself").removeClass("show").addClass("hide").attr("aria-hidden",true);
+            $(".img-wrap.showlabels").removeClass("hide").addClass("show").attr("aria-hidden",false);
         }
         $('.tooltip-down, .tooltip-up, .tooltip-right, .tooltip-left').toggle();
+        if($(".tooltipInner:visible").length>0){
+            $(".tooltipInner").attr("aria-hidden",false);
+        }
+        else{
+            $(".tooltipInner").attr("aria-hidden",true);
+        }
         if ($(this).hasClass('show-poptip')) {
             Utils.ariaAnnounce('Test Enabled')
-            $(this).attr('aria-label', 'Show Labels')
+            //$(this).attr('aria-label', 'Show Labels')
+            $(this).text('Show Labels')
+            $(this).attr('aria-label',$(this).attr('showlabels-aria'))
+            //$(this).attr('aria-pressed', false)
+
         } else {
-            $(this).attr('aria-label', 'Test Yourself')
+            //$(this).attr('aria-label', 'Test Yourself')
+            $(this).text('Test Yourself')
+            $(this).attr('aria-label',$(this).attr('testyourself-aria'))
+            //$(this).attr('aria-pressed', true)
             Utils.ariaAnnounce('Test Disabled')
         }
         Utils.setImageBound();
         // console.log($(this).hasClass('show-poptip'));
-    }
-    event.preventDefault();
-    event.stopPropagation();
+    //}
+    //event.preventDefault();
+    //event.stopPropagation();
 });
 
 $(document).ready(function () {
@@ -39,12 +52,16 @@ $(document).ready(function () {
     }).addClass("show");
     */
 
-    $('#image-map').addClass("hide")
-    $('#image-map-labels').addClass("show");
+    $('#image-map').addClass("hide").attr("aria-hidden",true);
+    $('#image-map-labels').addClass("show").attr("aria-hidden",false);
 
     //tooltip direction
     var tooltipDirection;
-    var ariaLabelsForTooltipAnchors = ['E', 'Action potential', 'E IPSP', 'Inside, Outside, Lipid, Lipid Bilayer'];
+    //var ariaLabelsForTooltipAnchors = ['E', 'Action potential', 'E IPSP', 'Inside, Outside, Lipid, Lipid Bilayer'];
+    var $orderedList = $('<ol>',{
+        'role':'tablist'
+    })
+
     for (i = 0; i < ($(".pin").length); i++) {
         // set tooltip direction type - up or down             
         /*if ($(".pin").eq(i).hasClass('pin-down')) {
@@ -63,33 +80,46 @@ $(document).ready(function () {
         } else {
             tooltipDirection = 'tooltip-right';
         }
-        var $toolTipAnchorWrapper = $('<div>', {
-            'style': "left:" + $(".pin").eq(i).data('xpos') + "px;top:" + $(".pin").eq(i).data('ypos') + "px; z-index: 1;",
+        var $toolTipAnchorWrapper = $('<li>', {
+            'class': 'li-' + tooltipDirection + ' tooltip-listitem',
+            'style': "left:" + $(".pin").eq(i).data('xpos') + "px;top:" + $(".pin").eq(i).data('ypos') + "px; z-index: 1;"
+            //,'class': tooltipDirection + ' tooltipInner',
+        });
+        var $tooltipButton = $('<button>', {
             'class': tooltipDirection + ' tooltipInner',
-            'tabindex': 0,
-            'role': 'tooltip',
-            'aria-label': ariaLabelsForTooltipAnchors[i]
+            'role':'tab',
+            //'aria-pressed':false,
+            'aria-selected':false,
+            'aria-expanded':false,
+            'aria-describedby': 'tooltip-' + (i + 1)
         });
         var $tooltipAnchor = $('<div>', {
             class: 'tooltip',
             id: 'tooltip-' + (i + 1),
-            'tabindex': 0
+            'tabindex': 0,
+            'aria-hidden':true
         });
-        $toolTipAnchorWrapper.append('?');
+        $tooltipButton.append('?');
+        $toolTipAnchorWrapper.append($tooltipButton);
         $tooltipAnchor.html($(".pin").eq(i).html());
+        $tooltipAnchor.find("p").removeAttr("tabindex");
         $toolTipAnchorWrapper.append($tooltipAnchor);
-        $tooltipAnchor.focusout(() => {
+        
+        /*$tooltipAnchor.focusout(() => {
             setTimeout(() => {
                 Utils.hideToolTip();
                 Utils.setImageBound();
             },50);
-        });
+        });*/
+
         // append the tooltip
-        $("#image-map").append($toolTipAnchorWrapper);
+        $orderedList.append($toolTipAnchorWrapper);
     }
+    $("#image-map").append($orderedList);
 
     // show/hide the tooltip
     $('.tooltipInner').click(function (event) {
+        /*
         if (event.target.closest("div.tooltip.is-visible") != null
             && event.target.closest("div.tooltip.is-visible") != undefined
             && $(event.target.closest("div.tooltip.is-visible")).length > 0) {
@@ -99,25 +129,33 @@ $(document).ready(function () {
         else {
             Utils.hideToolTip();
             // $(this).children('.tooltip').fadeIn(100);
-            var $toolTip = $(this).children('.tooltip');
+            var $toolTip = $(this).closest("li.tooltip-listitem").children('.tooltip');
             // console.log('sliderStepSize')
             Utils.showToolTip($toolTip);
         }
-        event.preventDefault();
-        event.stopPropagation();
-    });
-    $('.tooltipInner').keydown(function (event) {
-        if ((event.keyCode === 13)) {
+        */
+        var $toolTip = $(this).closest("li.tooltip-listitem").children('.tooltip');
+        if($toolTip.is(":visible")){
+            Utils.hideToolTip();
+            //$(this).attr("aria-pressed",false)
+            $(this).attr("aria-selected",false)
+            $(this).attr("aria-expanded",false)
+        }
+        else{
             Utils.hideToolTip();
             // $(this).children('.tooltip').fadeIn(100);
-            var $toolTip = $(this).children('.tooltip');
+            //$(this).attr("aria-pressed",true )
+            $(this).attr("aria-selected",true)
+            $(this).attr("aria-expanded",true)
             // console.log('sliderStepSize')
             Utils.showToolTip($toolTip);
-            
         }
+        
+
         event.preventDefault();
         event.stopPropagation();
     });
+    
 });
 
 // Utility Functions
@@ -161,7 +199,7 @@ $(document).ready(function () {
         var $visibleToolbar = $('.is-visible');
         if ($visibleToolbar.length) {
             $visibleToolbar.fadeOut(30);
-            $visibleToolbar.removeClass('is-visible');
+            $visibleToolbar.removeClass('is-visible').attr("aria-hidden",true);
             $visibleToolbar.closest(".tooltipInner").removeClass('maxzindex');
         }
     }
@@ -239,7 +277,7 @@ $(document).ready(function () {
             }
             $tooltip.fadeIn(500);
             $tooltip.find('p').focus();
-            $tooltip.addClass('is-visible');
+            $tooltip.addClass('is-visible').attr("aria-hidden",false);
             $tooltip.closest(".tooltipInner").addClass('maxzindex');
         }, 300);
     }

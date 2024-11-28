@@ -8,6 +8,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>EPUB: Myosin head movement</title>
+    <link rel="stylesheet" type="text/css" href="../../../common_assets/css/variables.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../styles/Elsevier_eBook.css" />
     <link rel="stylesheet" type="text/css" href="../css/header_style.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../../../common_assets/css/iframe_common.css" />
@@ -31,65 +33,64 @@
                 </div>
             </header> -->
             <div class="main-image-area neuromuscularfunction">
-                <div class="sr-only" style="position: absolute; left: -9999px;" role="heading" aria-level="1">welcome to
-                    Cell division and cell cycle</div>
+                <h2 class="sr-only" style="position: absolute; left: -9999px;">welcome to
+                    Cell division and cell cycle</h2>
                 <div class="Nervous-system-main">
                     <div class="inner-image-area" id="inner-image-area">
                         <div id="img">
-                            <figure class="Nervous-system active" id="img-1">
-                                <img src="../images/ch01_figure_text_13a.png" class="img" alt="Myosin head movement A" />
+                            <figure class="Nervous-system active" aria-hidden="false" id="img-1">
+                                <img src="../images/ch01_figure_text_13a.png" class="img" alt="Myosin head movement A" aria-hidden="true"/>
                             </figure>
-
-                            <figure class="Nervous-system" id="img-2">
-                                <img src="../images/ch01_figure_text_13b.png" class="img" alt="Myosin head movement B" />
+                            <figure class="Nervous-system" id="img-2" aria-hidden="true">
+                                <img src="../images/ch01_figure_text_13b.png" class="img" alt="Myosin head movement B" aria-hidden="true"/>
                             </figure>
-
-                            <figure class="Nervous-system" id="img-3">
-                                <img src="../images/ch01_figure_text_13c.png" class="img" alt="Myosin head movement C" />
+                            <figure class="Nervous-system" id="img-3" aria-hidden="true">
+                                <img src="../images/ch01_figure_text_13c.png" class="img" alt="Myosin head movement C" aria-hidden="true"/>
                             </figure>
-
-                            <figure class="Nervous-system" id="img-4">
-                                <img src="../images/ch01_figure_text_13d.png" class="img" alt="Myosin head movement D" />
+                            <figure class="Nervous-system" id="img-4" aria-hidden="true">
+                                <img src="../images/ch01_figure_text_13d.png" class="img" alt="Myosin head movement D" aria-hidden="true"/>
                             </figure>
-
                         </div>
                     </div>
                 </div>
 
-<div class="subcaption img-1 active">Phase G<sub>1</sub>: The cyclin D/Cdk4 complex assembles at the beginning of G<sub>1</sub>; the cyclin E/Cdk2 complex assembles near the end of G<sub>1</sub> as the cell is preparing to cross checkpoint 1 to start DNA synthesis (during S phase).</div>
-
-<div class="subcaption img-2">Phase S: The cyclin A/Cdk2 complex assembles as DNA synthesis starts.</div>
-
-<div class="subcaption img-3">Phase G<sub>2</sub>: Completion of G<sub>2</sub> is indicated by the assembled cyclin A/Cdk1 complex.</div>
-
-<div class="subcaption img-4">Phase Mitosis: A cell crosses checkpoint 2 to initiate mitosis when the cyclin B/Cdk1 complex assembles. The cyclin B/Cdk1 complex is degraded by the 26S proteasome and an assembled cyclin D/Cdk4 marks the start of the G<sub>1</sub> phase of a new cell cycle.</div>
-
-
+                <div class="subcaption img-1 active" aria-hidden='false'>Phase G<sub>1</sub>: The cyclin D/Cdk4 complex assembles at the beginning of G<sub>1</sub>; the cyclin E/Cdk2 complex assembles near the end of G<sub>1</sub> as the cell is preparing to cross checkpoint 1 to start DNA synthesis (during S phase).</div>
+                <div class="subcaption img-2" aria-hidden='true'>Phase S: The cyclin A/Cdk2 complex assembles as DNA synthesis starts.</div>
+                <div class="subcaption img-3" aria-hidden='true'>Phase G<sub>2</sub>: Completion of G<sub>2</sub> is indicated by the assembled cyclin A/Cdk1 complex.</div>
+                <div class="subcaption img-4" aria-hidden='true'>Phase Mitosis: A cell crosses checkpoint 2 to initiate mitosis when the cyclin B/Cdk1 complex assembles. The cyclin B/Cdk1 complex is degraded by the 26S proteasome and an assembled cyclin D/Cdk4 marks the start of the G<sub>1</sub> phase of a new cell cycle.</div>
 
                 <div class="slider-tab">
                     <div class="arrow-mask left">
-                        <div class="arrow-left outer" role="button" aria-label="previous" tabindex="0"></div>
+                        <button class="arrow-left outer" aria-label="previous" title="Previous"></button>
                     </div>
-                    <div class="arrow-mask right">
-                        <div class="arrow-right outer" role="button" aria-label="next" tabindex="0"></div>
-                    </div>
+                    
                     <div class="Nervous-system-slide">
-                        <div class="slider-track-line">
+                        <div class="slider-track-line" aria-hidden="true">
                             <div class="track"></div>
                             <div id="draggableDot"></div>
                         </div>
-                        <div class="buttonWrapper">
-                            <div class="radio-button tab-marker active" data-id="img-1" tabindex="0" title="G1"></div>
-                            <div class="radio-button tab-marker" data-id="img-2" tabindex="0" title="Phase S"></div>
-                            <div class="radio-button tab-marker" data-id="img-3" tabindex="0" title="Phase G2"></div>
-                            <div class="radio-button tab-marker" data-id="img-4" tabindex="0" title="Phase Mitosis"></div>
-
+                        <ol class="buttonWrapper" role="tablist" aria-label="use tab and enter keys to move between items in the slider">
+                            <li>
+                                <button role="tab" class="radio-button tab-marker active" aria-selected="true" data-id="img-1" title="G1"></button>
+                            </li>
+                            <li>
+                                <button role="tab" class="radio-button tab-marker" aria-selected="false" data-id="img-2" title="Phase S"></button>
+                            </li>
+                            <li>
+                                <button role="tab" class="radio-button tab-marker" aria-selected="false" data-id="img-3" title="Phase G2"></button>
+                            </li>
+                            <li>
+                                <button role="tab" class="radio-button tab-marker" aria-selected="false" data-id="img-4" title="Phase Mitosis"></button>
+                            </li>
+                        </ol>
+                        <div style="display: flex;grid-template-columns: 1fr 1fr 1fr;justify-content: space-between;">
                             <span class="nrvs-label">Phase G1</span>
                             <div class="label"><span id="selectedPhase" class="value">G1</span></div>
                             <span class="nrvs-label">Mitosis</span>
-
-
                         </div>
+                    </div>
+                    <div class="arrow-mask right">
+                        <button class="arrow-right outer" aria-label="next"  title="Next"></button>
                     </div>
                 </div>
             </div>

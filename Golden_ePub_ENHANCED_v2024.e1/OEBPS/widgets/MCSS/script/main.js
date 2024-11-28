@@ -333,8 +333,9 @@ function getNewQuestion(question) {
     bind_annotLinkEvents();
 }
 function addActiveClass(el) {
+    var isWrong = isAnsweredWrong();
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
-        if(!$(el.target).hasClass('already-answered') && !$(el.target).hasClass('wrong')){
+        if(!$(el.target).hasClass('already-answered') && !isWrong){
             $(".ic-opt-fbk").remove();
             $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-checked", false);
             $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-checked", false);
@@ -358,12 +359,22 @@ function addActiveClass(el) {
         return false;
     }
 }
+function isAnsweredWrong(){
+    var isAnsweredWrong = false;
+    $('.ques-content ul li.focus-input').each(function () {
+        if($(this).hasClass("wrong")){
+            isAnsweredWrong = true;
+        }
+    });
+    return isAnsweredWrong;
+}
 // check the current option is true or not .
 function getResult(element) {
     var id = parseInt($(element).attr('data-id'));
     let dataId = 'q-' + parseInt($('.tab-pane').attr('id'));
     if (id === currentQuestion.answer) {
         $(element).removeClass().addClass("focus-input last-child").attr("aria-describedby", "ariaCorrect");
+        $(".focus-input").attr("aria-disabled",true);
         correctMsg.innerHTML = correctFBText;
         $(element).parent().attr("data-correct", "true");
         //$(element).attr("role", "img");
@@ -392,6 +403,7 @@ function getResult(element) {
         ariaAnnounce('Selected option ' + $(element).text() + ' is correct. ' + currentQuestion.ansText);
     } else {
         $(element).removeClass().addClass("focus-input wrong").attr("aria-describedby", "ariaIncorrect");
+        $(".focus-input").attr("aria-disabled",true);
         correctMsg.classList.add("not-quite");
         var optFeedback = $(element).attr('data-feedback')
         if (optFeedback != undefined && optFeedback != "") {
@@ -501,7 +513,7 @@ $('#mcq_button').on('mousedown click', function (e) {
             $('#need_help').show();*/
             $('#questionNumber').focus();
         } else if (buttonText === 'try') {
-            $('.focus-input').removeClass().addClass('focus-input').attr("aria-checked",false);
+            $('.focus-input').removeClass().addClass('focus-input').attr("aria-checked",false).attr("aria-disabled", false);
             $('#answer_label').hide();
             $('#Add_solution').hide();
             $('.nav-link').each(function () {
@@ -544,6 +556,7 @@ $('#show_ans').on('click keydown', (function (e) {
         $('#mcq_button').removeClass('disabled').removeAttr('aria-disabled');
         // $('#mcq_button').removeAttr('tabindex');
         $('#mcq_button').attr('tabindex', '0');
+        $('.focus-input').removeClass('wrong').removeAttr("aria-checked").removeAttr("aria-describedby").attr("aria-disabled", true);
         let correctAnswer = [];
         $('.focus-input').each(function () {
             if ($(this).attr('data-id') == quiz[currentQuestion].answer) {
@@ -556,7 +569,7 @@ $('#show_ans').on('click keydown', (function (e) {
         setTimeout(() => {
             ariaAnnounce('Correct answer is ' + correctAnswer + ". " + quiz[currentQuestion].ansText);
         }, 200);
-        $('.focus-input').removeClass('wrong').removeAttr("aria-describedby");
+        
         $(".ic-opt-fbk").remove();
         $('#answer_label').hide();
         bind_annotLinkEvents();
