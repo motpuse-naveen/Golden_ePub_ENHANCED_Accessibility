@@ -8,6 +8,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>What is Psychopathology?</title>
+    <link rel="stylesheet" type="text/css" href="../../common_assets/css/variables.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../styles/Elsevier_eBook.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <script type="text/javascript" src="../script/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../script/jquery-ui.min.js"></script>
@@ -20,9 +22,9 @@
 
         <div class="bottom-bar-container center-in-display">
             <div class="bottom-bar">
-                <div class="inline-audio">
+                <div class="inline-audio" aria-labelledby="audio-title">
                     <div class="subcaption">
-                        <h1 id="audio-title">What is Psychopathology?</h1>
+                        <h2 class="audio-title" id="audio-title">What is Psychopathology?</h2>
                     </div>
                     <audio controls="controls" class="playAudio" controlslist="nodownload" aria-describedby="audio-description" aria-label="What is Psychopathology? audio content">
                         <source src="../audio/001-what-is-psychopathology.mp3" type="audio/mpeg" />
@@ -30,11 +32,9 @@
                         Your browser does not support the audio element.
                     </audio>
                     <div class="about-the-audio-container">
-                        <button class="about-the-audio" aria-pressed="true">About the Audio</button>
-                        <div id="audio-description" class="audio-description">
-                            This audio clip discusses the latest advancements in space exploration, including recent missions to Mars and the development of new telescopes. 
-                            <strong>Speaker:</strong> Dr. Jane Smith, an astrophysicist from the National Space Research Institute. 
-                            <strong>Key Highlights:</strong> Introduction to Mars Rover discoveries, discussion on the James Webb Space Telescope's findings, and insights into upcoming space missions.
+                        <button class="about-the-audio" aria-expanded="false">About the Audio</button>
+                        <div id="audio-description" class="audio-description collapsed">
+                            Psychopathology is the scientific study of mental disorders, including their symptoms, causes, development, and treatment. It focuses on understanding abnormal patterns of thoughts, emotions, and behaviors that significantly impair an individual's functioning or well-being.
                         </div>
                     </div>
                 </div>

@@ -830,6 +830,13 @@ div.aria-widget-vertical-slider .label {
 	color: #007cb6;
 	outline-offset: -1px;
 }
+h2.audio-title
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 150%;
+    line-height: 1.3em;
+}
 
 .focus-input {
 	background: #fff;
@@ -859,7 +866,58 @@ audio {
     float: left;
     line-height: 1.3em;
 }
+.audio-description.collapsed{
+	display: none;
+}
+.audio-description.expanded{
+	display: block !important;
+}
 
 .about-the-audio-container{
 	display: inline-block;
+}
+
+button.about-the-audio {
+	color: var(--blue);
+	display: inline-block;
+	min-height: 1.6em;
+	font-weight: 400;
+	line-height: 1.5em;
+	background: url(../images/Expand_N.svg) no-repeat;
+	background-position: 0em center;
+	background-size: 1.2em auto;
+	padding: 0.5em 1em 0.375em 2em;
+	cursor: pointer;
+	/*margin-left: -1.25em;*/
+    border-style: none;
+    font-size: inherit;
+	font-family: inherit;
+}
+
+button.about-the-audio:hover {
+	background: url(../images/Expand_Hover_N.svg) no-repeat;
+	background-position: 0em center;
+	background-size: 1.2em auto;
+	color: #A84800 !important;
+	text-decoration: underline;
+}
+button.about-the-audio.expanded {
+	background: url(../images/Collapse_N.svg) no-repeat !important;
+	background-position: 0em center !important;
+	background-size: 1.2em auto !important;
+}
+button.about-the-audio.expanded:hover {
+	background: url(../images/Collapse_hover_N.svg) no-repeat !important;
+	background-position: 0em center !important;
+	background-size: 1.2em auto !important;
+	text-decoration: underline;
+}
+button.about-the-audio:focus-visible{
+	outline: 2px solid var(--focus-visible) !important;
+	border: none !important;
+}
+
+:focus-visible {
+    outline: 2px solid var(--focus-visible) !important;
+	border: none !important;
 }

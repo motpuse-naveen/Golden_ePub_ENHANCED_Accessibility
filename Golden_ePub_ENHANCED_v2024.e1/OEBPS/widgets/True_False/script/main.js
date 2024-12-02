@@ -205,10 +205,8 @@ function getNewQuestion(question) {
             option.prepend($("<span class='visually-hidden'>" + optionStyleType[j] + ". " + "</span>")[0])
         }
         optionContainer.appendChild(option);
-        // option.setAttribute("onclick","checkResult(this)");
-        // option.setAttribute("onclick", "addActiveClass(this)");
     }
-    $('.focus-input').on('keydown click', addActiveClass);
+    $('.focus-input').on('keydown click', onClickAndEnterKey);
     $('.tab-pane ').attr('data-state', currentQuestion.state);
     $('.tab-pane ').attr('id', question);
     if (currentQuestion.state === 'wrong') {
@@ -278,31 +276,39 @@ function getNewQuestion(question) {
 }
 function addActiveClass(el) {
     var isWrong = isAnsweredWrong();
+    if(!$(el.target).hasClass('already-answered') && !isWrong){
+        $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-checked", false);
+        $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-checked", false);
+        $('.focus-input').each(function () {
+            if($(this).attr("aria-describedby") == "ariaIncorrect" 
+            || $(this).attr("aria-describedby") == "ariaCorrect"){
+                $(this).removeAttr("aria-describedby");
+            }
+        });
+        $(el.target).removeClass().addClass('focus-input active').attr("aria-checked", true);
+        $('#mcq_button').html('Check Answer');
+        $('#Add_solution').hide();
+        $('#answer_label').hide();
+        $('.tab-pane ').attr('data-state', 'answered');
+        $('#mcq_button').removeClass('disabled').removeAttr('aria-disabled');
+        //$('#mcq_button').attr('title', 'Check Answer');
+        $('#mcq_button').attr('tabindex', '0');
+        ariaAnnounce('Selected option is ' + $(el.target).text());
+    }
+    el.preventDefault();
+    el.stopPropagation();
+    return false;
+}
+
+function onClickAndEnterKey(el){
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
-        if(!$(el.target).hasClass('already-answered') && !isWrong){
-            $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-checked", false);
-            $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-checked", false);
-            $('.focus-input').each(function () {
-                if($(this).attr("aria-describedby") == "ariaIncorrect" 
-                || $(this).attr("aria-describedby") == "ariaCorrect"){
-                    $(this).removeAttr("aria-describedby");
-                }
-            });
-            $(el.target).removeClass().addClass('focus-input active').attr("aria-checked", true);
-            $('#mcq_button').html('Check Answer');
-            $('#Add_solution').hide();
-            $('#answer_label').hide();
-            $('.tab-pane ').attr('data-state', 'answered');
-            $('#mcq_button').removeClass('disabled').removeAttr('aria-disabled');
-            //$('#mcq_button').attr('title', 'Check Answer');
-            $('#mcq_button').attr('tabindex', '0');
-            ariaAnnounce('Selected option is ' + $(el.target).text());
-        }
+        addActiveClass(el)
         el.preventDefault();
         el.stopPropagation();
         return false;
     }
 }
+
 function isAnsweredWrong(){
     var isAnsweredWrong = false;
     $('.ques-content ul li.focus-input').each(function () {
@@ -452,6 +458,14 @@ $('#mcq_button').on('mousedown click', function (e) {
                     $(this).removeAttr('data-correct');
                 }
             });
+            $('.focus-input').each(function (index) {
+                if (index == 0) {
+                    $(this).attr("tabindex",0);
+                }
+                else{
+                    $(this).attr("tabindex",-1);
+                }
+            });
             $('#show_ans').attr('aria-expanded', false);
             $('#mcq_button').addClass('disabled').attr("aria-disabled",true);
             $('#questionNumber').focus();
@@ -550,3 +564,153 @@ function ariaAnnounce(msg) {
         $('#ariaMessages').html("");
     }, 5000);
 };
+
+
+//APT: Accessibility changes.
+
+/*
+ *   This content is licensed according to the W3C Software License at
+ *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+ *
+ *   File:   radio.js
+ *
+ *   Desc:   Radio group widget that implements ARIA Authoring Practices
+ */
+
+'use strict';
+
+class RadioGroup {
+  constructor(groupNode) {
+    this.groupNode = groupNode;
+
+    this.radioButtons = [];
+
+    this.firstRadioButton = null;
+    this.lastRadioButton = null;
+
+    var rbs = this.groupNode.querySelectorAll('.focus-input[role=radio]');
+
+    for (var i = 0; i < rbs.length; i++) {
+      var rb = rbs[i];
+
+      rb.tabIndex = -1;
+      rb.setAttribute('aria-checked', 'false');
+
+      rb.addEventListener('keydown', this.handleKeydown.bind(this));
+      rb.addEventListener('click', this.handleClick.bind(this));
+      rb.addEventListener('focus', this.handleFocus.bind(this));
+      rb.addEventListener('blur', this.handleBlur.bind(this));
+
+      this.radioButtons.push(rb);
+
+      if (!this.firstRadioButton) {
+        this.firstRadioButton = rb;
+      }
+      this.lastRadioButton = rb;
+    }
+    this.firstRadioButton.tabIndex = 0;
+  }
+
+  setChecked(currentItem) {
+    for (var i = 0; i < this.radioButtons.length; i++) {
+      var rb = this.radioButtons[i];
+      rb.setAttribute('aria-checked', 'false');
+      rb.tabIndex = -1;
+    }
+    currentItem.setAttribute('aria-checked', 'true');
+    currentItem.tabIndex = 0;
+    currentItem.focus();
+  }
+
+  setCheckedToPreviousItem(currentItem) {
+    var index;
+
+    if (currentItem === this.firstRadioButton) {
+      this.setChecked(this.lastRadioButton);
+    } else {
+      index = this.radioButtons.indexOf(currentItem);
+      this.setChecked(this.radioButtons[index - 1]);
+    }
+  }
+
+  setCheckedToNextItem(currentItem) {
+    var index;
+
+    if (currentItem === this.lastRadioButton) {
+      this.setChecked(this.firstRadioButton);
+    } else {
+      index = this.radioButtons.indexOf(currentItem);
+      this.setChecked(this.radioButtons[index + 1]);
+    }
+  }
+
+  /* EVENT HANDLERS */
+
+  handleKeydown(event) {
+    var tgt = event.currentTarget,
+      flag = false;
+
+    switch (event.key) {
+      case ' ':
+        this.setChecked(tgt);
+        flag = true;
+        break;
+
+      case 'Up':
+      case 'ArrowUp':
+      case 'Left':
+      case 'ArrowLeft':
+        this.setCheckedToPreviousItem(tgt);
+        flag = true;
+        break;
+
+      case 'Down':
+      case 'ArrowDown':
+      case 'Right':
+      case 'ArrowRight':
+        this.setCheckedToNextItem(tgt);
+        flag = true;
+        break;
+
+      default:
+        break;
+    }
+
+    if (flag) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
+  }
+
+  handleClick(event) {
+    this.setChecked(event.currentTarget);
+  }
+
+  handleFocus(event) {
+    event.currentTarget.classList.add('focus');
+    addActiveClass(event)
+  }
+
+  handleBlur(event) {
+    event.currentTarget.classList.remove('focus');
+  }
+}
+
+function allowedKey(el_key){
+    var event_keys = ['up','arrowup','left','arrowleft', 'down', 'arrowdown', 'right', 'arrowright'];
+    if(event_keys.includes(el_key.toLowerCase()))
+    {
+       return true;
+    }
+    else{
+       return false;
+    }
+}
+
+// Initialize radio button group
+window.addEventListener('load', function () {
+  var radios = document.querySelectorAll('[role="radiogroup"]');
+  for (var i = 0; i < radios.length; i++) {
+    new RadioGroup(radios[i]);
+  }
+});

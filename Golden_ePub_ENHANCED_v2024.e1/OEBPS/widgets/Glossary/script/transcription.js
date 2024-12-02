@@ -161,6 +161,7 @@ $(document).on('click keydown', '.dropdown-content a[href]', function (e) {
                         MathJax.typeset();
                         //MathJax.typesetPromise()
                     }
+                    $element.focus();
                 }
                 var data = null;
                 if (res.data) {

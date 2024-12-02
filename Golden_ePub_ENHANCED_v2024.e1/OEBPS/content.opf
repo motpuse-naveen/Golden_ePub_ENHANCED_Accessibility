@@ -98,6 +98,9 @@
 	<item id="Img10" href="images/F000018si1.png" media-type="image/png"/>
 	<item id="Img11" href="images/F000029si1.png" media-type="image/png"/>
 	<item id="Img14" href="images/code.png" media-type="image/png"/>
+   <item id="Img14_1" href="images/dummy1.png" media-type="image/png"/>
+   <item id="Img14_2" href="images/dummy2.png" media-type="image/png"/>
+   <item id="Img14_3" href="images/dummy3.png" media-type="image/png"/>
 	<item id="Img11a" href="images/chp001_gr001.jpg" media-type="image/jpeg"/>
 	<item id="Img12" href="images/F000036mmc03-01-9780128023198.jpg" media-type="image/jpeg"/>
 	<item id="Vid1" href="videos/mmc03-01-9780128023198.mp4" media-type="video/mp4"/>
@@ -341,6 +344,12 @@
 <item id="aud_16" href="widgets/Embedded_audio/images/audio_figure_volume_indicator.png" media-type="image/png"/>
 <item id="aud_17" href="widgets/Embedded_audio/images/play_pause@2x.png" media-type="image/png"/>
 <item id="aud_18" href="widgets/Embedded_audio/images/web_volume_dk.png" media-type="image/png"/>
+
+<item id="aud_18_1" href="widgets/Embedded_audio/images/Expand_N.svg" media-type="image/svg+xml"/>
+<item id="aud_18_2" href="widgets/Embedded_audio/images/Collapse_N.svg" media-type="image/svg+xml"/>
+<item id="aud_18_3" href="widgets/Embedded_audio/images/Expand_Hover_N.svg" media-type="image/svg+xml"/>
+<item id="aud_18_4" href="widgets/Embedded_audio/images/Collapse_hover_N.svg" media-type="image/svg+xml"/>
+
 <item id="aud_19" href="widgets/Embedded_audio/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
 <item id="aud_20" href="widgets/Embedded_audio/script/jquery-ui.min.js" media-type="text/javascript"/>
 <item id="aud_21" href="widgets/Embedded_audio/script/slider-a11y-vertical.js" media-type="text/javascript"/>
