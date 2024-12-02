@@ -9,7 +9,8 @@ $(document).ready(function (){
         ) { 
             setTimeout(function(){
                 console.log("dropdown-content - click/keypress")
-                $('.dropdown-content').hide();
+                $('.dropdown-content').closest(".dropdown[data-dfn]").attr("aria-expanded",false);
+                $('.dropdown-content').attr("aria-hidden",true).remove();
                 //NM: 09-June-2023 - The code is added to fix issue 
                 //Related to the annotation links in poptip is not working on ipad
                 $('.dropdown-content').each(function(){
@@ -26,8 +27,9 @@ $(document).ready(function (){
     $('.dropdown').on('keydown', '.dropdown-content', (e)=> {
         if (e.type === 'keydown' && e.keyCode === 27) { 
             console.log($(e.target))
-            $(e.target).parent().focus();   
-            $(e.target).hide();
+            $(e.target).parent().focus();
+            $(e.target).closest(".dropdown[data-dfn]").attr("aria-expanded",false);
+            $(e.target).attr("aria-hidden",true).remove();
             //NM: 09-June-2023 - The code is added to fix issue 
             //Related to the annotation links in poptip is not working on ipad
             $(e.target).each(function(){
@@ -66,18 +68,19 @@ function bind_glossary_events(){
                 setTimeout(function(){
                     
                 },200)
-                $('.dropdown-content').hide();
-                    closestdropdwn.focus();   
-                    //NM: 09-June-2023 - The code is added to fix issue 
-                    //Related to the annotation links in poptip is not working on ipad
-                    $('.dropdown-content').each(function(){
-                        if($(this).closest(".dropdown[temp-data-dfn]").length>0){
-                            var tempdataDefElm =$(this).closest(".dropdown[temp-data-dfn]")
-                            var tempdataDefVal =  tempdataDefElm.attr("temp-data-dfn");
-                            tempdataDefElm.removeAttr("temp-data-dfn");
-                            tempdataDefElm.attr("data-dfn", tempdataDefVal);
-                        }
-                    });
+                $('.dropdown-content').closest(".dropdown[data-dfn]").attr("aria-expanded",false);
+                $('.dropdown-content').attr("aria-hidden",true).remove();
+                closestdropdwn.focus();   
+                //NM: 09-June-2023 - The code is added to fix issue 
+                //Related to the annotation links in poptip is not working on ipad
+                $('.dropdown-content').each(function(){
+                    if($(this).closest(".dropdown[temp-data-dfn]").length>0){
+                        var tempdataDefElm =$(this).closest(".dropdown[temp-data-dfn]")
+                        var tempdataDefVal =  tempdataDefElm.attr("temp-data-dfn");
+                        tempdataDefElm.removeAttr("temp-data-dfn");
+                        tempdataDefElm.attr("data-dfn", tempdataDefVal);
+                    }
+                });
                 if(openanotherpoptip){
                     $(e.target).closest("[data-dfn]").focus()
                     Utils.getTooltip(dfnCode, $(e.target).closest("[data-dfn]"));
@@ -97,7 +100,8 @@ $(document).on('click keydown', '.dropdown-content a[href]', function (e) {
             tempdataDefElm.attr("data-dfn", tempdataDefVal);
         }
     });
-    $('.dropdown-content').hide();
+    $('.dropdown-content').closest(".dropdown[data-dfn]").attr("aria-expanded",false);
+    $('.dropdown-content').attr("aria-hidden",true).remove();
     e.stopPropagation();
 });
 
@@ -114,9 +118,12 @@ $(document).on('click keydown', '.dropdown-content a[href]', function (e) {
     app.getTooltip = function(dfnCode, $ele) {
         if (dfnLinks.hasOwnProperty(dfnCode)) {
             var $content = $('<div>', {
+                'id': 'definition-' + dfnCode,
                 'class': 'dropdown-content',
-                'tabindex': 0,
-                'aria-live':'assertive'
+                //'tabindex': 0,
+                //'aria-live':'assertive',
+                //'role':"tooltip",
+                'aria-hidden':true
             });
             var isLoaded = new Promise((resolve, reject) =>{
                 //if (!$ele.children().length) {
@@ -149,7 +156,7 @@ $(document).on('click keydown', '.dropdown-content a[href]', function (e) {
                     }
                     //NM: 09-June-2023 - The code is added to fix issue 
                     //Related to the annotation links in poptip is not working on ipad
-                    if($element.find('a[href^="#"]').length>0){
+                    if($element.find('a.innerlink[href^="#"]').length>0){
                         if($element.closest(".dropdown[data-dfn]").length>0){
                             var dataDefElm = $element.closest(".dropdown[data-dfn]");
                             var dataDefVal =  dataDefElm.attr("data-dfn");
@@ -161,7 +168,10 @@ $(document).on('click keydown', '.dropdown-content a[href]', function (e) {
                         MathJax.typeset();
                         //MathJax.typesetPromise()
                     }
-                    $element.focus();
+                    $ele.attr("aria-describedby", 'definition-' + dfnCode)
+                    $ele.attr("aria-expanded",true)
+                    //$element.removeAttr("aria-hidden").focus();
+                    $element.removeAttr("aria-hidden")
                 }
                 var data = null;
                 if (res.data) {

@@ -128,12 +128,12 @@ $(document).ready(function () {
                 if (id) {
                     tabButton.forEach(btn => {
                         btn.classList.remove("active");
-                        btn.setAttribute("aria-selected", false);
-                        //btn.setAttribute("aria-pressed", false);
+                        //btn.setAttribute("aria-selected", false);
+                        btn.setAttribute("aria-pressed", false);
                     });
                     e.target.classList.add("active");
-                    e.target.setAttribute("aria-selected", true);
-                    //e.target.setAttribute("aria-pressed", true);
+                    //e.target.setAttribute("aria-selected", true);
+                    e.target.setAttribute("aria-pressed", true);
                     jQuery('#selectedPhase').text(jQuery('.buttonWrapper .tab-marker.active .marker').text());
                     contents.forEach(content => {
                         content.classList.remove("active");
@@ -245,6 +245,8 @@ $(document).ready(function () {
         $draggableDot.animate({
             'margin-left': getStepLeft(stepNumber)
         }, 200)
+        $(".radio-button.tab-marker").attr("aria-pressed",false)
+        $(".radio-button.tab-marker[data-id='img-" + stepNumber + "']").attr("aria-pressed",true)
         $('#img-' + stepNumber).addClass('active').attr("aria-hidden", false);
         $('.img-' + stepNumber).addClass('active').attr("aria-hidden", false);
         // jQuery('#selectedPhase').text('G1');

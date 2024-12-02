@@ -58,64 +58,64 @@ $(document).ready(function () {
     //tooltip direction
     var tooltipDirection;
     //var ariaLabelsForTooltipAnchors = ['E', 'Action potential', 'E IPSP', 'Inside, Outside, Lipid, Lipid Bilayer'];
-    var $orderedList = $('<ol>',{
-        'role':'tablist'
-    })
+    $('.pin-group').each(function (groupIndex) {
+        console.log('pin-group:', groupIndex + 1);
+        const groupLabel = $(this).attr('group-label');
+        var $orderedList = $('<ol>',{
+            'aria-label':groupLabel
+        })
+        // Access child pins within each group
+        $(this).find('.pin').each(function (pinIndex) {
+            let tooltipDirection;
+    
+            // Determine tooltip direction based on classes
+            if ($(this).hasClass('pin-down')) {
+                tooltipDirection = 'tooltip-down';
+            } else if ($(this).hasClass('pin-left')) {
+                tooltipDirection = 'tooltip-left';
+            } else if ($(this).hasClass('pin-right')) {
+                tooltipDirection = 'tooltip-right';
+            } else if ($(this).hasClass('pin-up')) {
+                tooltipDirection = 'tooltip-up';
+            } else {
+                tooltipDirection = 'tooltip-right';
+            }
+    
+            // Create tooltip anchor wrapper
+            const $toolTipAnchorWrapper = $('<li>', {
+                'class': 'li-' + tooltipDirection + ' tooltip-listitem',
+                'style': "left:" + $(this).data('xpos') + "px; top:" + $(this).data('ypos') + "px; z-index: 1;"
+            });
+    
+            // Create tooltip button
+            const $tooltipButton = $('<button>', {
+                'class': tooltipDirection + ' tooltipInner',
+                'aria-expanded': false,
+                'aria-label': 'label ' + (pinIndex + 1) // Group-Pin index
+            });
+    
+            // Create tooltip content
+            const $tooltipAnchor = $('<div>', {
+                'class': 'tooltip',
+                'id': 'tooltip-' + (groupIndex + 1) + '-' + (pinIndex + 1),
+                'aria-hidden': true
+            });
+    
+            // Add the tooltip's text and clean up unwanted attributes
+            $tooltipAnchor.html($(this).html());
+            $tooltipAnchor.find('p').removeAttr('tabindex');
+    
+            // Assemble the tooltip
+            $tooltipButton.append('<span aria-hidden="true">?</span>');
+            $toolTipAnchorWrapper.append($tooltipButton);
+            $toolTipAnchorWrapper.append($tooltipAnchor);
+    
+            // Append the tooltip to the ordered list
+            $orderedList.append($toolTipAnchorWrapper);
+        });
 
-    for (i = 0; i < ($(".pin").length); i++) {
-        // set tooltip direction type - up or down             
-        /*if ($(".pin").eq(i).hasClass('pin-down')) {
-            tooltipDirection = 'tooltip-down';
-        } else {
-            tooltipDirection = 'tooltip-up';
-        }*/
-        if ($(".pin").eq(i).hasClass('pin-down')) {
-            tooltipDirection = 'tooltip-down';
-        } else if ($(".pin").eq(i).hasClass('pin-left')) {
-            tooltipDirection = 'tooltip-left';
-        } else if ($(".pin").eq(i).hasClass('pin-right')) {
-            tooltipDirection = 'tooltip-right';
-        } else if ($(".pin").eq(i).hasClass('pin-up')) {
-            tooltipDirection = 'tooltip-up';
-        } else {
-            tooltipDirection = 'tooltip-right';
-        }
-        var $toolTipAnchorWrapper = $('<li>', {
-            'class': 'li-' + tooltipDirection + ' tooltip-listitem',
-            'style': "left:" + $(".pin").eq(i).data('xpos') + "px;top:" + $(".pin").eq(i).data('ypos') + "px; z-index: 1;"
-            //,'class': tooltipDirection + ' tooltipInner',
-        });
-        var $tooltipButton = $('<button>', {
-            'class': tooltipDirection + ' tooltipInner',
-            'role':'tab',
-            //'aria-pressed':false,
-            'aria-selected':false,
-            'aria-expanded':false,
-            'aria-describedby': 'tooltip-' + (i + 1)
-        });
-        var $tooltipAnchor = $('<div>', {
-            class: 'tooltip',
-            id: 'tooltip-' + (i + 1),
-            'tabindex': 0,
-            'aria-hidden':true
-        });
-        $tooltipButton.append('?');
-        $toolTipAnchorWrapper.append($tooltipButton);
-        $tooltipAnchor.html($(".pin").eq(i).html());
-        $tooltipAnchor.find("p").removeAttr("tabindex");
-        $toolTipAnchorWrapper.append($tooltipAnchor);
-        
-        /*$tooltipAnchor.focusout(() => {
-            setTimeout(() => {
-                Utils.hideToolTip();
-                Utils.setImageBound();
-            },50);
-        });*/
-
-        // append the tooltip
-        $orderedList.append($toolTipAnchorWrapper);
-    }
-    $("#image-map").append($orderedList);
+        $("#image-map").append($orderedList);
+    });
 
     // show/hide the tooltip
     $('.tooltipInner').click(function (event) {
@@ -134,18 +134,19 @@ $(document).ready(function () {
             Utils.showToolTip($toolTip);
         }
         */
+        $('.tooltipInner').attr("aria-expanded",false)
         var $toolTip = $(this).closest("li.tooltip-listitem").children('.tooltip');
         if($toolTip.is(":visible")){
             Utils.hideToolTip();
             //$(this).attr("aria-pressed",false)
-            $(this).attr("aria-selected",false)
+            //$(this).attr("aria-selected",false)
             $(this).attr("aria-expanded",false)
         }
         else{
             Utils.hideToolTip();
             // $(this).children('.tooltip').fadeIn(100);
             //$(this).attr("aria-pressed",true )
-            $(this).attr("aria-selected",true)
+            //$(this).attr("aria-selected",true)
             $(this).attr("aria-expanded",true)
             // console.log('sliderStepSize')
             Utils.showToolTip($toolTip);

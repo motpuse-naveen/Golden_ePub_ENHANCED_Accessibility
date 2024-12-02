@@ -464,6 +464,7 @@ function answerIndicatot() {
         footerAnchor.classList.add("nav-link");
         footerAnchor.classList.add("step");
         footerAnchor.setAttribute("data-id", 'q-' + (parseInt(i) + 1));
+        footerAnchor.setAttribute("href", '#');
         //footerLi.setAttribute('role', 'option');
         //footerLi.setAttribute('aria-selected', 'false');
         //APT: Added selected state to anchor element
