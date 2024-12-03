@@ -22,13 +22,13 @@ $(".poptip_btn").on('click', function (event) {
             Utils.ariaAnnounce('Test Enabled')
             //$(this).attr('aria-label', 'Show Labels')
             $(this).text('Show Labels')
-            $(this).attr('aria-label',$(this).attr('showlabels-aria'))
+            $(this).attr('aria-label',$(this).attr('data-showlabelsaria'))
             //$(this).attr('aria-pressed', false)
 
         } else {
             //$(this).attr('aria-label', 'Test Yourself')
             $(this).text('Test Yourself')
-            $(this).attr('aria-label',$(this).attr('testyourself-aria'))
+            $(this).attr('aria-label',$(this).attr('data-testyourselfaria'))
             //$(this).attr('aria-pressed', true)
             Utils.ariaAnnounce('Test Disabled')
         }
@@ -60,7 +60,7 @@ $(document).ready(function () {
     //var ariaLabelsForTooltipAnchors = ['E', 'Action potential', 'E IPSP', 'Inside, Outside, Lipid, Lipid Bilayer'];
     $('.pin-group').each(function (groupIndex) {
         console.log('pin-group:', groupIndex + 1);
-        const groupLabel = $(this).attr('group-label');
+        const groupLabel = $(this).attr('data-grouplabel');
         var $orderedList = $('<ol>',{
             'aria-label':groupLabel
         })

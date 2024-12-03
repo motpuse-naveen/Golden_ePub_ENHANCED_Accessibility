@@ -378,7 +378,7 @@
 <item id="ty_2" href="widgets/Labels/css/device.css" media-type="text/css" />
 <item id="ty_3" href="widgets/Labels/css/style.css" media-type="text/css" />
 <item id="ty_4" href="widgets/Labels/images/image_figure_test_yourself_btn.png" media-type="image/png" />
-<item id="ty_4" href="widgets/Labels/images/image_figure_test_yourself_btn_wt.png" media-type="image/png" />
+<item id="ty_4_1" href="widgets/Labels/images/image_figure_test_yourself_btn_wt.png" media-type="image/png" />
 <item id="ty_5" href="widgets/Labels/images/navbar_minus.png" media-type="image/png" />
 <item id="ty_6" href="widgets/Labels/images/navbar_plus.png" media-type="image/png" />
 <item id="ty_7" href="widgets/Labels/images/hotspot-mag-glass.png" media-type="image/png" />
@@ -568,7 +568,6 @@
    <itemref idref="IDX001" linear="yes"/>
    <itemref idref="ty_1" linear="no" />
    <itemref idref="sl_25" linear="no" />
-   <itemref idref="sl_26" linear="no" />
    <itemref idref="mcms_02" linear="no"/>
    <itemref idref="mcms_19" linear="no"/>
 </spine>
