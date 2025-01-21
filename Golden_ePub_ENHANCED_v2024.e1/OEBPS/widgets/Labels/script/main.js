@@ -343,7 +343,7 @@ $(document).ready(function () {
         //$imageWrapper.css({ 'top': newTop, 'left': newLeft });
     }
     app.ariaAnnounce = function (msg) {
-        console.log(msg);
+        //console.log(msg);
         if (msg) {
             $('#ariaMessages').html(msg);
         }

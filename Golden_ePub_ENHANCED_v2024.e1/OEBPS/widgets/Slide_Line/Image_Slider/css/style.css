@@ -113,6 +113,7 @@ input#slide[type=range]:hover::-webkit-slider-thumb {
 	outline: 2px solid #007cb6;
 	color: #007cb6;
 	outline-offset: -1px;
+	font-weight: bold;
 }
 
 .focus-input {

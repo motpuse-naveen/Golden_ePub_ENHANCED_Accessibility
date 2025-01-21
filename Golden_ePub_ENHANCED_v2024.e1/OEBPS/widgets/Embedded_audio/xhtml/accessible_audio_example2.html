@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Transcript with VTT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #transcript {
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+    .transcript-line {
+      cursor: pointer;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="audio-container">
+    <audio id="audio-player" controls>
+      <source src="../audio/001-what-is-psychopathology.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div id="transcript">
+      <!-- Transcript will be loaded here dynamically -->
+    </div>
+  </div>
+
+  <script>
+    // Load the WebVTT file and display the transcript
+    const audio = document.getElementById('audio-player');
+    const transcriptContainer = document.getElementById('transcript');
+    const vttFile = '../audio/001-what-is-psychopathology.vtt';
+
+    // Fetch and parse the VTT file
+    fetch(vttFile)
+      .then(response => response.text())
+      .then(parseVTT)
+      .catch(error => console.error('Error loading VTT file:', error));
+
+    function parseVTT(vttData) {
+      const lines = vttData.split('\n\n');
+      lines.forEach((line, index) => {
+        const parts = line.split('\n');
+        if (parts.length >= 2 && parts[0].includes('-->')) {
+          const timestamps = parts[0].split(' --> ');
+          const start = convertToSeconds(timestamps[0]);
+          const end = convertToSeconds(timestamps[1]);
+          const text = parts.slice(1).join(' ');
+
+          const transcriptLine = document.createElement('div');
+          transcriptLine.textContent = text;
+          transcriptLine.className = 'transcript-line';
+          transcriptLine.dataset.start = start;
+          transcriptLine.dataset.end = end;
+
+          // Jump to audio when clicking on the line
+          transcriptLine.addEventListener('click', () => {
+            audio.currentTime = start;
+            audio.play();
+          });
+
+          transcriptContainer.appendChild(transcriptLine);
+        }
+      });
+    }
+
+    // Convert VTT timestamp (hh:mm:ss.ms) to seconds
+    function convertToSeconds(timestamp) {
+      const parts = timestamp.split(':');
+      const secondsParts = parts[2].split('.');
+      return (
+        parseInt(parts[0]) * 3600 +
+        parseInt(parts[1]) * 60 +
+        parseInt(secondsParts[0]) +
+        (secondsParts[1] ? parseInt(secondsParts[1]) / 1000 : 0)
+      );
+    }
+
+    // Highlight the current transcript line as the audio plays
+    audio.addEventListener('timeupdate', () => {
+      const currentTime = audio.currentTime;
+      document.querySelectorAll('.transcript-line').forEach(line => {
+        const start = parseFloat(line.dataset.start);
+        const end = parseFloat(line.dataset.end);
+        if (currentTime >= start && currentTime <= end) {
+          line.classList.add('highlight');
+        } else {
+          line.classList.remove('highlight');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

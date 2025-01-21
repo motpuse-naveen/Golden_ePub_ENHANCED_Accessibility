@@ -150,7 +150,7 @@ function getNewQuestion(question) {
     QuestionNumber.innerText = "Question " + (question);
     //  &lt;!-- QuestionNumber.innerText = "Question " + (question) + " of " + (quiz.length); 
     QuestionNumber.setAttribute('aria-label', "Question " + (question));
-    QuestionNumber.setAttribute('role', "heading");
+    //QuestionNumber.setAttribute('role', "heading");
     QuestionNumber.setAttribute('tabindex', '0');
     optionsIndex++;
     // get random question
@@ -642,7 +642,7 @@ $('.arrow-right').on('click keydown', function (e) {
 });
 var ariaClearTimeout = null;
 function ariaAnnounce(msg) {
-    console.log(msg);
+    //console.log(msg);
     if (msg) {
         clearTimeout(ariaClearTimeout)
         $('#ariaMessages').html("");

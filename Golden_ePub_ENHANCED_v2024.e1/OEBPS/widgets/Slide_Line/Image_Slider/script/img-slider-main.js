@@ -10,7 +10,7 @@
     var currentSliderVal = 0;
     app.announcementRange = { min: 0, max: 100 };
     app.ariaAnnounce = function (msg) {
-        console.log(msg);
+        //console.log(msg);
         if (msg) {
             $('#ariaMessages').html(msg);
         }

@@ -175,7 +175,7 @@ function setAvailableQuestion() {
 function getNewQuestion(question) {
     $('#mcq_button').show();
     QuestionNumber.innerText = "Question " + (question);
-    QuestionNumber.setAttribute('role', "heading");
+    //QuestionNumber.setAttribute('role', "heading");
     QuestionNumber.setAttribute('tabindex', '0');
     optionsIndex++;
     // get random question
@@ -337,7 +337,7 @@ function getNewQuestion(question) {
 }
 function addActiveClass(el) {
     var isWrong = isAnsweredWrong();
-    console.log("called addActiveClass " + el.key)
+    //console.log("called addActiveClass " + el.key)
     if(!$(el.target).hasClass('already-answered') && !isWrong){
         $(".ic-opt-fbk").remove();
         $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-checked", false);
@@ -645,7 +645,7 @@ $('#show_ans').on('focusin click keyup', function (e) {
 
 var ariaClearTimeout = null;
 function ariaAnnounce(msg) {
-    console.log(msg);
+    //console.log(msg);
     if (msg) {
         clearTimeout(ariaClearTimeout)
         $('#ariaMessages').html("");

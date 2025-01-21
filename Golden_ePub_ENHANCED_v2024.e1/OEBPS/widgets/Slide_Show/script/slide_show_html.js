@@ -121,7 +121,7 @@
                 $imageWrapper.animate({'top': newTop, 'left': newLeft}, 400);
             }
             app.ariaAnnounce = function (msg) {
-            console.log(msg);
+            //console.log(msg);
                 if (msg) {
                     $('#ariaMessages').html(msg);
                 }
