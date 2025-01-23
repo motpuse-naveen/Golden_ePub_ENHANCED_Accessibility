@@ -56,11 +56,11 @@
 <navPoint id="toc44" playOrder="44"><navLabel><text>Quiz with Multiple Choice</text></navLabel><content src="xhtml/Quiz_with_Multiple_Choice.xhtml"/></navPoint>
 <navPoint id="toc45" playOrder="45"><navLabel><text>Quiz with Multiple Answer</text></navLabel><content src="xhtml/Quiz_with_Multiple_Answer.xhtml"/></navPoint>
 <navPoint id="toc46" playOrder="46"><navLabel><text>Quiz with True/False</text></navLabel><content src="xhtml/Quiz_with_True-False.xhtml"/></navPoint></navPoint>
-<navPoint id="toc46" playOrder="47"><navLabel><text>Flashcard</text></navLabel><content src="xhtml/Flashcard.xhtml"/></navPoint></navPoint>
-<navPoint id="toc47" playOrder="48"><navLabel><text>Appendix A</text></navLabel><content src="xhtml/Appendix-A_19_B9780124158207000173.xhtml"/></navPoint>
-<navPoint id="toc48" playOrder="49"><navLabel><text>Glossary</text></navLabel><content src="xhtml/Glossary_20_B9780124158207000054.xhtml"/></navPoint>
-<navPoint id="toc49" playOrder="50"><navLabel><text>Bibliography</text></navLabel><content src="xhtml/Bibliography_21_B9780124158207000178.xhtml"/></navPoint>
-<navPoint id="toc50" playOrder="51"><navLabel><text>Index</text></navLabel><content src="xhtml/Index_22_B9780124158207000044.xhtml"/></navPoint>
+<navPoint id="toc47" playOrder="47"><navLabel><text>Flashcard</text></navLabel><content src="xhtml/Flashcard.xhtml"/></navPoint></navPoint>
+<navPoint id="toc48" playOrder="48"><navLabel><text>Appendix A</text></navLabel><content src="xhtml/Appendix-A_19_B9780124158207000173.xhtml"/></navPoint>
+<navPoint id="toc49" playOrder="49"><navLabel><text>Glossary</text></navLabel><content src="xhtml/Glossary_20_B9780124158207000054.xhtml"/></navPoint>
+<navPoint id="toc50" playOrder="50"><navLabel><text>Bibliography</text></navLabel><content src="xhtml/Bibliography_21_B9780124158207000178.xhtml"/></navPoint>
+<navPoint id="toc51" playOrder="51"><navLabel><text>Index</text></navLabel><content src="xhtml/Index_22_B9780124158207000044.xhtml"/></navPoint>
 </navMap>
 <pageList>
 <pageTarget type="front" value="page_i" playOrder="52"><navLabel><text>i</text></navLabel><content src="xhtml/Cover.xhtml#page_i"/></pageTarget>

@@ -607,6 +607,7 @@
    <itemref idref="enhance_8" linear="yes"/>
    <itemref idref="enhance_9" linear="yes"/>
    <itemref idref="enhance_10" linear="yes"/>
+   <itemref idref="enhance_11" linear="yes"/>
    <itemref idref="Appendix" linear="yes"/>
    <itemref idref="Glossary" linear="yes"/>
    <itemref idref="Bibliography" linear="yes"/>
