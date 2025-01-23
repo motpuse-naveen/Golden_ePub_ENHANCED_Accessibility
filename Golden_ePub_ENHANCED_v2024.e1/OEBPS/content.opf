@@ -340,6 +340,9 @@
 <item id="aud_3" href="widgets/Embedded_audio/fonts/SourceSansPro-Regular.ttf" media-type="application/vnd.ms-opentype"/>
 <item id="aud_4" href="widgets/Embedded_audio/audio/001-what-is-psychopathology.mp3" media-type="audio/mpeg"/>
 <item id="aud_5" href="widgets/Embedded_audio/audio/001-what-is-psychopathology.ogg" media-type="audio/ogg"/>
+<item id="aud_4_1" href="widgets/Embedded_audio/audio/what-is-psychopathology.mp3" media-type="audio/mpeg"/>
+<item id="aud_5_2" href="widgets/Embedded_audio/audio/what-is-psychopathology.ogg" media-type="audio/ogg"/>
+<item id="aud_5_3" href="widgets/Embedded_audio/audio/001-what-is-psychopathology.vtt" media-type="text/vtt"/>
 <item id="aud_15" href="widgets/Embedded_audio/css/style.css" media-type="text/css"/>
 <item id="aud_16" href="widgets/Embedded_audio/images/audio_figure_volume_indicator.png" media-type="image/png"/>
 <item id="aud_17" href="widgets/Embedded_audio/images/play_pause@2x.png" media-type="image/png"/>
@@ -354,6 +357,8 @@
 <item id="aud_20" href="widgets/Embedded_audio/script/jquery-ui.min.js" media-type="text/javascript"/>
 <item id="aud_21" href="widgets/Embedded_audio/script/slider-a11y-vertical.js" media-type="text/javascript"/>
 <item id="aud_22" href="widgets/Embedded_audio/xhtml/001-what-is-psychopathology.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="aud_23" href="widgets/Embedded_audio/xhtml/accessible_audio_example1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="aud_24" href="widgets/Embedded_audio/xhtml/accessible_audio_example2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 <!--Slideshow-->
 <item id="SlideShow_1" href="widgets/Slide_Show/css/header_style.css" media-type="text/css"/>
 <item id="SlideShow_2" href="widgets/Slide_Show/css/style.css" media-type="text/css"/>

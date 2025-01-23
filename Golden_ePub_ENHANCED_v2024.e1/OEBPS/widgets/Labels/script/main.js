@@ -135,12 +135,14 @@ $(document).ready(function () {
         }
         */
         $('.tooltipInner').attr("aria-expanded",false)
+        $('.tooltipInner').removeAttr("aria-describedby")
         var $toolTip = $(this).closest("li.tooltip-listitem").children('.tooltip');
         if($toolTip.is(":visible")){
             Utils.hideToolTip();
             //$(this).attr("aria-pressed",false)
             //$(this).attr("aria-selected",false)
             $(this).attr("aria-expanded",false)
+            $(this).removeAttr("aria-describedby")
         }
         else{
             Utils.hideToolTip();
@@ -148,6 +150,7 @@ $(document).ready(function () {
             //$(this).attr("aria-pressed",true )
             //$(this).attr("aria-selected",true)
             $(this).attr("aria-expanded",true)
+            $(this).attr("aria-describedby",$toolTip.attr("id"))
             // console.log('sliderStepSize')
             Utils.showToolTip($toolTip);
         }
@@ -457,3 +460,41 @@ imageElms.forEach(element => {
 		return false;
 	});
 });
+
+const handleClickOutside = (event) => {
+    // Alert to check the clicked target (for debugging)
+    var isTooltipOnly = 0;
+    if(event.target.closest(".tooltip-listitem")){
+        isTooltipOnly = event.target.closest(".tooltip-listitem").length
+    }
+    console.log(isTooltipOnly);
+    if(isTooltipOnly<=0){
+        var $visibleToolbar = $('.is-visible');
+        if ($visibleToolbar.length) {
+            var tooltipButton = $visibleToolbar.closest(".tooltip-listitem").find("button.tooltipInner")
+            tooltipButton.focus();
+            tooltipButton.removeClass('maxzindex').attr("aria-expanded","false");
+            $visibleToolbar.removeClass('is-visible').attr("aria-hidden",true);
+            $visibleToolbar.fadeOut(30);
+        }
+    }
+  };
+  
+  const handleEscapeKey = (event) => {
+    if (event.key === "Escape") {
+      
+        var $visibleToolbar = $('.is-visible');
+        if ($visibleToolbar.length) {
+            var tooltipButton = $visibleToolbar.closest(".tooltip-listitem").find("button.tooltipInner")
+            tooltipButton.focus();
+            tooltipButton.removeClass('maxzindex').attr("aria-expanded","false");
+            $visibleToolbar.removeClass('is-visible').attr("aria-hidden",true);
+            $visibleToolbar.fadeOut(30);
+        }
+    }
+  };
+  
+  // Add event listeners to the document
+  document.addEventListener("click", handleClickOutside);
+  document.addEventListener("keydown", handleEscapeKey);
+  
