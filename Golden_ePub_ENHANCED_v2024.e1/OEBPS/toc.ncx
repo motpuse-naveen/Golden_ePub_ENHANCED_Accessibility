@@ -1,104 +1,722 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
-<head>
-<meta name="dtb:uid" content="urn:isbn:978-0-12-809343-6"/>
-<meta name="dtb:depth" content="2"/>
-<meta name="dtb:totalPageCount" content="0"/>
-<meta name="dtb:maxPageNumber" content="0"/>
-</head>
-<docTitle>
-<text>Navigation</text>
-</docTitle>
-<navMap>
-<navPoint id="toc1" playOrder="1"><navLabel><text>Instructions for online access</text></navLabel><content src="xhtml/PIN.xhtml"/></navPoint>
-<navPoint id="toc2" playOrder="2"><navLabel><text>Title of Book</text></navLabel><content src="xhtml/Cover.xhtml"/>
-<navPoint id="toc3" playOrder="3"><navLabel><text>Cover image</text></navLabel><content src="xhtml/Cover.xhtml#Cover"/></navPoint>
-<navPoint id="toc4" playOrder="4"><navLabel><text>Title page</text></navLabel><content src="xhtml/Title_page.xhtml"/></navPoint>
-<navPoint id="toc5" playOrder="5"><navLabel><text>Disclaimer</text></navLabel><content src="xhtml/Disclaimer.xhtml"/></navPoint>
-<navPoint id="toc6" playOrder="6"><navLabel><text>Table of Contents</text></navLabel><content src="xhtml/Contents.xhtml"/></navPoint>
-<navPoint id="toc7" playOrder="7"><navLabel><text>Copyright</text></navLabel><content src="xhtml/Copyright_iv_B9780124158207000084.xhtml"/></navPoint>
-<navPoint id="toc8" playOrder="8"><navLabel><text>List of Contributors</text></navLabel><content src="xhtml/ListOfContributors_v_B9780124158207000051.xhtml"/></navPoint>
-<navPoint id="toc9" playOrder="9"><navLabel><text>Dedication</text></navLabel><content src="xhtml/Dedication_vi_B9780124158207000064.xhtml"/></navPoint>
-<navPoint id="toc10" playOrder="10"><navLabel><text>Preface</text></navLabel><content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml"/></navPoint>
-<navPoint id="toc11" playOrder="11"><navLabel><text>Acknowledgments</text></navLabel><content src="xhtml/Acknowledgments_xiii-xiv_B9780124158207000073.xhtml"/></navPoint>
-<navPoint id="toc12" playOrder="12"><navLabel><text>List of Illustrations</text></navLabel><content src="xhtml/ListOfIllustrations_xv_B9780124158207000058.xhtml"/></navPoint>
-<navPoint id="toc13" playOrder="13"><navLabel><text>List of Tables</text></navLabel><content src="xhtml/ListOfTables_xvi_B9780124158207000154.xhtml"/></navPoint></navPoint>
-<navPoint id="toc14" playOrder="14"><navLabel><text>1. Overview of Investment Banking</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#CHP001tit1"/>
-<navPoint id="toc15" playOrder="15"><navLabel><text>Exam Q&amp;A</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#EXAM001"/></navPoint>
-<navPoint id="toc16" playOrder="16"><navLabel><text>Abstract</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0010"/>
-<navPoint id="toc17" playOrder="17"><navLabel><text>Section title inside abstract</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#1ST0010"/></navPoint>
-<navPoint id="toc18" playOrder="18"><navLabel><text>Keywords</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#cesectitle0030"/></navPoint></navPoint>
-<navPoint id="toc19" playOrder="19"><navLabel><text>Postcrisis Global Investment Banking Firms</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0030"/></navPoint>
-<navPoint id="toc20" playOrder="20"><navLabel><text>Other Investment Banking Firms</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0035"/></navPoint>
-<navPoint id="toc21" playOrder="21"><navLabel><text>Investment Banking Businesses</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0040"/></navPoint>
-<navPoint id="toc22" playOrder="22"><navLabel><text>Investment Banking Division</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0045"/>
-<navPoint id="toc23" playOrder="23"><navLabel><text>Client Coverage Bankers</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0050"/></navPoint>
-<navPoint id="toc24" playOrder="24"><navLabel><text>Capital Markets Group</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0055"/></navPoint>
-<navPoint id="toc25" playOrder="25"><navLabel><text>M&#38;A Group</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0070"/></navPoint></navPoint>
-<navPoint id="toc26" playOrder="26"><navLabel><text>Trading Division</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0075"/>
-<navPoint id="toc27" playOrder="27"><navLabel><text>Fixed Income, Currencies, and Commodities</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0080"/></navPoint>
-<navPoint id="toc28" playOrder="28"><navLabel><text>Equities</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0085"/></navPoint></navPoint>
-<navPoint id="toc29" playOrder="29"><navLabel><text>Nonclient-Related Trading and Investing</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0090"/>
-<navPoint id="toc30" playOrder="30"><navLabel><text>Principal Investing</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0095"/></navPoint>
-<navPoint id="toc31" playOrder="31"><navLabel><text>Proprietary Trading</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0100"/></navPoint></navPoint>
-<navPoint id="toc32" playOrder="32"><navLabel><text>Asset Management Division</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0105"/>
-<navPoint id="toc33" playOrder="33"><navLabel><text>Coinvestments in Asset Management Division Funds</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0110"/></navPoint></navPoint>
-<navPoint id="toc34" playOrder="34"><navLabel><text>Review Questions</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0115"/></navPoint>
-<navPoint id="toc35" playOrder="35"><navLabel><text>References</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#BIBLIOG0010tit"/></navPoint></navPoint>
-<navPoint id="toc36" playOrder="36"><navLabel><text>2. Samples of Widget Enhancements</text></navLabel><content src="xhtml/Ch002_Samples_of_Widget_Enhancements.xhtml"/>
-<navPoint id="toc37" playOrder="37"><navLabel><text>Streaming Video</text></navLabel><content src="xhtml/Ch002_Samples_of_Widget_Enhancements.xhtml#sv"/></navPoint>
-<navPoint id="toc38" playOrder="38"><navLabel><text>Embedded Audio</text></navLabel><content src="xhtml/Embedded_Audio.xhtml"/></navPoint>
-<navPoint id="toc39" playOrder="39"><navLabel><text>Slideshow</text></navLabel><content src="xhtml/Slideshow.xhtml"/></navPoint>
-<navPoint id="toc40" playOrder="40"><navLabel><text>Slide-Line</text></navLabel><content src="xhtml/Slide-Line.xhtml"/></navPoint>
-<navPoint id="toc41" playOrder="41"><navLabel><text>Test Yourself</text></navLabel><content src="xhtml/Test_Yourself.xhtml"/></navPoint>
-<navPoint id="toc42" playOrder="42"><navLabel><text>Show-Hide</text></navLabel><content src="xhtml/Show-Hide.xhtml"/></navPoint>
-<navPoint id="toc43" playOrder="43"><navLabel><text>Pop Tip (Remarks)</text></navLabel><content src="xhtml/Pop_Tip.xhtml"/></navPoint>
-<navPoint id="toc44" playOrder="44"><navLabel><text>Quiz with Multiple Choice</text></navLabel><content src="xhtml/Quiz_with_Multiple_Choice.xhtml"/></navPoint>
-<navPoint id="toc45" playOrder="45"><navLabel><text>Quiz with Multiple Answer</text></navLabel><content src="xhtml/Quiz_with_Multiple_Answer.xhtml"/></navPoint>
-<navPoint id="toc46" playOrder="46"><navLabel><text>Quiz with True/False</text></navLabel><content src="xhtml/Quiz_with_True-False.xhtml"/></navPoint></navPoint>
-<navPoint id="toc47" playOrder="47"><navLabel><text>Flashcard</text></navLabel><content src="xhtml/Flashcard.xhtml"/></navPoint></navPoint>
-<navPoint id="toc48" playOrder="48"><navLabel><text>Appendix A</text></navLabel><content src="xhtml/Appendix-A_19_B9780124158207000173.xhtml"/></navPoint>
-<navPoint id="toc49" playOrder="49"><navLabel><text>Glossary</text></navLabel><content src="xhtml/Glossary_20_B9780124158207000054.xhtml"/></navPoint>
-<navPoint id="toc50" playOrder="50"><navLabel><text>Bibliography</text></navLabel><content src="xhtml/Bibliography_21_B9780124158207000178.xhtml"/></navPoint>
-<navPoint id="toc51" playOrder="51"><navLabel><text>Index</text></navLabel><content src="xhtml/Index_22_B9780124158207000044.xhtml"/></navPoint>
-</navMap>
-<pageList>
-<pageTarget type="front" value="page_i" playOrder="52"><navLabel><text>i</text></navLabel><content src="xhtml/Cover.xhtml#page_i"/></pageTarget>
-<pageTarget type="front" value="page_ii" playOrder="53"><navLabel><text>ii</text></navLabel><content src="xhtml/Title_page.xhtml#page_ii"/></pageTarget>
-<pageTarget type="front" value="page_iv" playOrder="54"><navLabel><text>iv</text></navLabel><content src="xhtml/Copyright_iv_B9780124158207000084.xhtml#page_iv"/></pageTarget>
-<pageTarget type="front" value="page_v" playOrder="55"><navLabel><text>v</text></navLabel><content src="xhtml/ListOfContributors_v_B9780124158207000051.xhtml#page_v"/></pageTarget>
-<pageTarget type="front" value="page_vi" playOrder="56"><navLabel><text>vi</text></navLabel><content src="xhtml/Dedication_vi_B9780124158207000064.xhtml#page_vi"/></pageTarget>
-<pageTarget type="front" value="page_vii" playOrder="57"><navLabel><text>vii</text></navLabel><content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_vii"/></pageTarget>
-<pageTarget type="front" value="page_viii" playOrder="58"><navLabel><text>viii</text></navLabel><content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_viii"/></pageTarget>
-<pageTarget type="front" value="page_ix" playOrder="59"><navLabel><text>ix</text></navLabel><content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_ix"/></pageTarget>
-<pageTarget type="front" value="page_x" playOrder="60"><navLabel><text>x</text></navLabel><content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_x"/></pageTarget>
-<pageTarget type="front" value="page_xi" playOrder="61"><navLabel><text>xi</text></navLabel><content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_xi"/></pageTarget>
-<pageTarget type="front" value="page_xii" playOrder="62"><navLabel><text>xii</text></navLabel><content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_xii"/></pageTarget>
-<pageTarget type="front" value="page_xiii" playOrder="63"><navLabel><text>xiii</text></navLabel><content src="xhtml/Acknowledgments_xiii-xiv_B9780124158207000073.xhtml#page_xiii"/></pageTarget>
-<pageTarget type="front" value="page_xiv" playOrder="64"><navLabel><text>xiv</text></navLabel><content src="xhtml/Acknowledgments_xiii-xiv_B9780124158207000073.xhtml#page_xiv"/></pageTarget>
-<pageTarget type="front" value="page_xv" playOrder="65"><navLabel><text>xv</text></navLabel><content src="xhtml/ListOfIllustrations_xv_B9780124158207000058.xhtml#page_xv"/></pageTarget>
-<pageTarget type="front" value="page_xvi" playOrder="66"><navLabel><text>xvi</text></navLabel><content src="xhtml/ListOfTables_xvi_B9780124158207000154.xhtml#page_xvi"/></pageTarget>
-<pageTarget type="normal" value="page_1" playOrder="67"><navLabel><text>1</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_1"/></pageTarget>
-<pageTarget type="normal" value="page_2" playOrder="68"><navLabel><text>2</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_2"/></pageTarget>
-<pageTarget type="normal" value="page_3" playOrder="69"><navLabel><text>3</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_3"/></pageTarget>
-<pageTarget type="normal" value="page_4" playOrder="70"><navLabel><text>4</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_4"/></pageTarget>
-<pageTarget type="normal" value="page_5" playOrder="71"><navLabel><text>5</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_5"/></pageTarget>
-<pageTarget type="normal" value="page_6" playOrder="72"><navLabel><text>6</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_6"/></pageTarget>
-<pageTarget type="normal" value="page_7" playOrder="73"><navLabel><text>7</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_7"/></pageTarget>
-<pageTarget type="normal" value="page_8" playOrder="74"><navLabel><text>8</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_8"/></pageTarget>
-<pageTarget type="normal" value="page_9" playOrder="75"><navLabel><text>9</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_9"/></pageTarget>
-<pageTarget type="normal" value="page_10" playOrder="76"><navLabel><text>10</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_10"/></pageTarget>
-<pageTarget type="normal" value="page_11" playOrder="77"><navLabel><text>11</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_11"/></pageTarget>
-<pageTarget type="normal" value="page_12" playOrder="78"><navLabel><text>12</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_12"/></pageTarget>
-<pageTarget type="normal" value="page_13" playOrder="79"><navLabel><text>13</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_13"/></pageTarget>
-<pageTarget type="normal" value="page_14" playOrder="80"><navLabel><text>14</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_14"/></pageTarget>
-<pageTarget type="normal" value="page_15" playOrder="81"><navLabel><text>15</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_15"/></pageTarget>
-<pageTarget type="normal" value="page_16" playOrder="82"><navLabel><text>16</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_16"/></pageTarget>
-<pageTarget type="normal" value="page_17" playOrder="83"><navLabel><text>17</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_17"/></pageTarget>
-<pageTarget type="normal" value="page_18" playOrder="84"><navLabel><text>18</text></navLabel><content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_18"/></pageTarget>
-<pageTarget type="special" value="page_19" playOrder="85"><navLabel><text>19</text></navLabel><content src="xhtml/Appendix-A_19_B9780124158207000173.xhtml#page_19"/></pageTarget>
-<pageTarget type="special" value="page_20" playOrder="86"><navLabel><text>20</text></navLabel><content src="xhtml/Glossary_20_B9780124158207000054.xhtml#page_20"/></pageTarget>
-<pageTarget type="special" value="page_21" playOrder="87"><navLabel><text>21</text></navLabel><content src="xhtml/Bibliography_21_B9780124158207000178.xhtml#page_21"/></pageTarget>
-<pageTarget type="special" value="page_22" playOrder="88"><navLabel><text>22</text></navLabel><content src="xhtml/Index_22_B9780124158207000044.xhtml#page_22"/></pageTarget>
-</pageList>
+	<head>
+		<meta name="dtb:uid" content="urn:isbn:978-0-12-809343-6" />
+		<meta name="dtb:depth" content="2" />
+		<meta name="dtb:totalPageCount" content="0" />
+		<meta name="dtb:maxPageNumber" content="0" />
+	</head>
+	<docTitle>
+		<text>
+			Navigation
+		</text>
+	</docTitle>
+	<navMap>
+		<navPoint id="toc1" playOrder="1">
+			<navLabel>
+				<text>
+					Instructions for online access
+				</text>
+			</navLabel>
+			<content src="xhtml/PIN.xhtml" />
+		</navPoint>
+		<navPoint id="toc2" playOrder="2">
+			<navLabel>
+				<text>
+					Title of Book
+				</text>
+			</navLabel>
+			<content src="xhtml/Cover.xhtml" />
+			<navPoint id="toc3" playOrder="3">
+				<navLabel>
+					<text>
+						Cover image
+					</text>
+				</navLabel>
+				<content src="xhtml/Cover.xhtml#Cover" />
+			</navPoint>
+			<navPoint id="toc4" playOrder="4">
+				<navLabel>
+					<text>
+						Title page
+					</text>
+				</navLabel>
+				<content src="xhtml/Title_page.xhtml" />
+			</navPoint>
+			<navPoint id="toc5" playOrder="5">
+				<navLabel>
+					<text>
+						Disclaimer
+					</text>
+				</navLabel>
+				<content src="xhtml/Disclaimer.xhtml" />
+			</navPoint>
+			<navPoint id="toc6" playOrder="6">
+				<navLabel>
+					<text>
+						Table of Contents
+					</text>
+				</navLabel>
+				<content src="xhtml/Contents.xhtml" />
+			</navPoint>
+			<navPoint id="toc7" playOrder="7">
+				<navLabel>
+					<text>
+						Copyright
+					</text>
+				</navLabel>
+				<content src="xhtml/Copyright_iv_B9780124158207000084.xhtml" />
+			</navPoint>
+			<navPoint id="toc8" playOrder="8">
+				<navLabel>
+					<text>
+						List of Contributors
+					</text>
+				</navLabel>
+				<content src="xhtml/ListOfContributors_v_B9780124158207000051.xhtml" />
+			</navPoint>
+			<navPoint id="toc9" playOrder="9">
+				<navLabel>
+					<text>
+						Dedication
+					</text>
+				</navLabel>
+				<content src="xhtml/Dedication_vi_B9780124158207000064.xhtml" />
+			</navPoint>
+			<navPoint id="toc10" playOrder="10">
+				<navLabel>
+					<text>
+						Preface
+					</text>
+				</navLabel>
+				<content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml" />
+			</navPoint>
+			<navPoint id="toc11" playOrder="11">
+				<navLabel>
+					<text>
+						Acknowledgments
+					</text>
+				</navLabel>
+				<content src="xhtml/Acknowledgments_xiii-xiv_B9780124158207000073.xhtml" />
+			</navPoint>
+			<navPoint id="toc12" playOrder="12">
+				<navLabel>
+					<text>
+						List of Illustrations
+					</text>
+				</navLabel>
+				<content src="xhtml/ListOfIllustrations_xv_B9780124158207000058.xhtml" />
+			</navPoint>
+			<navPoint id="toc13" playOrder="13">
+				<navLabel>
+					<text>
+						List of Tables
+					</text>
+				</navLabel>
+				<content src="xhtml/ListOfTables_xvi_B9780124158207000154.xhtml" />
+			</navPoint>
+		</navPoint>
+		<navPoint id="toc14" playOrder="14">
+			<navLabel>
+				<text>
+					1. Overview of Investment Banking
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#CHP001tit1" />
+			<navPoint id="toc15" playOrder="15">
+				<navLabel>
+					<text>
+						Exam Q&amp;A
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#EXAM001" />
+			</navPoint>
+			<navPoint id="toc16" playOrder="16">
+				<navLabel>
+					<text>
+						Abstract
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0010" />
+				<navPoint id="toc17" playOrder="17">
+					<navLabel>
+						<text>
+							Section title inside abstract
+						</text>
+					</navLabel>
+					<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#1ST0010" />
+				</navPoint>
+				<navPoint id="toc18" playOrder="18">
+					<navLabel>
+						<text>
+							Keywords
+						</text>
+					</navLabel>
+					<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#cesectitle0030" />
+				</navPoint>
+			</navPoint>
+			<navPoint id="toc19" playOrder="19">
+				<navLabel>
+					<text>
+						Postcrisis Global Investment Banking Firms
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0030" />
+			</navPoint>
+			<navPoint id="toc20" playOrder="20">
+				<navLabel>
+					<text>
+						Other Investment Banking Firms
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0035" />
+			</navPoint>
+			<navPoint id="toc21" playOrder="21">
+				<navLabel>
+					<text>
+						Investment Banking Businesses
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0040" />
+			</navPoint>
+			<navPoint id="toc22" playOrder="22">
+				<navLabel>
+					<text>
+						Investment Banking Division
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0045" />
+				<navPoint id="toc23" playOrder="23">
+					<navLabel>
+						<text>
+							Client Coverage Bankers
+						</text>
+					</navLabel>
+					<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0050" />
+				</navPoint>
+				<navPoint id="toc24" playOrder="24">
+					<navLabel>
+						<text>
+							Capital Markets Group
+						</text>
+					</navLabel>
+					<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0055" />
+				</navPoint>
+				<navPoint id="toc25" playOrder="25">
+					<navLabel>
+						<text>
+							M&#38;A Group
+						</text>
+					</navLabel>
+					<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0070" />
+				</navPoint>
+			</navPoint>
+			<navPoint id="toc26" playOrder="26">
+				<navLabel>
+					<text>
+						Trading Division
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0075" />
+				<navPoint id="toc27" playOrder="27">
+					<navLabel>
+						<text>
+							Fixed Income, Currencies, and Commodities
+						</text>
+					</navLabel>
+					<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0080" />
+				</navPoint>
+				<navPoint id="toc28" playOrder="28">
+					<navLabel>
+						<text>
+							Equities
+						</text>
+					</navLabel>
+					<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0085" />
+				</navPoint>
+			</navPoint>
+			<navPoint id="toc29" playOrder="29">
+				<navLabel>
+					<text>
+						Nonclient-Related Trading and Investing
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0090" />
+				<navPoint id="toc30" playOrder="30">
+					<navLabel>
+						<text>
+							Principal Investing
+						</text>
+					</navLabel>
+					<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0095" />
+				</navPoint>
+				<navPoint id="toc31" playOrder="31">
+					<navLabel>
+						<text>
+							Proprietary Trading
+						</text>
+					</navLabel>
+					<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0100" />
+				</navPoint>
+			</navPoint>
+			<navPoint id="toc32" playOrder="32">
+				<navLabel>
+					<text>
+						Asset Management Division
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0105" />
+				<navPoint id="toc33" playOrder="33">
+					<navLabel>
+						<text>
+							Coinvestments in Asset Management Division Funds
+						</text>
+					</navLabel>
+					<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0110" />
+				</navPoint>
+			</navPoint>
+			<navPoint id="toc34" playOrder="34">
+				<navLabel>
+					<text>
+						Review Questions
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#ST0115" />
+			</navPoint>
+			<navPoint id="toc35" playOrder="35">
+				<navLabel>
+					<text>
+						References
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#BIBLIOG0010tit" />
+			</navPoint>
+		</navPoint>
+		<navPoint id="toc36" playOrder="36">
+			<navLabel>
+				<text>
+					2. Samples of Widget Enhancements
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch002_Samples_of_Widget_Enhancements.xhtml" />
+			<navPoint id="toc37" playOrder="37">
+				<navLabel>
+					<text>
+						Streaming Video
+					</text>
+				</navLabel>
+				<content src="xhtml/Ch002_Samples_of_Widget_Enhancements.xhtml#sv" />
+			</navPoint>
+			<navPoint id="toc38" playOrder="38">
+				<navLabel>
+					<text>
+						Embedded Audio
+					</text>
+				</navLabel>
+				<content src="xhtml/Embedded_Audio.xhtml" />
+			</navPoint>
+			<navPoint id="toc39" playOrder="39">
+				<navLabel>
+					<text>
+						Slideshow
+					</text>
+				</navLabel>
+				<content src="xhtml/Slideshow.xhtml" />
+			</navPoint>
+			<navPoint id="toc40" playOrder="40">
+				<navLabel>
+					<text>
+						Slide-Line
+					</text>
+				</navLabel>
+				<content src="xhtml/Slide-Line.xhtml" />
+			</navPoint>
+			<navPoint id="toc41" playOrder="41">
+				<navLabel>
+					<text>
+						Test Yourself
+					</text>
+				</navLabel>
+				<content src="xhtml/Test_Yourself.xhtml" />
+			</navPoint>
+			<navPoint id="toc42" playOrder="42">
+				<navLabel>
+					<text>
+						Show-Hide
+					</text>
+				</navLabel>
+				<content src="xhtml/Show-Hide.xhtml" />
+			</navPoint>
+			<navPoint id="toc43" playOrder="43">
+				<navLabel>
+					<text>
+						Pop Tip (Remarks)
+					</text>
+				</navLabel>
+				<content src="xhtml/Pop_Tip.xhtml" />
+			</navPoint>
+			<navPoint id="toc44" playOrder="44">
+				<navLabel>
+					<text>
+						Quiz with Multiple Choice
+					</text>
+				</navLabel>
+				<content src="xhtml/Quiz_with_Multiple_Choice.xhtml" />
+			</navPoint>
+			<navPoint id="toc45" playOrder="45">
+				<navLabel>
+					<text>
+						Quiz with Multiple Answer
+					</text>
+				</navLabel>
+				<content src="xhtml/Quiz_with_Multiple_Answer.xhtml" />
+			</navPoint>
+			<navPoint id="toc46" playOrder="46">
+				<navLabel>
+					<text>
+						Quiz with True/False
+					</text>
+				</navLabel>
+				<content src="xhtml/Quiz_with_True-False.xhtml" />
+			</navPoint>
+		</navPoint>
+		<navPoint id="toc47" playOrder="47">
+			<navLabel>
+				<text>
+					Flashcard
+				</text>
+			</navLabel>
+			<content src="xhtml/Flashcard.xhtml" />
+		</navPoint>
+		<navPoint id="toc48" playOrder="48">
+			<navLabel>
+				<text>
+					Appendix A
+				</text>
+			</navLabel>
+			<content src="xhtml/Appendix-A_19_B9780124158207000173.xhtml" />
+		</navPoint>
+		<navPoint id="toc49" playOrder="49">
+			<navLabel>
+				<text>
+					Glossary
+				</text>
+			</navLabel>
+			<content src="xhtml/Glossary_20_B9780124158207000054.xhtml" />
+		</navPoint>
+		<navPoint id="toc50" playOrder="50">
+			<navLabel>
+				<text>
+					Bibliography
+				</text>
+			</navLabel>
+			<content src="xhtml/Bibliography_21_B9780124158207000178.xhtml" />
+		</navPoint>
+		<navPoint id="toc51" playOrder="51">
+			<navLabel>
+				<text>
+					Index
+				</text>
+			</navLabel>
+			<content src="xhtml/Index_22_B9780124158207000044.xhtml" />
+		</navPoint>
+	</navMap>
+	<pageList>
+		<pageTarget type="front" value="page_i" playOrder="52">
+			<navLabel>
+				<text>
+					i
+				</text>
+			</navLabel>
+			<content src="xhtml/Cover.xhtml#page_i" />
+		</pageTarget>
+		<pageTarget type="front" value="page_ii" playOrder="53">
+			<navLabel>
+				<text>
+					ii
+				</text>
+			</navLabel>
+			<content src="xhtml/Title_page.xhtml#page_ii" />
+		</pageTarget>
+		<pageTarget type="front" value="page_iv" playOrder="54">
+			<navLabel>
+				<text>
+					iv
+				</text>
+			</navLabel>
+			<content src="xhtml/Copyright_iv_B9780124158207000084.xhtml#page_iv" />
+		</pageTarget>
+		<pageTarget type="front" value="page_v" playOrder="55">
+			<navLabel>
+				<text>
+					v
+				</text>
+			</navLabel>
+			<content src="xhtml/ListOfContributors_v_B9780124158207000051.xhtml#page_v" />
+		</pageTarget>
+		<pageTarget type="front" value="page_vi" playOrder="56">
+			<navLabel>
+				<text>
+					vi
+				</text>
+			</navLabel>
+			<content src="xhtml/Dedication_vi_B9780124158207000064.xhtml#page_vi" />
+		</pageTarget>
+		<pageTarget type="front" value="page_vii" playOrder="57">
+			<navLabel>
+				<text>
+					vii
+				</text>
+			</navLabel>
+			<content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_vii" />
+		</pageTarget>
+		<pageTarget type="front" value="page_viii" playOrder="58">
+			<navLabel>
+				<text>
+					viii
+				</text>
+			</navLabel>
+			<content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_viii" />
+		</pageTarget>
+		<pageTarget type="front" value="page_ix" playOrder="59">
+			<navLabel>
+				<text>
+					ix
+				</text>
+			</navLabel>
+			<content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_ix" />
+		</pageTarget>
+		<pageTarget type="front" value="page_x" playOrder="60">
+			<navLabel>
+				<text>
+					x
+				</text>
+			</navLabel>
+			<content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_x" />
+		</pageTarget>
+		<pageTarget type="front" value="page_xi" playOrder="61">
+			<navLabel>
+				<text>
+					xi
+				</text>
+			</navLabel>
+			<content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_xi" />
+		</pageTarget>
+		<pageTarget type="front" value="page_xii" playOrder="62">
+			<navLabel>
+				<text>
+					xii
+				</text>
+			</navLabel>
+			<content src="xhtml/Preface_vii-xii_B9780124158207000164.xhtml#page_xii" />
+		</pageTarget>
+		<pageTarget type="front" value="page_xiii" playOrder="63">
+			<navLabel>
+				<text>
+					xiii
+				</text>
+			</navLabel>
+			<content src="xhtml/Acknowledgments_xiii-xiv_B9780124158207000073.xhtml#page_xiii" />
+		</pageTarget>
+		<pageTarget type="front" value="page_xiv" playOrder="64">
+			<navLabel>
+				<text>
+					xiv
+				</text>
+			</navLabel>
+			<content src="xhtml/Acknowledgments_xiii-xiv_B9780124158207000073.xhtml#page_xiv" />
+		</pageTarget>
+		<pageTarget type="front" value="page_xv" playOrder="65">
+			<navLabel>
+				<text>
+					xv
+				</text>
+			</navLabel>
+			<content src="xhtml/ListOfIllustrations_xv_B9780124158207000058.xhtml#page_xv" />
+		</pageTarget>
+		<pageTarget type="front" value="page_xvi" playOrder="66">
+			<navLabel>
+				<text>
+					xvi
+				</text>
+			</navLabel>
+			<content src="xhtml/ListOfTables_xvi_B9780124158207000154.xhtml#page_xvi" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_1" playOrder="67">
+			<navLabel>
+				<text>
+					1
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_1" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_2" playOrder="68">
+			<navLabel>
+				<text>
+					2
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_2" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_3" playOrder="69">
+			<navLabel>
+				<text>
+					3
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_3" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_4" playOrder="70">
+			<navLabel>
+				<text>
+					4
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_4" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_5" playOrder="71">
+			<navLabel>
+				<text>
+					5
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_5" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_6" playOrder="72">
+			<navLabel>
+				<text>
+					6
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_6" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_7" playOrder="73">
+			<navLabel>
+				<text>
+					7
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_7" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_8" playOrder="74">
+			<navLabel>
+				<text>
+					8
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_8" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_9" playOrder="75">
+			<navLabel>
+				<text>
+					9
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_9" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_10" playOrder="76">
+			<navLabel>
+				<text>
+					10
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_10" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_11" playOrder="77">
+			<navLabel>
+				<text>
+					11
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_11" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_12" playOrder="78">
+			<navLabel>
+				<text>
+					12
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_12" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_13" playOrder="79">
+			<navLabel>
+				<text>
+					13
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_13" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_14" playOrder="80">
+			<navLabel>
+				<text>
+					14
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_14" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_15" playOrder="81">
+			<navLabel>
+				<text>
+					15
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_15" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_16" playOrder="82">
+			<navLabel>
+				<text>
+					16
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_16" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_17" playOrder="83">
+			<navLabel>
+				<text>
+					17
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_17" />
+		</pageTarget>
+		<pageTarget type="normal" value="page_18" playOrder="84">
+			<navLabel>
+				<text>
+					18
+				</text>
+			</navLabel>
+			<content src="xhtml/Ch001_1-18_B978012415820700007X.xhtml#page_18" />
+		</pageTarget>
+		<pageTarget type="special" value="page_19" playOrder="85">
+			<navLabel>
+				<text>
+					19
+				</text>
+			</navLabel>
+			<content src="xhtml/Appendix-A_19_B9780124158207000173.xhtml#page_19" />
+		</pageTarget>
+		<pageTarget type="special" value="page_20" playOrder="86">
+			<navLabel>
+				<text>
+					20
+				</text>
+			</navLabel>
+			<content src="xhtml/Glossary_20_B9780124158207000054.xhtml#page_20" />
+		</pageTarget>
+		<pageTarget type="special" value="page_21" playOrder="87">
+			<navLabel>
+				<text>
+					21
+				</text>
+			</navLabel>
+			<content src="xhtml/Bibliography_21_B9780124158207000178.xhtml#page_21" />
+		</pageTarget>
+		<pageTarget type="special" value="page_22" playOrder="88">
+			<navLabel>
+				<text>
+					22
+				</text>
+			</navLabel>
+			<content src="xhtml/Index_22_B9780124158207000044.xhtml#page_22" />
+		</pageTarget>
+	</pageList>
 </ncx>
