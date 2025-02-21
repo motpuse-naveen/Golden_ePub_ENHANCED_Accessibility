@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="caption-container">
-                <p id="caption"></p>
+                <p id="caption" ></p>
             </div>
             <div class="thumbnail_main">
                 <div class="prevContainer">
@@ -53,38 +53,38 @@
                 </div>
                 <ul class="tablist" aria-label="slide show">
                     <li>
-                    <button class="column" aria-selected="true"
-                        style="background-image: url('../images/ch01_figure_text_15a.png');" 
-                        onclick="currentSlide(1)" id="1"
-                        title="Image 1" aria-label="Image 1">
-                        <div aria-hidden="true" class="hiddenCaption"><b>A:</b> Immunofluorescence images of stages in mitosis in human carcinoma cells in culture.</div>
-                        <div class="column_inner" aria-hidden="true"
-                            aria-label="Immunofluorescence images of stages in mitosis in human carcinoma cells in culture."
-                            style="background-image: url('../images/ch01_figure_text_15a.png');"></div>
-                     </button>
+                        <label aria-hidden="true" class="hiddenCaption"><b>A:</b> Immunofluorescence images of stages in mitosis in human carcinoma cells in culture.</label>
+                        <label class="column_inner" aria-hidden="true"
+                                aria-label="Immunofluorescence images of stages in mitosis in human carcinoma cells in culture."
+                                style="background-image: url('../images/ch01_figure_text_15a.png');"></label>
+                        <button role="button" class="column" 
+                            style="background-image: url('../images/ch01_figure_text_15a.png');" 
+                            onclick="currentSlide(1)" id="1"
+                            title="Image 1" aria-label="Image 1">
+                        </button>
                     </li>
                     <li>
-                    <button class="column" aria-selected="false"
-                        style="background-image: url('../images/ch01_figure_text_15b.png');"
-                        onclick="currentSlide(2)" id="2"
-                        title="Image 2" aria-label="Image 2">
-                        <div aria-hidden="true" class="hiddenCaption"><b>B:</b> Metaphase, with spindle microtubules (green), the microtubule-stabilizing protein (HURP; red) and chromosomal DNA (blue).</div>
-                        <div class="column_inner" aria-hidden="true"
-                            aria-label="Metaphase, with spindle microtubules (green), the microtubule-stabilizing protein (HURP; red) and chromosomal DNA (blue)."
-                            style="background-image: url('../images/ch01_figure_text_15b.png');"></div>
-                    </button>
-                </li>
-                <li>
-                    <button class="column" aria-selected="false"
-                        style="background-image: url('../images/ch01_figure_text_15c.png');"
-                        onclick="currentSlide(3)" id="3"
-                        title="Image 3" aria-label="Image 3">
-                        <div aria-hidden="true" class="hiddenCaption"><b>C:</b> Anaphase, with spindle microtubules (green), the central spindle (Aurora-B kinase, red) and segregated chromosomes (blue).</div>
-                        <div class="column_inner" aria-hidden="true"
-                            aria-label="Anaphase, with spindle microtubules (green), the central spindle (Aurora-B kinase, red) and segregated chromosomes (blue)."
-                            style="background-image: url('../images/ch01_figure_text_15c.png');"></div>
-                    </button>
-                </li>
+                        <label aria-hidden="true" class="hiddenCaption"><b>B:</b> Metaphase, with spindle microtubules (green), the microtubule-stabilizing protein (HURP; red) and chromosomal DNA (blue).</label>
+                        <label class="column_inner" aria-hidden="true"
+                                aria-label="Metaphase, with spindle microtubules (green), the microtubule-stabilizing protein (HURP; red) and chromosomal DNA (blue)."
+                                style="background-image: url('../images/ch01_figure_text_15b.png');"></label>
+                        <button role="button" class="column" 
+                            style="background-image: url('../images/ch01_figure_text_15b.png');"
+                            onclick="currentSlide(2)" id="2"
+                            title="Image 2" aria-label="Image 2">
+                        </button>
+                    </li>
+                    <li>
+                        <label aria-hidden="true" class="hiddenCaption"><b>C:</b> Anaphase, with spindle microtubules (green), the central spindle (Aurora-B kinase, red) and segregated chromosomes (blue).</label>
+                        <label class="column_inner" aria-hidden="true"
+                                aria-label="Anaphase, with spindle microtubules (green), the central spindle (Aurora-B kinase, red) and segregated chromosomes (blue)."
+                                style="background-image: url('../images/ch01_figure_text_15c.png');"></label>
+                        <button role="button" class="column" 
+                            style="background-image: url('../images/ch01_figure_text_15c.png');"
+                            onclick="currentSlide(3)" id="3"
+                            title="Image 3" aria-label="Image 3">
+                        </button>
+                    </li>
                 </ul>
                 <div class="nextContainer">
                     <button aria-label="Next Slide" onclick="plusSlides(1)" title="Next"></button>

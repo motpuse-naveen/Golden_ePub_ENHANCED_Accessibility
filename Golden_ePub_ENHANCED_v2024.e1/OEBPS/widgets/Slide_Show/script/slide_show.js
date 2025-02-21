@@ -173,8 +173,9 @@ function showSlides(n) {
     element.classList.add("active");
     element.setAttribute("aria-selected",true)
     element.setAttribute("aria-pressed",true)
-    if($(dots[slideIndex - 1]).find(".hiddenCaption") && $(dots[slideIndex - 1]).find(".hiddenCaption").length>0){
-        captionText.innerHTML = $(dots[slideIndex - 1]).find(".hiddenCaption").html()
+    var closestLI = $(dots[slideIndex - 1]).closest("li");
+    if(closestLI.find(".hiddenCaption") && closestLI.find(".hiddenCaption").length>0){
+        captionText.innerHTML = closestLI.find(".hiddenCaption").html()
     }
     else{
         captionText.innerHTML = '<b>' + dots[slideIndex - 1].title.substr(0, 2) + '</b>' + dots[slideIndex - 1].title.substr(2);
@@ -188,7 +189,7 @@ $(document).ready(function () {
     resize();
     createDraggable();
 
-    $('.column').mouseover((e) => {
+    $('.column').closest("li").mouseover((e) => {
         $(e.currentTarget).find('.column_inner').css('opacity', 1)
     }).mouseleave((e) => {
         $(e.currentTarget).find('.column_inner').css('opacity', 0)

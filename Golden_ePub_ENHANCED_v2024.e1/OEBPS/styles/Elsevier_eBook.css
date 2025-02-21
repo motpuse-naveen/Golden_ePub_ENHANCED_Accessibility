@@ -4946,7 +4946,85 @@ display: table-cell;
 	}
 }
 
+/********** RICE-49 (Add Physical Page Numbers in ePub and ePub4Mobi) ***********/
+
+p + div[role="doc-pagebreak"]{
+	margin-top: 1rem !important;
+}
+
+div[role="doc-pagebreak"]{
+    display: inline-block;
+    border: solid 2px #3f8099;
+    border-radius: 7px;
+    padding: 2px 5px;
+    text-align: center;
+	margin: 0 0 1rem 0;
+	white-space: nowrap;
+}
+
+.empty-doc-pagebreak[role="doc-pagebreak"]{
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+span[role="doc-pagebreak"]{
+    border: solid 2px #3f8099;
+    border-radius: 7px;
+    padding: 2px 5px;
+    text-align: center;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+	white-space: nowrap;
+}
+
+.image-right_back
+{
+	text-align:right;
+	margin: 0em 0em 1em 0em;
+	padding:0em;
+}
+
+
+
+/********** RICE-61 (Mark the part, unit, Volume heading using <h1>) ***********/
+
+.volumehead{
+      display: block;
+    font-size: 300%;
+    text-align: left;
+    text-indent: 0em;
+    margin-top: 0em;
+    margin-bottom: 1em;
+    padding-right: 10px;
+    line-height: 1em;
+    font-weight: normal;
+}
+
+.volumenumber{
+position: relative;
+    padding-right: 0.31em;
+}
+
+.volumenumber:after{
+   display: block;
+Content: ":";
+position: absolute;
+top: 0.08em;
+right: 0;
+}
+
 iframe {
 	border:none;
 	width: 100%;
+}
+/*Changes to fix - ePUB validation errors */
+iframe.flashcard_activityframe {
+	overflow: hidden;
+	scrollbar-width: none; /* Firefox */
+	border: none;
+}
+
+iframe.flashcard_activityframe::-webkit-scrollbar {
+    display: none;
 }

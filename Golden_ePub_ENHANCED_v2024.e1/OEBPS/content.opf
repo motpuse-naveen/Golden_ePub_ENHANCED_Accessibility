@@ -544,28 +544,50 @@
 <item id="mcms_19" href="widgets/MCMS/xhtml/MCMS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 
 <!--Flashcard-->
-<item id="Flashcard_1" href="widgets/Flashcard/01/activity.html" media-type="text/html"/>
-<item id="Flashcard_2" href="widgets/Flashcard/01/images/lines.png" media-type="image/png"/>
-<item id="Flashcard_3" href="widgets/Flashcard/01/images/8.png" media-type="image/png"/>
-<item id="Flashcard_4" href="widgets/Flashcard/01/images/9.png" media-type="image/png"/>
-<item id="Flashcard_5" href="widgets/Flashcard/01/images/transp.png" media-type="image/png"/>
-<item id="Flashcard_6" href="widgets/Flashcard/01/images/12.png" media-type="image/png"/>
-<item id="Flashcard_7" href="widgets/Flashcard/01/images/13.png" media-type="image/png"/>
-<item id="Flashcard_8" href="widgets/Flashcard/01/images/11.png" media-type="image/png"/>
-<item id="Flashcard_9" href="widgets/Flashcard/01/images/10.png" media-type="image/png"/>
-<item id="Flashcard_10" href="widgets/Flashcard/01/images/base_bw.png" media-type="image/png"/>
-<item id="Flashcard_11" href="widgets/Flashcard/01/images/base_color.png" media-type="image/png"/>
-<item id="Flashcard_12" href="widgets/Flashcard/01/images/4.png" media-type="image/png"/>
-<item id="Flashcard_13" href="widgets/Flashcard/01/images/5.png" media-type="image/png"/>
-<item id="Flashcard_14" href="widgets/Flashcard/01/images/7.png" media-type="image/png"/>
-<item id="Flashcard_15" href="widgets/Flashcard/01/images/6.png" media-type="image/png"/>
-<item id="Flashcard_16" href="widgets/Flashcard/01/images/2.png" media-type="image/png"/>
-<item id="Flashcard_17" href="widgets/Flashcard/01/images/3.png" media-type="image/png"/>
-<item id="Flashcard_18" href="widgets/Flashcard/01/images/1.png" media-type="image/png"/>
-<item id="Flashcard_19" href="widgets/Flashcard/01/activityframe.html" media-type="text/html" fallback="activityframe-fallback"/>
-<item id="activityframe-fallback" href="widgets/Flashcard/01/fallback.png" media-type="image/png"/>
+<item id="Flashcard_01_1" href="widgets/Flashcard/01/activity.html" media-type="text/html"/>
+<item id="Flashcard_01_2" href="widgets/Flashcard/01/images/lines.png" media-type="image/png"/>
+<item id="Flashcard_01_3" href="widgets/Flashcard/01/images/8.png" media-type="image/png"/>
+<item id="Flashcard_01_4" href="widgets/Flashcard/01/images/9.png" media-type="image/png"/>
+<item id="Flashcard_01_5" href="widgets/Flashcard/01/images/transp.png" media-type="image/png"/>
+<item id="Flashcard_01_6" href="widgets/Flashcard/01/images/12.png" media-type="image/png"/>
+<item id="Flashcard_01_7" href="widgets/Flashcard/01/images/13.png" media-type="image/png"/>
+<item id="Flashcard_01_8" href="widgets/Flashcard/01/images/11.png" media-type="image/png"/>
+<item id="Flashcard_01_9" href="widgets/Flashcard/01/images/10.png" media-type="image/png"/>
+<item id="Flashcard_01_10" href="widgets/Flashcard/01/images/base_bw.png" media-type="image/png"/>
+<item id="Flashcard_01_11" href="widgets/Flashcard/01/images/base_color.png" media-type="image/png"/>
+<item id="Flashcard_01_12" href="widgets/Flashcard/01/images/4.png" media-type="image/png"/>
+<item id="Flashcard_01_13" href="widgets/Flashcard/01/images/5.png" media-type="image/png"/>
+<item id="Flashcard_01_14" href="widgets/Flashcard/01/images/7.png" media-type="image/png"/>
+<item id="Flashcard_01_15" href="widgets/Flashcard/01/images/6.png" media-type="image/png"/>
+<item id="Flashcard_01_16" href="widgets/Flashcard/01/images/2.png" media-type="image/png"/>
+<item id="Flashcard_01_17" href="widgets/Flashcard/01/images/3.png" media-type="image/png"/>
+<item id="Flashcard_01_18" href="widgets/Flashcard/01/images/1.png" media-type="image/png"/>
+<item id="Flashcard_01_19" href="widgets/Flashcard/01/activityframe.html" media-type="text/html" fallback="activityframe-01-fallback"/>
+<item id="Flashcard_01_20" href="widgets/Flashcard/01/index.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="activityframe-01-fallback" href="widgets/Flashcard/01/fallback.png" media-type="image/png"/>
 
-<item id="Flashcard_20" href="widgets/Flashcard/01/index.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="Flashcard_70_1" href="widgets/Flashcard/70/activity.html" media-type="text/html"/>
+<item id="Flashcard_70_2" href="widgets/Flashcard/70/images/lines.png" media-type="image/png"/>
+<item id="Flashcard_70_3" href="widgets/Flashcard/70/images/8.png" media-type="image/png"/>
+<item id="Flashcard_70_4" href="widgets/Flashcard/70/images/9.png" media-type="image/png"/>
+<item id="Flashcard_70_5" href="widgets/Flashcard/70/images/transp.png" media-type="image/png"/>
+<item id="Flashcard_70_6" href="widgets/Flashcard/70/images/12.png" media-type="image/png"/>
+<item id="Flashcard_70_7" href="widgets/Flashcard/70/images/13.png" media-type="image/png"/>
+<item id="Flashcard_70_8" href="widgets/Flashcard/70/images/11.png" media-type="image/png"/>
+<item id="Flashcard_70_9" href="widgets/Flashcard/70/images/10.png" media-type="image/png"/>
+<item id="Flashcard_70_10" href="widgets/Flashcard/70/images/base_bw.png" media-type="image/png"/>
+<item id="Flashcard_70_11" href="widgets/Flashcard/70/images/base_color.png" media-type="image/png"/>
+<item id="Flashcard_70_12" href="widgets/Flashcard/70/images/4.png" media-type="image/png"/>
+<item id="Flashcard_70_13" href="widgets/Flashcard/70/images/5.png" media-type="image/png"/>
+<item id="Flashcard_70_14" href="widgets/Flashcard/70/images/7.png" media-type="image/png"/>
+<item id="Flashcard_70_15" href="widgets/Flashcard/70/images/6.png" media-type="image/png"/>
+<item id="Flashcard_70_16" href="widgets/Flashcard/70/images/2.png" media-type="image/png"/>
+<item id="Flashcard_70_17" href="widgets/Flashcard/70/images/3.png" media-type="image/png"/>
+<item id="Flashcard_70_18" href="widgets/Flashcard/70/images/1.png" media-type="image/png"/>
+<item id="Flashcard_70_19" href="widgets/Flashcard/70/activityframe.html" media-type="text/html" fallback="activityframe-70-fallback"/>
+<item id="Flashcard_70_20" href="widgets/Flashcard/70/index.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="activityframe-70-fallback" href="widgets/Flashcard/70/fallback.png" media-type="image/png"/>
+
 <item id="Flashcard_21" href="widgets/Flashcard/activity-main/js/widgetinit.js" media-type="text/javascript"/>
 <item id="Flashcard_22" href="widgets/Flashcard/activity-main/js/widget.js" media-type="text/javascript"/>
 <item id="Flashcard_23" href="widgets/Flashcard/activity-main/js/accessibility_handler.js" media-type="text/javascript"/>
