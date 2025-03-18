@@ -35,8 +35,25 @@ elm_seperators.forEach(elmhrs => {
 
 //Add role button to hotspots
 setTimeout(function(){
-    window.frames["mainframe"].setAttribute("title","Main Frame")
-    window.frames["mainframe"].contentWindow.frames["framecontainer"].setAttribute("title","Activity Frame")
+    var mainframe = document.getElementById("mainframe");
+
+    if (mainframe) {
+        mainframe.setAttribute("title", "Main Frame");
+        mainframe.setAttribute("allowFullScreen", "true");
+        mainframe.setAttribute("frameborder", "0");
+        mainframe.setAttribute("scrolling", "no");
+
+        // Access the content of the mainframe (Ensure it's from the same origin)
+        var mainframeDoc = mainframe.contentDocument || mainframe.contentWindow.document;
+        
+        if (mainframeDoc) {
+            // Get the nested iframe inside mainframe
+            var activityFrame = mainframeDoc.getElementById("framecontainer"); // Use ID
+            if (activityFrame) {
+                activityFrame.setAttribute("title", "Activity Frame");
+            }
+        }
+    }
     /*const frm_activity_document = window.frames["mainframe"].contentWindow.frames["framecontainer"].contentWindow.document;
     const elm_htspots = frm_activity_document.querySelectorAll("#zoomContainer .hotspot div");
     const elm_htspotslbls = frm_activity_document.querySelectorAll("#zoomContainer .labelsdata div");
