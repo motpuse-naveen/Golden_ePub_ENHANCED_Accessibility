@@ -127,6 +127,7 @@ function autoDragPagination(selectedStep) {
 }
 var QuestionNumber = document.querySelector("#questionNumber");
 var QuestionName = document.querySelector("#questionName");
+var QuestionInstruction = document.querySelector("#questionInstruction");
 var optionContainer = document.querySelector(".Multiple-choice");
 var correctMsg = document.querySelector(".correct");
 var indicator = document.querySelector(".nav-tabs");
@@ -181,6 +182,15 @@ function getNewQuestion(question) {
         $('#subheading3').hide().attr("aria-hidden", true);
         optionsIndex++
     }
+    if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
+        && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
+            QuestionInstruction.innerText = "Select one answer."
+            optionContainer.setAttribute("role", "radiogroup");
+    }
+    else {
+        QuestionInstruction.innerText = "Select all that apply."
+        optionContainer.setAttribute("role", "group");
+    }
     var optionStyleType = [];
     if (currentQuestion.optionStyleType != undefined && currentQuestion.optionStyleType != null && currentQuestion.optionStyleType != "" && currentQuestion.optionStyleType != "none") {
         optionContainer.setAttribute("styletype", currentQuestion.optionStyleType);
@@ -201,7 +211,14 @@ function getNewQuestion(question) {
         option.innerHTML = currentQuestion.option[j];
         option.setAttribute('data-id', j);
         option.setAttribute('tabindex', '0');
-        option.setAttribute('role', 'checkbox');
+        if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
+        && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
+            option.setAttribute('role', 'radio');
+        }
+        else{
+            option.setAttribute('role', 'checkbox');
+        }
+        
         option.setAttribute('aria-checked', 'false');
         optionsIndex++;
         option.className = "focus-input";
