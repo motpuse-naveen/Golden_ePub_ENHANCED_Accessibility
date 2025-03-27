@@ -5,7 +5,8 @@
 }
 
 html, body {
-  height: 90%;
+  height: 100%;
+  overflow: hidden;
 }
 
 #mainframe {
@@ -175,24 +176,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', end
   max-height: 500px;
   overflow: auto;
 }
-.title-wrap{
-  display: block;
+.title-wrap {
   display: flex;
   position: relative;
-  height: 40px;
-  align-items: center;
-  position: relative;
   height: 50px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .h-hotspot .titleContainer{
-	position: absolute;
+	/*position: absolute;*/
   font-weight: 600;
   /*top: -34px;
   left:60px;*/
-  font-size: 1.5em;
+  font-size: 1.2em;
   /*padding: 10px 5px;*/
   margin: 6px;
+}
+.h-hotspot .commentButton{
+  position: unset;
 }
 .h-hotspot .modalbg .dialog .ie7 {
   filter: progid:DXImageTransform.Microsoft.Shadow(color='#000', Direction=135, Strength=3);
@@ -304,6 +306,15 @@ outline: 2px solid #EB6500;
 }
 
 
+iframe.activityframe {
+	overflow: hidden;
+	scrollbar-width: none; /* Firefox */
+	border: none;
+}
+
+iframe.activityframe::-webkit-scrollbar {
+    display: none;
+}
 
 @media (max-width: 915px){
   /*.h-hotspot .titleContainer {
@@ -319,9 +330,7 @@ outline: 2px solid #EB6500;
     left: 20%;
   }
   */
-  html, body {
-    height: 80%;
-  }
+
   .h-hotspot .modalbg .dialog_body{
     max-height: 250px;
   }
@@ -515,8 +524,7 @@ outline: 2px solid #EB6500;
 }
 
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+  and (min-device-width: 768px)  
   and (-webkit-min-device-pixel-ratio: 1) {
   #mainframe{
     width: 640px;

@@ -471,6 +471,7 @@ $('#mcq_button').on('mousedown click', function (e) {
             $('#mcq_button').addClass('disabled').attr("aria-disabled",true);
             $('#questionNumber').focus();
             $('#mcq_button').html('Check Answer');
+            $('#need_help').attr("aria-hidden","false").show();
             //$('#mcq_button').attr('title', 'Check Answer');
             // $('#mcq_button').removeAttr('tabindex');
             //$('#mcq_button').attr('tabindex', '-1');
@@ -513,6 +514,7 @@ $('#show_ans').on('click keydown', (function (e) {
         }, 200);
         
         $('#answer_label').hide();
+        $('#need_help').attr("aria-hidden","true").hide();
     }
 }));
 $('.arrow-left').on('click keydown', function (e) {

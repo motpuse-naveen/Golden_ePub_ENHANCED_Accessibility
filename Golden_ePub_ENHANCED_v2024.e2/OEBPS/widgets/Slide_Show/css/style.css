@@ -154,6 +154,10 @@
 	background-position: center;
 }
 
+.main-slider-area .thumbnail_main .tablist li{
+	position: relative;
+}
+
 .main-slider-area .thumbnail_main .column:hover .column_inner {
 	/* opacity: 1; */
 }
