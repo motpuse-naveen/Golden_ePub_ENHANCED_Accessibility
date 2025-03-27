@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" version="3.0" xml:lang="en" unique-identifier="p9780124046320">
+  <metadata>
+     <meta property="schema:accessMode">textual</meta>	
+     <meta property="schema:accessMode">visual</meta>
+     <meta property="schema:accessModeSufficient">textual</meta>
+     <meta property="schema:accessModeSufficient">visual</meta>
+     <meta property="schema:accessModeSufficient">textual, visual</meta>
+     <meta property="schema:accessibilityFeature">structuralNavigation</meta>
+     <meta property="schema:accessibilityFeature">displayTransformability</meta>
+     <meta property="schema:accessibilityFeature">MathML</meta>
+     <meta property="schema:accessibilityFeature">describedMath</meta>
+     <meta property="schema:accessibilityFeature">ARIA</meta>
+     <meta property="schema:accessibilityFeature">pageNavigation</meta>
+     <meta property="schema:accessibilityFeature">alternativeText</meta>
+     <meta property="schema:accessibilityFeature">longDescription</meta>
+     <meta property="schema:accessibilityFeature">tableOfContents</meta>
+     <meta property="schema:accessibilityFeature">structuralNavigation</meta>
+     <meta property="schema:accessibilityFeature">index</meta>
+     <meta property="schema:accessibilityFeature">printPageNumbers</meta>
+     <meta property="schema:accessibilityFeature">readingOrder</meta>
+     <meta property="schema:accessibilityHazard">noFlashingHazard</meta>
+     <meta property="schema:accessibilityHazard">noSoundHazard</meta>
+     <meta property="schema:accessibilityHazard">noMotionSimulationHazard</meta>
+     <meta property="schema:accessibilitySummary">This publication conforms to WCAG 2.0 Level AA.</meta>
+      <dc:identifier id="p9780124046320">urn:isbn:978-0-12-809343-6</dc:identifier>
+      <meta refines="#p9780124046320" property="identifier-type" scheme="onix:codelist5">15</meta>
+      <dc:title id="t1">Research Methods in Human-Computer Interaction</dc:title>
+      <meta refines="#t1" property="title-type">main</meta>
+      <meta refines="#t1" property="display-seq">1</meta>
+      <meta refines="#t1" property="group-position">2</meta>
+      <dc:creator id="creator01">Jonathan Lazar</dc:creator>
+      <meta refines="#creator01" property="role" scheme="marc:relators">aut</meta>
+      <meta refines="#creator01" property="display-seq">1</meta>
+      <meta refines="#creator01" property="file-as">Lazar, Jonathan</meta>
+      <dc:creator id="creator02">Jinjuan Heidi Feng</dc:creator>
+      <meta refines="#creator02" property="role" scheme="marc:relators">aut</meta>
+      <meta refines="#creator02" property="display-seq">2</meta>
+      <meta refines="#creator02" property="file-as">Feng, Jinjuan Heidi</meta>
+      <dc:creator id="creator03">Harry Hochheiser</dc:creator>
+      <meta refines="#creator03" property="role" scheme="marc:relators">aut</meta>
+      <meta refines="#creator03" property="display-seq">3</meta>
+      <meta refines="#creator03" property="file-as">Hochheiser, Harry</meta>
+      <dc:source id="p9780128093436">urn:isbn:9780128093436</dc:source>
+      <meta refines="#p9780128093436" property="identifier-type" scheme="onix:codelist5">15</meta>
+      <meta refines="#p9780128093436" property="source-of">pagination</meta>
+      <dc:publisher>Elsevier Inc.</dc:publisher>
+      <dc:language>en</dc:language><dc:type>Text</dc:type>
+      <dc:format>56 pages</dc:format>
+      <dc:date>2012</dc:date>
+      <meta property="dcterms:modified">2014-01-30T15:30:00Z</meta>
+      <meta name="cover" content="cover-image"/>
+   </metadata>
+   <manifest>
+	<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+	<item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
+	<item id="PIN" href="xhtml/PIN.xhtml" media-type="application/xhtml+xml"/>
+	<item id="html-cover-page" href="xhtml/Cover.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Title_page" href="xhtml/Title_page.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Disclaimer" href="xhtml/Disclaimer.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Contents" href="xhtml/Contents.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Copyright" href="xhtml/Copyright_iv_B9780124158207000084.xhtml" media-type="application/xhtml+xml"/>
+	<item id="LOC" href="xhtml/ListOfContributors_v_B9780124158207000051.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Dedication" href="xhtml/Dedication_vi_B9780124158207000064.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Preface" href="xhtml/Preface_vii-xii_B9780124158207000164.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Acknowledgments" href="xhtml/Acknowledgments_xiii-xiv_B9780124158207000073.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Loi" href="xhtml/ListOfIllustrations_xv_B9780124158207000058.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Lot" href="xhtml/ListOfTables_xvi_B9780124158207000154.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Volume" href="xhtml/Volume.xhtml" media-type="application/xhtml+xml"/>	
+	<item id="CHP001" properties="mathml scripted" href="xhtml/Ch001_1-18_B978012415820700007X.xhtml" media-type="application/xhtml+xml"/>
+	<item id="CHP001a" href="xhtml/Ch001_Extended_Fig1_1.xhtml" media-type="application/xhtml+xml"/>
+	<item id="enhance_1" href="xhtml/Ch002_Samples_of_Widget_Enhancements.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
+	<item id="enhance_2" href="xhtml/Embedded_Audio.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+	<item id="enhance_3" href="xhtml/Slideshow.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+	<item id="enhance_4" href="xhtml/Slide-Line.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+	<item id="enhance_5" href="xhtml/Test_Yourself.xhtml" media-type="application/xhtml+xml"/>
+	<item id="enhance_6" href="xhtml/Show-Hide.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+	<item id="enhance_7" href="xhtml/Pop_Tip.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+	<item id="enhance_8" href="xhtml/Quiz_with_Multiple_Choice.xhtml" media-type="application/xhtml+xml"/>
+	<item id="enhance_9" href="xhtml/Quiz_with_Multiple_Answer.xhtml" media-type="application/xhtml+xml"/>
+	<item id="enhance_10" href="xhtml/Quiz_with_True-False.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_11" href="xhtml/Flashcard.xhtml" media-type="application/xhtml+xml"/>
+	<item id="cssme" href="styles/media.css" media-type="text/css"/>
+	<item id="cssma" href="styles/math.css" media-type="text/css"/>
+	<item href="styles/math.js" id="mathjs" media-type="text/javascript"/>
+	<item id="Appendix" href="xhtml/Appendix-A_19_B9780124158207000173.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Glossary" href="xhtml/Glossary_20_B9780124158207000054.xhtml" media-type="application/xhtml+xml"/>
+	<item id="Bibliography" href="xhtml/Bibliography_21_B9780124158207000178.xhtml" media-type="application/xhtml+xml"/>	
+	<item id="IDX001" href="xhtml/Index_22_B9780124158207000044.xhtml" media-type="application/xhtml+xml"/>
+	<item id="css" href="styles/Elsevier_eBook.css" media-type="text/css"/>
+	<item id="cover-image" properties="cover-image" href="images/9780128093436_FC.jpg" media-type="image/jpeg"/>
+	<item id="Img1" href="images/publogo.jpg" media-type="image/jpeg"/>
+	<item id="Img2" href="images/F099990icon01-9780124158207.jpg" media-type="image/jpeg"/>
+	<item id="Img3" href="images/T000013tabT0010.jpg" media-type="image/jpeg"/>
+	<item id="Img4" href="images/T000013tabT0030.jpg" media-type="image/jpeg"/>
+	<item id="Img5" href="images/T000013tabT0030a.jpg" media-type="image/jpeg"/>
+	<item id="Img5a1" href="images/T000011tabT0030a.jpg" media-type="image/jpeg"/>
+	<item id="Img5a" href="images/T000013tabT0010G.jpg" media-type="image/jpeg"/>
+	<item id="Img6" href="images/F000013f01-01-9780124158207.jpg" media-type="image/jpeg"/>
+	<item id="Img7" href="images/F000013f01-02-9780124158207.jpg" media-type="image/jpeg"/>
+	<item id="Img8" href="images/F000013f01-03-9780124158207.jpg" media-type="image/jpeg"/>
+	<item id="Img9" href="images/chem.jpg" media-type="image/jpeg"/>
+	<item id="Img10" href="images/F000018si1.png" media-type="image/png"/>
+	<item id="Img11" href="images/F000029si1.svg" media-type="image/svg+xml"/>
+	<item id="Img14" href="images/code.png" media-type="image/png"/>
+   <item id="Img14_1" href="images/dummy1.png" media-type="image/png"/>
+   <item id="Img14_2" href="images/dummy2.png" media-type="image/png"/>
+   <item id="Img14_3" href="images/dummy3.png" media-type="image/png"/>
+	<item id="Img11a" href="images/chp001_gr001.jpg" media-type="image/jpeg"/>
+	<item id="Img12" href="images/F000036mmc03-01-9780128023198.jpg" media-type="image/jpeg"/>
+	<item id="Vid1" href="videos/mmc03-01-9780128023198.mp4" media-type="video/mp4"/>
+	<item id="Vid2" href="videos/mmc03-01-9780128023198.mp3" media-type="audio/mpeg"/>
+	<item id="vid_1" href="https://static.us.elsevierhealth.com/swartz_8_9780323672924/9780323672924_0137.m3u8" media-type="application/vnd.apple.mpegurl"/>
+	<item id="vid_2" href="https://static.us.elsevierhealth.com/swartz_8_9780323672924/9780323672924_0137.vtt" media-type="text/vtt"/>
+   <item id="vid_3" href="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.m3u8" media-type="application/vnd.apple.mpegurl"/>
+	<item id="vid_4" href="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.vtt" media-type="text/vtt"/>
+<!--widgets-->
+<item id="wid_1" href="widgets/common_assets/scripts/hlsjs/hls.js" media-type="application/javascript"/>
+<item id="wid_2" href="widgets/common_assets/scripts/hlsjs/hls.js.map" media-type="application/json"/>
+<item id="wid_3" href="widgets/common_assets/scripts/hlsjs/hls.min.js" media-type="application/javascript"/>
+<item id="wid_4" href="widgets/common_assets/scripts/hlsjs/hls.min.js.map" media-type="application/json"/>
+<item id="wid_5" href="widgets/common_assets/scripts/mathjax/a11y/assistive-mml.js" media-type="application/javascript"/>
+<item id="wid_6" href="widgets/common_assets/scripts/mathjax/a11y/complexity.js" media-type="application/javascript"/>
+<item id="wid_7" href="widgets/common_assets/scripts/mathjax/a11y/explorer.js" media-type="application/javascript"/>
+<item id="wid_8" href="widgets/common_assets/scripts/mathjax/a11y/semantic-enrich.js" media-type="application/javascript"/>
+<item id="wid_9" href="widgets/common_assets/scripts/mathjax/adaptors/liteDOM.js" media-type="application/javascript"/>
+<item id="wid_10" href="widgets/common_assets/scripts/mathjax/core.js" media-type="application/javascript"/>
+<item id="wid_11" href="widgets/common_assets/scripts/mathjax/input/asciimath.js" media-type="application/javascript"/>
+<item id="wid_12" href="widgets/common_assets/scripts/mathjax/input/mml.js" media-type="application/javascript"/>
+<item id="wid_13" href="widgets/common_assets/scripts/mathjax/input/mml/entities.js" media-type="application/javascript"/>
+<item id="wid_14" href="widgets/common_assets/scripts/mathjax/input/mml/extensions/mml3.js" media-type="application/javascript"/>
+<item id="wid_15" href="widgets/common_assets/scripts/mathjax/input/mml/extensions/mml3.sef.json" media-type="application/json"/>
+<item id="wid_16" href="widgets/common_assets/scripts/mathjax/input/tex-base.js" media-type="application/javascript"/>
+<item id="wid_17" href="widgets/common_assets/scripts/mathjax/input/tex-full.js" media-type="application/javascript"/>
+<item id="wid_18" href="widgets/common_assets/scripts/mathjax/input/tex.js" media-type="application/javascript"/>
+<item id="wid_19" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/action.js" media-type="application/javascript"/>
+<item id="wid_20" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/all-packages.js" media-type="application/javascript"/>
+<item id="wid_21" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/ams.js" media-type="application/javascript"/>
+<item id="wid_22" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/amscd.js" media-type="application/javascript"/>
+<item id="wid_23" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/autoload.js" media-type="application/javascript"/>
+<item id="wid_24" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/bbox.js" media-type="application/javascript"/>
+<item id="wid_25" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/boldsymbol.js" media-type="application/javascript"/>
+<item id="wid_26" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/braket.js" media-type="application/javascript"/>
+<item id="wid_27" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/bussproofs.js" media-type="application/javascript"/>
+<item id="wid_28" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/cancel.js" media-type="application/javascript"/>
+<item id="wid_29" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/centernot.js" media-type="application/javascript"/>
+<item id="wid_30" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/color.js" media-type="application/javascript"/>
+<item id="wid_31" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/colortbl.js" media-type="application/javascript"/>
+<item id="wid_32" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/colorv2.js" media-type="application/javascript"/>
+<item id="wid_33" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/configmacros.js" media-type="application/javascript"/>
+<item id="wid_34" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/enclose.js" media-type="application/javascript"/>
+<item id="wid_35" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/extpfeil.js" media-type="application/javascript"/>
+<item id="wid_36" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/gensymb.js" media-type="application/javascript"/>
+<item id="wid_37" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/html.js" media-type="application/javascript"/>
+<item id="wid_38" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/mathtools.js" media-type="application/javascript"/>
+<item id="wid_39" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/mhchem.js" media-type="application/javascript"/>
+<item id="wid_40" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/newcommand.js" media-type="application/javascript"/>
+<item id="wid_41" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/noerrors.js" media-type="application/javascript"/>
+<item id="wid_42" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/noundefined.js" media-type="application/javascript"/>
+<item id="wid_43" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/physics.js" media-type="application/javascript"/>
+<item id="wid_44" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/require.js" media-type="application/javascript"/>
+<item id="wid_45" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/setoptions.js" media-type="application/javascript"/>
+<item id="wid_46" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/tagformat.js" media-type="application/javascript"/>
+<item id="wid_47" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/textcomp.js" media-type="application/javascript"/>
+<item id="wid_48" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/textmacros.js" media-type="application/javascript"/>
+<item id="wid_49" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/unicode.js" media-type="application/javascript"/>
+<item id="wid_50" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/upgreek.js" media-type="application/javascript"/>
+<item id="wid_51" href="widgets/common_assets/scripts/mathjax/input/tex/extensions/verb.js" media-type="application/javascript"/>
+<item id="wid_52" href="widgets/common_assets/scripts/mathjax/latest.js" media-type="application/javascript"/>
+<item id="wid_53" href="widgets/common_assets/scripts/mathjax/loader.js" media-type="application/javascript"/>
+<item id="wid_54" href="widgets/common_assets/scripts/mathjax/mml-chtml.js" media-type="application/javascript"/>
+<item id="wid_55" href="widgets/common_assets/scripts/mathjax/mml-svg.js" media-type="application/javascript"/>
+<item id="wid_56" href="widgets/common_assets/scripts/mathjax/node-main.js" media-type="application/javascript"/>
+<item id="wid_57" href="widgets/common_assets/scripts/mathjax/output/chtml.js" media-type="application/javascript"/>
+<item id="wid_58" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/tex.js" media-type="application/javascript"/>
+<item id="wid_59" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_60" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff" media-type="application/font-woff"/>
+<item id="wid_61" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_62" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff" media-type="application/font-woff"/>
+<item id="wid_63" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_64" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff" media-type="application/font-woff"/>
+<item id="wid_65" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff" media-type="application/font-woff"/>
+<item id="wid_66" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_67" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff" media-type="application/font-woff"/>
+<item id="wid_68" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff" media-type="application/font-woff"/>
+<item id="wid_69" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_70" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff" media-type="application/font-woff"/>
+<item id="wid_71" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff" media-type="application/font-woff"/>
+<item id="wid_72" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_73" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_74" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_75" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_76" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_77" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_78" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_79" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff" media-type="application/font-woff"/>
+<item id="wid_80" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff" media-type="application/font-woff"/>
+<item id="wid_81" href="widgets/common_assets/scripts/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff" media-type="application/font-woff"/>
+<item id="wid_82" href="widgets/common_assets/scripts/mathjax/output/svg.js" media-type="application/javascript"/>
+<item id="wid_83" href="widgets/common_assets/scripts/mathjax/output/svg/fonts/tex.js" media-type="application/javascript"/>
+<item id="wid_84" href="widgets/common_assets/scripts/mathjax/sre/mathmaps/de.js" media-type="application/javascript"/>
+<item id="wid_85" href="widgets/common_assets/scripts/mathjax/sre/mathmaps/en.js" media-type="application/javascript"/>
+<item id="wid_86" href="widgets/common_assets/scripts/mathjax/sre/mathmaps/es.js" media-type="application/javascript"/>
+<item id="wid_87" href="widgets/common_assets/scripts/mathjax/sre/mathmaps/fr.js" media-type="application/javascript"/>
+<item id="wid_88" href="widgets/common_assets/scripts/mathjax/sre/mathmaps/hi.js" media-type="application/javascript"/>
+<item id="wid_89" href="widgets/common_assets/scripts/mathjax/sre/mathmaps/it.js" media-type="application/javascript"/>
+<item id="wid_90" href="widgets/common_assets/scripts/mathjax/sre/mathmaps/nemeth.js" media-type="application/javascript"/>
+<item id="wid_91" href="widgets/common_assets/scripts/mathjax/sre/sre-node.js" media-type="application/javascript"/>
+<item id="wid_92" href="widgets/common_assets/scripts/mathjax/sre/sre_browser.js" media-type="application/javascript"/>
+<item id="wid_93" href="widgets/common_assets/scripts/mathjax/startup.js" media-type="application/javascript"/>
+<item id="wid_94" href="widgets/common_assets/scripts/mathjax/tex-chtml-full.js" media-type="application/javascript"/>
+<item id="wid_95" href="widgets/common_assets/scripts/mathjax/tex-chtml.js" media-type="application/javascript"/>
+<item id="wid_96" href="widgets/common_assets/scripts/mathjax/tex-mml-chtml.js" media-type="application/javascript"/>
+<item id="wid_97" href="widgets/common_assets/scripts/mathjax/tex-mml-svg.js" media-type="application/javascript"/>
+<item id="wid_98" href="widgets/common_assets/scripts/mathjax/tex-svg-full.js" media-type="application/javascript"/>
+<item id="wid_99" href="widgets/common_assets/scripts/mathjax/tex-svg.js" media-type="application/javascript"/>
+<item id="wid_100" href="widgets/common_assets/scripts/mathjax/ui/lazy.js" media-type="application/javascript"/>
+<item id="wid_101" href="widgets/common_assets/scripts/mathjax/ui/menu.js" media-type="application/javascript"/>
+<item id="wid_102" href="widgets/common_assets/scripts/mathjax/ui/safe.js" media-type="application/javascript"/>
+<item id="wid_103" href="widgets/common_assets/scripts/jquery-3.6.0.min.js" media-type="application/javascript"/>
+<item id="wid_104" href="widgets/common_assets/scripts/video-tracker.js" media-type="application/javascript"/>
+<item id="wid_105" href="widgets/common_assets/css/common.css" media-type="text/css"/>
+<item id="wid_106" href="widgets/common_assets/css/iframe_common.css" media-type="text/css"/>
+<item id="wid_107" href="widgets/common_assets/css/variables.css" media-type="text/css"/>
+<item id="wid_108" href="widgets/common_assets/css/casestudy.css" media-type="text/css"/>
+<item id="wid_109" href="widgets/common_assets/css/main.css" media-type="text/css"/>
+<item id="wid_110" href="widgets/common_assets/css/learningresources.css" media-type="text/css"/>
+<item id="wid_111" href="widgets/common_assets/images/close.png" media-type="image/png"/>
+<item id="wid_112" href="widgets/common_assets/scripts/common.js" media-type="application/javascript"/>
+<item id="wid_113" href="widgets/common_assets/scripts/iframe_common.js" media-type="application/javascript"/>
+
+<item id="abc_20" href="widgets/common_assets/images/badge-slideline-01.svg" media-type="image/svg+xml"/>
+<item id="abc_21" href="widgets/common_assets/images/badge-slideline-02.svg" media-type="image/svg+xml"/>
+<item id="abc_22" href="widgets/common_assets/images/badge-slideline-03.svg" media-type="image/svg+xml"/>
+<item id="abc_23" href="widgets/common_assets/images/badge-slideline-04.svg" media-type="image/svg+xml"/>
+<item id="abc_24" href="widgets/common_assets/images/badge-slideline-05.svg" media-type="image/svg+xml"/>
+<item id="abc_25" href="widgets/common_assets/images/badge-slideline-06.svg" media-type="image/svg+xml"/>
+<item id="abc_26" href="widgets/common_assets/images/badge-slideline-07.svg" media-type="image/svg+xml"/>
+<item id="abc_27" href="widgets/common_assets/images/badge-slideline-08.svg" media-type="image/svg+xml"/>
+<item id="abc_28" href="widgets/common_assets/images/badge-slideline-09.svg" media-type="image/svg+xml"/>
+<item id="abc_29" href="widgets/common_assets/images/badge-testyourself-00.svg" media-type="image/svg+xml"/>
+<item id="abc_30" href="widgets/common_assets/images/badge-testyourself-01.svg" media-type="image/svg+xml"/>
+<item id="abc_31" href="widgets/common_assets/images/badge-testyourself-02.svg" media-type="image/svg+xml"/>
+<item id="abc_32" href="widgets/common_assets/images/badge-testyourself-03.svg" media-type="image/svg+xml"/>
+<item id="abc_33" href="widgets/common_assets/images/badge-testyourself-04.svg" media-type="image/svg+xml"/>
+<item id="abc_34" href="widgets/common_assets/images/badge-testyourself-05.svg" media-type="image/svg+xml"/>
+<item id="abc_35" href="widgets/common_assets/images/badge-testyourself-06.svg" media-type="image/svg+xml"/>
+<item id="abc_36" href="widgets/common_assets/images/badge-testyourself-07.svg" media-type="image/svg+xml"/>
+<item id="abc_37" href="widgets/common_assets/images/badge-testyourself-08.svg" media-type="image/svg+xml"/>
+<item id="abc_38" href="widgets/common_assets/images/badge-testyourself-09.svg" media-type="image/svg+xml"/>
+<item id="abc_39" href="widgets/common_assets/images/badge-testyourself-10.svg" media-type="image/svg+xml"/>
+<item id="abc_40" href="widgets/common_assets/images/callout-arrow-00.svg" media-type="image/svg+xml"/>
+<item id="abc_41" href="widgets/common_assets/images/callout-arrow-01.svg" media-type="image/svg+xml"/>
+<item id="abc_42" href="widgets/common_assets/images/callout-arrow-02.svg" media-type="image/svg+xml"/>
+<item id="abc_43" href="widgets/common_assets/images/callout-arrow-03.svg" media-type="image/svg+xml"/>
+<item id="abc_44" href="widgets/common_assets/images/callout-arrow-04.svg" media-type="image/svg+xml"/>
+<item id="abc_45" href="widgets/common_assets/images/callout-arrow-05.svg" media-type="image/svg+xml"/>
+<item id="abc_46" href="widgets/common_assets/images/callout-arrow-07.svg" media-type="image/svg+xml"/>
+<item id="abc_47" href="widgets/common_assets/images/callout-arrow-08.svg" media-type="image/svg+xml"/>
+<item id="abc_48" href="widgets/common_assets/images/callout-arrow-09.svg" media-type="image/svg+xml"/>
+<item id="abc_49" href="widgets/common_assets/images/callout-arrow-10.svg" media-type="image/svg+xml"/>
+<item id="abc_50" href="widgets/common_assets/images/callout-video-01.svg" media-type="image/svg+xml"/>
+<item id="abc_51" href="widgets/common_assets/images/callout-video-02.svg" media-type="image/svg+xml"/>
+<item id="abc_52" href="widgets/common_assets/images/callout-video-03.svg" media-type="image/svg+xml"/>
+<item id="abc_53" href="widgets/common_assets/images/callout-video-04.svg" media-type="image/svg+xml"/>
+<item id="abc_54" href="widgets/common_assets/images/callout-video-05.svg" media-type="image/svg+xml"/>
+<item id="abc_55" href="widgets/common_assets/images/callout-video-07.svg" media-type="image/svg+xml"/>
+<item id="abc_56" href="widgets/common_assets/images/callout-video-08.svg" media-type="image/svg+xml"/>
+<item id="abc_57" href="widgets/common_assets/images/callout-video-09.svg" media-type="image/svg+xml"/>
+<item id="abc_58" href="widgets/common_assets/images/callout-video-10.svg" media-type="image/svg+xml"/>
+<item id="abc_59" href="widgets/common_assets/images/chapter_bg.png" media-type="image/png"/>
+<item id="abc_60" href="widgets/common_assets/images/chapter_bg_white.png" media-type="image/png"/>
+<item id="abc_61" href="widgets/common_assets/images/equation-sample.png" media-type="image/png"/>
+<item id="abc_62" href="widgets/common_assets/images/figure-unavailable.png" media-type="image/png"/>
+<item id="abc_63" href="widgets/common_assets/images/grid-12.svg" media-type="image/svg+xml"/>
+<item id="abc_68" href="widgets/common_assets/images/icon-anatomy-embryology.svg" media-type="image/svg+xml"/>
+<item id="abc_69" href="widgets/common_assets/images/icon-arrow-right-white.svg" media-type="image/svg+xml"/>
+<item id="abc_70" href="widgets/common_assets/images/icon-biochemistry.svg" media-type="image/svg+xml"/>
+<item id="abc_71" href="widgets/common_assets/images/icon-checkmark.svg" media-type="image/svg+xml"/>
+<item id="abc_72" href="widgets/common_assets/images/icon-doublecheckmark.svg" media-type="image/svg+xml"/>
+<item id="abc_73" href="widgets/common_assets/images/icon-genetics.svg" media-type="image/svg+xml"/>
+<item id="abc_74" href="widgets/common_assets/images/icon-histology.svg" media-type="image/svg+xml"/>
+<item id="abc_75" href="widgets/common_assets/images/icon-immunology-microbiology.svg" media-type="image/svg+xml"/>
+<item id="abc_76" href="widgets/common_assets/images/icon-information-orange.svg" media-type="image/svg+xml"/>
+<item id="abc_77" href="widgets/common_assets/images/icon-magnify-pink.svg" media-type="image/svg+xml"/>
+<item id="abc_78" href="widgets/common_assets/images/icon-microscope-purple.svg" media-type="image/svg+xml"/>
+<item id="abc_79" href="widgets/common_assets/images/icon-neuroscience.svg" media-type="image/svg+xml"/>
+<item id="abc_80" href="widgets/common_assets/images/icon-pathology.svg" media-type="image/svg+xml"/>
+<item id="abc_81" href="widgets/common_assets/images/icon-pharmacology.svg" media-type="image/svg+xml"/>
+<item id="abc_82" href="widgets/common_assets/images/icon-physiology.svg" media-type="image/svg+xml"/>
+<item id="abc_83" href="widgets/common_assets/images/icon-pillbottle-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_84" href="widgets/common_assets/images/icon-question-gray.svg" media-type="image/svg+xml"/>
+<item id="abc_85" href="widgets/common_assets/images/icon-scope-teal.svg" media-type="image/svg+xml"/>
+<item id="abc_86" href="widgets/common_assets/images/icon.png" media-type="image/png"/>
+<item id="abc_116" href="widgets/common_assets/images/publisher-logo.png" media-type="image/png"/>
+<item id="abc_117" href="widgets/common_assets/images/stub-landscape.png" media-type="image/png"/>
+<item id="abc_118" href="widgets/common_assets/images/stub-portrait.png" media-type="image/png"/>
+<item id="abc_119" href="widgets/common_assets/images/temp-icon.svg" media-type="image/svg+xml"/>
+<item id="abc_120" href="widgets/common_assets/images/callout-arrow-06.svg" media-type="image/svg+xml"/>
+<item id="abc_121" href="widgets/common_assets/images/callout-arrow-white.svg" media-type="image/svg+xml"/>
+<item id="abc_122" href="widgets/common_assets/images/callout-video-06.svg" media-type="image/svg+xml"/>
+<item id="abc_64" href="widgets/common_assets/images/ico/cb-circle.svg" media-type="image/svg+xml"/>
+<item id="abc_65" href="widgets/common_assets/images/ico/cb-square.svg" media-type="image/svg+xml"/>
+<item id="abc_66" href="widgets/common_assets/images/ico/cb-triangle.svg" media-type="image/svg+xml"/>
+<item id="abc_67" href="widgets/common_assets/images/ico/temp-icon.svg" media-type="image/svg+xml"/>
+<item id="abc_87" href="widgets/common_assets/images/platform/icon-arrow-hide-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_88" href="widgets/common_assets/images/platform/icon-arrow-right-gray.svg" media-type="image/svg+xml"/>
+<item id="abc_89" href="widgets/common_assets/images/platform/icon-arrow-right-white.svg" media-type="image/svg+xml"/>
+<item id="abc_90" href="widgets/common_assets/images/platform/icon-arrow-show-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_91" href="widgets/common_assets/images/platform/icon-assessment-black.svg" media-type="image/svg+xml"/>
+<item id="abc_92" href="widgets/common_assets/images/platform/icon-assessment-white.svg" media-type="image/svg+xml"/>
+<item id="abc_93" href="widgets/common_assets/images/platform/icon-audio-player-white.svg" media-type="image/svg+xml"/>
+<item id="abc_94" href="widgets/common_assets/images/platform/icon-audio-white.svg" media-type="image/svg+xml"/>
+<item id="abc_95" href="widgets/common_assets/images/platform/icon-custom-white.svg" media-type="image/svg+xml"/>
+<item id="abc_96" href="widgets/common_assets/images/platform/icon-definition-black.svg" media-type="image/svg+xml"/>
+<item id="abc_97" href="widgets/common_assets/images/platform/icon-definition-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_98" href="widgets/common_assets/images/platform/icon-guidedtour-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_99" href="widgets/common_assets/images/platform/icon-hotspot-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_100" href="widgets/common_assets/images/platform/icon-key-term-black.svg" media-type="image/svg+xml"/>
+<item id="abc_101" href="widgets/common_assets/images/platform/icon-link-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_102" href="widgets/common_assets/images/platform/icon-link-jump-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_103" href="widgets/common_assets/images/platform/icon-molecule-black.svg" media-type="image/svg+xml"/>
+<item id="abc_104" href="widgets/common_assets/images/platform/icon-molecule-white.svg" media-type="image/svg+xml"/>
+<item id="abc_105" href="widgets/common_assets/images/platform/icon-poptip-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_106" href="widgets/common_assets/images/platform/icon-slidedtour-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_107" href="widgets/common_assets/images/platform/icon-slideline-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_108" href="widgets/common_assets/images/platform/icon-slideshow-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_109" href="widgets/common_assets/images/platform/icon-table-black.svg" media-type="image/svg+xml"/>
+<item id="abc_110" href="widgets/common_assets/images/platform/icon-testyourself-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_111" href="widgets/common_assets/images/platform/icon-threed-black.svg" media-type="image/svg+xml"/>
+<item id="abc_112" href="widgets/common_assets/images/platform/icon-threed-blue.svg" media-type="image/svg+xml"/>
+<item id="abc_113" href="widgets/common_assets/images/platform/icon-threed-white.svg" media-type="image/svg+xml"/>
+<item id="abc_114" href="widgets/common_assets/images/platform/icon-video-white.svg" media-type="image/svg+xml"/>
+<item id="abc_115" href="widgets/common_assets/images/platform/icon-web-white.svg" media-type="image/svg+xml"/>
+
+<!--Show/Hide-->
+<item id="widget_1" href="widgets/Show_Hide/css/show_hide.css" media-type="text/css"/>
+<item id="widget_2" href="widgets/Show_Hide/images/Expand_N.svg" media-type="image/svg+xml"/>
+<item id="widget_3" href="widgets/Show_Hide/images/Collapse_N.svg" media-type="image/svg+xml"/>
+<item id="widget_4" href="widgets/Show_Hide/images/Expand_Hover_N.svg" media-type="image/svg+xml"/>
+<item id="widget_5" href="widgets/Show_Hide/images/Collapse_hover_N.svg" media-type="image/svg+xml"/>
+<item id="widget_6" href="widgets/Show_Hide/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+<item id="widget_7" href="widgets/Show_Hide/script/show_hide.js" media-type="text/javascript"/>
+<!--Audio-->
+<item id="aud_1" href="widgets/Embedded_audio/fonts/InklingSerifWeb-Regular.ttf" media-type="font/ttf"/>
+<item id="aud_2" href="widgets/Embedded_audio/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
+<item id="aud_3" href="widgets/Embedded_audio/fonts/SourceSansPro-Regular.ttf" media-type="font/ttf"/>
+<item id="aud_4" href="widgets/Embedded_audio/audio/001-what-is-psychopathology.mp3" media-type="audio/mpeg"/>
+<item id="aud_5" href="widgets/Embedded_audio/audio/001-what-is-psychopathology.ogg" media-type="audio/ogg"/>
+<item id="aud_4_1" href="widgets/Embedded_audio/audio/what-is-psychopathology.mp3" media-type="audio/mpeg"/>
+<item id="aud_5_2" href="widgets/Embedded_audio/audio/what-is-psychopathology.ogg" media-type="audio/ogg"/>
+<item id="aud_5_3" href="widgets/Embedded_audio/audio/001-what-is-psychopathology.vtt" media-type="text/vtt"/>
+<item id="aud_15" href="widgets/Embedded_audio/css/style.css" media-type="text/css"/>
+<item id="aud_16" href="widgets/Embedded_audio/images/audio_figure_volume_indicator.png" media-type="image/png"/>
+<item id="aud_17" href="widgets/Embedded_audio/images/play_pause@2x.png" media-type="image/png"/>
+<item id="aud_18" href="widgets/Embedded_audio/images/web_volume_dk.png" media-type="image/png"/>
+
+<item id="aud_18_1" href="widgets/Embedded_audio/images/Expand_N.svg" media-type="image/svg+xml"/>
+<item id="aud_18_2" href="widgets/Embedded_audio/images/Collapse_N.svg" media-type="image/svg+xml"/>
+<item id="aud_18_3" href="widgets/Embedded_audio/images/Expand_Hover_N.svg" media-type="image/svg+xml"/>
+<item id="aud_18_4" href="widgets/Embedded_audio/images/Collapse_hover_N.svg" media-type="image/svg+xml"/>
+
+<item id="aud_19" href="widgets/Embedded_audio/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+<item id="aud_20" href="widgets/Embedded_audio/script/jquery-ui.min.js" media-type="text/javascript"/>
+<item id="aud_21" href="widgets/Embedded_audio/script/slider-a11y-vertical.js" media-type="text/javascript"/>
+<item id="aud_22" href="widgets/Embedded_audio/xhtml/001-what-is-psychopathology.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
+<!--Slideshow-->
+<item id="SlideShow_1" href="widgets/Slide_Show/css/header_style.css" media-type="text/css"/>
+<item id="SlideShow_2" href="widgets/Slide_Show/css/style.css" media-type="text/css"/>
+<item id="SlideShow_3" href="widgets/Slide_Show/fonts/InklingSerifWeb-Regular.ttf" media-type="font/ttf"/>
+<item id="SlideShow_4" href="widgets/Slide_Show/fonts/SourceSansPro-Regular.ttf" media-type="font/ttf"/>
+<item id="SlideShow_5" href="widgets/Slide_Show/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
+<item id="SlideShow_6" href="widgets/Slide_Show/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
+<item id="SlideShow_7" href="widgets/Slide_Show/script/jquery-3.6.0.min.js" media-type="application/javascript"/>
+<item id="SlideShow_8" href="widgets/Slide_Show/script/jquery-ui.min.js" media-type="application/javascript"/>
+<item id="SlideShow_9" href="widgets/Slide_Show/script/slider-a11y.js" media-type="application/javascript"/>
+<item id="SlideShow_10" href="widgets/Slide_Show/script/slide_show.js" media-type="text/javascript"/>
+<item id="SlideShow_11" href="widgets/Slide_Show/script/ui-touch-punch.js" media-type="application/javascript"/>
+<item id="SlideShow_12" href="widgets/Slide_Show/xhtml/ch01_slideshow_23.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="SlideShow_13" href="widgets/Slide_Show/images/ch01_figure_text_15a.png" media-type="image/png"/>
+<item id="SlideShow_14" href="widgets/Slide_Show/images/ch01_figure_text_15b.png" media-type="image/png"/>
+<item id="SlideShow_15" href="widgets/Slide_Show/images/ch01_figure_text_15c.png" media-type="image/png"/>
+<item id="SlideShow_16" href="widgets/Slide_Show/images/image_figure_controls.png" media-type="image/png"/>
+<item id="SlideShow_17" href="widgets/Slide_Show/images/navbar_minus.png" media-type="image/png"/>
+<item id="SlideShow_18" href="widgets/Slide_Show/images/navbar_plus.png" media-type="image/png"/>
+<!--TestYourself-->
+<item id="ty_1" href="widgets/Labels/xhtml/ch02_testyourself_09.xhtml" properties="scripted" media-type="application/xhtml+xml" />
+<item id="ty_2" href="widgets/Labels/css/device.css" media-type="text/css" />
+<item id="ty_3" href="widgets/Labels/css/style.css" media-type="text/css" />
+<item id="ty_4" href="widgets/Labels/images/image_figure_test_yourself_btn.png" media-type="image/png" />
+<item id="ty_4_1" href="widgets/Labels/images/image_figure_test_yourself_btn_wt.png" media-type="image/png" />
+<item id="ty_5" href="widgets/Labels/images/navbar_minus.png" media-type="image/png" />
+<item id="ty_6" href="widgets/Labels/images/navbar_plus.png" media-type="image/png" />
+<item id="ty_7" href="widgets/Labels/images/hotspot-mag-glass.png" media-type="image/png" />
+<item id="ty_8" href="widgets/Labels/images/pl002-0009-9780323393225.jpg" media-type="image/jpeg" />
+<item id="ty_9" href="widgets/Labels/images/pl002-0009a-9780323393225.jpg" media-type="image/jpeg" />
+<item id="ty_10" href="widgets/Labels/images/web_arrow_poptip.png" media-type="image/png" />
+<item id="ty_11" href="widgets/Labels/script/jquery-3.6.0.min.js" media-type="text/javascript" />
+<item id="ty_12" href="widgets/Labels/script/jquery-ui.min.js" media-type="text/javascript" />
+<item id="ty_13" href="widgets/Labels/script/main.js" media-type="text/javascript" />
+<item id="ty_14" href="widgets/Labels/script/ui-touch-punch.js" media-type="text/javascript" />
+<!--SlideLine-->
+<item id="sl_1" href="widgets/Slide_Line/Image_Slider/css/header_style.css" media-type="text/css"/>
+<item id="sl_2" href="widgets/Slide_Line/Image_Slider/css/style.css" media-type="text/css"/>
+<item id="sl_3" href="widgets/Slide_Line/Image_Slider/fonts/InklingSerifWeb-Regular.ttf" media-type="font/ttf"/>
+<item id="sl_4" href="widgets/Slide_Line/Image_Slider/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
+<item id="sl_5" href="widgets/Slide_Line/Image_Slider/fonts/SourceSansPro-Light.woff" media-type="application/font-woff"/>
+<item id="sl_6" href="widgets/Slide_Line/Image_Slider/fonts/SourceSansPro-Light.ttf" media-type="font/ttf"/>
+<item id="sl_7" href="widgets/Slide_Line/Image_Slider/images/ch01_figure_text_13a.png" media-type="image/png"/>
+<item id="sl_8" href="widgets/Slide_Line/Image_Slider/images/ch01_figure_text_13b.png" media-type="image/png"/>
+<item id="sl_9" href="widgets/Slide_Line/Image_Slider/images/ch01_figure_text_13c.png" media-type="image/png"/>
+<item id="sl_10" href="widgets/Slide_Line/Image_Slider/images/ch01_figure_text_13d.png" media-type="image/png"/>
+<item id="sl_11" href="widgets/Slide_Line/Image_Slider/images/image_figure_controls.png" media-type="image/png"/>
+<item id="sl_12" href="widgets/Slide_Line/Image_Slider/images/navbar_minus.png" media-type="image/png"/>
+<item id="sl_13" href="widgets/Slide_Line/Image_Slider/images/navbar_plus.png" media-type="image/png"/>
+<item id="sl_14" href="widgets/Slide_Line/Image_Slider/images/step-setup-img1.png" media-type="image/png"/>
+<item id="sl_15" href="widgets/Slide_Line/Image_Slider/images/step-setup-img2.png" media-type="image/png"/>
+<item id="sl_16" href="widgets/Slide_Line/Image_Slider/images/step-setup-img3.png" media-type="image/png"/>
+<item id="sl_17" href="widgets/Slide_Line/Image_Slider/images/step-setup-img4.png" media-type="image/png"/>
+<item id="sl_18" href="widgets/Slide_Line/Image_Slider/images/timeline_dot_small.png" media-type="image/png"/>
+<item id="sl_19" href="widgets/Slide_Line/Image_Slider/script/img-slider2.js" media-type="text/javascript" />
+<item id="sl_20" href="widgets/Slide_Line/Image_Slider/script/img-slider-main.js" media-type="text/javascript" />
+<item id="sl_21" href="widgets/Slide_Line/Image_Slider/script/jquery-3.6.0.min.js" media-type="application/javascript"/>
+<item id="sl_22" href="widgets/Slide_Line/Image_Slider/script/jquery-ui.min.js" media-type="application/javascript"/>
+<item id="sl_23" href="widgets/Slide_Line/Image_Slider/script/slider-a11y.js" media-type="text/javascript" />
+<item id="sl_24" href="widgets/Slide_Line/Image_Slider/script/ui-touch-punch.js" media-type="text/javascript" />
+<item id="sl_25" href="widgets/Slide_Line/Image_Slider/xhtml/ch01_slideline_21.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
+<!--PopTip(Remarks)-->
+<item id="Glo_001" href="widgets/Glossary/css/style.css" media-type="text/css"/>
+<item id="Glo_002" href="widgets/Glossary/fonts/InklingSerifWeb-Regular.ttf" media-type="font/ttf"/>
+<item id="Glo_003" href="widgets/Glossary/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
+<item id="Glo_004" href="widgets/Glossary/fonts/SourceSansPro-Bold.ttf" media-type="font/ttf"/>
+<item id="Glo_005" href="widgets/Glossary/fonts/SourceSansPro-Bold.woff" media-type="application/font-woff"/>
+<item id="Glo_006" href="widgets/Glossary/fonts/SourceSansPro-Light.ttf" media-type="font/ttf"/>
+<item id="Glo_007" href="widgets/Glossary/fonts/SourceSansPro-Light.woff" media-type="application/font-woff"/>
+<item id="Glo_008" href="widgets/Glossary/fonts/SourceSansPro-Regular.ttf" media-type="font/ttf"/>
+<item id="Glo_009" href="widgets/Glossary/fonts/SourceSansPro-Regular.woff" media-type="application/font-woff"/>
+<item id="Glo_010" href="widgets/Glossary/images/abc.jpg" media-type="image/jpeg"/>
+<item id="Glo_011" href="widgets/Glossary/images/glossry-img.png" media-type="image/png"/>
+<item id="Glo_012" href="widgets/Glossary/images/icon_definition_blue.png" media-type="image/png"/>
+<item id="Glo_013" href="widgets/Glossary/images/icon_link_blue.png" media-type="image/png"/>
+<item id="Glo_014" href="widgets/Glossary/script/glossary-poptip.js" media-type="application/javascript"/>
+<item id="Glo_015" href="widgets/Glossary/script/jquery-3.6.0.min.js" media-type="application/javascript"/>
+<item id="Glo_016" href="widgets/Glossary/script/transcription.js" media-type="application/javascript"/>
+<!--MCSS-->
+<item id="mcms_02" href="widgets/MCSS/xhtml/chapter02_mcms.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="widget_711" href="widgets/MCSS/images/ass/ch01_un_02.png" media-type="image/png"/>
+<item id="widget_712" href="widgets/MCSS/images/ass/ch01_un_03.png" media-type="image/png"/>
+<item id="widget_713" href="widgets/MCSS/images/ass/ch01_un_04.png" media-type="image/png"/>
+<item id="widget_714" href="widgets/MCSS/images/ass/ch04_un_01.png" media-type="image/png"/>
+<item id="widget_715" href="widgets/MCSS/images/ass/ch04_un_02.png" media-type="image/png"/>
+<item id="widget_716" href="widgets/MCSS/images/ass/ch04_un_03.png" media-type="image/png"/>
+<item id="widget_717" href="widgets/MCSS/images/ass/ch04_un_04.png" media-type="image/png"/>
+<item id="widget_718" href="widgets/MCSS/images/ass/ch05_un_01.png" media-type="image/png"/>
+<item id="widget_719" href="widgets/MCSS/images/ass/ch05_un_02.png" media-type="image/png"/>
+<item id="widget_720" href="widgets/MCSS/images/ass/ch05_un_03.png" media-type="image/png"/>
+<item id="widget_721" href="widgets/MCSS/images/ass/ch05_un_04.png" media-type="image/png"/>
+<item id="widget_722" href="widgets/MCSS/images/ass/ch06_un_01.png" media-type="image/png"/>
+<item id="widget_723" href="widgets/MCSS/images/ass/ch07_un_01.png" media-type="image/png"/>
+<item id="widget_724" href="widgets/MCSS/images/ass/ch07_un_02.png" media-type="image/png"/>
+<item id="widget_725" href="widgets/MCSS/images/ass/ch07_un_03.png" media-type="image/png"/>
+<item id="widget_726" href="widgets/MCSS/images/ass/ch09_un_01.png" media-type="image/png"/>
+<item id="widget_727" href="widgets/MCSS/images/ass/ch09_un_02.png" media-type="image/png"/>
+<item id="widget_728" href="widgets/MCSS/images/ass/ch09_un_03.png" media-type="image/png"/>
+<item id="widget_729" href="widgets/MCSS/images/ass/ch10_un_01.png" media-type="image/png"/>
+<item id="widget_730" href="widgets/MCSS/images/ass/ch10_un_02.png" media-type="image/png"/>
+<item id="widget_731" href="widgets/MCSS/images/ass/ch10_un_03.png" media-type="image/png"/>
+<item id="widget_732" href="widgets/MCSS/images/ass/ch11_un_01.png" media-type="image/png"/>
+<item id="widget_733" href="widgets/MCSS/images/ass/ch11_un_02.png" media-type="image/png"/>
+<item id="widget_734" href="widgets/MCSS/images/ass/ch12_un_01.png" media-type="image/png"/>
+<item id="widget_735" href="widgets/MCSS/images/ass/ch12_un_02.png" media-type="image/png"/>
+<item id="widget_736" href="widgets/MCSS/images/ass/ch12_un_03.png" media-type="image/png"/>
+<item id="widget_737" href="widgets/MCSS/images/ass/ch12_un_04.png" media-type="image/png"/>
+<item id="widget_738" href="widgets/MCSS/images/ass/ch13_un_01.png" media-type="image/png"/>
+<item id="widget_739" href="widgets/MCSS/images/ass/ch13_un_02.png" media-type="image/png"/>
+<item id="widget_740" href="widgets/MCSS/images/ass/ch13_un_03.png" media-type="image/png"/>
+<item id="widget_741" href="widgets/MCSS/images/ass/ch14_un_01.png" media-type="image/png"/>
+<item id="widget_742" href="widgets/MCSS/images/ass/ch14_un_02.png" media-type="image/png"/>
+<item id="widget_743" href="widgets/MCSS/images/ass/ch14_un_03.png" media-type="image/png"/>
+<item id="widget_744" href="widgets/MCSS/images/ass/ch15_un_001.png" media-type="image/png"/>
+<item id="widget_745" href="widgets/MCSS/images/ass/ch15_un_002.png" media-type="image/png"/>
+<item id="widget_746" href="widgets/MCSS/images/ass/ch15_un_003.png" media-type="image/png"/>
+<item id="widget_747" href="widgets/MCSS/images/ass/ch15_un_01.png" media-type="image/png"/>
+<item id="widget_748" href="widgets/MCSS/images/ass/ch15_un_02.png" media-type="image/png"/>
+<item id="widget_749" href="widgets/MCSS/images/ass/ch15_un_03.png" media-type="image/png"/>
+<item id="widget_750" href="widgets/MCSS/images/ass/ch15_un_04.png" media-type="image/png"/>
+<item id="widget_751" href="widgets/MCSS/images/ass/ch15_un_05.png" media-type="image/png"/>
+<item id="widget_752" href="widgets/MCSS/images/ass/ch16_un_01.png" media-type="image/png"/>
+<item id="widget_item112" href="widgets/MCSS/css/style.css" media-type="text/css"/>
+<item id="widget_item121" href="widgets/MCSS/images/assessment_check_large.png" media-type="image/png"/>
+<item id="widget_item122" href="widgets/MCSS/images/assessment_check_white.png" media-type="image/png"/>
+<item id="widget_item123" href="widgets/MCSS/images/check_normal.png" media-type="image/png"/>
+<item id="widget_item124" href="widgets/MCSS/images/false.png" media-type="image/png"/>
+<item id="widget_item125" href="widgets/MCSS/images/false_red.png" media-type="image/png"/>
+<item id="widget_item126" href="widgets/MCSS/images/figure_arrow_mask_left.png" media-type="image/png"/>
+<item id="widget_item127" href="widgets/MCSS/images/figure_arrow_mask_right.png" media-type="image/png"/>
+<item id="widget_item128_1" href="widgets/MCSS/images/left-arrow-default.svg" media-type="image/svg+xml"/>
+<item id="widget_item128_2" href="widgets/MCSS/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
+<item id="widget_item128_3" href="widgets/MCSS/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
+<item id="widget_item128_4" href="widgets/MCSS/images/right-arrow-default.svg" media-type="image/svg+xml"/>
+<item id="widget_item128_5" href="widgets/MCSS/images/right-arrow-disabled.svg" media-type="image/svg+xml"/>
+<item id="widget_item128_6" href="widgets/MCSS/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
+<item id="widget_item129" href="widgets/MCSS/images/x.png" media-type="image/png"/>
+<item id="widget_item131_mainjs" href="widgets/MCSS/script/main.js" media-type="text/javascript"/>
+<item id="widget_item131_mainjsa" href="widgets/MCSS/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+<item id="mcss_17" href="widgets/MCSS/js/ch02_ass.js" media-type="application/javascript"/>
+<!--TrueFalse-->
+<item id="fl_1" href="widgets/True_False/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
+<item id="fl_2" href="widgets/True_False/script/main.js" media-type="application/javascript"/>
+<item id="fl_3" href="widgets/True_False/images/right-arrow-default.svg" media-type="image/svg+xml"/>
+<item id="fl_4" href="widgets/True_False/css/style.css" media-type="text/css"/>
+<item id="fl_5" href="widgets/True_False/images/false_red.png" media-type="image/png"/>
+<item id="fl_6" href="widgets/True_False/script/jquery-3.6.0.min.js" media-type="application/javascript"/>
+<item id="fl_7" href="widgets/True_False/images/assessment_check_large.png" media-type="image/png"/>
+<item id="fl_8" href="widgets/True_False/images/figure_arrow_mask_right.png" media-type="image/png"/>
+<item id="fl_9" href="widgets/True_False/images/x.png" media-type="image/png"/>
+<item id="fl_10" href="widgets/True_False/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
+<item id="fl_11" href="widgets/True_False/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
+<item id="fl_12" href="widgets/True_False/images/right-arrow-disabled.svg" media-type="image/svg+xml"/>
+<item id="fl_13" href="widgets/True_False/images/figure_arrow_mask_left.png" media-type="image/png"/>
+<item id="fl_14" href="widgets/True_False/js/QUIZTRUE.js" media-type="application/javascript"/>
+<item id="fl_15" href="widgets/True_False/images/assessment_check_white.png" media-type="image/png"/>
+<item id="fl_16" href="widgets/True_False/xhtml/True_False.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="fl_17" href="widgets/True_False/images/left-arrow-default.svg" media-type="image/svg+xml"/>
+<item id="fl_18" href="widgets/True_False/images/false.png" media-type="image/png"/>
+<item id="fl_19" href="widgets/True_False/images/check_normal.png" media-type="image/png"/>
+<!--MCMS-->
+<item id="mcms_1" href="widgets/MCMS/css/style.css" media-type="text/css"/>
+<item id="mcms_2" href="widgets/MCMS/images/assessment_check_large.png" media-type="image/png"/>
+<item id="mcms_3" href="widgets/MCMS/images/assessment_check_white.png" media-type="image/png"/>
+<item id="mcms_4" href="widgets/MCMS/images/check_normal.png" media-type="image/png"/>
+<item id="mcms_5" href="widgets/MCMS/images/false.png" media-type="image/png"/>
+<item id="mcms_6" href="widgets/MCMS/images/false_red.png" media-type="image/png"/>
+<item id="mcms_7" href="widgets/MCMS/images/figure_arrow_mask_left.png" media-type="image/png"/>
+<item id="mcms_8" href="widgets/MCMS/images/figure_arrow_mask_right.png" media-type="image/png"/>
+<item id="mcms_9" href="widgets/MCMS/images/left-arrow-default.svg" media-type="image/svg+xml"/>
+<item id="mcms_10" href="widgets/MCMS/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
+<item id="mcms_11" href="widgets/MCMS/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
+<item id="mcms_12" href="widgets/MCMS/images/right-arrow-default.svg" media-type="image/svg+xml"/>
+<item id="mcms_13" href="widgets/MCMS/images/right-arrow-disabled.svg" media-type="image/svg+xml"/>
+<item id="mcms_14" href="widgets/MCMS/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
+<item id="mcms_15" href="widgets/MCMS/images/x.png" media-type="image/png"/>
+<item id="mcms_16" href="widgets/MCMS/js/QUIZMCMS.js" media-type="text/javascript"/>
+<item id="mcms_17" href="widgets/MCMS/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+<item id="mcms_18" href="widgets/MCMS/script/main.js" media-type="text/javascript"/>
+<item id="mcms_19" href="widgets/MCMS/xhtml/MCMS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
+<!--Flashcard-->
+<item id="Flashcard_1" href="widgets/Flashcard/01/activity.html" media-type="text/html"/>
+<item id="Flashcard_2" href="widgets/Flashcard/01/images/lines.png" media-type="image/png"/>
+<item id="Flashcard_3" href="widgets/Flashcard/01/images/8.png" media-type="image/png"/>
+<item id="Flashcard_4" href="widgets/Flashcard/01/images/9.png" media-type="image/png"/>
+<item id="Flashcard_5" href="widgets/Flashcard/01/images/transp.png" media-type="image/png"/>
+<item id="Flashcard_6" href="widgets/Flashcard/01/images/12.png" media-type="image/png"/>
+<item id="Flashcard_7" href="widgets/Flashcard/01/images/13.png" media-type="image/png"/>
+<item id="Flashcard_8" href="widgets/Flashcard/01/images/11.png" media-type="image/png"/>
+<item id="Flashcard_9" href="widgets/Flashcard/01/images/10.png" media-type="image/png"/>
+<item id="Flashcard_10" href="widgets/Flashcard/01/images/base_bw.png" media-type="image/png"/>
+<item id="Flashcard_11" href="widgets/Flashcard/01/images/base_color.png" media-type="image/png"/>
+<item id="Flashcard_12" href="widgets/Flashcard/01/images/4.png" media-type="image/png"/>
+<item id="Flashcard_13" href="widgets/Flashcard/01/images/5.png" media-type="image/png"/>
+<item id="Flashcard_14" href="widgets/Flashcard/01/images/7.png" media-type="image/png"/>
+<item id="Flashcard_15" href="widgets/Flashcard/01/images/6.png" media-type="image/png"/>
+<item id="Flashcard_16" href="widgets/Flashcard/01/images/2.png" media-type="image/png"/>
+<item id="Flashcard_17" href="widgets/Flashcard/01/images/3.png" media-type="image/png"/>
+<item id="Flashcard_18" href="widgets/Flashcard/01/images/1.png" media-type="image/png"/>
+<item id="Flashcard_19" href="widgets/Flashcard/01/activityframe.html" media-type="text/html" fallback="activityframe-fallback"/>
+<item id="activityframe-fallback" href="widgets/Flashcard/01/fallback.png" media-type="image/png"/>
+
+<item id="Flashcard_20" href="widgets/Flashcard/01/index.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="Flashcard_21" href="widgets/Flashcard/activity-main/js/widgetinit.js" media-type="text/javascript"/>
+<item id="Flashcard_22" href="widgets/Flashcard/activity-main/js/widget.js" media-type="text/javascript"/>
+<item id="Flashcard_23" href="widgets/Flashcard/activity-main/js/accessibility_handler.js" media-type="text/javascript"/>
+<item id="Flashcard_24" href="widgets/Flashcard/activity-main/js/jquery.ui.touch-punch.min.js" media-type="text/javascript"/>
+<item id="Flashcard_25" href="widgets/Flashcard/activity-main/js/main.js" media-type="text/javascript"/>
+<item id="Flashcard_26" href="widgets/Flashcard/activity-main/js/hotspot.js" media-type="text/javascript"/>
+<item id="Flashcard_27" href="widgets/Flashcard/activity-main/js/iscroll-zoom.js" media-type="text/javascript"/>
+<item id="Flashcard_28" href="widgets/Flashcard/activity-main/js/scale.js" media-type="text/javascript"/>
+<item id="Flashcard_29" href="widgets/Flashcard/activity-main/js/jquery-3.1.1.min.js" media-type="text/javascript"/>
+<item id="Flashcard_30" href="widgets/Flashcard/activity-main/js/jquery-ui.js" media-type="text/javascript"/>
+<item id="Flashcard_31" href="widgets/Flashcard/activity-main/style/jquery-ui.css" media-type="text/css"/>
+<item id="Flashcard_32" href="widgets/Flashcard/activity-main/style/style.css" media-type="text/css"/>
+<item id="Flashcard_33" href="widgets/Flashcard/activity-main/style/hotspot.css" media-type="text/css"/>
+<item id="Flashcard_34" href="widgets/Flashcard/activity-main/fonts/arial/arial.ttf" media-type="font/ttf"/>
+<item id="Flashcard_35" href="widgets/Flashcard/activity-main/fonts/arial/arial.eot" media-type="application/vnd.ms-opentype"/>
+<item id="Flashcard_36" href="widgets/Flashcard/activity-main/fonts/arial/arial.woff" media-type="application/font-woff"/>
+   </manifest>
+<spine page-progression-direction="ltr" toc="ncx">
+   <itemref idref="PIN" linear="yes"/>
+   <itemref idref="html-cover-page" linear="yes"/>
+   <itemref idref="Title_page" linear="yes"/>
+   <itemref idref="Disclaimer" linear="yes"/>
+   <itemref idref="Contents" linear="yes"/>
+   <itemref idref="Copyright" linear="yes"/>
+   <itemref idref="LOC" linear="yes"/>
+   <itemref idref="Dedication" linear="yes"/>
+   <itemref idref="Preface" linear="yes"/>
+   <itemref idref="Acknowledgments" linear="yes"/>
+   <itemref idref="Loi" linear="yes"/>
+   <itemref idref="Lot" linear="yes"/>
+   <itemref idref="Volume" linear="yes"/>
+   <itemref idref="CHP001" linear="yes"/>
+   <itemref idref="CHP001a" linear="yes"/>
+   <itemref idref="enhance_1" linear="yes"/>
+   <itemref idref="enhance_2" linear="yes"/>
+   <itemref idref="enhance_3" linear="yes"/>
+   <itemref idref="enhance_4" linear="yes"/>
+   <itemref idref="enhance_5" linear="yes"/>
+   <itemref idref="enhance_6" linear="yes"/>
+   <itemref idref="enhance_7" linear="yes"/>
+   <itemref idref="enhance_8" linear="yes"/>
+   <itemref idref="enhance_9" linear="yes"/>
+   <itemref idref="enhance_10" linear="yes"/>
+   <itemref idref="enhance_11" linear="yes"/>
+   <itemref idref="Appendix" linear="yes"/>
+   <itemref idref="Glossary" linear="yes"/>
+   <itemref idref="Bibliography" linear="yes"/>
+   <itemref idref="IDX001" linear="yes"/>
+   <itemref idref="ty_1" linear="no" />
+   <itemref idref="sl_25" linear="no" />
+   <itemref idref="mcms_02" linear="no"/>
+   <itemref idref="mcms_19" linear="no"/>
+</spine>
+<guide>
+   <reference type="cover" title="Cover" href="xhtml/Cover.xhtml"/>
+   <reference type="toc" title="Contents" href="xhtml/Contents.xhtml"/>
+</guide>
+</package>
