@@ -543,6 +543,9 @@
 <item id="mcms_18" href="widgets/MCMS/script/main.js" media-type="text/javascript"/>
 <item id="mcms_19" href="widgets/MCMS/xhtml/MCMS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 
+<!--Streaming Video-->
+<item id="Streaming_Video_1" href="widgets/Streaming_Video/Streaming_Video.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
 <!--Flashcard-->
 <item id="Flashcard_01_1" href="widgets/Flashcard/01/activity.html" media-type="text/html"/>
 <item id="Flashcard_01_2" href="widgets/Flashcard/01/images/lines.png" media-type="image/png"/>
