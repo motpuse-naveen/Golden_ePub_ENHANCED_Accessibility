@@ -270,8 +270,11 @@ function getNewQuestion(question) {
             $(this).addClass('active');
         }
     });
-    MathJax.typesetClear()
-    MathJax.typeset();
+    if (typeof MathJax !== 'undefined' && typeof MathJax !== 'null'){
+        MathJax.typesetClear()
+        MathJax.typeset();
+    }
+    
     questionCounter++;
 }
 function addActiveClass(el) {

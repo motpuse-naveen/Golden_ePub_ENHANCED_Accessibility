@@ -316,8 +316,10 @@ function getNewQuestion(question) {
             $("ul").find(`[data-id='${userAns}']`).removeClass().addClass('focus-input wrong').attr("aria-describedby", "ariaIncorrect");
         }
     });
-    MathJax.typesetClear()
-    MathJax.typeset();
+    if (typeof MathJax !== 'undefined' && typeof MathJax !== 'null'){
+        MathJax.typesetClear()
+        MathJax.typeset();
+    }
     questionCounter++;
     bind_annotLinkEvents();
 }

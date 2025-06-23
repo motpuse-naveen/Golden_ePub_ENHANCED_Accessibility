@@ -164,7 +164,7 @@ $(document).on('click keydown', '.dropdown-content a[href]', function (e) {
                             dataDefElm.attr("temp-data-dfn", dataDefVal);
                         }
                     }
-                    if (typeof MathJax != 'undefined' && typeof MathJax != 'null'){
+                    if (typeof MathJax !== 'undefined' && typeof MathJax !== 'null'){
                         MathJax.typeset();
                         //MathJax.typesetPromise()
                     }

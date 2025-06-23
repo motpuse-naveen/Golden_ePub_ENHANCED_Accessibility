@@ -527,7 +527,29 @@
 <item id="fl_17" href="widgets/True_False/images/left-arrow-default.svg" media-type="image/svg+xml"/>
 <item id="fl_18" href="widgets/True_False/images/false.png" media-type="image/png"/>
 <item id="fl_19" href="widgets/True_False/images/check_normal.png" media-type="image/png"/>
+
 <!--MCMS-->
+<item id="mcms_old_1" href="widgets/MCMS_OLD/css/style.css" media-type="text/css"/>
+<item id="mcms_old_2" href="widgets/MCMS_OLD/images/assessment_check_large.png" media-type="image/png"/>
+<item id="mcms_old_3" href="widgets/MCMS_OLD/images/assessment_check_white.png" media-type="image/png"/>
+<item id="mcms_old_4" href="widgets/MCMS_OLD/images/check_normal.png" media-type="image/png"/>
+<item id="mcms_old_5" href="widgets/MCMS_OLD/images/false.png" media-type="image/png"/>
+<item id="mcms_old_6" href="widgets/MCMS_OLD/images/false_red.png" media-type="image/png"/>
+<item id="mcms_old_7" href="widgets/MCMS_OLD/images/figure_arrow_mask_left.png" media-type="image/png"/>
+<item id="mcms_old_8" href="widgets/MCMS_OLD/images/figure_arrow_mask_right.png" media-type="image/png"/>
+<item id="mcms_old_9" href="widgets/MCMS_OLD/images/left-arrow-default.svg" media-type="image/svg+xml"/>
+<item id="mcms_old_10" href="widgets/MCMS_OLD/images/left-arrow-disabled.svg" media-type="image/svg+xml"/>
+<item id="mcms_old_11" href="widgets/MCMS_OLD/images/left-arrow-hover.svg" media-type="image/svg+xml"/>
+<item id="mcms_old_12" href="widgets/MCMS_OLD/images/right-arrow-default.svg" media-type="image/svg+xml"/>
+<item id="mcms_old_13" href="widgets/MCMS_OLD/images/right-arrow-disabled.svg" media-type="image/svg+xml"/>
+<item id="mcms_old_14" href="widgets/MCMS_OLD/images/right-arrow-hover.svg" media-type="image/svg+xml"/>
+<item id="mcms_old_15" href="widgets/MCMS_OLD/images/x.png" media-type="image/png"/>
+<item id="mcms_old_16" href="widgets/MCMS_OLD/js/QUIZMCMS.js" media-type="text/javascript"/>
+<item id="mcms_old_17" href="widgets/MCMS_OLD/script/jquery-3.6.0.min.js" media-type="text/javascript"/>
+<item id="mcms_old_18" href="widgets/MCMS_OLD/script/main.js" media-type="text/javascript"/>
+<item id="mcms_old_19" href="widgets/MCMS_OLD/xhtml/MCMS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
+<!--MCMS Combined-->
 <item id="mcms_1" href="widgets/MCMS/css/style.css" media-type="text/css"/>
 <item id="mcms_2" href="widgets/MCMS/images/assessment_check_large.png" media-type="image/png"/>
 <item id="mcms_3" href="widgets/MCMS/images/assessment_check_white.png" media-type="image/png"/>
@@ -647,6 +669,7 @@
    <itemref idref="ty_1" linear="no" />
    <itemref idref="sl_25" linear="no" />
    <itemref idref="mcms_02" linear="no"/>
+   <itemref idref="mcms_old_19" linear="no"/>
    <itemref idref="mcms_19" linear="no"/>
 </spine>
 <guide>
