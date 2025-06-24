@@ -5018,3 +5018,14 @@ position: absolute;
 top: 0.08em;
 right: 0;
 }
+
+
+ol.number {
+	list-style-type: decimal;
+	padding-left: 3em; /* optional: increases space for the marker */
+  }
+  
+  ol.number li::marker {
+	font-weight: bold; /* makes the number bold */
+	content: counter(list-item) ".  "; /* adds a dot and space after the number */
+  }

@@ -7,7 +7,9 @@
 		<meta name="dtb:maxPageNumber" content="0" />
 	</head>
 	<docTitle>
-		<text>Navigation</text>
+		<text>
+			Navigation
+		</text>
 	</docTitle>
 	<navMap>
 		<navPoint id="toc1" playOrder="1">
@@ -297,86 +299,86 @@
 				</text>
 			</navLabel>
 			<content src="xhtml/Ch002_Samples_of_Widget_Enhancements.xhtml" />
-			<navPoint id="toc37" playOrder="37">
-				<navLabel>
-					<text>
-						Streaming Video
-					</text>
-				</navLabel>
-				<content src="xhtml/StreamingVideo.xhtml#sv" />
-			</navPoint>
-			<navPoint id="toc38" playOrder="38">
-				<navLabel>
-					<text>
-						Embedded Audio
-					</text>
-				</navLabel>
-				<content src="xhtml/Embedded_Audio.xhtml" />
-			</navPoint>
-			<navPoint id="toc39" playOrder="39">
-				<navLabel>
-					<text>
-						Slideshow
-					</text>
-				</navLabel>
-				<content src="xhtml/Slideshow.xhtml" />
-			</navPoint>
-			<navPoint id="toc40" playOrder="40">
-				<navLabel>
-					<text>
-						Slide-Line
-					</text>
-				</navLabel>
-				<content src="xhtml/Slide-Line.xhtml" />
-			</navPoint>
-			<navPoint id="toc41" playOrder="41">
-				<navLabel>
-					<text>
-						Test Yourself
-					</text>
-				</navLabel>
-				<content src="xhtml/Test_Yourself.xhtml" />
-			</navPoint>
-			<navPoint id="toc42" playOrder="42">
-				<navLabel>
-					<text>
-						Show-Hide
-					</text>
-				</navLabel>
-				<content src="xhtml/Show-Hide.xhtml" />
-			</navPoint>
-			<navPoint id="toc43" playOrder="43">
-				<navLabel>
-					<text>
-						Pop Tip (Remarks)
-					</text>
-				</navLabel>
-				<content src="xhtml/Pop_Tip.xhtml" />
-			</navPoint>
-			<navPoint id="toc44" playOrder="44">
-				<navLabel>
-					<text>
-						Quiz with Multiple Choice
-					</text>
-				</navLabel>
-				<content src="xhtml/Quiz_with_Multiple_Choice.xhtml" />
-			</navPoint>
-			<navPoint id="toc45" playOrder="45">
-				<navLabel>
-					<text>
-						Quiz with Multiple Answer
-					</text>
-				</navLabel>
-				<content src="xhtml/Quiz_with_Multiple_Answer.xhtml" />
-			</navPoint>
-			<navPoint id="toc46" playOrder="46">
-				<navLabel>
-					<text>
-						Quiz with True/False
-					</text>
-				</navLabel>
-				<content src="xhtml/Quiz_with_True-False.xhtml" />
-			</navPoint>
+		</navPoint>
+		<navPoint id="toc37" playOrder="37">
+			<navLabel>
+				<text>
+					Streaming Video
+				</text>
+			</navLabel>
+			<content src="xhtml/StreamingVideo.xhtml#sv" />
+		</navPoint>
+		<navPoint id="toc38" playOrder="38">
+			<navLabel>
+				<text>
+					Embedded Audio
+				</text>
+			</navLabel>
+			<content src="xhtml/Embedded_Audio.xhtml" />
+		</navPoint>
+		<navPoint id="toc39" playOrder="39">
+			<navLabel>
+				<text>
+					Slideshow
+				</text>
+			</navLabel>
+			<content src="xhtml/Slideshow.xhtml" />
+		</navPoint>
+		<navPoint id="toc40" playOrder="40">
+			<navLabel>
+				<text>
+					Slide-Line
+				</text>
+			</navLabel>
+			<content src="xhtml/Slide-Line.xhtml" />
+		</navPoint>
+		<navPoint id="toc41" playOrder="41">
+			<navLabel>
+				<text>
+					Test Yourself
+				</text>
+			</navLabel>
+			<content src="xhtml/Test_Yourself.xhtml" />
+		</navPoint>
+		<navPoint id="toc42" playOrder="42">
+			<navLabel>
+				<text>
+					Show-Hide
+				</text>
+			</navLabel>
+			<content src="xhtml/Show-Hide.xhtml" />
+		</navPoint>
+		<navPoint id="toc43" playOrder="43">
+			<navLabel>
+				<text>
+					Pop Tip (Remarks)
+				</text>
+			</navLabel>
+			<content src="xhtml/Pop_Tip.xhtml" />
+		</navPoint>
+		<navPoint id="toc44" playOrder="44">
+			<navLabel>
+				<text>
+					Quiz with Multiple Choice
+				</text>
+			</navLabel>
+			<content src="xhtml/Quiz_with_Multiple_Choice.xhtml" />
+		</navPoint>
+		<navPoint id="toc45" playOrder="45">
+			<navLabel>
+				<text>
+					Quiz with Multiple Answer
+				</text>
+			</navLabel>
+			<content src="xhtml/Quiz_with_Multiple_Answer.xhtml" />
+		</navPoint>
+		<navPoint id="toc46" playOrder="46">
+			<navLabel>
+				<text>
+					Quiz with True/False
+				</text>
+			</navLabel>
+			<content src="xhtml/Quiz_with_True-False.xhtml" />
 		</navPoint>
 		<navPoint id="toc47" playOrder="47">
 			<navLabel>

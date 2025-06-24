@@ -607,9 +607,6 @@
    <item id="mcms_18" href="widgets/MCMS/script/main.js" media-type="text/javascript"/>
    <item id="mcms_19" href="widgets/MCMS/xhtml/MCMS.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 
-   <!--Streaming Video-->
-   <item id="Streaming_Video_1" href="widgets/Streaming_Video/Streaming_Video.xhtml" properties="scripted remote-resources"  media-type="application/xhtml+xml"/>
-
    <!--Flashcard-->
    <item id="Flashcard_01_1" href="widgets/Flashcard/01/activity.html" media-type="text/html"/>
    <item id="Flashcard_01_2" href="widgets/Flashcard/01/images/lines.png" media-type="image/png"/>
@@ -724,7 +721,7 @@
    <item id="Guided_Tour_19" href="widgets/Guided_Tour/script/slider-a11y.js" media-type="text/javascript"/>
    <item id="Guided_Tour_20" href="widgets/Guided_Tour/script/ui-touch-punch.js" media-type="text/javascript"/>
    <item id="Guided_Tour_21" href="widgets/Guided_Tour/xhtml/Guided_Tour.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-
+   <item id="Guided_Tour_22" href="widgets/Guided_Tour/script/main.js" media-type="text/javascript"/>
    <!--Inline Question Common Files-->
    <item id="iq1" href="widgets/inline_questions/libs/jquery-3.6.0.min.js" media-type="text/javascript"/>
    <item id="iq2" href="widgets/inline_questions/libs/jQuery.print.js" media-type="text/javascript"/>
@@ -782,6 +779,9 @@
    <itemref idref="Volume" linear="yes"/>
    <itemref idref="CHP001" linear="yes"/>
    <itemref idref="CHP001a" linear="yes"/>
+   <itemref idref="CHP002" linear="yes"/>
+
+   <itemref idref="enhance_13" linear="yes"/>
    <itemref idref="enhance_1" linear="yes"/>
    <itemref idref="enhance_2" linear="yes"/>
    <itemref idref="enhance_3" linear="yes"/>
@@ -789,10 +789,26 @@
    <itemref idref="enhance_5" linear="yes"/>
    <itemref idref="enhance_6" linear="yes"/>
    <itemref idref="enhance_7" linear="yes"/>
+   <itemref idref="enhance_12" linear="yes"/>
    <itemref idref="enhance_8" linear="yes"/>
    <itemref idref="enhance_9" linear="yes"/>
    <itemref idref="enhance_10" linear="yes"/>
    <itemref idref="enhance_11" linear="yes"/>
+   
+   <itemref idref="enhance_14" linear="yes"/>
+   <itemref idref="enhance_15" linear="yes"/>
+   <itemref idref="enhance_16" linear="yes"/>
+   <itemref idref="enhance_17" linear="yes"/>
+   <itemref idref="enhance_18" linear="yes"/>
+   <itemref idref="enhance_19" linear="yes"/>
+   <itemref idref="enhance_20" linear="yes"/>
+   <itemref idref="enhance_21" linear="yes"/>
+   <itemref idref="enhance_22" linear="yes"/>
+   <itemref idref="enhance_23" linear="yes"/>
+   <itemref idref="enhance_24" linear="yes"/>
+   <itemref idref="enhance_25" linear="yes"/>
+   <itemref idref="enhance_26" linear="yes"/>
+
    <itemref idref="Appendix" linear="yes"/>
    <itemref idref="Glossary" linear="yes"/>
    <itemref idref="Bibliography" linear="yes"/>
@@ -802,6 +818,8 @@
    <itemref idref="mcms_02" linear="no"/>
    <itemref idref="mcms_old_19" linear="no"/>
    <itemref idref="mcms_19" linear="no"/>
+   <itemref idref="Guided_Tour_21" linear="no"/>
+   
 </spine>
 <guide>
    <reference type="cover" title="Cover" href="xhtml/Cover.xhtml"/>
