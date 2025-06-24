@@ -77,7 +77,7 @@
 	<item id="enhance_4" href="xhtml/Slide-Line.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 	<item id="enhance_5" href="xhtml/Test_Yourself.xhtml" media-type="application/xhtml+xml"/>
 	<item id="enhance_6" href="xhtml/Show-Hide.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-	<item id="enhance_7" href="xhtml/Pop_Tip.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+	<item id="enhance_7" href="xhtml/PopTip.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 	<item id="enhance_8" href="xhtml/Quiz_with_Multiple_Choice.xhtml" media-type="application/xhtml+xml"/>
 	<item id="enhance_9" href="xhtml/Quiz_with_Multiple_Answer.xhtml" media-type="application/xhtml+xml"/>
 	<item id="enhance_10" href="xhtml/Quiz_with_True-False.xhtml" properties="scripted" media-type="application/xhtml+xml"/>

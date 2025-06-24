@@ -354,7 +354,7 @@
 					Pop Tip (Remarks)
 				</text>
 			</navLabel>
-			<content src="xhtml/Pop_Tip.xhtml" />
+			<content src="xhtml/PopTip.xhtml" />
 		</navPoint>
 		<navPoint id="toc44" playOrder="44">
 			<navLabel>
