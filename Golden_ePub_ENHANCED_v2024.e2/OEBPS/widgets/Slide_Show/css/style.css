@@ -33,6 +33,7 @@
 	margin: 10px;
 }
 
+ 
 .main-document-area {
 	background-color: white;
 	position: relative;
@@ -410,3 +411,70 @@ sup {
 .hiddenCaption{
 	display: none !important;
 }
+
+/* .mixed-slides-container */
+.mixed-slides-container {
+	display: flex;
+	overflow-x: auto;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+  }
+  
+  .mixed-slides-container li {
+	flex: 0 0 100%; /* One slide at a time */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .mixed-slides-container li .ss-img-wrap{
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: auto;
+	display: flex;
+	max-height: 100%;
+  }
+  .mixed-slides-container li.vimg .ss-img-wrap{
+	height: 100%;
+  }
+  
+  .slides img {
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+	display: block;
+	margin: 0 auto;
+  }
+
+  /* .vert-slides-container */
+.vert-slides-container {
+	display: flex;
+	overflow-x: auto;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+  }
+  
+  .vert-slides-container li {
+	flex: 0 0 100%; /* One slide at a time */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+  }
+
+  .vert-slides-container .ss-img-wrap{
+	height: 100%;
+  }
+  
+  .slides img {
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+	display: block;
+	margin: 0 auto;
+  }

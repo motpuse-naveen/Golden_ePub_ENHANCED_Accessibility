@@ -397,14 +397,22 @@
    <item id="SlideShow_10" href="widgets/Slide_Show/script/slide_show.js" media-type="text/javascript"/>
    <item id="SlideShow_11" href="widgets/Slide_Show/script/ui-touch-punch.js" media-type="application/javascript"/>
    <item id="SlideShow_12" href="widgets/Slide_Show/xhtml/ch01_slideshow_23.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="SlideShow_12_more_images" href="widgets/Slide_Show/xhtml/ch01_slideshow_more_images.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="SlideShow_12_more_images" href="widgets/Slide_Show/xhtml/slideshow_more_images.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="SlideShow_12_Mixed_images" href="widgets/Slide_Show/xhtml/slideshow_mixed_images.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="SlideShow_12_vertical_images" href="widgets/Slide_Show/xhtml/slideshow_vertical_images.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="SlideShow_12_horizontal_images" href="widgets/Slide_Show/xhtml/slideshow_horizontal_images.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 
    <item id="SlideShow_13" href="widgets/Slide_Show/images/ch01_figure_text_15a.png" media-type="image/png"/>
    <item id="SlideShow_14" href="widgets/Slide_Show/images/ch01_figure_text_15b.png" media-type="image/png"/>
    <item id="SlideShow_15" href="widgets/Slide_Show/images/ch01_figure_text_15c.png" media-type="image/png"/>
-   <item id="SlideShow_16" href="widgets/Slide_Show/images/image_figure_controls.png" media-type="image/png"/>
-   <item id="SlideShow_17" href="widgets/Slide_Show/images/navbar_minus.png" media-type="image/png"/>
-   <item id="SlideShow_18" href="widgets/Slide_Show/images/navbar_plus.png" media-type="image/png"/>
+   <item id="SlideShow_16" href="widgets/Slide_Show/images/ch01_figure_text_15d.png" media-type="image/png"/>
+   <item id="SlideShow_17" href="widgets/Slide_Show/images/ch01_figure_text_15e.png" media-type="image/png"/>
+   <item id="SlideShow_18" href="widgets/Slide_Show/images/image_figure_controls.png" media-type="image/png"/>
+   <item id="SlideShow_19" href="widgets/Slide_Show/images/navbar_minus.png" media-type="image/png"/>
+   <item id="SlideShow_20" href="widgets/Slide_Show/images/navbar_plus.png" media-type="image/png"/>
+   <item id="SlideShow_21" href="widgets/Slide_Show/images/f017-001ac-9780323543873.png" media-type="image/png"/>
+   <item id="SlideShow_22" href="widgets/Slide_Show/images/f017-001df-9780323543873.png" media-type="image/png"/>
+
    <!--TestYourself-->
    <item id="ty_1" href="widgets/Labels/xhtml/ch02_testyourself_09.xhtml" properties="scripted" media-type="application/xhtml+xml" />
    <item id="ty_2" href="widgets/Labels/css/device.css" media-type="text/css" />
