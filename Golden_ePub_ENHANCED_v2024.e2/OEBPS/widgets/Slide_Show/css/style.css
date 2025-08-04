@@ -1,3 +1,6 @@
+body {
+	background-color: white;
+}
 .main-image-area {
 	background-color: white;
 	position: relative;
@@ -102,10 +105,12 @@
 	z-index: 99;
 	display: flex;
 	justify-content: center;
-	height: 60px;
+	/*height: 60px;*/
 	align-items: center;
 	background-color: #fff;
-	border-top: 1px solid #f2f2f6;
+	/*border-top: 1px solid #f2f2f6;*/
+	border-bottom: 1px solid #f2f2f6;
+    padding-bottom: 10px;
 }
 
 .main-slider-area .thumbnail_main .column {
@@ -184,13 +189,30 @@
 .prevContainer,
 .nextContainer {
 	margin: auto 5px;
+	flex: 0 0 auto;
 }
 
 .tablist{
-	display: inline-flex;
-	padding-left: 0;
+	/*flex: 1 1 auto;*/
+	display: flex;
+	flex-wrap: wrap; /* allow thumbnails to wrap */
+	gap: 8px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	max-height: 120px;
+    overflow-y: auto;
 }
-
+/*
+.tablist::-webkit-scrollbar {
+	height: 6px;
+  }
+  
+  .tablist::-webkit-scrollbar-thumb {
+	background-color: #888;
+	border-radius: 4px;
+  }
+*/
 .prevContainer a,.prevContainer button,
 .nextContainer a,.nextContainer button {
 	width: 40px;
@@ -305,6 +327,13 @@
 	pointer-events: none;
 	color: lightgray!important;
 }
+
+.thumbnail_main {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	flex-wrap: nowrap; /* no wrap here; wrapping happens inside .tablist */
+  }
 
 .thumbnail_main .column:focus {
 	border: 3px solid black;
@@ -477,4 +506,13 @@ sup {
 	object-fit: contain;
 	display: block;
 	margin: 0 auto;
+  }
+
+  ul
+  {
+  	list-style-type: none;
+  }
+  ol
+  {
+  	list-style-type: none;
   }

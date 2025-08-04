@@ -4468,6 +4468,7 @@ border-left: solid 1px;
 padding-left: 0.5em;
 text-align: center;
 }
+/*
 ul
 {
 list-style-type: none;
@@ -4476,7 +4477,7 @@ ol
 {
 list-style-type: none;
 }
-
+*/
 /* ==================== German Styles for Figures and Tables in Standard CSS ===================== */
 
 /* ==================== Figure Styles ===================== */
