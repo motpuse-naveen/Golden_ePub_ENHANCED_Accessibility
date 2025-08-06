@@ -75,6 +75,7 @@
 	<item id="enhance_2" href="xhtml/Embedded_Audio.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 	<item id="enhance_3" href="xhtml/Slideshow.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 	<item id="enhance_4" href="xhtml/Slide-Line.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_4_1" href="xhtml/Slide-Line-Scroll.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 	<item id="enhance_5" href="xhtml/Test_Yourself.xhtml" media-type="application/xhtml+xml"/>
 	<item id="enhance_6" href="xhtml/Show-Hide.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 	<item id="enhance_7" href="xhtml/PopTip.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
@@ -455,6 +456,57 @@
    <item id="sl_23" href="widgets/Slide_Line/Image_Slider/script/slider-a11y.js" media-type="text/javascript" />
    <item id="sl_24" href="widgets/Slide_Line/Image_Slider/script/ui-touch-punch.js" media-type="text/javascript" />
    <item id="sl_25" href="widgets/Slide_Line/Image_Slider/xhtml/ch01_slideline_21.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="sl_26" href="widgets/Slide_Line/Image_Slider/xhtml/ch53_slideline_10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="sl_27" href="widgets/Slide_Line/Image_Slider/xhtml/slideline-scale-to-fit.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
+   <item id="sl_28" href="widgets/Slide_Line/Image_Slider/images/ch53_figure_text_10a.png" media-type="image/png"/>
+   <item id="sl_29" href="widgets/Slide_Line/Image_Slider/images/ch53_figure_text_10b.png" media-type="image/png"/>
+   <item id="sl_30" href="widgets/Slide_Line/Image_Slider/images/ch53_figure_text_10c.png" media-type="image/png"/>
+   <item id="sl_31" href="widgets/Slide_Line/Image_Slider/images/ch05_figure_text_18a.png" media-type="image/png"/>
+   <item id="sl_32" href="widgets/Slide_Line/Image_Slider/images/ch05_figure_text_18b.png" media-type="image/png"/>
+   <item id="sl_33" href="widgets/Slide_Line/Image_Slider/images/ch05_figure_text_18c.png" media-type="image/png"/>
+   <item id="sl_34" href="widgets/Slide_Line/Image_Slider/images/ch05_figure_text_18d.png" media-type="image/png"/>
+   <item id="sl_35" href="widgets/Slide_Line/Image_Slider/images/ch05_figure_text_18e.png" media-type="image/png"/>
+
+<!--SlideLine Scroll-->
+   <item id="slscroll_1" href="widgets/Slide_Line/Image_Slider_Scroll/css/header_style.css" media-type="text/css"/>
+   <item id="slscroll_2" href="widgets/Slide_Line/Image_Slider_Scroll/css/style.css" media-type="text/css"/>
+   <item id="slscroll_3" href="widgets/Slide_Line/Image_Slider_Scroll/fonts/InklingSerifWeb-Regular.ttf" media-type="font/ttf"/>
+   <item id="slscroll_4" href="widgets/Slide_Line/Image_Slider_Scroll/fonts/InklingSerifWeb-Regular.woff" media-type="application/font-woff"/>
+   <item id="slscroll_5" href="widgets/Slide_Line/Image_Slider_Scroll/fonts/SourceSansPro-Light.woff" media-type="application/font-woff"/>
+   <item id="slscroll_6" href="widgets/Slide_Line/Image_Slider_Scroll/fonts/SourceSansPro-Light.ttf" media-type="font/ttf"/>
+   <item id="slscroll_11" href="widgets/Slide_Line/Image_Slider_Scroll/images/image_figure_controls.png" media-type="image/png"/>
+   <item id="slscroll_12" href="widgets/Slide_Line/Image_Slider_Scroll/images/navbar_minus.png" media-type="image/png"/>
+   <item id="slscroll_13" href="widgets/Slide_Line/Image_Slider_Scroll/images/navbar_plus.png" media-type="image/png"/>
+   <item id="slscroll_18" href="widgets/Slide_Line/Image_Slider_Scroll/images/timeline_dot_small.png" media-type="image/png"/>
+   <item id="slscroll_19" href="widgets/Slide_Line/Image_Slider_Scroll/script/img-slider2.js" media-type="text/javascript" />
+   <item id="slscroll_20" href="widgets/Slide_Line/Image_Slider_Scroll/script/img-slider-main.js" media-type="text/javascript" />
+   <item id="slscroll_21" href="widgets/Slide_Line/Image_Slider_Scroll/script/jquery-3.6.0.min.js" media-type="application/javascript"/>
+   <item id="slscroll_22" href="widgets/Slide_Line/Image_Slider_Scroll/script/jquery-ui.min.js" media-type="application/javascript"/>
+   <item id="slscroll_23" href="widgets/Slide_Line/Image_Slider_Scroll/script/slider-a11y.js" media-type="text/javascript" />
+   <item id="slscroll_24" href="widgets/Slide_Line/Image_Slider_Scroll/script/ui-touch-punch.js" media-type="text/javascript" />
+   <item id="slscroll_25" href="widgets/Slide_Line/Image_Slider_Scroll/xhtml/ch03_slideline_04.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="slscroll_26" href="widgets/Slide_Line/Image_Slider_Scroll/xhtml/ch55_slideline_10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="slscroll_27" href="widgets/Slide_Line/Image_Slider_Scroll/xhtml/Image_Slider_Scroll.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="slscroll_29" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch03_figure_text_04a.png" media-type="image/png"/>
+   <item id="slscroll_30" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch03_figure_text_04b.png" media-type="image/png"/>
+   <item id="slscroll_31" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch03_figure_text_04c.png" media-type="image/png"/>
+   <item id="slscroll_32" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch03_figure_text_04d.png" media-type="image/png"/>
+   <item id="slscroll_33" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch03_figure_text_04e.png" media-type="image/png"/>
+   <item id="slscroll_34" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch03_figure_text_04f.png" media-type="image/png"/>
+   <item id="slscroll_35" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch55_figure_text_10a.png" media-type="image/png"/>
+   <item id="slscroll_36" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch55_figure_text_10b.png" media-type="image/png"/>
+   <item id="slscroll_37" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch55_figure_text_10c.png" media-type="image/png"/>
+   <item id="slscroll_38" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch55_figure_text_10d.png" media-type="image/png"/>
+   <item id="slscroll_39" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch55_figure_text_10e.png" media-type="image/png"/>
+   <item id="slscroll_40" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch55_figure_text_10f.png" media-type="image/png"/>
+   <item id="slscroll_41" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch55_figure_text_10g.png" media-type="image/png"/>
+   <item id="slscroll_42" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch01_figure_text_14a.png" media-type="image/png"/>
+   <item id="slscroll_43" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch01_figure_text_14b.png" media-type="image/png"/>
+   <item id="slscroll_44" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch01_figure_text_14c.png" media-type="image/png"/>
+   <item id="slscroll_45" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch01_figure_text_14d.png" media-type="image/png"/>
+   <item id="slscroll_46" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch01_figure_text_14e.png" media-type="image/png"/>
+   <item id="slscroll_47" href="widgets/Slide_Line/Image_Slider_Scroll/images/ch01_figure_text_14f.png" media-type="image/png"/>
 
    <!--PopTip(Remarks)-->
    <item id="poptip_001" href="widgets/Poptip/css/style.css" media-type="text/css"/>
@@ -796,6 +848,7 @@
    <itemref idref="enhance_2" linear="yes"/>
    <itemref idref="enhance_3" linear="yes"/>
    <itemref idref="enhance_4" linear="yes"/>
+   <itemref idref="enhance_4_1" linear="yes"/>
    <itemref idref="enhance_5" linear="yes"/>
    <itemref idref="enhance_6" linear="yes"/>
    <itemref idref="enhance_7" linear="yes"/>
@@ -825,6 +878,11 @@
    <itemref idref="IDX001" linear="yes"/>
    <itemref idref="ty_1" linear="no" />
    <itemref idref="sl_25" linear="no" />
+   <itemref idref="sl_26" linear="no" />
+   <itemref idref="sl_27" linear="no" />
+   <itemref idref="slscroll_25" linear="no" />
+   <itemref idref="slscroll_26" linear="no" />
+   <itemref idref="slscroll_27" linear="no" />
    <itemref idref="mcms_02" linear="no"/>
    <itemref idref="mcms_old_19" linear="no"/>
    <itemref idref="mcms_19" linear="no"/>

@@ -10,7 +10,7 @@
     var currentSliderVal = 0;
     app.announcementRange = { min: 0, max: 100 };
     app.ariaAnnounce = function (msg) {
-        console.log(msg);
+        //console.log(msg);
         if (msg) {
             $('#ariaMessages').html(msg);
         }
@@ -170,7 +170,7 @@ $(document).ready(function () {
 let element = document.getElementById('inner-image-area');
 $(document).ready(function () {
     resize();
-    //createDraggable();
+    createDraggable();
 });
 window.addEventListener("resize", resize);
 function resize() {
@@ -185,7 +185,7 @@ function resize() {
         Utils.getImageWrapper().find('#img').removeClass('resp');
     }
     // Utils.setImageBound();
-    //createDraggable()
+    createDraggable()
 }
 Utils.getImageWrapper().dblclick(function () {
     if (!$('.btn-plus').hasClass('disabled')) {

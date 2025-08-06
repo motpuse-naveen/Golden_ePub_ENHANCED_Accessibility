@@ -38,25 +38,25 @@
                 <div class="Nervous-system-main">
                     <div class="inner-image-area" id="inner-image-area">
                         <div id="img">
-                            <figure class="Nervous-system active" id="img-1">
+                            <figure class="Nervous-system active" aria-hidden="false" id="img-1">
                                 <img src="../images/ch01_figure_text_14a.png" class="img" alt="Myosin head movement A" />
                             </figure>
 
-                            <figure class="Nervous-system" id="img-2">
+                            <figure class="Nervous-system" aria-hidden="true" id="img-2">
                                 <img src="../images/ch01_figure_text_14b.png" class="img" alt="Myosin head movement B" />
                             </figure>
 
-                            <figure class="Nervous-system" id="img-3">
+                            <figure class="Nervous-system" aria-hidden="true" id="img-3">
                                 <img src="../images/ch01_figure_text_14c.png" class="img" alt="Myosin head movement C" />
                             </figure>
 
-                            <figure class="Nervous-system" id="img-4">
+                            <figure class="Nervous-system" aria-hidden="true" id="img-4">
                                 <img src="../images/ch01_figure_text_14d.png" class="img" alt="Myosin head movement D" />
                             </figure>
-							<figure class="Nervous-system" id="img-5">
+							<figure class="Nervous-system" aria-hidden="true" id="img-5">
                                 <img src="../images/ch01_figure_text_14e.png" class="img" alt="Myosin head movement E" />
                             </figure>
-							<figure class="Nervous-system" id="img-6">
+							<figure class="Nervous-system" aria-hidden="true" id="img-6">
                                 <img src="../images/ch01_figure_text_14f.png" class="img" alt="Myosin head movement F" />
                             </figure>
 
@@ -64,40 +64,50 @@
                     </div>
                 </div>
 
-			   <div class="subcaption img-1 active">The stages in mitosis, including the appearance and distribution of the chromosomes.</div>
-			   <div class="subcaption img-2">The stages in mitosis, including the appearance and distribution of the chromosomes.</div>
-			   <div class="subcaption img-3">The stages in mitosis, including the appearance and distribution of the chromosomes.</div>
-			   <div class="subcaption img-4">The stages in mitosis, including the appearance and distribution of the chromosomes.</div>
-			   <div class="subcaption img-5">The stages in mitosis, including the appearance and distribution of the chromosomes.</div>
-			   <div class="subcaption img-6">The stages in mitosis, including the appearance and distribution of the chromosomes.</div>
+			   <div tabindex="0" class="subcaption img-1 active" aria-hidden='false'>First stage of mitosis in which chromosomes condense, become visible, and spindle fibers begin to form.</div>
+			   <div tabindex="0" class="subcaption img-2" aria-hidden='true'>The nuclear envelope breaks down, and spindle fibers attach to chromosomes via kinetochores, moving them toward the cell’s equator.</div>
+			   <div tabindex="0" class="subcaption img-3" aria-hidden='true'>Chromosomes align at the cell’s equator, attached to spindle fibers from opposite poles via their kinetochores.</div>
+			   <div tabindex="0" class="subcaption img-4" aria-hidden='true'>Sister chromatids separate at the centromere and are pulled toward opposite poles of the cell by the spindle fibers.</div>
+			   <div tabindex="0" class="subcaption img-5" aria-hidden='true'>Chromosomes reach opposite poles, decondense into chromatin, and nuclear envelopes reform around each set.</div>
+			   <div tabindex="0" class="subcaption img-6" aria-hidden='true'>The cytoplasm divides, producing two separate daughter cells, each with its own nucleus and identical set of chromosomes.</div>
 
-
-
-                <div class="slider-tab">
+               <div class="slider-tab">
                     <div class="arrow-mask left">
-                        <div class="arrow-left outer" role="button" aria-label="previous" tabindex="0"></div>
-                    </div>
-                    <div class="arrow-mask right">
-                        <div class="arrow-right outer" role="button" aria-label="next" tabindex="0"></div>
+                        <button class="arrow-left outer" aria-label="previous" title="Previous"></button>
                     </div>
                     <div class="Nervous-system-slide">
-                        <div class="slider-track-line">
+                        <div class="slider-track-line" aria-hidden="true">
                             <div class="track"></div>
                             <div id="draggableDot"></div>
                         </div>
-                        <div class="buttonWrapper">
-                            <div class="radio-button tab-marker active" data-id="img-1" tabindex="0" title="Prophase"></div>
-                            <div class="radio-button tab-marker" data-id="img-2" tabindex="0" title="Prometaphase"></div>
-                            <div class="radio-button tab-marker" data-id="img-3" tabindex="0" title="Metaphase"></div>
-                            <div class="radio-button tab-marker" data-id="img-4" tabindex="0" title="Anaphase"></div>
-                            <div class="radio-button tab-marker" data-id="img-5" tabindex="0" title="Telophase"></div>
-                            <div class="radio-button tab-marker" data-id="img-6" tabindex="0" title="Cytokinesis"></div>
-
+                        <ol class="buttonWrapper" aria-label="use tab and enter keys to move between items in the slider">
+                            <li>
+                                <button class="radio-button tab-marker active" aria-pressed="true" data-id="img-1" title="Prophase"></button>
+                            </li>
+                            <li>
+                                <button class="radio-button tab-marker" aria-pressed="false" data-id="img-2" title="Prometaphase"></button>
+                            </li>
+                            <li>
+                                <button class="radio-button tab-marker" aria-pressed="false" data-id="img-3" title="Metaphase"></button>
+                            </li>
+                            <li>
+                                <button class="radio-button tab-marker" aria-pressed="false" data-id="img-4" title="Anaphase"></button>
+                            </li>
+                            <li>
+                                <button class="radio-button tab-marker" aria-pressed="false" data-id="img-5" title="Telophase"></button>
+                            </li>
+                            <li>
+                                <button class="radio-button tab-marker" aria-pressed="false" data-id="img-6" title="Cytokinesis"></button>
+                            </li>
+                        </ol>
+                        <div style="display: flex;grid-template-columns: 1fr 1fr 1fr;justify-content: space-between;">
                             <span class="nrvs-label">Stage: Prophase</span>
                             <div class="label"><span id="selectedPhase" class="value">Prophase</span></div>
                             <span class="nrvs-label">Stage: Cytokinesis</span>
-
                         </div>
+                    </div>
+                    <div class="arrow-mask right">
+                        <button class="arrow-right outer" aria-label="next"  title="Next"></button>
                     </div>
                 </div>
             </div>

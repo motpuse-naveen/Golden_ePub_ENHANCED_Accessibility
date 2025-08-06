@@ -117,6 +117,7 @@ input#slide[type=range]:hover::-webkit-slider-thumb {
 	outline: 2px solid #007cb6;
 	color: #007cb6;
 	outline-offset: -1px;
+	font-weight: bold;
 }
 
 .focus-input {
@@ -202,11 +203,12 @@ button {
 	padding: 0;
 	text-align: center;
 	width: 100%;
+	margin: 0;
+	margin-bottom: 20px;
 }
 
 .Nervous-system.active {
 	display: block;
-	margin: 0;
 }
 
 .Nervous-system-images {
@@ -224,7 +226,7 @@ button {
 	position: relative;
 	top: 4.5px;
 	height: 6px;
-	background: #d9d9d9;
+	background: #6D6D6D;
 	border: #22adcc;
 	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
 	transition: all 0.2s ease-out;
@@ -234,15 +236,21 @@ button {
 
 .buttonWrapper {
 	position: relative;
-	margin-top: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+	margin-left: -2px;
 }
+ul.buttonWrapper li,ol.buttonWrapper li {
+	list-style: none;
+}
+
 .radio-button{
 	position: absolute;
 	top: -22px;
 	left: 0px;
-	height: 17px;
-	width: 17px;
-	background: url(../images/timeline_dot_small.png), #d9d9d9;
+	height: 5px;
+    width: 5px;
+	background: #FFFFFF;
 	background-repeat: no-repeat;
 	background-position: 4px 4px;
 	background-size: 8px;
@@ -258,6 +266,8 @@ button {
 	-webkit-box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
 	-moz-box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.08) inset;
 	box-shadow: 0px 1px 0 rgb(0 0 0 / 8%) inset;
+	border: 6px solid #6D6D6D;
+    border-radius: 12px;
 }
 /*
 .radio-button-1 {
@@ -535,8 +545,8 @@ span.nrvs-label.current-step {
 	.slide8 #image-map {
 		transform: scale(0.45);
 	}
-	.subcaption.active {
-		position: absolute;
+	.main-image-area .subcaption.active {
+		position: fixed;
 		bottom: 68px;
 		left: 0;
 		right: 0;
@@ -552,8 +562,8 @@ span.nrvs-label.current-step {
 		width: auto !important;
 		margin-left: 0 !important;
 	}
-	.neuromuscularfunction .subcaption.active {
-		position: fixed;
+	.main-image-area .subcaption.active {
+		/*position: fixed;*/
 	}
 }
 
@@ -648,7 +658,7 @@ input#sliderInputBox {
 }
 
 @media (max-width: 991.98px) {
-	.neuromuscularfunction .subcaption.active {
+	.main-image-area .subcaption.active {
 		padding-left: 5px;
 		padding-right: 5px;
 		margin: 0 auto;
@@ -717,13 +727,16 @@ sup {
 	margin: 0 auto;
 }
 
-.Nervous-system-main .inner-image-area {
+.main-image-area .inner-image-area {
 	height: 100%;
-	margin: 0 auto;
+	margin: 10px;
+}
+.main-image-area .subcaption{
+	display: none;
 }
 
-.subcaption.active {
-	position: absolute;
+.main-image-area .subcaption.active {
+	position: fixed;
 	bottom: 68px;
 	left: 0;
 	right: 0;
@@ -738,13 +751,18 @@ sup {
 	font-size: 14px;
 	width: 97%;
 	margin-left: 1%;
-}
-
-.neuromuscularfunction .subcaption.active {
 	margin-left: 0px;
     position: fixed;
     display: block;
-    /*height: 42px;*/
+    max-height: 48px;
     overflow-y: auto;
 	margin: 4px 0px;
+}
+
+:focus-visible{
+	outline: 2px solid var(--focus-visible);
+	outline: none;
+    -webkit-box-shadow: 0px 0px 0px 2px var(--focus-visible);
+    -moz-box-shadow: 0px 0px 0px 2px var(--focus-visible);
+    box-shadow: 0px 0px 0px 2px var(--focus-visible);
 }

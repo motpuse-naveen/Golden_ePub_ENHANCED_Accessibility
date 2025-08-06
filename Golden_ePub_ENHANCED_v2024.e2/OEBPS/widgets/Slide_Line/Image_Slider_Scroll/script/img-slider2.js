@@ -4,6 +4,8 @@ $(document).ready(function () {
     var framePadding = 60;
     var maxSteps = 4;
     maxSteps = $("#inner-image-area #img .Nervous-system").length;
+    var imageAria = $("#inner-image-area");
+    imageAria.attr("tabindex","0").attr("role","region").attr("aria-label","Scroll to view more stages.")
     var getTrackWidth = () => $(".track").width();
     var dragUnit = 40;
     var $draggableDot = $("#draggableDot");
@@ -31,6 +33,9 @@ $(document).ready(function () {
         else{
             $(".radio-button.tab-marker[data-id='img-"+ (index+1) +"']").css({"left":((radioPerc * index)-radioButtnPerc) + "%"});
         }
+    });
+    $(".buttonWrapper button.radio-button").each(function(index){
+        $(this).attr("aria-label", $(this).attr("title"));
     });
     var selectedStep = 1;
     
@@ -120,36 +125,48 @@ $(document).ready(function () {
 
     wrapper = document.getElementById('inner-image-area'),
         tabs.onclick = e => {
-            const id = e.target.dataset.id;
-            if (id) {
-                tabButton.forEach(btn => {
-                    btn.classList.remove("active");
-                });
-                e.target.classList.add("active");
-                jQuery('#selectedPhase').text(jQuery('.buttonWrapper .tab-marker.active .marker').text());
-                contents.forEach(content => {
-                    content.classList.remove("active");
-                });
-                subcaptionContents.forEach(content => {
-                    content.classList.remove("active");
-                });
-                const element = document.getElementById(id);
-                element.classList.add("active");
-                const element2 = document.getElementsByClassName(id);
-                $(element2).addClass('active');
-                handleDotMove(e);
+            if($(e.target).hasClass('radio-button')){
+                const id = e.target.dataset.id;
+                if (id) {
+                    tabButton.forEach(btn => {
+                        btn.classList.remove("active");
+                        //btn.setAttribute("aria-selected", false);
+                        btn.setAttribute("aria-pressed", false);
+                    });
+                    e.target.classList.add("active");
+                    //e.target.setAttribute("aria-selected", true);
+                    e.target.setAttribute("aria-pressed", true);
+                    jQuery('#selectedPhase').text(jQuery('.buttonWrapper .tab-marker.active .marker').text());
+                    contents.forEach(content => {
+                        content.classList.remove("active");
+                        content.setAttribute("aria-hidden", true);
+                    });
+                    subcaptionContents.forEach(content => {
+                        content.classList.remove("active");
+                        content.setAttribute("aria-hidden", true);;
+                    });
+                    const element = document.getElementById(id);
+                    element.classList.add("active")
+                    element.setAttribute("aria-hidden", false);
+                    const element2 = document.getElementsByClassName(id)[0];
+                    $(element2).addClass('active');
+                    element2.setAttribute("aria-hidden", false);
+                    handleDotMove(e);
+                }
             }
         }
 
     function handleDotMove(e) {
-        //debugger;
         contents.forEach(content => {
             content.classList.remove("active");
+            content.setAttribute("aria-hidden", true);
         });
         subcaptionContents.forEach(content => {
             content.classList.remove("active");
+            content.setAttribute("aria-hidden", true);
         });
-        dragUnit = e.clientX - framePadding;
+        const rect = e.target.getBoundingClientRect();
+        dragUnit = rect.x - framePadding;
         var trackStepWidth = getTrackWidth() / (maxSteps -1);
         var halfTrackStepWidth = trackStepWidth / 2;
         
@@ -163,7 +180,7 @@ $(document).ready(function () {
         selectStep(stepno, phsText);
     }
     function onRightArrowMouseUp(e) {
-        if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'mouseup') {
+        if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
             contents.forEach(content => {
                 content.classList.remove("active");
             });
@@ -173,21 +190,11 @@ $(document).ready(function () {
             var stepno = selectedStep + 1;
             var phsText = $(".tab-marker[data-id='img-" + stepno + "']").attr("title")
             selectStep(stepno, phsText);
-            /*
-            if (jQuery('#selectedPhase').text() === 'G1') {
-                
-            } else if (jQuery('#selectedPhase').text() === 'S') {
-                selectStep(3, 'G2');
-            } else if (jQuery('#selectedPhase').text() === 'G2') {
-                selectStep(4, 'Mitosis');
-            } else {
-                selectStep(1, 'G1');
-            }
-            */
+            
         }
     }
     function onLeftArrowMouseUp(e) {
-        if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'mouseup') {
+        if ((e.type === 'keydown' && e.keyCode === 13) || e.type === 'click') {
             contents.forEach(content => {
                 content.classList.remove("active");
             });
@@ -197,33 +204,23 @@ $(document).ready(function () {
             var stepno = selectedStep - 1;
             var phsText = $(".tab-marker[data-id='img-" + stepno + "']").attr("title")
             selectStep(stepno, phsText);
-            /*
-            if (jQuery('#selectedPhase').text() === 'G1') {
-                selectStep(4, 'Mitosis');
-            } else if (jQuery('#selectedPhase').text() === 'S') {
-                selectStep(1, 'G1');
-            } else if (jQuery('#selectedPhase').text() === 'G2') {
-                selectStep(2, 'S');
-            } else {
-                selectStep(3, 'G2');
-            }
-            */
+           
         }
     }
     function removeEvent($ele, event) {
         $ele.off(event);
     }
     function addMouseUpToArrowLeft() {
-        $('.arrow-left').unbind('mouseup keydown').bind('mouseup keydown', onLeftArrowMouseUp);
+        $('.arrow-left').unbind('click').bind('click', onLeftArrowMouseUp);
     }
     function addMouseUpToArrowRight() {
-        $('.arrow-right').unbind('mouseup keydown').bind('mouseup keydown', onRightArrowMouseUp);
+        $('.arrow-right').unbind('click').bind('click', onRightArrowMouseUp);
     }
 
     // addMouseUpToArrowLeft();
     addMouseUpToArrowRight();
     $('.tab-marker').keyup(function (e) {
-        if (e.keyCode === 9) {
+        if (e.type === 'keyup' && e.keyCode === 13) {
             contents.forEach(content => {
                 content.classList.remove("active");
             });
@@ -250,8 +247,10 @@ $(document).ready(function () {
         $draggableDot.animate({
             'margin-left': getStepLeft(stepNumber)
         }, 200)
-        $('#img-' + stepNumber).addClass('active');
-        $('.img-' + stepNumber).addClass('active');
+        $(".radio-button.tab-marker").attr("aria-pressed",false)
+        $(".radio-button.tab-marker[data-id='img-" + stepNumber + "']").attr("aria-pressed",true)
+        $('#img-' + stepNumber).addClass('active').attr("aria-hidden", false);
+        $('.img-' + stepNumber).addClass('active').attr("aria-hidden", false);
         // jQuery('#selectedPhase').text('G1');
         jQuery('#selectedPhase').text(phaseText);
         selectedStep = stepNumber;
@@ -272,29 +271,44 @@ $(document).ready(function () {
             addMouseUpToArrowRight();
         }
         
+        SetScrollPosition(stepNumber)
+        
+    }
+    function SetScrollPosition(stepNumber){
         const container = document.getElementById('inner-image-area');
         const steps = $('.inner-image-area .Nervous-system.active');
         const totalHeight = steps[0].scrollHeight; // Total height of the scrollable content
-        const numberOfSteps = $("#inner-image-area #img .Nervous-system").length;
-        const stepHeight = totalHeight / numberOfSteps; // Height of each step
-        const targetScrollTop = (stepNumber - 2) * stepHeight;
-        const targetScrollTop2 = (stepNumber) * stepHeight;
+        var numberOfSteps = $("#inner-image-area #img .Nervous-system").length;
+        const skipstepcount = Number(container.getAttribute('skip-steps')); // returns "5" or null
+        
+        const contHeight = $("#inner-image-area #img").height() - 80;
+        //const perstepht = totalHeight/
+        var stepHeight = totalHeight / numberOfSteps; // Height of each step
+        if(skipstepcount != 0 && skipstepcount>0){
+            stepHeight = totalHeight / (numberOfSteps/skipstepcount);
+        }
+
+        var scrollHt = (stepNumber-1) * stepHeight;
+        if(skipstepcount != 0 && skipstepcount>0){
+            scrollHt = (stepNumber - skipstepcount) * stepHeight;
+        }
+
         if(stepNumber < numberOfSteps){
-            if(targetScrollTop2 > (container.scrollHeight - (container.offsetHeight + 50))){
+            if(scrollHt > contHeight){
                 container.scrollTo({
-                    top: targetScrollTop
+                    top: (scrollHt - contHeight)
                 });
             }
         }
         else{
-            if(targetScrollTop2 > (container.scrollHeight - (container.offsetHeight + 50))){
+            if(scrollHt > (container.scrollHeight - (container.offsetHeight + 50))){
                 container.scrollTo({
                     top: container.scrollHeight
                 });
             }
         }
-        
     }
+      
     window.addEventListener("resize", () => {
         $draggableDot.css({
             'margin-left': getStepLeft(selectedStep)
