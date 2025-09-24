@@ -13,6 +13,7 @@
     <script type="text/javascript" src="../widgets/common_assets/scripts/mathjax/tex-mml-chtml.js"></script>
     <script type="text/javascript" src="../widgets/common_assets/scripts/hlsjs/hls.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../widgets/common_assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/synth.css"/>
 </head>
 
 <body>
@@ -23,19 +24,126 @@
                 <h1 class="chaptitle" id="sv">Streaming Video</h1>
             </hgroup>
         </header>
+       
         <div class="video-area" style="margin-top:2em;">
+
             <h3 class="sr-only" style="position: absolute; left: -9999px;" >Counseling a patient about health issues</h3>
+
             <video class="hls-video" controls="controls" controlslist="nodownload" crossorigin="anonymous"
                 src="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.m3u8">
-               
-                <track kind="subtitles" label="Closed Caption - English" srclang="en"
+                <track kind="captions" label="Closed Caption - English" srclang="en"
+                    src="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.vtt" />
+                <track kind="descriptions" label="Detail Description - English" srclang="en"
                     src="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.vtt" />
                     Your browser does not support HTML5 video.
             </video>
             <div class="vidleg">
-                <p><span class="fignum">Video 7.1 </span>Counseling a patient about health issues</p>
+                <p><span class="fignum">Video 7.1:</span> Counseling a patient about health issues</p>
+            </div>
+            <div class="ddesc">
+                <p>Capture the Detailed Description for the video here</p>
             </div>
         </div>
+
+        <hr style="width: 100%; margin: 30px 0;" aria-hidden="true" aria-label="separator"/>
+
+        <h2 class="alttitle" id="defaultVideo1">Video with sound and with Closed Captions:</h2>
+        <div class="video-area" style="margin-top:2em;">
+            <h3 class="sr-only" style="position: absolute; left: -9999px;" >Video with sound and with Closed Captions:</h3>
+            <video class="local-video" controls="controls" controlslist="nodownload" crossorigin="anonymous"
+                src="../videos/mmc03-01-9780128023198.mp4">
+                <track kind="captions" label="Closed Caption - English" srclang="en"
+                    src="../videos/mmc03-01-9780128023198.vtt" />
+                    Your browser does not support HTML5 video.
+            </video>
+            <div class="vidleg">
+                <p><span class="fignum">Video 1:</span> Video title goes here</p>
+            </div>
+        </div>
+
+        <hr style="width: 100%; margin: 30px 0;" aria-hidden="true" aria-label="separator"/>
+
+        <h2 class="alttitle" id="defaultVideo2">Video without sound and with Closed Captions:</h2>
+        <div class="video-area" style="margin-top:2em;">
+            <h3 class="sr-only" style="position: absolute; left: -9999px;" >Video, Lower Uterine Segment</h3>
+            <video class="local-video" controls="controls" controlslist="nodownload" crossorigin="anonymous"
+                src="../videos/mmc04-02-9780323917544.mp4">
+                <track kind="captions" label="Closed Caption - English" srclang="en"
+                    src="../videos/mmc04-02-9780323917544.vtt" />
+                    Your browser does not support HTML5 video.
+            </video>
+            <div class="vidleg">
+                <p><span class="fignum">Video 2:</span> Lower Uterine Segment</p>
+            </div>
+        </div>
+
+        <hr style="width: 100%; margin: 30px 0;"/>
+
+        <h2 class="alttitle" id="defaultVideo3">Video with sound, with Closed Captions, and with Detailed Description (Text Format):</h2>
+        <div class="video-area" style="margin-top:2em;">
+            <video class="local-video" controls="controls" controlslist="nodownload" crossorigin="anonymous"
+                src="../videos/Video-mmc2.mp4">
+                <track kind="captions" label="Closed Caption - English" srclang="en"
+                    src="../videos/Video-mmc2-CC.vtt" />
+                <track kind="descriptions" label="Detail Description - English" srclang="en"
+                    src="../videos/Video-mmc2-AD.vtt" />
+                    Your browser does not support HTML5 video.
+            </video>
+            <div class="vidleg">
+                <p><span class="fignum">Video 3:</span> Lower Uterine Segment</p>
+            </div>
+            <div class="ddesc">
+                <p class="Detailed-Description">Professor Peter Hindmarsh: An adrenal crisis is a medical emergency. This is recognized by the emergency services who give high priority to attending a person with adrenal insufficiency. The key word for triage after calling this emergency service number is adrenal insufficiency which triggers their care pathway. Preventing an adrenal crisis is important, as it carries a high morbidity and mortality. So understanding sick day rules and what to do in situations such as trauma, or with diarrhoeal problems is important. This video covers some of this, but for more detail, please consult our book Replacement Therapies in Adrenal Insufficiency published by Elsevier. This contains a lot of information on emergency pathways, preparing for surgery, and of course, visiting the dentist. The cause of an adrenal crisis is an acute deficiency of adrenal hormones, cortisol and aldosterone. This is often precipitated by a stress, such as an infection or trauma. This can occur in people already diagnosed with adrenal insufficiency, or as a first presentation of a new case. In addition, patients receiving or who have received high doses of glucocorticoids for other conditions are also at risk because their own adrenal glands are suppressed. Key features prompting urgent attention often known as red flags are confusion, seizures and coma along with low blood pressure. The classical biochemical triad is a low plasma sodium and raised plasma potassium levels along with a low blood glucose. This is illustrated in this diagram which shows a loss of cortisol on the left-hand side, and aldosterone loss on the right-hand side. Loss of cortisol leads to a low blood glucose or hypoglycemia, and because of vomiting, a reduction in blood volume, which is also contributed to by the loss of aldosterone. Loss of aldosterone leads to sodium loss in the urine. Loss of sodium in this way is associated with a rise in plasma potassium which can lead to heart rhythm abnormalities and cardiac arrest. Hydrocortisone needs to be given urgently intravenously, and the doses are shown over here, in the left column. The plasma sodium is best rectified initially with fluid replacement and oral fludrocortisone treatment can be instituted when the patient can take medications orally. During illness we employ a stepped approach. If there is a raised temperature over 38 degrees but no vomiting, then double or triple doses of hydrocortisone are needed, with an extra double, the morning dose given at four AM. Level two is when vomiting is present. If it is more than an hour since the last dose was administered, that dose will have been absorbed. If however, vomiting takes place less than an hour, then the dose should be repeated. And if this is vomited again within an hour an intramuscular injection of hydrocortisone should be given, and the patient should be taken to accident and emergency for assessment. If in any doubt, give the intramuscular injection of hydrocortisone, as no harm will come of it. More at four is designed to keep patients safe in the early hours of the morning. The dose given is double or triple the first dose of the morning, and is in addition to the double or triple morning dose. This extra dose should be given regardless of doses taken earlier in the night. The reason for more at four is that the circadian rhythm of cortisol tells us that cortisol starts to rise in the blood from around midnight reaching a peak between six and seven AM. Without dosing schedules for hydrocortisone, replacement means that at four AM there is a critical time when the evening dose has worn off. This means that even doubling or tripling the evening dose in illness will not last long enough to cover this time period, which is when most adrenal crisis occur. So extra dosing is needed during illness. Incidentally, this graph taken from a patient with congenital adrenal hyperplasia includes 17 hydroxyprogesterone measurements in purple, and you can see nicely the increased drive from two to three to the adrenal gland raising 17 hydroxyprogesterone from four AM due to the absence of cortisol at this time. Doubling the dose does not double the amount of cortisol in the blood. Even a triple dose in this case shown in the slide of 30 milligrams hardly reaches 1200 nanomoles per litre. It's not until a dose of 50 milligrams is given that we get double the cortisol in the blood. This is because of the presence of cortisol binding globulin in the blood. Cortisol binding globulin or CBG binds cortisol, and the cortisol we measure in the lab as a measure of this bound cortisol, and the cortisol that is unbound, or free. CBG binds about 95 percent of cortisol in the blood, but it becomes saturated around a concentration of 500 nanomoles per litre. If cortisol exceeds 500 nanomoles per litre, then the amount that is free will increase. But because free cortisol is easily removed by the kidneys and passed out in the urine, the actual rise in cortisol is less than expected. However, doubling or tripling the dose is important because when temperature in the body increases, less cortisol is bound to CBG. So for example, in tonsillitis the increase in temperature locally in the tonsils, which means more cortisol falls of CBG in the tonsils, there's a greater local effect without exposing the rest of the body to high cortisol levels. But we need the extra hydrocortisone to allow for this clever process to take place in the tonsils so double or tripling the dose is needed. The key points from this video are summarized here. An adrenal crisis can occur in anyone who becomes unwell, so knowing what to do when sick is important. In level one there is sickness with a temperature above 38 degrees and no vomiting, double or triple dosing is needed. In level two there is sickness with a temperature above 38 degrees and also vomiting. If the vomiting takes place one hour after the hydrocortisone dose has been administered, the medication is likely to have been absorbed and no repeat dose is needed. If vomiting occurs within an hour, then the dose should be repeated. If vomiting occurs again within one hour, an intramuscular injection of hydrocortisone is needed and the person should go straight to accident and emergency for assessment. Give an extra double strip or triple dose around four AM in all situations. Double or triple dosing is needed to maintain good delivery of cortisol to the areas of inflammation. We can't cover everything in this particular video. But detailed information on when to double or triple a dose is available in our book Replacement Therapies in Adrenal Insufficiency published by Elsevier. This includes flow diagrams on how to handle diarrhoea, dental procedures, burns, trauma and other aspects of emergency care along with dealing with surgery. The video demonstrates lower uterine segment, Caesarean section. Text, Elsevier is in the top right corner. Copyrights Elsevier appears in the top left and bottom right corners. Text reads after painting with antiseptic solution and draping with sterile towels. Suprapubic transverse incision, Pfannenstiel made. A surgical scalpel is being used to make the incision. A gloved hand is holding gauze next to the incision. Another gloved hand is holding the skin apart at the incision. Surgical scissors are being used. The gloved hands are holding the incision open with surgical forceps. Two sets of surgical forceps are holding the incision open. Surgical scissors are being used to cut through the layers of the skin. Text, rectus sheath is opened. A small surgical tool is being used along with surgical forceps. Another scalpel is being used. Surgical forceps and scissors are used. Text, opening of the parietal peritoneum. The gloved hands use surgical forceps and then open the parietal peritoneum. A Doyen’s abdominal retractor is introduced to keep the incision open. Text reads introducing Doyen's abdominal retractor. Surgical forceps, scissors, and Doyen's abdominal retractor are used. Text reads loose fold of uteroversical peritoneum cut transversely and pushed down lower uterine segment approached. Surgical needle drivers and a Doyen’s abdominal retractor are being used. Text, Stay suture applied, optional. Surgical scissors and a Doyen’s abdominal retractor are used. Text, incision made on lower uterine segment by scalpel. Text, curvilinear uterine incision made using scissors, Uterine muscle fibres are split. Text, membranes ruptured. The membranes surrounding the baby are ruptured. Text reads Doyen’s retractor is removed. Palm is used as fulcrum and head is levered out. A gloved hand is placed below the opening, likely to assist with delivery. The gloved hands pull out the baby during delivery. A bulb syringe is being used to suction the baby’s mouth. Cord clamps are placed, and the umbilical cord is cut between the clamps. The baby is removed from the opening. Text, Allis tissue forceps are placed at the corners of the uterine wound. The placenta is removed. Text, after spontaneous separation of Placenta, Placenta with entire membranes removed. Suturing begins to close the uterine wall. Text, first layer done by continuous, locking running suture of the full thickness of myometrium excluding decidua. Text reads first layer suturing done. More suturing is done. Text, second layer done by continuous sutures burying first layer. Text reads Second layer suturing done. Text, visceral peritoneum not commonly sutured. Before closing the abdomen, the ovaries and tubes are to be examined. More suturing is done to close the parietal peritoneum. Text, after toileting the abdominal cavity, Parietal peritoneum closed. The rectus sheath is closed with sutures. Text, rectus sheath closed. The subcutaneous layer is sutured. Text, after closure of subcutaneous layer. Skin closure begins with a subcuticular stitch. Text, skin closed with subcuticular stitch.</p>
+            </div>
+        </div>
+
+        <hr style="width: 100%; margin: 30px 0;" aria-hidden="true" aria-label="separator"/>
+
+        <h2 class="alttitle" id="defaultVideo4">Video without sound and with Audio Descriptions (i.e. Narration):</h2>
+        <div class="video-area" style="margin-top:2em;">
+
+            <h3 class="sr-only" style="position: absolute; left: -9999px;" >Video without sound and with Audio Descriptions (i.e. Narration)</h3>
+
+            <video class="local-video" controls="controls" controlslist="nodownload" crossorigin="anonymous"
+                src="../videos/9780443285646_0083.mp4">
+                <track kind="captions" label="Audio Descriptions - English" srclang="en"
+                    src="../videos/9780443285646_0083-ad.vtt" />
+                    Your browser does not support HTML5 video.
+            </video>
+            <div class="vidleg">
+                <p><span class="fignum">Video 4:</span> Video title goes here</p>
+            </div>
+            <div class="ddesc">
+                <p>A grayscale, cross-sectional ultrasound image reveals soft tissue structures with a relatively well-circumscribed, rounded mass located centrally. The lesion is hypoechoic, meaning it appears darker than the surrounding tissue, with clearly defined margins. The internal architecture is somewhat heterogeneous, indicating internal complexity or varied tissue composition. A slightly hyperechoic rim, brighter than the mass, surrounds it, suggesting compression of surrounding tissues. The adjacent soft tissue shows a striated pattern and appears mildly compressed, indicating mass effect.</p>
+                <p>A well-rounded, ovoid hypoechoic mass gradually becomes visible and enlarges before fading from view. It has few scattered internal low-intensity echoes, suggesting minor internal variation. The lesion is surrounded by a prominent hyperechoic rim, clearly demarcating it from adjacent tissue structures. There is no evidence of posterior acoustic enhancement or shadowing, suggesting a relatively uniform composition. Surrounding hyperechoic streaks likely represent displaced or compressed fascial planes.</p>
+                <p>A fusiform hypoechoic lesion appears, aligned along the anatomical course of a peripheral nerve. The mass shows a heterogeneous internal echotexture but remains relatively well-defined. A characteristic “target sign” is visible, a central echogenic (bright) core surrounded by a hypoechoic rim, a pattern typical of benign peripheral nerve sheath tumors (PNSTs) such as schwannomas. The overlying subcutaneous fat and skin layers remain intact. Notably, the lesion is in continuity with the parent nerve, confirming it as intraneural rather than an external compressive lesion.</p>
+                <p>A repeated transverse view through the same mass confirms earlier findings. The lesion maintains an eccentric position in relation to the nerve, a distinguishing feature of schwannomas, as opposed to neurofibromas which are centrally located and inseparable from the nerve. The mass retains a fusiform shape, and the surrounding muscle and fascial layers appear normal. There is no evidence of tissue invasion, perilesional edema, or acoustic shadowing. Although Color Doppler imaging is not shown, benign lesions like schwannomas typically exhibit mild internal vascularity.</p>
+                <p>An oval, hypoechoic mass with well-demarcated borders and internal heterogeneity reappears, initially in the central field and later slightly to the left. Internally, areas of relative echogenicity may indicate collagenous stroma, while the surrounding more hypoechoic rim likely represents a myxoid or cellular component. The parent nerve is visualized entering and exiting the lesion, an important diagnostic feature of intraneural tumors. There are no signs of necrosis, calcification, or posterior acoustic shadowing. These sonographic features strongly suggest a benign schwannoma, with low suspicion for malignant PNST due to the lesion's clean margins and non-invasive appearance.</p>
+            </div>
+        </div>
+
+        <hr style="width: 100%; margin: 30px 0;" aria-hidden="true" aria-label="separator"/>
+
+        <h2 class="alttitle" id="defaultAudio5">Audio (mp3) with sound and with Closed Captions (If vtt file is provided with the audio file):</h2>
+        <div class="video-area" style="margin-top:2em;">
+            <iframe src="../widgets/Embedded_audio/xhtml/audio-with-closed-captions.xhtml" height="150" aria-label="Audio (mp3) with sound and with Closed Captions"/>
+        </div>
+
+        <hr style="width: 100%; margin: 30px 0;" aria-hidden="true" aria-label="separator"/>
+
+        <h2 class="alttitle" id="defaultAudio6">Audio (mp3) with sound and without Closed Captions:</h2>
+        <div class="video-area" style="margin-top:2em;">
+            <iframe src="../widgets/Embedded_audio/xhtml/audio-without-closed-captions.xhtml" height="500" aria-label="Audio (mp3) with sound and without Closed Captions"/>
+        </div>
+
+        <hr style="width: 100%; margin: 30px 0;" aria-hidden="true" aria-label="separator"/>
+        <p id="P0010" class="textfl">I am very grateful to many who have contributed to <i>Investment Banks, Hedge Funds, and Private Equity</i>. My wife Janet and my children (Paul, Lauren, Audrey, Julia, and Peter) have been very patient and supportive during the more than two-year process of researching and writing this book. When I decided to become an academic, they assumed that my investment banker workweek would drop from 70&#160;+ hours to less than half that amount. This has not been the case, as I learned that academics work long hours too, and the book added many hours to my schedule. My oldest son, Paul, is a banker, derivatives structurer, and former convertibles trader, and I relied on and appreciated his wisdom in thinking through the organization of the book and benefited from his many technical suggestions. I wish to thank Xiaowei Zhang, who worked on my team at J.P. Morgan, for her very diligent and efficient contributions as my principal assistant during the editing and model-producing stage of this project. I was very fortunate to be able to rely on her many talents during an interlude in her investment banking career.</p>
+        <p id="P0015" class="text">I am also grateful to many finance department colleagues and administrators at Northwestern University&#8217;s Kellogg School of Management for their support for this project and for me over the past five years as I transitioned from practitioner to academic. They have been very patient and encouraging during this process. Special thanks to Kathleen Haggerty for her assistance from the Office of the Dean and to senior finance department faculty members Robert Korajczyk, Robert McDonald, and Mitchell Petersen for providing valuable suggestions regarding the content of the book.</p>
+        <p id="P0020" class="text">I am indebted to the following colleagues and friends from investment banks that provided excellent input to selected chapters:</p>
+
+
+
+
     </section>
     <script src="../widgets/common_assets/scripts/video-tracker.js"></script>
     <script src="../widgets/common_assets/scripts/common.js"></script>

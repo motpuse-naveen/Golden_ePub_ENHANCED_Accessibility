@@ -98,7 +98,7 @@
    <item id="enhance_24" href="xhtml/Dropdowns-upto5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
    <item id="enhance_25" href="xhtml/Dropdowns-upto10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
    <item id="enhance_26" href="xhtml/Dropdowns-above10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-
+   <item id="css_synth" href="styles/synth.css" media-type="text/css"/>
 	<item id="cssme" href="styles/media.css" media-type="text/css"/>
 	<item id="cssma" href="styles/math.css" media-type="text/css"/>
 	<item href="styles/math.js" id="mathjs" media-type="text/javascript"/>
@@ -129,7 +129,23 @@
 	<item id="Img12" href="images/F000036mmc03-01-9780128023198.jpg" media-type="image/jpeg"/>
    <item id="Img12_1" href="images/Image-zoom.jpg" media-type="image/jpeg"/>
 	<item id="Vid1" href="videos/mmc03-01-9780128023198.mp4" media-type="video/mp4"/>
-	<item id="Vid2" href="videos/mmc03-01-9780128023198.mp3" media-type="audio/mpeg"/>
+   <item id="Vid1_vtt" href="videos/mmc03-01-9780128023198.vtt" media-type="text/vtt"/>
+   <item id="Vid2" href="videos/mmc03-01-9780128023198.mp3" media-type="audio/mpeg"/>
+   <item id="Vid3" href="videos/9780443285646_0083.mp4" media-type="video/mp4"/>
+   <item id="Vid3_vtt" href="videos/9780443285646_0083-ad.vtt" media-type="text/vtt"/>
+   <item id="Vid3_txt" href="videos/9780443285646_0083-ad.txt" media-type="text/plain"/>
+   <item id="Vid4" href="videos/mmc04-02-9780323917544.mp4" media-type="video/mp4"/>
+   <item id="Vid4_vtt" href="videos/mmc04-02-9780323917544.vtt" media-type="text/vtt"/>
+
+   <item id="Vid5" href="videos/Video-mmc2.mp4" media-type="video/mp4"/>
+   <item id="Vid5_ad_vtt" href="videos/Video-mmc2-AD.vtt" media-type="text/vtt"/>
+   <item id="Vid5_cc_vtt" href="videos/Video-mmc2-CC.vtt" media-type="text/vtt"/>
+   <item id="Vid5_dd_txt" href="videos/Video-mmc2-Detailed-Description.txt" media-type="text/plain"/>
+
+   <item id="Aud1" href="videos/Audio-mmc3-cc.mp3" media-type="audio/mpeg"/>
+   <item id="Aud1_vtt" href="videos/Audio-mmc3-cc.vtt" media-type="text/vtt"/>
+
+
 	<item id="vid_1" href="https://static.us.elsevierhealth.com/swartz_8_9780323672924/9780323672924_0137.m3u8" media-type="application/vnd.apple.mpegurl"/>
 	<item id="vid_2" href="https://static.us.elsevierhealth.com/swartz_8_9780323672924/9780323672924_0137.vtt" media-type="text/vtt"/>
    <item id="vid_3" href="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.m3u8" media-type="application/vnd.apple.mpegurl"/>
@@ -384,6 +400,9 @@
    <item id="aud_20" href="widgets/Embedded_audio/script/jquery-ui.min.js" media-type="text/javascript"/>
    <item id="aud_21" href="widgets/Embedded_audio/script/slider-a11y-vertical.js" media-type="text/javascript"/>
    <item id="aud_22" href="widgets/Embedded_audio/xhtml/001-what-is-psychopathology.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="aud_23" href="widgets/Embedded_audio/xhtml/audio-with-closed-captions.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="aud_24" href="widgets/Embedded_audio/xhtml/audio-without-closed-captions.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+
 
    <!--Slideshow-->
    <item id="SlideShow_1" href="widgets/Slide_Show/css/header_style.css" media-type="text/css"/>
