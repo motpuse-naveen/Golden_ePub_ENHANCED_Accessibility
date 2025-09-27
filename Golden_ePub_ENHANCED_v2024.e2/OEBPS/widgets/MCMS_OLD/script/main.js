@@ -127,7 +127,9 @@ function autoDragPagination(selectedStep) {
 }
 var QuestionNumber = document.querySelector("#questionNumber");
 var QuestionName = document.querySelector("#questionName");
+var QuestionInstruction = document.querySelector("#questionInstruction");
 var optionContainer = document.querySelector(".Multiple-choice");
+
 var correctMsg = document.querySelector(".correct");
 var indicator = document.querySelector(".nav-tabs");
 var subHeadingContainer = document.querySelector(".content-heading");
@@ -136,6 +138,13 @@ var currentQuestion;
 var availableQuestion = [];
 var availableOption = [];
 var selectOption = [];
+var optionGroup = document.querySelector(".ques-content");
+optionGroup.setAttribute("role", optionContainer.getAttribute("role"));
+optionGroup.setAttribute("aria-labelledby", optionContainer.getAttribute("aria-labelledby"));
+optionContainer.removeAttribute("role");
+optionContainer.removeAttribute("aria-labelledby");
+
+//["role", "aria-labelledby"].forEach(attr => optionContainer.removeAttribute(attr));// This will also work but not sure some platforms may give a error for arrow function.
 // add quiz question to new array;
 function setAvailableQuestion() {
     var totalQuestion = quiz.length;
@@ -181,6 +190,15 @@ function getNewQuestion(question) {
         $('#subheading3').hide().attr("aria-hidden", true);
         optionsIndex++
     }
+    if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
+        && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
+            QuestionInstruction.innerText = "Select one answer."
+            optionGroup.setAttribute("role", "radiogroup");
+    }
+    else {
+        QuestionInstruction.innerText = "Select all that apply."
+        optionGroup.setAttribute("role", "group");
+    }
     var optionStyleType = [];
     if (currentQuestion.optionStyleType != undefined && currentQuestion.optionStyleType != null && currentQuestion.optionStyleType != "" && currentQuestion.optionStyleType != "none") {
         optionContainer.setAttribute("styletype", currentQuestion.optionStyleType);
@@ -197,11 +215,19 @@ function getNewQuestion(question) {
     }
     optionContainer.innerHTML = '';
     for (var j = 0; j < optionlen; j++) {
-        var option = document.createElement("li");
+        var optionli = document.createElement("li");
+        var option = document.createElement("div");
         option.innerHTML = currentQuestion.option[j];
         option.setAttribute('data-id', j);
         option.setAttribute('tabindex', '0');
-        option.setAttribute('role', 'checkbox');
+        if (currentQuestion.type != undefined && currentQuestion.type != null && currentQuestion.type != ""
+        && currentQuestion.type == "MCSS" || currentQuestion.type == "TF") {
+            option.setAttribute('role', 'radio');
+        }
+        else{
+            option.setAttribute('role', 'checkbox');
+        }
+        
         option.setAttribute('aria-checked', 'false');
         optionsIndex++;
         option.className = "focus-input";
@@ -211,7 +237,8 @@ function getNewQuestion(question) {
         if(optionStyleType !=undefined && optionStyleType.length>0){
             option.prepend($("<span class='visually-hidden'>" + optionStyleType[j] + ". " + "</span>")[0])
         }
-        optionContainer.appendChild(option);
+        optionli.appendChild(option);
+        optionContainer.appendChild(optionli);
     }
     $('.focus-input').on('keydown click', addActiveClass);
     $(".focus-input *").on("click", function (e) {
@@ -306,7 +333,10 @@ function getNewQuestion(question) {
     questionCounter++;
     bind_annotLinkEvents();
 }
+/*
+//Old code - before to address best practice by Ace by Daisy.
 function addActiveClass(el) {
+    debugger;
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
         if(!$(el.target).hasClass('already-answered')){
             if (currentQuestion.state !== 'wrong' && !$(el.target).hasClass('wrong') && !$(el.target).hasClass('last-child')) {
@@ -366,6 +396,58 @@ function addActiveClass(el) {
     }
     
 }
+*/
+
+function addActiveClass(el) {
+    let $target = $(el.target).closest('.focus-input'); // get closest .focus-input div
+    if ((el.type === 'keydown' && (el.key === 'Enter' || el.keyCode === 13)) || el.type === 'click') {
+        if (!$target.hasClass('already-answered')) {
+            if (currentQuestion.state !== 'wrong' && !$target.hasClass('wrong') && !$target.hasClass('last-child')) {
+                if (!$target.hasClass("active")) {
+                    $target.removeClass().addClass('focus-input active').attr("aria-checked", true);
+                    selectOption = [];
+
+                    if (currentQuestion.type && (currentQuestion.type === "MCSS" || currentQuestion.type === "TF")) {
+                        $target.parent().siblings().find('.focus-input')
+                            .removeClass().addClass('focus-input').attr("aria-checked", false);
+                        $target.removeClass().addClass('focus-input active').attr("aria-checked", true);
+                    }
+
+                    $('#mcq_button').html('Check Answer').removeAttr('aria-disabled').removeClass('disabled').attr('tabindex', '0');
+                    $('#Add_solution, #answer_label').hide();
+                    $('.tab-pane').attr('data-state', 'answered');
+
+                    ariaAnnounce('Selected option is ' + $target.text());
+                } else {
+                    if ($('.focus-input.active').length > 1) {
+                        $target.removeClass("active").attr("aria-checked", false);
+                    }
+                }
+            } else {
+                if (currentQuestion.type && (currentQuestion.type === "MCSS" || currentQuestion.type === "TF")) {
+                    selectOption = [];
+                    $(".ic-opt-fbk").remove();
+                    $target.parent().siblings().find('.focus-input')
+                        .removeClass().addClass('focus-input').attr("aria-checked", false);
+                    $target.removeClass().addClass('focus-input active').attr("aria-checked", true)
+                        .removeClass('wrong').removeAttr("aria-describedby");
+                    $('#mcq_button').html('Check Answer').removeAttr('aria-disabled').removeClass('disabled').attr('tabindex', '0');
+                    $('#Add_solution, #answer_label').hide();
+                    $('.tab-pane').attr('data-state', 'answered');
+                } else {
+                    if (!$target.hasClass('wrong') && !$target.hasClass('last-child')) {
+                        $target.removeClass().addClass('focus-input active').attr("aria-checked", true);
+                    }
+                }
+            }
+        }
+
+        el.preventDefault();
+        el.stopPropagation();
+        return false;
+    }
+}
+
 // check the current option is true or not .
 function check(answer, selectOption) {
     for (var i = 0; i < answer.length; i++) {

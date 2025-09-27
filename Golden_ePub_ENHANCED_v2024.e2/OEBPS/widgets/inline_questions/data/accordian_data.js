@@ -52,7 +52,7 @@ const questions_data = {
           explanation: `urinary bladder; cyst; sac of fluid`,
         }
       ],
-      titleElement: "h4", //"h1", "h2", "h3", "h4", "h5", "h6" ,""
+      titleElement: "", //"h1", "h2", "h3", "h4", "h5", "h6" ,""
       itemSeperator: "false",
     },
     group2: {
@@ -101,7 +101,7 @@ const questions_data = {
           explanation: `pertaining to`,
         }
       ],
-      titleElement: "h4", //"h1", "h2", "h3", "h4", "h5", "h6" ,""
+      titleElement: "", //"h1", "h2", "h3", "h4", "h5", "h6" ,""
       itemSeperator: "false",
     },
     group3: {

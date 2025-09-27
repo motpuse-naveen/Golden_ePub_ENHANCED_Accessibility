@@ -375,6 +375,7 @@ function addActiveClass(el) {
     }
 }
 
+
 function onClickAndEnterKey(el){
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
         addActiveClass(el)

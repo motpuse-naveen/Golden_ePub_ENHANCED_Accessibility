@@ -18,7 +18,7 @@
 </head>
 
 <body>
-   <main>
+   <main role="main">
       <div class="main-slider-area slide7 img-tour textfl" id="main-image-area">
          <header class="header">
             <div class="zoom-slider">
@@ -96,23 +96,7 @@
                         targets. Brain antigens also leak into the CSF.</p>
                   </div>
                </div>
-               <!--
-               <div class="pin pin-left" data-xpos="455" data-ypos="108">
-                  <div class="pin-inner-txt">
-                     <p><b>8</b> Glucocorticoids and corticotropin reduce or normalize production of CXCL13 and BAFF as
-                        detected in the CSF. They may not be sufficient to stop autoantibody production.</p>
-                  </div>
-               </div>
-               <div class="pin" data-xpos="-20" data-ypos="353">
-                  <div class="pin-inner-txt">
-                     <p><b>9</b> Anti-CD20 monoclonal antibodies target only B-cell lineage cells that express CD20 for
-                        destruction; long-lasting plasma cells (“antibody factories”) escape, unless plasmablasts can be
-                        destroyed before they terminally differentiate. Clinical benefit has resulted from removal of
-                        pathogenic B lymphocytes with anti-B-cell monoclonal antibodies and abrogating B-cell survival
-                        factors by high-dose steroidogenic agents.</p>
-                  </div>
-               </div>
-               -->
+               
             </div>
             <div class="inner-slide-area" id="inner-image-area">
                <figure id="image-map">
@@ -130,26 +114,26 @@
                <a role="button" tabindex="0" aria-label="Previous Slide" data-nav="-1" href="#"></a>
             </div>
             <div class="thumbnail_slidr">
-               <ul class="thumbnail_slidr_inner" role="listbox">
-                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_1">
+               <ul class="thumbnail_slidr_inner" role="listbox" aria-label="Slide Thumbnails">
+                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_1" aria-label="Slide 1">
                      <div>1</div>
                   </li>
-                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_2">
+                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_2" aria-label="Slide 2">
                      <div>2</div>
                   </li>
-                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_3">
+                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_3" aria-label="Slide 3">
                      <div>3</div>
                   </li>
-                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_4">
+                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_4" aria-label="Slide 4">
                      <div>4</div>
                   </li>
-                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_5">
+                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_5" aria-label="Slide 5">
                      <div>5</div>
                   </li>
-                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_6">
+                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_6" aria-label="Slide 6">
                      <div>6</div>
                   </li>
-                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_7">
+                  <li class="column" role="option" tabindex="0" data-tooltipnumber="col_7" aria-label="Slide 7">
                      <div>7</div>
                   </li>
                   <!--
@@ -167,9 +151,9 @@
             </div>
          </div>
       </div>
-   </main>
+   
    <div id="ariaMessages" class="visually-hidden" aria-live="assertive"></div>
-
+</main>
    <script type="text/javascript" src="../script/main.js"></script>
    <script src="../../common_assets/scripts/iframe_common.js"></script>
 </body>

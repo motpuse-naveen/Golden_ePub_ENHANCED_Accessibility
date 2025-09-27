@@ -152,7 +152,9 @@ $(document).ready(function () {
       var $toolTipAnchorWrapper = $('<div>', {
          'style': "left:" + $(".pin").eq(i).data('xpos') + "px;top:" + $(".pin").eq(i).data('ypos') + "px",
          'class': tooltipDirection + ' tooltipInner',
-         'tabindex': 0
+         'tabindex': 0,
+         'role':"button",
+         'aria-label': "pin " + (i + 1)
       });
       var $tooltipAnchor = $('<div>', {
          class: 'tooltip',

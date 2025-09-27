@@ -279,7 +279,7 @@ $(document).ready(function () {
         const steps = $('.inner-image-area .Nervous-system.active');
         const totalHeight = steps[0].scrollHeight; // Total height of the scrollable content
         var numberOfSteps = $("#inner-image-area #img .Nervous-system").length;
-        const skipstepcount = Number(container.getAttribute('skip-steps')); // returns "5" or null
+        const skipstepcount = Number(container.getAttribute('data-skip-steps')); // returns "5" or null
         
         const contHeight = $("#inner-image-area #img").height() - 80;
         //const perstepht = totalHeight/

@@ -156,7 +156,7 @@ class Reflective_Writing_Handler {
       }).join('')}
       <div class="question-controls no-print">
           <button id="btnShowFeedback_${group.id}" class="btn_style_primary show-feedback-btn" aria-disabled="false">Show Feedback</button>
-          <button id="btnPrint_${group.id}" class="btn_style_secondary print-btn" aria-hidden="true"><span class="print-btn-icon" aria-hidden="true"></span>Print</button>
+          <button id="btnPrint_${group.id}" class="btn_style_secondary print-btn"><span class="print-btn-icon" aria-hidden="true"></span>Print</button>
       </div>
       </div>`);
     return div;
