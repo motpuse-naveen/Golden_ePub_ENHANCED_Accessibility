@@ -395,7 +395,7 @@
 				</text>
 			</navLabel>
 			<content src="xhtml/Flashcard.xhtml" />
-		</navPoint>
+		</navPoint>		
 		<navPoint id="toc49" playOrder="49">
 			<navLabel>
 				<text>
@@ -427,7 +427,7 @@
 				</text>
 			</navLabel>
 			<content src="xhtml/Index_22_B9780124158207000044.xhtml" />
-		</navPoint>
+		</navPoint>		
 	</navMap>
 	<pageList>
 		<pageTarget type="front" value="page_i" playOrder="53">
