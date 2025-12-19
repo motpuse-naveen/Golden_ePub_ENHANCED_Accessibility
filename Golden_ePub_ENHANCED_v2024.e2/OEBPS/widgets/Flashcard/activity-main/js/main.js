@@ -38,7 +38,7 @@ function onCommentCloseClicked(e) {
         .attr('aria-hidden', 'true');
 
     jqnc('.openModal').css('pointer-events','none');
-	jqnc('.interactive-wrapper').attr('aria-hidden', 'false');
+	jqnc('.interactive-wrapper').removeAttr('aria-hidden');
     setTimeout(() => jqnc('.commentButton').focus(), 300);
 }
 
