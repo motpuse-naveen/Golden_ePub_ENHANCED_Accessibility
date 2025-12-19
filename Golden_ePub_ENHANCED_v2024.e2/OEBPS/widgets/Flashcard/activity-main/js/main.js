@@ -1,51 +1,45 @@
-jqnc(document).ready(function(){
-	jqnc('.h-hotspot').find('.commentButton').bind('click keyup touchstart',onCommentClicked);
-	jqnc('.h-hotspot').find('.close').bind('click keydown touchstart',onCommentCloseClicked);
-	/*jqnc(window).resize(function(){
-		setFrameSize();
-	});
-	setFrameSize();*/
+jqnc(document).ready(function () {
+    jqnc('.commentButton').on('click keyup touchstart', onCommentClicked);
+    jqnc('.close').on('click keydown touchstart', onCommentCloseClicked);
 });
 
-jqnc(document).keydown(function(event) { 
-	if (event.keyCode == 27) { 
-		//isCommentOpen = true;
-		jqnc('.h-hotspot').find('.modalbg').removeClass('modalbgAnimate');
-		jqnc('.h-hotspot').find('.openModal').css('pointer-events','none');
-		jqnc('.h-hotspot').find('.modalbg').attr('aria-hidden', 'true');
-		setTimeout(function () {
-			jqnc('.h-hotspot').find('.commentButton').focus();
-		},200);
-	}
-  });
+jqnc(document).on('keydown', function (e) {
+    if (e.keyCode === 27 && isCommentOpen) {
+        onCommentCloseClicked(e);
+    }
+});
+
 var isCommentOpen = false;
-function onCommentClicked(e)
-{
-	if(e.type == 'keyup' && (e.keyCode != 13))
-		return false;
-	//if(!isCommentOpen){
-		jqnc('.h-hotspot').find('.modalbg').addClass('modalbgAnimate')
-		jqnc('.h-hotspot').find('.openModal').css('pointer-events','auto')
-		jqnc('.h-hotspot').find('.modalbg').attr('aria-hidden', 'false');
-		setTimeout(function () {
-			jqnc('#dialogClose').focus();
-		},300);	
-	//}
-	//isCommentOpen = false;
+
+function onCommentClicked(e) {
+    if (e.type === 'keyup' && e.keyCode !== 13) return;
+
+    isCommentOpen = true;
+    jqnc('.modalbg')
+        .addClass('modalbgAnimate')
+        .attr('aria-hidden', 'false');	
+
+    jqnc('.openModal').css('pointer-events','auto');
+
+    setTimeout(() => {
+		jqnc('#dialogClose').focus();
+		jqnc('.interactive-wrapper').attr('aria-hidden', 'true');
+	}, 300);
+	
 }
 
-function onCommentCloseClicked(e)
-{	
+function onCommentCloseClicked(e) {
 	restrictTab(e);
-	if(e.type == 'keydown' && (e.keyCode != 13) && (e.keyCode != 27))
-		return false;
-	//isCommentOpen = true;
-	jqnc('.h-hotspot').find('.modalbg').removeClass('modalbgAnimate');
-	jqnc('.h-hotspot').find('.openModal').css('pointer-events','none');
-	jqnc('.h-hotspot').find('.modalbg').attr('aria-hidden', 'true');
-	setTimeout(function () {
-		jqnc('.h-hotspot').find('.commentButton').focus();
-	},300);
+    if (e.type === 'keydown' && ![13,27].includes(e.keyCode)) return;
+
+    isCommentOpen = false;
+    jqnc('.modalbg')
+        .removeClass('modalbgAnimate')
+        .attr('aria-hidden', 'true');
+
+    jqnc('.openModal').css('pointer-events','none');
+	jqnc('.interactive-wrapper').attr('aria-hidden', 'false');
+    setTimeout(() => jqnc('.commentButton').focus(), 300);
 }
 
 function restrictTab(e) {

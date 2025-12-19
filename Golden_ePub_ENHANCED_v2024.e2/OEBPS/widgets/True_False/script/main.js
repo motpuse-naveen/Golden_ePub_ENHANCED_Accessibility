@@ -130,6 +130,13 @@ var questionCounter = 0;
 var currentQuestion;
 var availableQuestion = [];
 var availableOption = [];
+
+var optionGroup = document.querySelector(".ques-content");
+optionGroup.setAttribute("role", optionContainer.getAttribute("role"));
+optionGroup.setAttribute("aria-labelledby", optionContainer.getAttribute("aria-labelledby"));
+optionContainer.removeAttribute("role");
+optionContainer.removeAttribute("aria-labelledby");
+
 // add quiz question to new array;
 function setAvailableQuestion() {
     var totalQuestion = quiz.length;
@@ -193,7 +200,8 @@ function getNewQuestion(question) {
     }
     optionContainer.innerHTML = '';
     for (var j = 0; j < optionlen; j++) {
-        var option = document.createElement("li");
+        var optionli = document.createElement("li");
+        var option = document.createElement("div");
         option.innerHTML = currentQuestion.option[j];
         option.setAttribute('data-id', j);
         option.setAttribute('tabindex', '0');
@@ -204,7 +212,8 @@ function getNewQuestion(question) {
         if(optionStyleType !=undefined && optionStyleType.length>0){
             option.prepend($("<span class='visually-hidden'>" + optionStyleType[j] + ". " + "</span>")[0])
         }
-        optionContainer.appendChild(option);
+        optionli.appendChild(option);
+        optionContainer.appendChild(optionli);
     }
     $('.focus-input').on('keydown click', onClickAndEnterKey);
     $('.tab-pane ').attr('data-state', currentQuestion.state);
@@ -279,25 +288,34 @@ function getNewQuestion(question) {
 }
 function addActiveClass(el) {
     var isWrong = isAnsweredWrong();
-    if(!$(el.target).hasClass('already-answered') && !isWrong){
-        $(el.target).prevAll().removeClass().addClass('focus-input').attr("aria-checked", false);
-        $(el.target).nextAll().removeClass().addClass('focus-input').attr("aria-checked", false);
+    let $target = $(el.target).closest('.focus-input'); // normalize target
+
+    if (!$target.hasClass('already-answered') && !isWrong) {
+        $target.parent().siblings().find('.focus-input')
+            .removeClass().addClass('focus-input').attr("aria-checked", false);
+
+        // Remove any previous aria-describedby values
         $('.focus-input').each(function () {
-            if($(this).attr("aria-describedby") == "ariaIncorrect" 
-            || $(this).attr("aria-describedby") == "ariaCorrect"){
+            if ($(this).attr("aria-describedby") === "ariaIncorrect" || 
+                $(this).attr("aria-describedby") === "ariaCorrect") {
                 $(this).removeAttr("aria-describedby");
             }
         });
-        $(el.target).removeClass().addClass('focus-input active').attr("aria-checked", true);
-        $('#mcq_button').html('Check Answer');
-        $('#Add_solution').hide();
-        $('#answer_label').hide();
-        $('.tab-pane ').attr('data-state', 'answered');
-        $('#mcq_button').removeClass('disabled').removeAttr('aria-disabled');
-        //$('#mcq_button').attr('title', 'Check Answer');
-        $('#mcq_button').attr('tabindex', '0');
-        ariaAnnounce('Selected option is ' + $(el.target).text());
+
+        $target.removeClass().addClass('focus-input active').attr("aria-checked", true);
+
+        $('#mcq_button')
+            .html('Check Answer')
+            .removeClass('disabled')
+            .removeAttr('aria-disabled')
+            .attr('tabindex', '0');
+
+        $('#Add_solution, #answer_label').hide();
+        $('.tab-pane').attr('data-state', 'answered');
+
+        ariaAnnounce('Selected option is ' + $target.text().trim());
     }
+
     el.preventDefault();
     el.stopPropagation();
     return false;

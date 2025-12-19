@@ -22,12 +22,9 @@
 	align-items: center;
 }
 
-.inner-image-area img {
-	width: auto !Important;
-	margin: auto;
-	max-width: 100%;
-	max-height: 80%;
-}
+
+
+
 
 .pop-tip {
 	border: 4px solid #007cb6;
@@ -129,16 +126,16 @@ input#slide[type=range]:hover::-webkit-slider-thumb {
 	text-align: justify;
 }
 
-.neuromuscularfunction .arrow-left.outer,
-.neuromuscularfunction .arrow-right.outer {
+.main-image-area .arrow-left.outer,
+.main-image-area .arrow-right.outer {
 	top: 7px;
 }
 
-.neuromuscularfunction .arrow-left.outer {
+.main-image-area .arrow-left.outer {
 	left: 10px;
 }
 
-.neuromuscularfunction .arrow-right.outer {
+.main-image-area .arrow-right.outer {
 	right: 10px;
 }
 
@@ -199,6 +196,24 @@ button {
 	padding: 0;
 	text-align: center;
 	width: 100%;
+	margin: 0;
+	/*margin-bottom: 20px;*/
+}
+
+/*Slide-Scale*/
+.inner-image-area img {
+	width: auto !Important;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.scale-to-fit .inner-image-area figure.Nervous-system{
+	height: 100%;
+}
+
+.scale-to-fit .inner-image-area figure.Nervous-system img {
+	height: 100%;
 }
 
 .Nervous-system.active {
@@ -514,14 +529,14 @@ span.nrvs-label.current-step {
 	font-weight: 600;
 }
 
-.neuromuscularfunction .footer {
+.main-image-area .footer {
 	bottom: 0px;
 	position: absolute;
 	left: 0;
 	right: 0;
 }
 
-.neuromuscularfunction .slider-tab {
+.main-image-area .slider-tab {
 	bottom: 0px;
 	position: fixed;
 	left: 0;
@@ -554,7 +569,7 @@ span.nrvs-label.current-step {
 		width: auto !important;
 		margin-left: 0 !important;
 	}*/
-	.neuromuscularfunction .subcaption.active {
+	.main-image-area .subcaption.active {
 		position: fixed;
 	}
 }
@@ -650,7 +665,7 @@ input#sliderInputBox {
 }
 
 @media (max-width: 991.98px) {
-	.neuromuscularfunction .subcaption.active {
+	.main-image-area .subcaption.active {
 		padding-left: 5px;
 		padding-right: 5px;
 		margin: 0 auto;
@@ -720,14 +735,24 @@ sup {
 }
 
 .Nervous-system-main .inner-image-area {
-	height: 100%;
+	height: 86%;
+	margin: 10px;
+}
+/*Slide-Scale*/
+.scale-to-fit .Nervous-system-main .inner-image-area {
 	margin: 0 auto;
 }
-.slideline-main div.subcaption{
+.scale-to-fit .Nervous-system-main .inner-image-area div#img{
+	height: 90%;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+.main-image-area div.subcaption{
 	display: none;
 }
 
-.subcaption.active {
+.main-image-area .subcaption.active {
 	position: absolute;
 	bottom: 78px;
 	left: 0;
@@ -744,14 +769,13 @@ sup {
 	margin-left: 1%;
 }
 
-.neuromuscularfunction .subcaption.active {
+.main-image-area .subcaption.active {
 	margin-left: 0px;
     position: fixed;
     display: block;
-    height: 42px;
+    max-height: 44px;
     overflow-y: auto;
 	margin: 4px 10px;
-	
 }
 
 :focus-visible{

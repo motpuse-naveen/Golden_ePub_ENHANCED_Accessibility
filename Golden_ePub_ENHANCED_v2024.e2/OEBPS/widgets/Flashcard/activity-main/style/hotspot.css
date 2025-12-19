@@ -34,22 +34,24 @@
 	border: 1px solid black;
     background: #d0cdcd;
 }
-.w-hotspot .hotspot .notselected{
+.w-hotspot .hotspot button.notselected{
   background: white;
   z-index: 2;
 }
 
-.w-hotspot .hotspot .selected{
-background: rgb(254,252,234); /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover, rgba(254,252,234,1) 33%, rgba(241,218,54,1) 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, rgba(254,252,234,1) 33%,rgba(241,218,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, rgba(254,252,234,1) 33%,rgba(241,218,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.w-hotspot .hotspot button.selected{
+  background: rgb(241,218,54); /* Old browsers */
+  /*
+  background: -moz-radial-gradient(center, ellipse cover, rgba(254,252,234,1) 33%, rgba(241,218,54,1) 100%); 
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(254,252,234,1) 33%,rgba(241,218,54,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(254,252,234,1) 33%,rgba(241,218,54,1) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 );
+  */
 }	
-.w-hotspot .hotspot .notselected{
-	background-color: FFF !important;
-}
-.w-hotspot .hotspot > div, .w-hotspot .hotspot > button{
+/*
+.w-hotspot .hotspot > div, 
+*/
+.w-hotspot .hotspot > button{
 	/*background-color: FFF;*/
 	border: 2px solid black;
 	border-radius: 25px;

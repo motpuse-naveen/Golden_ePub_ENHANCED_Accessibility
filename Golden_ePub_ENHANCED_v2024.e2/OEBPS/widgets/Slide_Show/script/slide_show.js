@@ -143,7 +143,7 @@ $(document).ready(function () {
 var Utils;
 // Utility Functions End
 var slideIndex = 1;
-showSlides(slideIndex);
+
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
@@ -184,11 +184,21 @@ function showSlides(n) {
     bind_annotLinkEvents();
 }
 
-let element = document.getElementById('inner-image-area');
+var innerImageArea = document.getElementById('inner-image-area');
 $(document).ready(function () {
     resize();
     createDraggable();
+    $('.mixed-slides-container, .vert-slides-container').each(function () {
+        const $Container = $(this);
 
+        if ($Container.length) {
+            // Add class 'slides' to all <li>
+            $Container.children('li').addClass('slides');
+            // Remove class 'slides' from all <img> inside the container
+            $Container.find('img').removeClass('slides');
+        }
+    });
+    showSlides(slideIndex);
     $('.column').closest("li").mouseover((e) => {
         $(e.currentTarget).find('.column_inner').css('opacity', 1)
     }).mouseleave((e) => {

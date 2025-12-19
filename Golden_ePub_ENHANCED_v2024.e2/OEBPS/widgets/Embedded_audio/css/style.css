@@ -152,13 +152,13 @@ body.has-bottom-bar .bottom-bar-container {
 	opacity: 1;
 	cursor: default;
 	border-radius: 3px;
-	-webkit-box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+	/*-webkit-box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
 	-moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;*/
 	line-height: 0;
 	padding: 10px;
 }

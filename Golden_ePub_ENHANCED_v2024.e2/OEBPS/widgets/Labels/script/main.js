@@ -205,6 +205,7 @@ $(document).ready(function () {
             $visibleToolbar.fadeOut(30);
             $visibleToolbar.removeClass('is-visible').attr("aria-hidden",true);
             $visibleToolbar.closest(".tooltipInner").removeClass('maxzindex');
+            $visibleToolbar.closest(".tooltip-listitem").removeClass('maxzindex');
         }
     }
     app.getImageWrapper = function () {
@@ -283,6 +284,7 @@ $(document).ready(function () {
             $tooltip.find('p').focus();
             $tooltip.addClass('is-visible').attr("aria-hidden",false);
             $tooltip.closest(".tooltipInner").addClass('maxzindex');
+            $tooltip.closest(".tooltip-listitem").addClass('maxzindex');
         }, 300);
     }
     app.getNewScaleByDirection = function (direction) {
@@ -472,8 +474,10 @@ const handleClickOutside = (event) => {
         var $visibleToolbar = $('.is-visible');
         if ($visibleToolbar.length) {
             var tooltipButton = $visibleToolbar.closest(".tooltip-listitem").find("button.tooltipInner")
+            var tooltipItem = $visibleToolbar.closest(".tooltip-listitem")
             tooltipButton.focus();
             tooltipButton.removeClass('maxzindex').attr("aria-expanded","false");
+            tooltipItem.removeClass('maxzindex')
             $visibleToolbar.removeClass('is-visible').attr("aria-hidden",true);
             $visibleToolbar.fadeOut(30);
         }
@@ -486,8 +490,10 @@ const handleClickOutside = (event) => {
         var $visibleToolbar = $('.is-visible');
         if ($visibleToolbar.length) {
             var tooltipButton = $visibleToolbar.closest(".tooltip-listitem").find("button.tooltipInner")
+            var tooltipItem = $visibleToolbar.closest(".tooltip-listitem").find("button.tooltipInner")
             tooltipButton.focus();
             tooltipButton.removeClass('maxzindex').attr("aria-expanded","false");
+            tooltipItem.removeClass('maxzindex')
             $visibleToolbar.removeClass('is-visible').attr("aria-hidden",true);
             $visibleToolbar.fadeOut(30);
         }

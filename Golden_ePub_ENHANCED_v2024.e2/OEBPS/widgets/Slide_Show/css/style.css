@@ -1,3 +1,6 @@
+body {
+	background-color: white;
+}
 .main-image-area {
 	background-color: white;
 	position: relative;
@@ -33,6 +36,7 @@
 	margin: 10px;
 }
 
+ 
 .main-document-area {
 	background-color: white;
 	position: relative;
@@ -101,10 +105,12 @@
 	z-index: 99;
 	display: flex;
 	justify-content: center;
-	height: 60px;
+	/*height: 60px;*/
 	align-items: center;
 	background-color: #fff;
-	border-top: 1px solid #f2f2f6;
+	/*border-top: 1px solid #f2f2f6;*/
+	border-bottom: 1px solid #f2f2f6;
+    padding-bottom: 10px;
 }
 
 .main-slider-area .thumbnail_main .column {
@@ -183,13 +189,30 @@
 .prevContainer,
 .nextContainer {
 	margin: auto 5px;
+	flex: 0 0 auto;
 }
 
 .tablist{
-	display: inline-flex;
-	padding-left: 0;
+	/*flex: 1 1 auto;*/
+	display: flex;
+	flex-wrap: wrap; /* allow thumbnails to wrap */
+	gap: 8px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	max-height: 120px;
+    overflow-y: auto;
 }
-
+/*
+.tablist::-webkit-scrollbar {
+	height: 6px;
+  }
+  
+  .tablist::-webkit-scrollbar-thumb {
+	background-color: #888;
+	border-radius: 4px;
+  }
+*/
 .prevContainer a,.prevContainer button,
 .nextContainer a,.nextContainer button {
 	width: 40px;
@@ -305,6 +328,13 @@
 	color: lightgray!important;
 }
 
+.thumbnail_main {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	flex-wrap: nowrap; /* no wrap here; wrapping happens inside .tablist */
+  }
+
 .thumbnail_main .column:focus {
 	border: 3px solid black;
 }
@@ -410,3 +440,79 @@ sup {
 .hiddenCaption{
 	display: none !important;
 }
+
+/* .mixed-slides-container */
+.mixed-slides-container {
+	display: flex;
+	overflow-x: auto;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+  }
+  
+  .mixed-slides-container li {
+	flex: 0 0 100%; /* One slide at a time */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .mixed-slides-container li .ss-img-wrap{
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: auto;
+	display: flex;
+	max-height: 100%;
+  }
+  .mixed-slides-container li.vimg .ss-img-wrap{
+	height: 100%;
+  }
+  
+  .slides img {
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+	display: block;
+	margin: 0 auto;
+  }
+
+  /* .vert-slides-container */
+.vert-slides-container {
+	display: flex;
+	overflow-x: auto;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+  }
+  
+  .vert-slides-container li {
+	flex: 0 0 100%; /* One slide at a time */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+  }
+
+  .vert-slides-container .ss-img-wrap{
+	height: 100%;
+  }
+  
+  .slides img {
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+	display: block;
+	margin: 0 auto;
+  }
+
+  ul
+  {
+  	list-style-type: none;
+  }
+  ol
+  {
+  	list-style-type: none;
+  }

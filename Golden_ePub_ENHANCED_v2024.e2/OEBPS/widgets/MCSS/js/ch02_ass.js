@@ -17,7 +17,7 @@ var quiz = [
 `<!--2.-->`,
 `<!--3.-->`,
 `<!--4.-->The male and female pronuclei are the haploid nuclei of the sperm and oocyte, respectively. They fuse during fertilization to form the diploid nucleus of a zygote. The nucleus occupies most of the head of the sperm, and after it enters the oocyte, it swells to form the male pronucleus. The pronuclei are about equal in size and show similar features.`],
-        optionStyleType: `none`,
+        optionStyleType: `st-upper-alpha`,
         answer: 4,
         ansText: `Rationale: <!--4-->The male and female pronuclei are the haploid nuclei of the sperm and oocyte, respectively. They fuse during fertilization to form the diploid nucleus of a zygote. The nucleus occupies most of the head of the sperm, and after it enters the oocyte, it swells to form the male pronucleus. The pronuclei are about equal in size and show similar features.`,
         state: `notAnswered`,
@@ -41,7 +41,7 @@ var quiz = [
 `<!--2.-->`,
 `<!--3.-->The zona pellucida undergoes changes, called the zona reaction, when a sperm contacts the cell membrane of a secondary oocyte. These changes, caused by the release of substances from the oocyte, prevent other sperms from passing through the zona pellucida and entering the oocyte.`,
 `<!--4.-->`],
-        optionStyleType: `none`,
+        optionStyleType: `st-upper-alpha`,
         answer: 3,
         ansText: `Rationale: <!--3-->The zona pellucida undergoes changes, called the zona reaction, when a sperm contacts the cell membrane of a secondary oocyte. These changes, caused by the release of substances from the oocyte, prevent other sperms from passing through the zona pellucida and entering the oocyte.`,
         state: `notAnswered`,
@@ -65,7 +65,7 @@ var quiz = [
 `<!--2.-->The acrosome is a caplike structure that invests the anterior half of the head of the sperm. It contains enzymes that pass through perforations in its wall and digest a path for the sperm to follow through the zona pellucida to fertilize the oocyte.`,
 `<!--3.-->`,
 `<!--4.-->`],
-        optionStyleType: `none`,
+        optionStyleType: `st-upper-alpha`,
         answer: 2,
         ansText: `Rationale: <!--2-->The acrosome is a caplike structure that invests the anterior half of the head of the sperm. It contains enzymes that pass through perforations in its wall and digest a path for the sperm to follow through the zona pellucida to fertilize the oocyte.`,
         state: `notAnswered`,
@@ -516,13 +516,14 @@ var quiz = [
 `<!--2.-->The prechordal plate indicates the future cranial end of the embryo and the future site of the mouth. It is a circular area of endoderm that is firmly adherent to the overlying embryonic epiblast. It is an important landmark in the early embryo and serves as an organizer of the cranial region of the embryo.`,
 `<!--3.-->`,
 `<!--4.-->`],
-        optionStyleType: `none`,
+        optionStyleType: `st-upper-alpha`,
         answer: 2,
         ansText: `Rationale: <!--2-->The prechordal plate indicates the future cranial end of the embryo and the future site of the mouth. It is a circular area of endoderm that is firmly adherent to the overlying embryonic epiblast. It is an important landmark in the early embryo and serves as an organizer of the cranial region of the embryo.`,
         state: `notAnswered`,
         userAnswered: ``
     },
 
+    
 
     {
         q: `For each word or phrase, select the lettered part or phrase that matches it correctly.<br /><br />Develops from a ruptured ovarian follicle`,
