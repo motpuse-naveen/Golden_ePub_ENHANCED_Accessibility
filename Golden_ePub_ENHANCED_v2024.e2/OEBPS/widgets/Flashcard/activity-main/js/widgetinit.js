@@ -21,7 +21,7 @@
                     const oActivity = new WidgetConstructor(jqnc(el));
                     app.finalActivityArr.push(oActivity);
                 } else {
-                    console.warn(`Widget class "${className}" not found in window.`);
+                    //console.warn(`Widget class "${className}" not found in window.`);
                 }
             }
         });

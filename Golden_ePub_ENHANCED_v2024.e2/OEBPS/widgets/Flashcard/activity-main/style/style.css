@@ -369,10 +369,13 @@ iframe.activityframe::-webkit-scrollbar {
   }*/
 }
 
-@media (max-width: 510px){
+@media (max-width: 550px){
   #mainframe{
     width: 486px;
     height: 553px;
+  }
+  .interactive-wrapper{
+    height: 600px;
   }
   .h-hotspot .button { 
     font-size: 18px;
@@ -394,7 +397,7 @@ iframe.activityframe::-webkit-scrollbar {
   }*/
 }
 
-@media (max-width: 390px){
+@media (max-width: 420px){
   /*.h-hotspot .titleContainer {
     top: -52px;
     left: 4px;
@@ -402,6 +405,9 @@ iframe.activityframe::-webkit-scrollbar {
   #mainframe {
     width: 368px;
     height: 422px;
+  }
+  .interactive-wrapper{
+    height: 600px;
   }
   /*
   .h-hotspot .button {

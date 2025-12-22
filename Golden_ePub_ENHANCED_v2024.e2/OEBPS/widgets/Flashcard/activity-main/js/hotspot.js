@@ -173,7 +173,7 @@ var hotspot = function (data) {
 		jqnc(data).find('.openModal').css('pointer-events', 'auto');
 		setTimeout(function () {
 			jqnc(data).find('#dialogClose').focus();
-			console.log('focus set')
+			//console.log('focus set')
 		}, 1000);
 	}
 	function onCommentCloseClicked(e) {
@@ -183,9 +183,9 @@ var hotspot = function (data) {
 		jqnc(data).find('.openModal').css('pointer-events', 'none')
 	}
 	function setFocus() {
-		console.log('setFocus call');
+		//console.log('setFocus call');
 		if (lastFocus != null) {
-			console.log('setFocus inside');
+			//console.log('setFocus inside');
 			jqnc(lastFocus).attr('tabindex', -1);
 
 			jqnc(lastFocus).focus();
@@ -201,7 +201,7 @@ var hotspot = function (data) {
 				jqnc(this).hide();
 			}
 		})
-		console.log("remove selected 1");
+		//console.log("remove selected 1");
 		jqnc(data).find('.hotspot > div').removeClass('selected');
 		//jqnc(data).find('.hotspot > div').addClass('notselected').attr("aria-pressed",false).attr("aria-expanded", false);
 		jqnc(data).find('.hotspot > div').addClass('notselected').attr("aria-pressed", false);
@@ -233,7 +233,7 @@ var hotspot = function (data) {
 		if (e.type == 'keyup' && (e.keyCode != 13))
 			return false;
 		lastFocus = jqnc(this);
-		console.log('lastFocus', lastFocus)
+		//console.log('lastFocus', lastFocus)
 
 		if (!jqnc(e.target).hasClass("selected")) {
 			hideAllHighlights()
@@ -292,7 +292,6 @@ var hotspot = function (data) {
 	});
 
 	function updateAriaAttributes() {
-		debugger;
 		const elm_htspots = document.querySelectorAll("#zoomContainer .hotspot button");
 		const elm_htspotslbls = document.querySelectorAll("#zoomContainer .hotspot div.hotspot_popup");
 		elm_htspots.forEach(elmht => {

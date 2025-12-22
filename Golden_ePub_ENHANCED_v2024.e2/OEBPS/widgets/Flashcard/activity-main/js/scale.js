@@ -42,7 +42,7 @@ function onResizeFn()
             scale = 1;
         }
 
-        console.log('in if scale ', scale);
+        //console.log('in if scale ', scale);
 
         jqnc('#framecontainer').css({
             "transform": "translate(-" + (shellWidth / 2) + "px,-" + (shellHeight / 2) + "px) scale(" + (1 / scale) + "," + (1 / scale) + ") translate(" + (shellWidth / 2) + "px," + (shellHeight / 2) + "px)",
@@ -61,7 +61,7 @@ function onResizeFn()
             scale = 1;
         }
         scale = (Number(scale) + 0.2);
-        console.log('in else scale ', scale);
+        //console.log('in else scale ', scale);
 
         jqnc('#framecontainer').css({
             "transform": "translate(-" + (shellWidth / 2) + "px,-" + (shellHeight / 2) + "px) scale(" + (1 / scale) + "," + (1 / scale) + ") translate(" + (shellWidth / 2) + "px," + (shellHeight / 2) + "px)",

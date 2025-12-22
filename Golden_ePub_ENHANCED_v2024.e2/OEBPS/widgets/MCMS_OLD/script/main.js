@@ -336,7 +336,6 @@ function getNewQuestion(question) {
 /*
 //Old code - before to address best practice by Ace by Daisy.
 function addActiveClass(el) {
-    debugger;
     if ((el.type === 'keydown' && el.keyCode == 13) || el.type === 'click') {
         if(!$(el.target).hasClass('already-answered')){
             if (currentQuestion.state !== 'wrong' && !$(el.target).hasClass('wrong') && !$(el.target).hasClass('last-child')) {
