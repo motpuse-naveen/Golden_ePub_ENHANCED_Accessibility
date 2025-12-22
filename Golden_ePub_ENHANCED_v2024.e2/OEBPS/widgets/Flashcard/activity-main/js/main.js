@@ -20,7 +20,7 @@ function onCommentClicked(e) {
         .attr('aria-hidden', 'false');	
 
     jqnc('.openModal').css('pointer-events','auto');
-
+    jqnc('.interactive-wrapper').removeAttr('aria-hidden');
     setTimeout(() => {
 		jqnc('#dialogClose').focus();
 		jqnc('.interactive-wrapper').attr('aria-hidden', 'true');
