@@ -844,115 +844,6 @@
    <item id="mpeg_8" href="widgets/inline_questions/data/audios/biology.mp3" media-type="audio/mpeg"/>
    <item id="mpeg_9" href="widgets/inline_questions/data/audios/biopsy.mp3" media-type="audio/mpeg"/>
    <item id="mpeg_10" href="widgets/inline_questions/data/audios/carcinogenic.mp3" media-type="audio/mpeg"/>
-
-   <!--Able Video Player-->
-   <item id="ableplayer_1" href="widgets/ableplayer/build/ableplayer.dist.js" media-type="application/javascript"/>
-<item id="ableplayer_2" href="widgets/ableplayer/build/ableplayer.js" media-type="application/javascript"/>
-<item id="ableplayer_3" href="widgets/ableplayer/build/ableplayer.min.css" media-type="text/css"/>
-<item id="ableplayer_4" href="widgets/ableplayer/build/ableplayer.min.js" media-type="application/javascript"/>
-<item id="ableplayer_5" href="widgets/ableplayer/build/demos.css" media-type="text/css"/>
-<item id="ableplayer_6" href="widgets/ableplayer/build/separate-dompurify/ableplayer.dist.js" media-type="application/javascript"/>
-<item id="ableplayer_7" href="widgets/ableplayer/build/separate-dompurify/ableplayer.js" media-type="application/javascript"/>
-<item id="ableplayer_8" href="widgets/ableplayer/build/separate-dompurify/ableplayer.min.js" media-type="application/javascript"/>
-<item id="ableplayer_9" href="widgets/ableplayer/build/separate-dompurify/purify.min.js" media-type="application/javascript"/>
-<item id="ableplayer_10" href="widgets/ableplayer/button-icons/black/captions.png" media-type="image/png"/>
-<item id="ableplayer_11" href="widgets/ableplayer/button-icons/black/chapters.png" media-type="image/png"/>
-<item id="ableplayer_12" href="widgets/ableplayer/button-icons/black/close.png" media-type="image/png"/>
-<item id="ableplayer_13" href="widgets/ableplayer/button-icons/black/descriptions.png" media-type="image/png"/>
-<item id="ableplayer_14" href="widgets/ableplayer/button-icons/black/ellipsis.png" media-type="image/png"/>
-<item id="ableplayer_15" href="widgets/ableplayer/button-icons/black/faster.png" media-type="image/png"/>
-<item id="ableplayer_16" href="widgets/ableplayer/button-icons/black/forward.png" media-type="image/png"/>
-<item id="ableplayer_17" href="widgets/ableplayer/button-icons/black/fullscreen-collapse.png" media-type="image/png"/>
-<item id="ableplayer_18" href="widgets/ableplayer/button-icons/black/fullscreen-expand.png" media-type="image/png"/>
-<item id="ableplayer_19" href="widgets/ableplayer/button-icons/black/help.png" media-type="image/png"/>
-<item id="ableplayer_20" href="widgets/ableplayer/button-icons/black/next.png" media-type="image/png"/>
-<item id="ableplayer_21" href="widgets/ableplayer/button-icons/black/pause.png" media-type="image/png"/>
-<item id="ableplayer_22" href="widgets/ableplayer/button-icons/black/play.png" media-type="image/png"/>
-<item id="ableplayer_23" href="widgets/ableplayer/button-icons/black/preferences.png" media-type="image/png"/>
-<item id="ableplayer_24" href="widgets/ableplayer/button-icons/black/previous.png" media-type="image/png"/>
-<item id="ableplayer_25" href="widgets/ableplayer/button-icons/black/rabbit.png" media-type="image/png"/>
-<item id="ableplayer_26" href="widgets/ableplayer/button-icons/black/restart.png" media-type="image/png"/>
-<item id="ableplayer_27" href="widgets/ableplayer/button-icons/black/rewind.png" media-type="image/png"/>
-<item id="ableplayer_28" href="widgets/ableplayer/button-icons/black/sign.png" media-type="image/png"/>
-<item id="ableplayer_29" href="widgets/ableplayer/button-icons/black/slower.png" media-type="image/png"/>
-<item id="ableplayer_30" href="widgets/ableplayer/button-icons/black/stop.png" media-type="image/png"/>
-<item id="ableplayer_31" href="widgets/ableplayer/button-icons/black/transcript.png" media-type="image/png"/>
-<item id="ableplayer_32" href="widgets/ableplayer/button-icons/black/turtle.png" media-type="image/png"/>
-<item id="ableplayer_33" href="widgets/ableplayer/button-icons/black/volume-loud.png" media-type="image/png"/>
-<item id="ableplayer_34" href="widgets/ableplayer/button-icons/black/volume-medium.png" media-type="image/png"/>
-<item id="ableplayer_35" href="widgets/ableplayer/button-icons/black/volume-mute.png" media-type="image/png"/>
-<item id="ableplayer_36" href="widgets/ableplayer/button-icons/black/volume-soft.png" media-type="image/png"/>
-<item id="ableplayer_37" href="widgets/ableplayer/button-icons/fonts/able.eot" media-type="application/vnd.ms-opentype"/>
-<item id="ableplayer_38" href="widgets/ableplayer/button-icons/fonts/able.svg" media-type="image/svg+xml"/>
-<item id="ableplayer_39" href="widgets/ableplayer/button-icons/fonts/able.ttf" media-type="font/ttf"/>
-<item id="ableplayer_40" href="widgets/ableplayer/button-icons/fonts/able.woff" media-type="application/font-woff"/>
-<item id="ableplayer_41" href="widgets/ableplayer/button-icons/white/captions.png" media-type="image/png"/>
-<item id="ableplayer_42" href="widgets/ableplayer/button-icons/white/chapters.png" media-type="image/png"/>
-<item id="ableplayer_43" href="widgets/ableplayer/button-icons/white/close.png" media-type="image/png"/>
-<item id="ableplayer_44" href="widgets/ableplayer/button-icons/white/descriptions.png" media-type="image/png"/>
-<item id="ableplayer_45" href="widgets/ableplayer/button-icons/white/ellipsis.png" media-type="image/png"/>
-<item id="ableplayer_46" href="widgets/ableplayer/button-icons/white/faster.png" media-type="image/png"/>
-<item id="ableplayer_47" href="widgets/ableplayer/button-icons/white/forward.png" media-type="image/png"/>
-<item id="ableplayer_48" href="widgets/ableplayer/button-icons/white/fullscreen-collapse.png" media-type="image/png"/>
-<item id="ableplayer_49" href="widgets/ableplayer/button-icons/white/fullscreen-expand.png" media-type="image/png"/>
-<item id="ableplayer_50" href="widgets/ableplayer/button-icons/white/help.png" media-type="image/png"/>
-<item id="ableplayer_51" href="widgets/ableplayer/button-icons/white/next.png" media-type="image/png"/>
-<item id="ableplayer_52" href="widgets/ableplayer/button-icons/white/pause.png" media-type="image/png"/>
-<item id="ableplayer_53" href="widgets/ableplayer/button-icons/white/play.png" media-type="image/png"/>
-<item id="ableplayer_54" href="widgets/ableplayer/button-icons/white/preferences.png" media-type="image/png"/>
-<item id="ableplayer_55" href="widgets/ableplayer/button-icons/white/previous.png" media-type="image/png"/>
-<item id="ableplayer_56" href="widgets/ableplayer/button-icons/white/rabbit.png" media-type="image/png"/>
-<item id="ableplayer_57" href="widgets/ableplayer/button-icons/white/restart.png" media-type="image/png"/>
-<item id="ableplayer_58" href="widgets/ableplayer/button-icons/white/rewind.png" media-type="image/png"/>
-<item id="ableplayer_59" href="widgets/ableplayer/button-icons/white/sign.png" media-type="image/png"/>
-<item id="ableplayer_60" href="widgets/ableplayer/button-icons/white/slower.png" media-type="image/png"/>
-<item id="ableplayer_61" href="widgets/ableplayer/button-icons/white/stop.png" media-type="image/png"/>
-<item id="ableplayer_62" href="widgets/ableplayer/button-icons/white/transcript.png" media-type="image/png"/>
-<item id="ableplayer_63" href="widgets/ableplayer/button-icons/white/turtle.png" media-type="image/png"/>
-<item id="ableplayer_64" href="widgets/ableplayer/button-icons/white/volume-loud.png" media-type="image/png"/>
-<item id="ableplayer_65" href="widgets/ableplayer/button-icons/white/volume-medium.png" media-type="image/png"/>
-<item id="ableplayer_66" href="widgets/ableplayer/button-icons/white/volume-mute.png" media-type="image/png"/>
-<item id="ableplayer_67" href="widgets/ableplayer/button-icons/white/volume-soft.png" media-type="image/png"/>
-<item id="ableplayer_68" href="widgets/ableplayer/libs/jquery-3.6.0.min.js" media-type="application/javascript"/>
-<item id="ableplayer_69" href="widgets/ableplayer/libs/js.cookie.min.js" media-type="application/javascript"/>
-<item id="ableplayer_70" href="widgets/ableplayer/media/9780323566940_0003-ad.vtt" media-type="text/vtt"/>
-<item id="ableplayer_71" href="widgets/ableplayer/media/9780323566940_0003.jpg" media-type="image/jpeg"/>
-<item id="ableplayer_72" href="widgets/ableplayer/media/9780323566940_0003.mp4" media-type="video/mp4"/>
-<item id="ableplayer_73" href="widgets/ableplayer/media/itaccess-excerpt-captions_en.vtt" media-type="text/vtt"/>
-<item id="ableplayer_74" href="widgets/ableplayer/media/itaccess-excerpt-described-captions_en.vtt" media-type="text/vtt"/>
-<item id="ableplayer_75" href="widgets/ableplayer/media/itaccess-excerpt-described.mp4" media-type="video/mp4"/>
-<item id="ableplayer_76" href="widgets/ableplayer/media/itaccess-excerpt.mp4" media-type="video/mp4"/>
-<item id="ableplayer_77" href="widgets/ableplayer/media/itaccess.jpg" media-type="image/jpeg"/>
-<item id="ableplayer_78" href="widgets/ableplayer/media/wwa.jpg" media-type="image/jpeg"/>
-<item id="ableplayer_79" href="widgets/ableplayer/media/wwa.mp4" media-type="video/mp4"/>
-<item id="ableplayer_80" href="widgets/ableplayer/media/wwa.webm" media-type="video/webm"/>
-<item id="ableplayer_81" href="widgets/ableplayer/media/wwa_captions_en.vtt" media-type="text/vtt"/>
-<item id="ableplayer_82" href="widgets/ableplayer/media/wwa_chapters_en.vtt" media-type="text/vtt"/>
-<item id="ableplayer_83" href="widgets/ableplayer/media/wwa_described.mp4" media-type="video/mp4"/>
-<item id="ableplayer_84" href="widgets/ableplayer/media/wwa_described.webm" media-type="video/webm"/>
-<item id="ableplayer_85" href="widgets/ableplayer/media/wwa_description_en.vtt" media-type="text/vtt"/>
-<item id="ableplayer_86" href="widgets/ableplayer/translations/ca.json" media-type="application/json"/>
-<item id="ableplayer_87" href="widgets/ableplayer/translations/cs.json" media-type="application/json"/>
-<item id="ableplayer_88" href="widgets/ableplayer/translations/da.json" media-type="application/json"/>
-<item id="ableplayer_89" href="widgets/ableplayer/translations/de.json" media-type="application/json"/>
-<item id="ableplayer_90" href="widgets/ableplayer/translations/en.json" media-type="application/json"/>
-<item id="ableplayer_91" href="widgets/ableplayer/translations/es.json" media-type="application/json"/>
-<item id="ableplayer_92" href="widgets/ableplayer/translations/fr.json" media-type="application/json"/>
-<item id="ableplayer_93" href="widgets/ableplayer/translations/he.json" media-type="application/json"/>
-<item id="ableplayer_94" href="widgets/ableplayer/translations/id.json" media-type="application/json"/>
-<item id="ableplayer_95" href="widgets/ableplayer/translations/it.json" media-type="application/json"/>
-<item id="ableplayer_96" href="widgets/ableplayer/translations/ja.json" media-type="application/json"/>
-<item id="ableplayer_97" href="widgets/ableplayer/translations/ms.json" media-type="application/json"/>
-<item id="ableplayer_98" href="widgets/ableplayer/translations/nb.json" media-type="application/json"/>
-<item id="ableplayer_100" href="widgets/ableplayer/translations/nl.json" media-type="application/json"/>
-<item id="ableplayer_101" href="widgets/ableplayer/translations/pl.json" media-type="application/json"/>
-<item id="ableplayer_102" href="widgets/ableplayer/translations/pt-br.json" media-type="application/json"/>
-<item id="ableplayer_103" href="widgets/ableplayer/translations/pt.json" media-type="application/json"/>
-<item id="ableplayer_104" href="widgets/ableplayer/translations/sv.json" media-type="application/json"/>
-<item id="ableplayer_105" href="widgets/ableplayer/translations/tr.json" media-type="application/json"/>
-<item id="ableplayer_106" href="widgets/ableplayer/translations/zh-tw.json" media-type="application/json"/>
-<item id="ableplayer_107" href="xhtml/ableplayer.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-
 </manifest>
 <spine page-progression-direction="ltr" toc="ncx">
    <itemref idref="PIN" linear="yes"/>
@@ -974,7 +865,6 @@
 
    <itemref idref="enhance_13" linear="yes"/>
    <itemref idref="enhance_1" linear="yes"/>
-   <itemref idref="ableplayer_107" linear="yes"/>
    <itemref idref="enhance_2" linear="yes"/>
    <itemref idref="enhance_3" linear="yes"/>
    <itemref idref="enhance_4" linear="yes"/>
