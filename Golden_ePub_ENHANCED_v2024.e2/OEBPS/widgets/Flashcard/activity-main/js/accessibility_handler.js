@@ -50,7 +50,7 @@ setTimeout(function(){
             // Get the nested iframe inside mainframe
             var activityFrame = mainframeDoc.getElementById("framecontainer"); // Use ID
             if (activityFrame) {
-                activityFrame.setAttribute("title", "Activity Frame");
+                activityFrame.setAttribute("title", "Activity");
             }
         }
     }

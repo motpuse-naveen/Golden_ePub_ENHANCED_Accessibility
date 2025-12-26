@@ -86,7 +86,6 @@ var hotspot = function (data) {
 				// listStr = listStr.substring(0, listStr.length-2);
 				listStr = listStr + 'and ' + listLblTxt;
 			}
-
 		}
 		altTextStr = altTextStr.replace("-imgtitle-", document.title);
 		altTextStr = altTextStr.replace("-listlabels-", listStr);
@@ -127,7 +126,6 @@ var hotspot = function (data) {
 			'height': 50
 		})
 		txtdata.html(txt)
-
 	}
 
 	function setupPopup() {
@@ -136,11 +134,13 @@ var hotspot = function (data) {
 
 	function addButtonEvents() {
 		//jqnc(data).find('.hotspot > div').bind('click keyup touchstart',onHotSpotClicked);	
-		jqnc(data).find('.hotspot > button').bind('click touchstart', onHotSpotClicked);
+		jqnc(data).find('.hotspot > button').bind('click', onHotSpotClicked);
 
 		/*jqnc(data).find('.hotspot > div').each(function(){
 			jqnc(this).attr('aria-label', jqnc(this).attr('data-popup'));
 		});*/
+
+		
 		// Move labels ONLY if they are still inside .labelsdata (scoped)
 		jqnc(data).find('.hotspot > button').each(function () {
 			var id = jqnc(this).attr('data-id');
@@ -156,44 +156,15 @@ var hotspot = function (data) {
 				jqnc(this).remove();
 			}
 		});
+		
 		jqnc(data).find('.hotspot > button').each(function () {
 			//jqnc(this).attr('aria-label', jqnc(this).attr('data-popup'));
 			jqnc(this).attr('aria-label', "label " + jqnc(this).attr('data-id'));
 			jqnc(this).attr('aria-expanded', "false");
 			jqnc(this).removeAttr('aria-describedby');
-		});
-		jqnc(data).find('.commentButton').bind('click keyup touchstart', onCommentClicked);
-		jqnc(data).find('.close').bind('click keyup touchstart', onCommentCloseClicked);
+		});		
 	}
-
-	function onCommentClicked(e) {
-		if (e.type == 'keyup' && (e.keyCode != 13))
-			return false;
-		jqnc(data).find('.modalbg').addClass('modalbgAnimate');
-		jqnc(data).find('.openModal').css('pointer-events', 'auto');
-		setTimeout(function () {
-			jqnc(data).find('#dialogClose').focus();
-			//console.log('focus set')
-		}, 1000);
-	}
-	function onCommentCloseClicked(e) {
-		if (e.type == 'keyup' && (e.keyCode != 13) && (e.keyCode != 27))
-			return false;
-		jqnc(data).find('.modalbg').removeClass('modalbgAnimate')
-		jqnc(data).find('.openModal').css('pointer-events', 'none')
-	}
-	function setFocus() {
-		//console.log('setFocus call');
-		if (lastFocus != null) {
-			//console.log('setFocus inside');
-			jqnc(lastFocus).attr('tabindex', -1);
-
-			jqnc(lastFocus).focus();
-			jqnc(lastFocus).attr('tabindex', 0);
-		}
-
-	}
-
+	
 	function hideAllHighlights() {
 		jqnc(data).find('.imagehighlights > div').each(function () {
 			var id = jqnc(this).attr('data-id')
@@ -260,12 +231,7 @@ var hotspot = function (data) {
 			'height': '0px',
 			'padding-bottom': imgHeight + 'px'
 		})
-		//txtdata.html('');
-		//jqnc(data).find('.hotspot > div').removeClass('selected');
-		//jqnc(data).find('.commentButton').css({'bottom':-imgHeight+'px' });
-		jqnc(data).find('.commentButton').css({
-			'display': 'inline'
-		});
+
 		jqnc(data).find('.imagehighlights > div').css({
 			'height': imgHeight + 'px'
 		});
@@ -282,14 +248,15 @@ var hotspot = function (data) {
 			hotspotWidth = 150;
 		}
 	}
+	/*
 	jqnc(document).ready(function () {
 		//setParameters();
-		//alert(jqnc(window).innerWidth());
 	});
 
 	jqnc(window).resize(function () {
 		//setParameters();
 	});
+	*/
 
 	function updateAriaAttributes() {
 		const elm_htspots = document.querySelectorAll("#zoomContainer .hotspot button");

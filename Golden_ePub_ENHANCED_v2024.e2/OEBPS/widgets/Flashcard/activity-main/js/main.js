@@ -1,6 +1,9 @@
 jqnc(document).ready(function () {
-    jqnc('.commentButton').on('click keyup touchstart', onCommentClicked);
-    jqnc('.close').on('click keydown touchstart', onCommentCloseClicked);
+    //jqnc('.commentButton').on('click keyup touchstart', onCommentClicked);
+    //jqnc('.close').on('click keydown touchstart', onCommentCloseClicked);
+    //For the real HTML <button>, click alone is sufficient in almost all cases. no keyup or touchstart is required.
+    jqnc('.commentButton').on('click', onCommentClicked);
+    jqnc('.close').on('click', onCommentCloseClicked);
 });
 
 jqnc(document).on('keydown', function (e) {
@@ -49,12 +52,10 @@ function restrictTab(e) {
     }
 }
 
-
 /*function setFrameSize(){
-   var innerWidth = 	jqnc(window).innerWidth();
+   var innerWidth = jqnc(window).innerWidth();
 
    if(innerWidth <= 320){
       jqnc('#framecontainer').;
    }
-
 }*/
