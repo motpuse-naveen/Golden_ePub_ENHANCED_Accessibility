@@ -54,13 +54,4 @@ setTimeout(function(){
             }
         }
     }
-    /*const frm_activity_document = window.frames["mainframe"].contentWindow.frames["framecontainer"].contentWindow.document;
-    const elm_htspots = frm_activity_document.querySelectorAll("#zoomContainer .hotspot button");
-    const elm_htspotslbls = frm_activity_document.querySelectorAll("#zoomContainer .labelsdata div.hotspot_popup");
-    elm_htspots.forEach(elmht => {
-        elmht.setAttribute("role", "button");
-    });
-    elm_htspotslbls.forEach(elmhtlbl => {
-        elmhtlbl.setAttribute("aria-live", "assertive");
-    });*/
 },1000)

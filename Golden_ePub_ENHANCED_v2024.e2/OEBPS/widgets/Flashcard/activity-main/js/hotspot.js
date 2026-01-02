@@ -136,11 +136,6 @@ var hotspot = function (data) {
 		//jqnc(data).find('.hotspot > div').bind('click keyup touchstart',onHotSpotClicked);	
 		jqnc(data).find('.hotspot > button').bind('click', onHotSpotClicked);
 
-		/*jqnc(data).find('.hotspot > div').each(function(){
-			jqnc(this).attr('aria-label', jqnc(this).attr('data-popup'));
-		});*/
-
-		
 		// Move labels ONLY if they are still inside .labelsdata (scoped)
 		jqnc(data).find('.hotspot > button').each(function () {
 			var id = jqnc(this).attr('data-id');
@@ -174,12 +169,7 @@ var hotspot = function (data) {
 		})
 		//console.log("remove selected 1");
 		jqnc(data).find('.hotspot > div').removeClass('selected');
-		//jqnc(data).find('.hotspot > div').addClass('notselected').attr("aria-pressed",false).attr("aria-expanded", false);
-		jqnc(data).find('.hotspot > div').addClass('notselected').attr("aria-pressed", false);
-
 		jqnc(data).find('.hotspot > button').removeClass('selected').attr("aria-expanded", "false").removeAttr("aria-describedby");
-		//jqnc(data).find('.hotspot > div').addClass('notselected').attr("aria-pressed",false).attr("aria-expanded", false);
-		jqnc(data).find('.hotspot > button').addClass('notselected').attr("aria-pressed", false);
 	}
 
 	function showSelectedHigh(num) {
@@ -209,12 +199,10 @@ var hotspot = function (data) {
 		if (!jqnc(e.target).hasClass("selected")) {
 			hideAllHighlights()
 			showSelectedHigh(jqnc(e.target).html());
-			//jqnc(e.target).find('.hotspot > div').addClass('notselected')
 			jqnc(e.target).find('.hotspot > button').addClass('notselected')
-			//jqnc(e.target).addClass('selected').attr("aria-expanded",true).attr("aria-pressed", true)
 			jqnc(data).find('.hotspot_popup').hide().attr("aria-hidden", "true");
 
-			jqnc(e.target).addClass('selected').attr("aria-pressed", true).attr("aria-expanded", "true");
+			jqnc(e.target).addClass('selected').attr("aria-expanded", "true");
 			jqnc(e.target).attr("aria-describedby", 'popup_text_' + jqnc(e.target).attr('data-id'));
 			jqnc('#popup_text_' + jqnc(e.target).attr('data-id')).show().attr("aria-hidden", "false");
 		} else {
@@ -235,8 +223,6 @@ var hotspot = function (data) {
 		jqnc(data).find('.imagehighlights > div').css({
 			'height': imgHeight + 'px'
 		});
-		//jqnc(data).find('.imagehighlights').css({'height':(imgHeight)+'px','width':'90%'});
-
 		if ((innerWidth > 0) && (innerWidth <= 340)) {
 			hotspotSpaceLeft = 20;
 			hotspotWidth = 70;
@@ -248,22 +234,14 @@ var hotspot = function (data) {
 			hotspotWidth = 150;
 		}
 	}
-	/*
-	jqnc(document).ready(function () {
-		//setParameters();
-	});
-
-	jqnc(window).resize(function () {
-		//setParameters();
-	});
-	*/
-
 	function updateAriaAttributes() {
 		const elm_htspots = document.querySelectorAll("#zoomContainer .hotspot button");
 		const elm_htspotslbls = document.querySelectorAll("#zoomContainer .hotspot div.hotspot_popup");
+		
 		elm_htspots.forEach(elmht => {
 			elmht.setAttribute("role", "button");
 		});
+		
 		elm_htspotslbls.forEach(elmhtlbl => {
 			elmhtlbl.setAttribute("aria-live", "assertive");
 		});
