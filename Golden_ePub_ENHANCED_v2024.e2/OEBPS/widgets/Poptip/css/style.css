@@ -207,6 +207,7 @@ a:active {
     padding-right: 0px;
     padding-left: 3px;
     margin-left: 1px;
+    top: -2px;
 }
 .star.dropdown.def-img.star-tooltip:before {
     content: '*';
@@ -223,6 +224,7 @@ a:active {
     padding-right: 0px;
     padding-left: 3px;
     margin-left: 1px;
+    top: -2px;
     color: blue;
     text-decoration: none;
     text-transform: none;
@@ -383,6 +385,25 @@ span.text-highlighter::after, button.text-highlighter::after {
     text-align: left;
     text-decoration: none;
     text-transform: none;
+}
+/* Horizontal poptip positioning: default is left-aligned; flip when needed */
+.dropdown.def-img.poptip-left .dropdown-content{
+    left: 0;
+    right: auto;
+}
+.dropdown.def-img.poptip-right .dropdown-content{
+    right: 0;
+    left: auto;
+}
+
+/* Vertical poptip positioning controlled by JS */
+.dropdown-content.pos-bottom{
+    top: auto;
+    bottom: 24px !important; /* above the trigger */
+}
+.dropdown-content.pos-top{
+    bottom: auto !important;
+    top: 24px; /* below the trigger */
 }
 html {
     scroll-behavior: smooth;

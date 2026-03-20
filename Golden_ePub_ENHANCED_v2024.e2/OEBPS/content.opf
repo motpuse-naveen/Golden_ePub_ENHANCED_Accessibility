@@ -98,6 +98,8 @@
    <item id="enhance_24" href="xhtml/Dropdowns-upto5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
    <item id="enhance_25" href="xhtml/Dropdowns-upto10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
    <item id="enhance_26" href="xhtml/Dropdowns-above10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_27" href="xhtml/media-player.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
+
    <item id="css_synth" href="styles/synth.css" media-type="text/css"/>
 	<item id="cssme" href="styles/media.css" media-type="text/css"/>
 	<item id="cssma" href="styles/math.css" media-type="text/css"/>
@@ -844,6 +846,25 @@
    <item id="mpeg_8" href="widgets/inline_questions/data/audios/biology.mp3" media-type="audio/mpeg"/>
    <item id="mpeg_9" href="widgets/inline_questions/data/audios/biopsy.mp3" media-type="audio/mpeg"/>
    <item id="mpeg_10" href="widgets/inline_questions/data/audios/carcinogenic.mp3" media-type="audio/mpeg"/>
+
+   <!--ELS Media Player files-->
+   <item id="els_media_1" href="els-media/els-media-player.min.js" media-type="text/javascript"/>
+   <item id="els_media_2" href="els-media/els-media-player.min.css" media-type="text/css"/>
+
+   <item id="els_media_3" href="els-media/media/enVFL28_VLAGr07_T4L05_A0911207.mp4" media-type="video/mp4"/>
+   <item id="els_media_4" href="els-media/media/enVFL28_VLAGr07_T4L05_A0911207.vtt" media-type="text/vtt"/>
+   <item id="els_media_5" href="els-media/media/enVFL28_VLAGr07_T4L05_A0911207_ad.vtt" media-type="text/vtt"/>
+   <item id="els_media_6" href="els-media/media/enVFL28_VLAGr07_T4L05_A0911207.txt" media-type="text/plain"/>
+
+   <item id="els_media_11" href="els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426.mp4" media-type="video/mp4"/>
+   <item id="els_media_12" href="els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426.vtt" media-type="text/vtt"/>
+   <item id="els_media_13" href="els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426_ad.vtt" media-type="text/vtt"/>
+   <item id="els_media_14" href="els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426.txt" media-type="text/plain"/>
+
+   <item id="els_media_7" href="els-media/media/audio_example.mp3" media-type="audio/mpeg"/>
+   <item id="els_media_8" href="els-media/media/audio_example.vtt" media-type="text/vtt"/>
+   <item id="els_media_9" href="els-media/media/bbc-pm.mp4" media-type="audio/mpeg"/>
+   <item id="els_media_10" href="els-media/media/bbc-pm.vtt" media-type="text/vtt"/>
 </manifest>
 <spine page-progression-direction="ltr" toc="ncx">
    <itemref idref="PIN" linear="yes"/>
@@ -890,6 +911,7 @@
    <itemref idref="enhance_24" linear="yes"/>
    <itemref idref="enhance_25" linear="yes"/>
    <itemref idref="enhance_26" linear="yes"/>
+   <itemref idref="enhance_27" linear="yes"/>
 
    <itemref idref="Appendix" linear="yes"/>
    <itemref idref="Glossary" linear="yes"/>

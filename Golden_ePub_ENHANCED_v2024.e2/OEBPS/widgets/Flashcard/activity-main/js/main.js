@@ -125,8 +125,6 @@ function onCommentClicked() {
     }, 300);
 }
 
-
-
 function onCommentCloseClicked() {
     document.removeEventListener('focus', trapFocusHandler, true);
     document.removeEventListener('keydown', trapTabKey, true);
