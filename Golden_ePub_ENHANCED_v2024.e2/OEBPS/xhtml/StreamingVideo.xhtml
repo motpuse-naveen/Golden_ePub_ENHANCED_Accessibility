@@ -8,12 +8,11 @@
     <link rel="stylesheet" type="text/css" href="../styles/Elsevier_eBook.css" />
     <link rel="stylesheet" type="text/css" href="../styles/math.css" />
     <link rel="stylesheet" media="only screen" type="text/css" href="../styles/media.css" />
-
     <link rel="stylesheet" type="text/css" href="../widgets/common_assets/css/variables.css" />
     <script type="text/javascript" src="../widgets/common_assets/scripts/mathjax/tex-mml-chtml.js"></script>
-    <script type="text/javascript" src="../widgets/common_assets/scripts/hlsjs/hls.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../widgets/common_assets/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../styles/synth.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="../els-media/els-media-player.min.css" />-->
 </head>
 
 <body>
@@ -24,11 +23,8 @@
                 <h1 class="chaptitle" id="sv">Streaming Video</h1>
             </hgroup>
         </header>
-       
         <div class="video-area" style="margin-top:2em;">
-
             <h2 class="sr-only" style="position: absolute; left: -9999px;" >Counseling a patient about health issues</h2>
-
             <video class="hls-video" controls="controls" controlslist="nodownload" crossorigin="anonymous"
                 src="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.m3u8">
                 <track kind="captions" label="Closed Caption - English" srclang="en"
@@ -145,8 +141,16 @@
 
 
     </section>
-    <script src="../widgets/common_assets/scripts/video-tracker.js"></script>
+    <!--SCRIPTS-->
+    <script type="text/javascript" src="../widgets/common_assets/scripts/hlsjs/hls.min.js"></script>
+    <script src="../els-media/els-media-player.min.js"></script>
+    <!--<script src="../widgets/common_assets/scripts/video-tracker.js"></script>-->
     <script src="../widgets/common_assets/scripts/common.js"></script>
+    <!--
+    <script>
+        ELSPlayer.initElsPlayers();
+    </script>
+    -->
 </body>
 
 </html>
