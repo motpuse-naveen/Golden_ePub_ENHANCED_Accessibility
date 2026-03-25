@@ -44,7 +44,7 @@
         <div>
             <h2>Video 3 - Streaming Video. (.m3u8)</h2>
             <div class="els-player">
-                <video id="video_sample_trans1" controls="controls" preload="metadata">
+                <video id="video_sample_trans1" controls="controls" preload="metadata" crossorigin="anonymous">
                   <source src="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.m3u8"
                     type="application/vnd.apple.mpegurl"/>
                   <track kind="captions" label="Closed Caption" srclang="en"
@@ -57,10 +57,10 @@
         <div>
             <h2>Video 3 - Remote Video.(remote .mp4, remote vtt for captions.)</h2>
             <div class="els-player">
-                <video id="video_sample_trans2" controls="controls" poster="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg">
+                <video id="video_sample_trans2" controls="controls" crossorigin="anonymous" poster="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg">
                   <source src="https://thepaciellogroup.github.io/AT-browser-tests/video/ElephantsDream.mp4" type="video/mp4"/>
                   <track kind="captions" label="Closed Caption" srclang="en"
-                    src="https://thepaciellogroup.github.io/AT-browser-tests/video/subtitles-en.vtt" />
+                    src="https://thepaciellogroup.github.io/AT-browser-tests/video/subtitles-en.vtt" default="default" />
                 </video>
             </div>
         </div>
