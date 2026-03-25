@@ -10,88 +10,19 @@
     <link rel="stylesheet" type="text/css" href="../widgets/common_assets/css/variables.css" />
     <link rel="stylesheet" type="text/css" href="../widgets/common_assets/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../styles/synth.css" />
-    <link rel="stylesheet" type="text/css" href="../els-media/els-media-player.min.css" />
 </head>
 <body>
+  <main>
     <section role="doc-chapter" epub:type="chapter" id="c0002">
         <div id="CN"><a id="CHP002" /></div>
         <header>
             <hgroup>
-                <h1 class="chaptitle" id="elsmedia">Video and Audio Player Example</h1>
+                <h1 class="chaptitle" id="elsmedia">Video Player Using Cloud-Based Video Libarary</h1>
             </hgroup>
         </header>
-
-        <div>
-            <h2>Video 1 - local Video files. (local .mp4) and transcript using captions (.vtt)</h2>
-            <div class="els-player">
-                <video id="video1" controls="controls" preload="metadata">
-                  <source src="../els-media/media/enVFL28_VLAGr07_T4L05_A0911207.mp4" type="video/mp4"/>
-                  <track kind="captions" src="../els-media/media/enVFL28_VLAGr07_T4L05_A0911207.vtt" srclang="en" label="English" default="default"/>
-                  <track kind="descriptions" src="../els-media/media/enVFL28_VLAGr07_T4L05_A0911207_ad.vtt" srclang="en" label="Audio Description"/>
-                </video>
-              </div>
-        </div>
-        <div>
-            <h2>Video 2 - local Video files. (local .mp4) and transcript using text (.txt)</h2>
-            <div class="els-player bordered">
-                <video id="video2" controls="controls" preload="metadata" data-transcript="../els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426.txt">
-                  <source src="../els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426.mp4" type="video/mp4"/>
-                  <track kind="captions" src="../els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426.vtt" srclang="en" label="English" default="default"/>
-                  <track kind="descriptions" src="../els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426_ad.vtt" srclang="en" label="Audio Description"/>
-                </video>
-              </div>
-        </div>
-        <div>
-            <h2>Video 3 - Streaming Video. (.m3u8)</h2>
-            <div class="els-player">
-                <video id="video_sample_trans1" controls="controls" preload="metadata" crossorigin="anonymous">
-                  <source src="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.m3u8"
-                    type="application/vnd.apple.mpegurl"/>
-                  <track kind="captions" label="Closed Caption" srclang="en"
-                    src="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.vtt" />
-                  <track kind="descriptions" label="Audio Description" srclang="en"
-                    src="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.vtt" />
-                </video>
-              </div>
-        </div>
-        <div>
-            <h2>Video 3 - Remote Video.(remote .mp4, remote vtt for captions.)</h2>
-            <div class="els-player">
-                <video id="video_sample_trans2" controls="controls" crossorigin="anonymous" poster="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg">
-                  <source src="https://thepaciellogroup.github.io/AT-browser-tests/video/ElephantsDream.mp4" type="video/mp4"/>
-                  <track kind="captions" label="Closed Caption" srclang="en"
-                    src="https://thepaciellogroup.github.io/AT-browser-tests/video/subtitles-en.vtt" default="default" />
-                </video>
-            </div>
-        </div>
-        <div>
-            <h2>Audio 1 - local .mp4 and vtt</h2>
-            <div class="els-player">
-                <audio id="audio2" controls="controls">
-                  <source src="../els-media/media/bbc-pm.mp4" type="audio/mpeg"/>
-                  <track default="default" kind="captions" src="../els-media/media/bbc-pm.vtt" srclang="en" label="English"/>
-                </audio>
-              </div>
-        </div>
-        <div>
-            <h2>Audio 2 - local .mp3 and vtt</h2>
-            <div class="els-player">
-                <audio id="audio1" controls="controls">
-                  <source src="../els-media/media/audio_example.mp3" type="audio/mpeg"/>
-                  <track default="default" kind="captions" src="../els-media/media/audio_example.vtt" srclang="en" label="English"/>
-                </audio>
-              </div>
-        </div>
-
-
+        <div>Cloud-Based Video Libarary - Samples</div>
     </section>
-    <!--SCRIPTS-->
-    <script type="text/javascript" src="../widgets/common_assets/scripts/hlsjs/hls.min.js"></script>
-    <script src="../els-media/els-media-player.min.js"></script>
-    <script src="../widgets/common_assets/scripts/common.js"></script>
-    <script>
-        ELSPlayer.initElsPlayers();
-    </script>
+  </main>
 </body>
 
 </html>

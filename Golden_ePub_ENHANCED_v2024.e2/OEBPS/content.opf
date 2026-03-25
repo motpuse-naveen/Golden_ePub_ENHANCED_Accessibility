@@ -134,18 +134,8 @@
 
 	<item id="Vid1" href="videos/mmc03-01-9780128023198.mp4" media-type="video/mp4"/>
    <item id="Vid1_vtt" href="videos/mmc03-01-9780128023198.vtt" media-type="text/vtt"/>
-   <item id="Vid2" href="videos/mmc03-01-9780128023198.mp3" media-type="audio/mpeg"/>
    <item id="Vid3" href="videos/9780443285646_0083.mp4" media-type="video/mp4"/>
    <item id="Vid3_vtt" href="videos/9780443285646_0083-ad.vtt" media-type="text/vtt"/>
-   <item id="Vid3_txt" href="videos/9780443285646_0083-ad.txt" media-type="text/plain"/>
-   <item id="Vid4" href="videos/mmc04-02-9780323917544.mp4" media-type="video/mp4"/>
-   <item id="Vid4_vtt" href="videos/mmc04-02-9780323917544.vtt" media-type="text/vtt"/>
-
-   <item id="Vid5" href="videos/Video-mmc2.mp4" media-type="video/mp4"/>
-   <item id="Vid5_ad_vtt" href="videos/Video-mmc2-AD.vtt" media-type="text/vtt"/>
-   <item id="Vid5_cc_vtt" href="videos/Video-mmc2-CC.vtt" media-type="text/vtt"/>
-   <item id="Vid5_dd_txt" href="videos/Video-mmc2-Detailed-Description.txt" media-type="text/plain"/>
-
    <item id="Aud1" href="videos/Audio-mmc3-cc.mp3" media-type="audio/mpeg"/>
    <item id="Aud1_vtt" href="videos/Audio-mmc3-cc.vtt" media-type="text/vtt"/>
 
@@ -850,21 +840,11 @@
    <!--ELS Media Player files-->
    <item id="els_media_1" href="els-media/els-media-player.min.js" media-type="text/javascript"/>
    <item id="els_media_2" href="els-media/els-media-player.min.css" media-type="text/css"/>
-
-   <item id="els_media_3" href="els-media/media/enVFL28_VLAGr07_T4L05_A0911207.mp4" media-type="video/mp4"/>
-   <item id="els_media_4" href="els-media/media/enVFL28_VLAGr07_T4L05_A0911207.vtt" media-type="text/vtt"/>
-   <item id="els_media_5" href="els-media/media/enVFL28_VLAGr07_T4L05_A0911207_ad.vtt" media-type="text/vtt"/>
-   <item id="els_media_6" href="els-media/media/enVFL28_VLAGr07_T4L05_A0911207.txt" media-type="text/plain"/>
-
-   <item id="els_media_11" href="els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426.mp4" media-type="video/mp4"/>
-   <item id="els_media_12" href="els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426.vtt" media-type="text/vtt"/>
-   <item id="els_media_13" href="els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426_ad.vtt" media-type="text/vtt"/>
-   <item id="els_media_14" href="els-media/media/ENVM28_VLA0K_FL_T10L04_A0911426.txt" media-type="text/plain"/>
-
-   <item id="els_media_7" href="els-media/media/audio_example.mp3" media-type="audio/mpeg"/>
-   <item id="els_media_8" href="els-media/media/audio_example.vtt" media-type="text/vtt"/>
-   <item id="els_media_9" href="els-media/media/bbc-pm.mp4" media-type="audio/mpeg"/>
-   <item id="els_media_10" href="els-media/media/bbc-pm.vtt" media-type="text/vtt"/>
+   <item id="els_media_3" href="videos/mmc06-01-9780128203484.mp4" media-type="video/mp4"/>
+   <item id="els_media_4" href="videos/mmc06-01-9780128203484_cc.vtt" media-type="text/vtt"/>
+   <item id="els_media_5" href="videos/mmc25-02-9780128203484.mp4" media-type="video/mp4"/>
+   <item id="els_media_6" href="videos/mmc25-02-9780128203484_ad.vtt" media-type="text/vtt"/>
+   <item id="els_media_7" href="videos/audio-02-9780128023198.mp3" media-type="audio/mpeg"/>
 </manifest>
 <spine page-progression-direction="ltr" toc="ncx">
    <itemref idref="PIN" linear="yes"/>
