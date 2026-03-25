@@ -399,7 +399,7 @@
 		<navPoint id="toc49" playOrder="49">
 			<navLabel>
 				<text>
-					Video and Audio Player Example
+					Cloud-Based Video Library Example
 				</text>
 			</navLabel>
 			<content src="xhtml/media-player.xhtml#elsmedia" />

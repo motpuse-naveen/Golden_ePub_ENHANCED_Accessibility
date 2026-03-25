@@ -98,7 +98,7 @@
    <item id="enhance_24" href="xhtml/Dropdowns-upto5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
    <item id="enhance_25" href="xhtml/Dropdowns-upto10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
    <item id="enhance_26" href="xhtml/Dropdowns-above10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_27" href="xhtml/media-player.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
+   <item id="enhance_27" href="xhtml/media-player.xhtml" media-type="application/xhtml+xml"/>
 
    <item id="css_synth" href="styles/synth.css" media-type="text/css"/>
 	<item id="cssme" href="styles/media.css" media-type="text/css"/>
