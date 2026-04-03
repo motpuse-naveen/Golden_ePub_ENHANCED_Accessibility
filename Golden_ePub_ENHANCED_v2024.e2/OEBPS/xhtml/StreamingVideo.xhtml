@@ -168,9 +168,22 @@
             <div style="margin:0 auto; padding: 20px;">
                 <h2>Custom Video and Audio Player</h2>
                 <hr style="width: 390px;margin: 30px 0;height: 6px;background-color: #007398;border: none;" aria-hidden="true" aria-label="separator" />
-                <h2>Streaming Video (Remote Urls): Closed Captions and Transcript</h2>
+
+                <h2>Streaming Video (Remote Urls): Closed Captions, Transcript, Audio Description, and Detail Description</h2>
                 <div class="els-player">
                     <video id="els-player-video1" controls="controls" preload="metadata" crossorigin="anonymous">
+                        <source src="https://static.us.elsevierhealth.com/cox_1_9780443285547/9780443285547_0009.m3u8"
+                            type="application/vnd.apple.mpegurl" />
+                        <track kind="captions" label="Closed Caption" srclang="en" default="default"
+                            src="https://static.us.elsevierhealth.com/cox_1_9780443285547/9780443285547_0009.vtt" />
+                        <track kind="descriptions" src="https://static.us.elsevierhealth.com/cox_1_9780443285547/9780443285547_0009-ad.vtt" srclang="en"
+                            label="English"/>
+                    </video>
+                </div>
+
+                <h2>Streaming Video (Remote Urls): Closed Captions and Transcript</h2>
+                <div class="els-player">
+                    <video id="els-player-video2" controls="controls" preload="metadata" crossorigin="anonymous">
                         <source
                             src="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.m3u8"
                             type="application/vnd.apple.mpegurl" />
@@ -182,7 +195,7 @@
                 <hr style="width: 100%; margin: 30px 0;" aria-hidden="true" aria-label="separator" />
                 <h2>Local Video 1: Closed Captions and Transcript</h2>
                 <div class="els-player">
-                    <video id="els-player-video2" controls="controls" preload="metadata">
+                    <video id="els-player-video3" controls="controls" preload="metadata">
                         <source src="../videos/mmc06-01-9780128203484.mp4" type="video/mp4" />
                         <track kind="captions" src="../videos/mmc06-01-9780128203484_cc.vtt" srclang="en"
                             label="English" default="default" />
@@ -192,7 +205,7 @@
                 <hr style="width: 100%; margin: 30px 0;" aria-hidden="true" aria-label="separator" />
                 <h2>Local Video 2: Audio Description and Detail Description</h2>
                 <div class="els-player">
-                    <video id="els-player-video3" controls="controls" preload="metadata">
+                    <video id="els-player-video4" controls="controls" preload="metadata">
                         <source src="../videos/mmc25-02-9780128203484.mp4" type="video/mp4" />
                         <track kind="descriptions" src="../videos/mmc25-02-9780128203484_ad.vtt" srclang="en"
                             label="English" default="default" />
