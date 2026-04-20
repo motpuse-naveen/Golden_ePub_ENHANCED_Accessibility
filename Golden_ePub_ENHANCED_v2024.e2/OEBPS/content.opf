@@ -72,6 +72,7 @@
 	<item id="CHP001a" href="xhtml/Ch001_Extended_Fig1_1.xhtml" media-type="application/xhtml+xml"/>
    <item id="CHP002" href="xhtml/Ch002_Samples_of_Widget_Enhancements.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
 	<item id="enhance_1" href="xhtml/StreamingVideo.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
+   <item id="enhance_1_1" href="xhtml/GEMPSamples.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
 	<item id="enhance_2" href="xhtml/Embedded_Audio.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 	<item id="enhance_3" href="xhtml/Slideshow.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 	<item id="enhance_4" href="xhtml/Slide-Line.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
@@ -866,6 +867,7 @@
 
    <itemref idref="enhance_13" linear="yes"/>
    <itemref idref="enhance_1" linear="yes"/>
+   <itemref idref="enhance_1_1" linear="yes"/>
    <itemref idref="enhance_2" linear="yes"/>
    <itemref idref="enhance_3" linear="yes"/>
    <itemref idref="enhance_4" linear="yes"/>
