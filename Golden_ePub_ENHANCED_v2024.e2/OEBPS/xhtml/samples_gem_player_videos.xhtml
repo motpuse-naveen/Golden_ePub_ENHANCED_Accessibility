@@ -67,10 +67,10 @@
                     </video>
                 </div>
 
-                <h3>Local Video 3: Docked Captions - Caption panel can be docked below the video to completely avoid overlapping video content.</h3>
+                <h3>Local Video 3: using src attribute on video element instead of &lt;source&gt; tag.</h3>
                 <div class="gemp_player">
-                <video id="gemp-player-video5" controls="controls" preload="metadata" data-dockcaptions="true">
-                    <source src="../videos/mmc06-01-9780128203484.mp4" type="video/mp4" />
+                <video id="gemp-player-video5" src="../videos/mmc06-01-9780128203484.mp4" type="video/mp4"
+                    controls="controls" preload="metadata">
                     <track kind="captions" src="../videos/mmc06-01-9780128203484_cc.vtt" srclang="en" label="English"
                     default="default" />
                 </video>
@@ -119,17 +119,18 @@
         //<![CDATA[
         async function waitForLibrary(fxn) {
           while (typeof elsevierjsplayer !== "object") {
-            await new Promise(resolve => setTimeout(resolve, 100));
+            await (function(delay) {
+                return new Promise(resolve => setTimeout(resolve, delay));
+            })(100);
           }
           fxn();
         }
         
-        waitForLibrary(function () {
+        waitForLibrary(function () {          
           elsevierjsplayer.init();
         });
         //]]>
-    </script>
-
+    </script>    
 </body>
 
 </html>
