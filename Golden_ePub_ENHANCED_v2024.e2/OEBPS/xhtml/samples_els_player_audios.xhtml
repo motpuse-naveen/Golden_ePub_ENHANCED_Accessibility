@@ -10,7 +10,6 @@
     <link rel="stylesheet" media="only screen" type="text/css" href="../styles/media.css" />
     <link rel="stylesheet" type="text/css" href="../widgets/common_assets/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../widgets/common_assets/css/variables.css" />
-    <!--<script type="text/javascript" src="../widgets/common_assets/scripts/mathjax/tex-mml-chtml.js"></script>-->
     <link rel="stylesheet" type="text/css" href="../els-media/els-media-player.min.css" />
 </head>
 
@@ -19,15 +18,15 @@
         <div id="CN"><a id="CHP002" /></div>
         <header>
             <hgroup>
-                <h1 class="chaptitle" id="CHP001-1">Audio Samples</h1>
+                <h1 class="chaptitle" id="sv">ELS Player - Audio Samples</h1>
             </hgroup>
         </header>
-        <h2>Embedded Audio</h2>
+        <h2>Default html5 audio</h2>
         <div id="audio1"><iframe src="../widgets/Embedded_audio/xhtml/001-what-is-psychopathology.xhtml" height="300"
                 aria-label="Embedded Audio" /></div>
 
         <hr style="width: 100%; margin: 30px 0;" aria-hidden="true" aria-label="separator" />
-        <h2>Local Audio 1: Closed Captions and Transcript</h2>
+        <h2>ELS Player - Audio 1: Closed Captions and Transcript (local audio)</h2>
         <div class="els-player">
             <audio id="els-player-audio1" controls="controls">
                 <source src="../videos/Audio-mmc3-cc.mp3" type="audio/mpeg" />
@@ -37,7 +36,7 @@
         </div>
 
         <hr style="width: 100%; margin: 30px 0;" aria-hidden="true" aria-label="separator" />
-        <h2>Local Audio 2: Only Audio</h2>
+        <h2>ELS Player - Audio 2: Only Audio (local audio)</h2>
         <div class="els-player">
             <audio id="els-player-audio2" controls="controls">
                 <source src="../videos/audio-02-9780128023198.mp3" type="audio/mpeg" />
@@ -46,11 +45,9 @@
     </section>
 
     <script src="../els-media/els-media-player.min.js"></script>
-    <!--<script src="../widgets/common_assets/scripts/video-tracker.js"></script>-->
     <script src="../widgets/common_assets/scripts/common.js"></script>
     <script>
         ELSPlayer.initElsPlayers();
     </script>
 </body>
-
 </html>

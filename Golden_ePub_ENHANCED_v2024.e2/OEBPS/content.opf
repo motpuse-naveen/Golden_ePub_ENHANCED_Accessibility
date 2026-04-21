@@ -71,35 +71,37 @@
 	<item id="CHP001" properties="mathml scripted" href="xhtml/Ch001_1-18_B978012415820700007X.xhtml" media-type="application/xhtml+xml"/>
 	<item id="CHP001a" href="xhtml/Ch001_Extended_Fig1_1.xhtml" media-type="application/xhtml+xml"/>
    <item id="CHP002" href="xhtml/Ch002_Samples_of_Widget_Enhancements.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
-	<item id="enhance_1" href="xhtml/StreamingVideo.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
-   <item id="enhance_1_1" href="xhtml/GEMPSamples.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
-	<item id="enhance_2" href="xhtml/Embedded_Audio.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-	<item id="enhance_3" href="xhtml/Slideshow.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-	<item id="enhance_4" href="xhtml/Slide-Line.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_4_1" href="xhtml/Slide-Line-Scroll.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-	<item id="enhance_5" href="xhtml/Test_Yourself.xhtml" media-type="application/xhtml+xml"/>
-	<item id="enhance_6" href="xhtml/Show-Hide.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-	<item id="enhance_7" href="xhtml/PopTip.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-	<item id="enhance_8" href="xhtml/Quiz_with_Multiple_Choice.xhtml" media-type="application/xhtml+xml"/>
-	<item id="enhance_9" href="xhtml/Quiz_with_Multiple_Answer.xhtml" media-type="application/xhtml+xml"/>
-	<item id="enhance_10" href="xhtml/Quiz_with_True-False.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_11" href="xhtml/Flashcard.xhtml" media-type="application/xhtml+xml"/>
-   <item id="enhance_12" href="xhtml/Glossary.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_13" href="xhtml/Image_default_zoom.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_14" href="xhtml/Hotspot_Holder.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_15" href="xhtml/GuidedTour.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_16" href="xhtml/Accordian.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_17" href="xhtml/Accordion-with-Audio.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_18" href="xhtml/ShortAnswer-upto5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_19" href="xhtml/ShortAnswer-upto10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_20" href="xhtml/ShortAnswer-above10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_21" href="xhtml/Fill-in-the-Blank-upto5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_22" href="xhtml/Fill-in-the-Blank-upto10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_23" href="xhtml/Fill-in-the-Blank-above10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_24" href="xhtml/Dropdowns-upto5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_25" href="xhtml/Dropdowns-upto10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_26" href="xhtml/Dropdowns-above10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
-   <item id="enhance_27" href="xhtml/media-player.xhtml" media-type="application/xhtml+xml"/>
+   
+   <item id="enhance_1" href="xhtml/samples_html5_player_videos.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
+	<item id="enhance_2" href="xhtml/samples_els_player_videos.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
+	<item id="enhance_3" href="xhtml/samples_els_player_audios.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_4" href="xhtml/samples_gem_player_videos.xhtml" properties="scripted remote-resources" media-type="application/xhtml+xml"/>
+   
+	<item id="enhance_5" href="xhtml/Slideshow.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+	<item id="enhance_6" href="xhtml/Slide-Line.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_7" href="xhtml/Slide-Line-Scroll.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+	<item id="enhance_8" href="xhtml/Test_Yourself.xhtml" media-type="application/xhtml+xml"/>
+	<item id="enhance_9" href="xhtml/Show-Hide.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+	<item id="enhance_10" href="xhtml/PopTip.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+	<item id="enhance_11" href="xhtml/Quiz_with_Multiple_Choice.xhtml" media-type="application/xhtml+xml"/>
+	<item id="enhance_12" href="xhtml/Quiz_with_Multiple_Answer.xhtml" media-type="application/xhtml+xml"/>
+	<item id="enhance_13" href="xhtml/Quiz_with_True-False.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_14" href="xhtml/Flashcard.xhtml" media-type="application/xhtml+xml"/>
+   <item id="enhance_15" href="xhtml/Glossary.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_16" href="xhtml/Image_default_zoom.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_17" href="xhtml/Hotspot_Holder.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_18" href="xhtml/GuidedTour.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_19" href="xhtml/Accordian.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_20" href="xhtml/Accordion-with-Audio.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_21" href="xhtml/ShortAnswer-upto5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_22" href="xhtml/ShortAnswer-upto10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_23" href="xhtml/ShortAnswer-above10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_24" href="xhtml/Fill-in-the-Blank-upto5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_25" href="xhtml/Fill-in-the-Blank-upto10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_26" href="xhtml/Fill-in-the-Blank-above10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_27" href="xhtml/Dropdowns-upto5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_28" href="xhtml/Dropdowns-upto10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+   <item id="enhance_29" href="xhtml/Dropdowns-above10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
 
    <item id="css_synth" href="styles/synth.css" media-type="text/css"/>
 	<item id="cssme" href="styles/media.css" media-type="text/css"/>
@@ -865,21 +867,19 @@
    <itemref idref="CHP001a" linear="yes"/>
    <itemref idref="CHP002" linear="yes"/>
 
-   <itemref idref="enhance_13" linear="yes"/>
    <itemref idref="enhance_1" linear="yes"/>
-   <itemref idref="enhance_1_1" linear="yes"/>
    <itemref idref="enhance_2" linear="yes"/>
-   <itemref idref="enhance_3" linear="yes"/>
    <itemref idref="enhance_4" linear="yes"/>
-   <itemref idref="enhance_4_1" linear="yes"/>
+   <itemref idref="enhance_3" linear="yes"/>
    <itemref idref="enhance_5" linear="yes"/>
    <itemref idref="enhance_6" linear="yes"/>
    <itemref idref="enhance_7" linear="yes"/>
-   <itemref idref="enhance_12" linear="yes"/>
    <itemref idref="enhance_8" linear="yes"/>
    <itemref idref="enhance_9" linear="yes"/>
    <itemref idref="enhance_10" linear="yes"/>
    <itemref idref="enhance_11" linear="yes"/>
+   <itemref idref="enhance_12" linear="yes"/>
+   <itemref idref="enhance_13" linear="yes"/>
    <itemref idref="enhance_14" linear="yes"/>
    <itemref idref="enhance_15" linear="yes"/>
    <itemref idref="enhance_16" linear="yes"/>
@@ -894,6 +894,8 @@
    <itemref idref="enhance_25" linear="yes"/>
    <itemref idref="enhance_26" linear="yes"/>
    <itemref idref="enhance_27" linear="yes"/>
+   <itemref idref="enhance_28" linear="yes"/>
+   <itemref idref="enhance_29" linear="yes"/>
 
    <itemref idref="Appendix" linear="yes"/>
    <itemref idref="Glossary" linear="yes"/>
