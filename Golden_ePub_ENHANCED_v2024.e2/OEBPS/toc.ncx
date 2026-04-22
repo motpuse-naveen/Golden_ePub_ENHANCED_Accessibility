@@ -311,7 +311,7 @@
 		<navPoint id="toc38" playOrder="38">
 			<navLabel>
 				<text>
-					ELS Player - media samples
+					ELS (Video-Audio accessible) Player - media samples
 				</text>
 			</navLabel>
 			<content src="xhtml/samples_els_player_videos.xhtml#sv" />
@@ -328,7 +328,7 @@
 		<navPoint id="toc40" playOrder="40">
 			<navLabel>
 				<text>
-					ELS Player - audio samples
+					ELS (Video-Audio accessible) Player - audio samples
 				</text>
 			</navLabel>
 			<content src="xhtml/samples_els_player_audios.xhtml" />
