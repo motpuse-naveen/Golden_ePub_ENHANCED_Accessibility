@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player with AD</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    video { width: 100%; max-width: 600px; display: block; margin-bottom: 10px; }
+    .progress { width: 100%; background: #ddd; height: 10px; border-radius: 5px; margin-bottom: 10px; }
+    .progress-filled { width: 0%; height: 100%; background: #4caf50; border-radius: 5px; }
+    button { padding: 8px 16px; font-size: 16px; }
+  </style>
+</head>
+<body>
+
+<h2>Video Player with Speech Synthesis AD</h2>
+
+<video id="video" controls>
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="progress">
+  <div class="progress-filled" id="progress"></div>
+</div>
+
+<button id="adButton" style="display:none;">Play AD at 5s</button>
+
+<script>
+const video = document.getElementById('video');
+const progressFilled = document.getElementById('progress');
+const adButton = document.getElementById('adButton');
+var adplayed = false;
+// Update progress bar as video plays
+video.addEventListener('timeupdate', () => {
+  const percent = (video.currentTime / video.duration) * 100;
+  progressFilled.style.width = percent + "%";
+  console.log(video.currentTime)
+  if(video.currentTime>5 && !adplayed){
+    playAD("A large bird is flying across the screen while the background music plays.");
+    adplayed=true;
+  }
+});
+// Listen for the video end
+video.addEventListener('ended', () => {
+    adplayed = false;
+});
+
+// Function to play Speech Synthesis Audio Description
+function playAD(text) {
+  // Pause video
+  video.pause();
+
+  // Stop any previous speech
+  //speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+
+  utterance.onstart = () => console.log("AD started");
+  utterance.onend = () => {
+    console.log("AD ended, resuming video");
+    video.play();
+  };
+  utterance.onerror = (e) => console.error("Speech error", e.error);
+
+  speechSynthesis.speak(utterance);
+}
+
+// Example: Play AD on button click
+adButton.addEventListener('click', () => {
+  playAD("A large bird is flying across the screen while the background music plays.");
+});
+</script>
+
+</body>
+</html>
