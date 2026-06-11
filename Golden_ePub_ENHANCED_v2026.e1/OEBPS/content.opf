@@ -143,10 +143,13 @@
    <item id="Aud1_vtt" href="videos/Audio-mmc3-cc.vtt" media-type="text/vtt"/>
 
 
-	<item id="vid_1" href="https://static.us.elsevierhealth.com/swartz_8_9780323672924/9780323672924_0137.m3u8" media-type="application/vnd.apple.mpegurl"/>
+	<item id="vid_1" href="https://static.us.elsevierhealth.com/swartz_8_9780323672924/9780323672924_0137.m3u8" media-type="video/x-mpegurl"/>
 	<item id="vid_2" href="https://static.us.elsevierhealth.com/swartz_8_9780323672924/9780323672924_0137.vtt" media-type="text/vtt"/>
-   <item id="vid_3" href="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.m3u8" media-type="application/vnd.apple.mpegurl"/>
+   <item id="vid_3" href="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.m3u8" media-type="video/x-mpegurl"/>
 	<item id="vid_4" href="https://static.us.elsevierhealth.com/knechtle_9_9780443113291/9780443113291_0005.vtt" media-type="text/vtt"/>
+	<item id="vid_5" href="https://static.us.elsevierhealth.com/cox_1_9780443285547/9780443285547_0009.m3u8" media-type="video/x-mpegurl"/>
+	<item id="vid_6" href="https://static.us.elsevierhealth.com/cox_1_9780443285547/9780443285547_0009.vtt" media-type="text/vtt"/>
+	<item id="vid_7" href="https://static.us.elsevierhealth.com/cox_1_9780443285547/9780443285547_0009-ad.vtt" media-type="text/vtt"/>
    <!--widgets-->
    <item id="wid_1" href="widgets/common_assets/scripts/hlsjs/hls.js" media-type="application/javascript"/>
    <item id="wid_2" href="widgets/common_assets/scripts/hlsjs/hls.js.map" media-type="application/json"/>
