@@ -5196,16 +5196,41 @@ ol.number {
 
 
 /********** WCAG 1.4.12 (Text Spacing) ***********/
+/* Author CSS: line-height and paragraph spacing only.
+   WCAG 1.4.12 letter/word spacing minimums apply when users
+   override styles — not baked in here to avoid excessive gaps. */
 body p,
 body li,
 body dd,
 body dt,
 body blockquote,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body td,
+body th,
+body figcaption,
 body .text,
 body .textfl,
 body .biography,
 body .stereo,
-body .ttextfl{
+body .ttextfl,
+body .chaptitle,
+body .fmtitle,
+body .figleg,
+body .vidleg,
+body .ddesc,
+body .audleg,
+body .abstract,
+body .abspara,
+body .h1hd,
+body .h2hd,
+body .h3hd,
+body .h4hd,
+body .caption{
 	line-height: 1.5 !important;
 	word-spacing: 0.16em !important;
 }
@@ -5218,7 +5243,13 @@ body .stereo:not(:empty),
 body .ttextfl:not(:empty),
 body dd:not(:empty),
 body dt:not(:empty),
-body blockquote:not(:empty){
+body blockquote:not(:empty),
+body .abstract:not(:empty),
+body .abspara:not(:empty),
+body .figleg:not(:empty),
+body .vidleg:not(:empty),
+body .ddesc:not(:empty),
+body .audleg:not(:empty){
 	margin-top: 1.5em !important;
 	margin-bottom: 1.5em !important;
 }
@@ -5228,6 +5259,12 @@ body h2,
 body h3,
 body h4,
 body h5,
-body h6{
+body h6,
+body .chaptitle,
+body .fmtitle,
+body .h1hd,
+body .h2hd,
+body .h3hd,
+body .h4hd{
 	margin-top: 1.5em !important;
 }
