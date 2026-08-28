@@ -5193,3 +5193,41 @@ ol.number {
 	font-weight: bold; /* makes the number bold */
 	content: counter(list-item) ".  "; /* adds a dot and space after the number */
   }
+
+
+/********** WCAG 1.4.12 (Text Spacing) ***********/
+body p,
+body li,
+body dd,
+body dt,
+body blockquote,
+body .text,
+body .textfl,
+body .biography,
+body .stereo,
+body .ttextfl{
+	line-height: 1.5 !important;
+	word-spacing: 0.16em !important;
+}
+
+body p:not(:empty),
+body .text:not(:empty),
+body .textfl:not(:empty),
+body .biography:not(:empty),
+body .stereo:not(:empty),
+body .ttextfl:not(:empty),
+body dd:not(:empty),
+body dt:not(:empty),
+body blockquote:not(:empty){
+	margin-top: 1.5em !important;
+	margin-bottom: 1.5em !important;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6{
+	margin-top: 1.5em !important;
+}
