@@ -1,10 +1,18 @@
 /************* page css *************/
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
 .main-slider-area {
 	background-color: white;
 	position: relative;
 	margin: 0;
 	padding: 0;
-	height: 100vh;
+	height: 100%;
 	overflow: hidden;
 	box-sizing: border-box;
 }
@@ -17,6 +25,22 @@
 .main-slider-area .holder {
 	width: 100%;
 	height: calc(100% - 90px);
+}
+.main-slider-area .holder.tooltip-panel-open {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	box-sizing: border-box;
+}
+.main-slider-area .holder.tooltip-panel-open .inner-slide-area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 0;
+	overflow: visible;
+}
+.main-slider-area .holder.tooltip-panel-open #image-map {
+	max-height: none;
+	overflow: visible;
 }
 .main-slider-area .thumbnail_main {
 	width: 100%;

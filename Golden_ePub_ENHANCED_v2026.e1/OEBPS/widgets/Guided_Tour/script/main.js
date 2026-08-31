@@ -254,6 +254,71 @@ $(document).ready(function () {
          $visibleToolbar.removeClass('is-visible');
          $visibleToolbar.closest(".tooltipInner").removeClass('maxzindex');
       }
+      app.resetPanelHeight();
+   }
+   app.resetPanelHeight = function () {
+      var $holder = $('#holder');
+      var $inner = $('#inner-image-area');
+      $holder.removeClass('tooltip-panel-open');
+      $holder.scrollTop(0);
+      $holder.scrollLeft(0);
+      ['height', 'max-height', 'overflow'].forEach(function (prop) {
+         $holder[0].style.removeProperty(prop);
+      });
+      ['height', 'min-height', 'padding-top', 'padding-bottom', 'padding-left', 'min-width', 'width', 'box-sizing', 'display', 'justify-content', 'align-items'].forEach(function (prop) {
+         $inner[0].style.removeProperty(prop);
+      });
+   }
+   app.expandPanelForTooltip = function ($tooltip) {
+      var $holder = $('#holder');
+      var $inner = $('#inner-image-area');
+      var $img = $('#img');
+      var viewportHeight = $holder[0].offsetHeight;
+      var viewportWidth = $holder[0].offsetWidth;
+      $holder[0].style.setProperty('height', viewportHeight + 'px', 'important');
+      $holder[0].style.setProperty('max-height', viewportHeight + 'px', 'important');
+      $holder[0].style.setProperty('overflow', 'auto', 'important');
+      $holder.addClass('tooltip-panel-open');
+      setTimeout(function () {
+         var holderRect = $holder[0].getBoundingClientRect();
+         var imgRect = $img[0].getBoundingClientRect();
+         var tipRect = $tooltip[0].getBoundingClientRect();
+         var overflowTop = Math.max(0, holderRect.top - Math.min(tipRect.top, imgRect.top) + 10);
+         var overflowBottom = Math.max(0, Math.max(tipRect.bottom, imgRect.bottom) - holderRect.bottom + 10);
+         var overflowLeft = Math.max(0, holderRect.left - Math.min(tipRect.left, imgRect.left) + 10);
+         var overflowRight = Math.max(0, Math.max(tipRect.right, imgRect.right) - holderRect.right + 10);
+         var scrollWidth = viewportWidth + overflowLeft + overflowRight;
+         $inner[0].style.setProperty('display', 'flex', 'important');
+         $inner[0].style.setProperty('justify-content', 'center', 'important');
+         $inner[0].style.setProperty('align-items', 'center', 'important');
+         $inner[0].style.setProperty('box-sizing', 'content-box', 'important');
+         $inner[0].style.setProperty('height', viewportHeight + 'px', 'important');
+         $inner[0].style.setProperty('min-height', viewportHeight + 'px', 'important');
+         $inner[0].style.setProperty('width', scrollWidth + 'px', 'important');
+         $inner[0].style.setProperty('min-width', scrollWidth + 'px', 'important');
+         $inner[0].style.setProperty('padding-top', overflowTop + 'px', 'important');
+         $inner[0].style.setProperty('padding-bottom', overflowBottom + 'px', 'important');
+         $inner[0].style.setProperty('padding-left', overflowLeft + 'px', 'important');
+         requestAnimationFrame(function () {
+            var maxScrollTop = $holder[0].scrollHeight - $holder[0].clientHeight;
+            var scrollTop = overflowTop > 0 ? 0 : (overflowBottom > 0 ? maxScrollTop : 0);
+            $holder.scrollTop(scrollTop);
+            $holder.scrollLeft(0);
+            requestAnimationFrame(function () {
+               var margin = 10;
+               holderRect = $holder[0].getBoundingClientRect();
+               tipRect = $tooltip[0].getBoundingClientRect();
+               scrollTop = $holder.scrollTop();
+               if (tipRect.top < holderRect.top + margin) {
+                  scrollTop = Math.max(0, scrollTop - (holderRect.top + margin - tipRect.top));
+                  $holder.scrollTop(scrollTop);
+               } else if (overflowTop === 0 && tipRect.bottom > holderRect.bottom - margin) {
+                  scrollTop = Math.min(maxScrollTop, scrollTop + (tipRect.bottom - (holderRect.bottom - margin)));
+                  $holder.scrollTop(scrollTop);
+               }
+            });
+         });
+      }, 150);
    }
    app.getImageWrapper = function () {
       return $imageWrapper;
@@ -293,50 +358,13 @@ $(document).ready(function () {
       $(".column").removeClass('selected');
       $(".column[data-tooltipnumber='col_" + Utils.getActiveTooltipNumber() + "']").addClass('selected');
       $(".refresh_btn").removeClass("disabled")
-      //;//.addClass('selected');
-      var navHeight = $(".thumbnail_main").height();
-      console.log($(".column[data-tooltipnumber]"), Utils.getActiveTooltipNumber())
-      // console.log(Utils.getActiveTooltipNumber());
       $imageWrapper.css({ 'left': 0, 'top': 0 });
-      setTimeout(() => {
-         var isLeftUpdated = false;
-         var isTopUpdated = false;
-         var winHeight = $(window).height();
-         var winWidth = $(window).width();
-         $tooltip.show();
-         var toolTipoffset = $tooltip[0].getBoundingClientRect();
-         $tooltip.hide();
-         var newLeft = toolTipoffset.left;
-         var newTop = toolTipoffset.top;
-         $imageOffset = $imageWrapper.offset();
-         if (toolTipoffset.right > winWidth) {
-            newLeft = $imageOffset.left - ((toolTipoffset.right - (winWidth - 50)));
-            isLeftUpdated = true;
-         }
-         if (toolTipoffset.left < 50) {
-            newLeft = Math.abs(toolTipoffset.left) + 20;
-            isLeftUpdated = true;
-         }
-         if (toolTipoffset.top < 50) {
-            newTop = Math.abs(toolTipoffset.top) + 50;
-            isTopUpdated = true;
-         }
-         if (toolTipoffset.top + toolTipoffset.height > (winHeight - navHeight - 30)) {
-            newTop = $imageOffset.top - ((toolTipoffset.top + toolTipoffset.height) - (winHeight - navHeight) + 30);
-            //newTop = $imageOffset.top - toolTipoffset.height + 50//((toolTipoffset.bottom - winHeight) + 50);
-            isTopUpdated = true;
-         }
-         if (isTopUpdated && isLeftUpdated) {
-            $imageWrapper.animate({ 'left': newLeft + 'px', 'top': newTop + 'px' }, 50);
-         } else if (isTopUpdated) {
-            $imageWrapper.animate({ 'top': newTop + 'px' }, 50);
-         } else if (isLeftUpdated) {
-            $imageWrapper.animate({ 'left': newLeft + 'px' }, 50);
-         }
+      setTimeout(function () {
          $tooltip.fadeIn(500);
          $tooltip.find('p').focus();
          $tooltip.addClass('is-visible');
          $tooltip.closest(".tooltipInner").addClass('maxzindex');
+         app.expandPanelForTooltip($tooltip);
       }, 300);
    }
    app.getNewScaleByDirection = function (direction) {
