@@ -338,7 +338,7 @@ ul.thumbnail_slidr_inner {
 .thumbnail_main .column.selected::before, .thumbnail_main .column:hover::before {
     content: " ";
     position: absolute;
-    top: 24px;
+    top: 30px;
     left: 6px;
     background-color: var(--orange);
     height: 2px;
